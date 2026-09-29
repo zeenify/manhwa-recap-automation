@@ -91,10 +91,12 @@ def main():
         lines.append(f"  event: {b.get('event','')}")
     lines.append("")
 
-    Path(args.out).write_text("\n".join(lines), encoding="utf-8")
+    out_path = Path(args.out)
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    out_path.write_text("\n".join(lines), encoding="utf-8")
     print(json.dumps({
         "out": args.out, "beats": len(beats), "handoffs": [h.name for h in handoffs],
-        "bytes": Path(args.out).stat().st_size,
+        "bytes": out_path.stat().st_size,
     }, indent=1))
 
 
