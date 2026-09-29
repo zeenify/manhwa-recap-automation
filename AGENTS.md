@@ -75,6 +75,7 @@ Deps: Python 3.11 + Pillow + numpy (already installed). No git repo, no linter, 
 - `story-so-far.md` and `beats.json` are the memory of the project — do not overwrite casually.
 - TTS entry filenames must be unique per entry index: two entries can share the same first covered beat (the cold open once collided with a merged beat and its audio was silently overwritten — fixed with index-prefixed names, but older audio folders may not have them).
 - fish.audio can return HTTP 200 with an EMPTY body on auth/param failures — verify the output file exists and is >1KB, never trust the status code alone.
+- Writer agents' self-reported QA can be wrong (ch10's claimed "all under the cap" shipped 81- and 87-word entries) — the MAIN SESSION always re-verifies coverage, word caps, banned words, and shot directives with the production parsers before spending TTS credits; over-cap entries get edited by hand and their clips re-generated.
 - Stale `ffmpeg.exe` processes lock clip files and break cleanup — `taskkill //F //IM ffmpeg.exe` before deleting/re-rendering.
 - The concat demuxer resolves relative paths against the LIST FILE's directory — always write absolute forward-slash paths into `segments.txt` / `audio_list.txt`.
 - Change a render setting (resolution, filters) without deleting old clips = the idempotent skip silently reuses the stale clips. Purge `videos/<chapter>/clips/` first.
