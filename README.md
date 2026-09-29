@@ -56,8 +56,9 @@ this repo, while cropping, merging, TTS, and rendering stay deterministic.
 
 ```bash
 git clone <this-repo>
-cd manhwa-recap-pipeline
+cd manhwa-recap-automation
 pip install -r requirements.txt
+mkdir -p tmp
 # put your fish.audio key here (never committed):
 echo "sk-fish-..." > tmp/fish_api_key.txt
 ```
