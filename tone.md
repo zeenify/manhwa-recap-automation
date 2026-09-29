@@ -124,10 +124,12 @@ The writer tags each beat with a shot directive for the camera engine. Vocabular
 - Action burst → `quick-zoom`
 - Narrating over a beat while its dialogue was skipped → `hold` or slow drift
 
-**Merged entries (covers 2 beats):** the two panels display side by side as one
-collage for the whole entry's audio — so only merge when showing both panels at
-once reads fine, narrate them in panel order, and give each panel roughly half
-the entry's attention. Merge sparingly: the default is ONE entry per beat.
+**Merged entries (covers 2 beats):** the two panels display side by side at
+equal height for the whole entry's audio — so only merge beats of comparable
+height (tallest ≤ ~1.5× shortest; h×w is in the brief), narrate them in panel
+order, and give each panel roughly half the entry's attention. A short panel
+next to a tall one renders tiny — never merge mismatched sizes. Merge
+sparingly: the default is ONE entry per beat.
 
 Narration length implies beat duration (~150 wpm). Short beats get 1–2 sentences;
 spectacular panels earn 5–8. Total target for chapter 1: a 20–30 minute video.

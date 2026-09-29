@@ -28,10 +28,14 @@ Read each of the three ONCE, carefully — no re-reads; everything stays in cont
 3. Write the script **in beat order**. **Default: ONE entry per beat.** You may
    MERGE — but only ever TWO consecutive beats, only when they form one
    inseparable action, and only a handful of times per chapter (~4–6, not 16).
-   Merged entries display BOTH panels side by side as one collage for the whole
-   entry's audio, so narrate them in panel order with roughly balanced attention,
-   and never merge two panels that each need full-size detail (e.g. two dense
-   system windows). Every beat must be narrated or covered by a merged entry.
+   **Size rule:** merged panels display side by side at equal height, so only
+   merge beats whose heights are comparable — tallest at most ~1.5× the
+   shortest (every beat's h×w is in the brief). A short panel beside a tall one
+   renders tiny and unreadable; when sizes mismatch, write two entries instead.
+   Never merge two panels that each need full-size detail (e.g. two dense
+   system windows). Merged entries get narration covering both panels in panel
+   order with roughly balanced attention. Every beat must be narrated or
+   covered by a merged entry.
 4. **Pacing law applies to every entry**: match word count to the beat's screen
    time (see the table in tone.md). Quick beats get 8–13 words. Lore gets 25–75.
    Over 40 words requires an explanation beat. Average entry: 12–25 words.

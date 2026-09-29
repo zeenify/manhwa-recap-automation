@@ -33,6 +33,7 @@ W, H = 1920, 1080
 SS_W = 3840  # supersample width for zoompan quality
 GUTTER = 24  # px between panels in a collage
 PAN_W = 0.6  # pan-down column width as a fraction of frame width (full-width scroll retired)
+COLLAGE_MAX_RATIO = 1.6  # taller/shortest height ratio allowed in one collage card
 
 
 def sh(cmd, **kw):
@@ -188,6 +189,27 @@ def main():
             continue
         move = directives.get(tuple(cov), "hold")
         if len(bs) > 1:
+            hs = [b["h"] for b in bs]
+            if max(hs) / max(1, min(hs)) > COLLAGE_MAX_RATIO:
+                # mismatched sizes would render the short panel unreadably tiny:
+                # fall back to sequential per-beat cards (old time-split behavior)
+                print(f"entry {ei}: beats {cov} heights {hs} exceed collage ratio "
+                      f"{COLLAGE_MAX_RATIO} — rendering sequentially", file=sys.stderr)
+                total_h = sum(hs)
+                acc = 0.0
+                for b in bs:
+                    share = e["duration_s"] * (b["h"] / total_h)
+                    seg_move = move
+                    if seg_move == "pan-down" and (b["h"] / max(1, b["w"])) <= 1.67:
+                        seg_move = "fit"
+                    segments.append({"img": root / f"assets/{args.slug}/{args.chapter}/beats/{b['file']}",
+                                     "dur": share, "move": seg_move,
+                                     "fp": b.get("focal_point"), "entry": ei, "idx": len(segments)})
+                    acc += share
+                drift = e["duration_s"] - acc
+                if abs(drift) > 0.05 and segments:
+                    segments[-1]["dur"] += drift
+                continue
             cimg = build_collage(
                 [root / f"assets/{args.slug}/{args.chapter}/beats/{b['file']}" for b in bs],
                 work / f"collage_entry_{ei:03d}.png")
