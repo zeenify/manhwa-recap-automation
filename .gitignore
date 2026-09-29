@@ -26,4 +26,3 @@ toonverse/**/views/
 toonverse/**/window_*.png
 
 # ---- acquisition tooling is intentionally NOT part of this repo ----
-toonverse/download_chapters.py

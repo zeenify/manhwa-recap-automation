@@ -76,11 +76,13 @@ Drop the chapter scans into `toonverse/` — see
 [toonverse/README.md](toonverse/README.md) for the exact input contract
 (one folder per chapter, zero-padded 720px-wide strips).
 
-**This repository ships no scraper and no scraped content.** How you acquire
-scans is your business — only process content you have the rights to use, and
-check the source for duplicated pages (aggregators sometimes stitch two scan
-sources together; reader agents will flag suspicious repeats, and you should
-verify and dedupe before cropping).
+**A reference scraper is included** (`toonverse/download_chapters.py` — the
+author's own tool, written for their workflow; expect it to break as sites
+change). Whether you use it or fetch scans another way, **you are responsible
+for what you download and process** — only fetch content you have the rights to
+use, and check the source for duplicated pages (aggregators sometimes stitch two
+scan sources together; reader agents will flag suspicious repeats, and you
+should verify and dedupe before cropping).
 
 ## Running a chapter
 
@@ -146,10 +148,11 @@ scripts/ audio/ videos/ assets/ tmp/   outputs & scratch (gitignored)
 
 ## Legal note
 
-This repository contains **no scanned pages, no scraped content, and no
-scraper**. The sample narration in `examples/` is the author's original
-transformative commentary. You are responsible for the content you run through
-this pipeline — narrating and recapping someone else's work without permission
-may infringe their rights depending on your jurisdiction and use. Monetizing
-such videos on YouTube carries real copyright-strike risk; that business risk
-belongs to you, not this repo.
+This repository contains **no scanned pages and no scraped content** — the
+included scraper is the author's own reference tool and ships empty-handed. The
+sample narration in `examples/` is the author's original transformative
+commentary. You are responsible for the content you run through this pipeline —
+downloading, narrating and recapping someone else's work without permission may
+infringe their rights depending on your jurisdiction and use. Monetizing such
+videos on YouTube carries real copyright-strike risk; that business risk belongs
+to you, not this repo.

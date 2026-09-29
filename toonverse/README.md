@@ -29,5 +29,7 @@ Everything else in the pipeline is derived from these images. Nothing in this
 folder should be committed to git — scans are heavy and are not yours to
 redistribute (see the legal note in the root README).
 
-**How you obtain the scans is up to you** — this repository intentionally ships
-no scraper. Only process content you have the rights to use.
+**How you obtain the scans is up to you.** A reference scraper
+(`download_chapters.py`, written for the author's own workflow) sits in this
+folder — expect it to break as sites change, and remember you are responsible
+for what you fetch: only download content you have the rights to use.
