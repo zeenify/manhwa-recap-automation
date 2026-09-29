@@ -1,0 +1,24 @@
+{
+  "story_so_far": "Chapter 9 opens on the floor-17 goblin army (mission: 'DEFEAT 30 GOBLIN WARRIORS'). Juhyeok, flanked by Gobang and a caped figure in dark gear, commands 'WIPE THEM ALL OUT.' Gobang ignites into a golden flame pillar, roars 'GRARRR!', and blast-wipes the army — goblins fly, spears rain, Gobang lands crouched and glowing. Juhyeok watches, amazed ('WOW... THAT PERFORMANCE IS INSANE') and delivers his rental-bikes-vs-K2-tank analogy while a literal tank fires on-panel. Floor 17 clears: system notices award S++ and a Platinum Badge. A pale-haired witness screams 'BOM SANSA...?!' at the result. After the title card, floor 18 begins: 'DEFEAT 30 GOBLIN ASSASSINS' — monsters that use stealth skills. The trio advances ('MOVE OUT.') but the cloaked, red-masked assassins phase through cyan smoke and ambush: one clings to Gobang invisible (blue dashed outline), another leaves a fish on his head; Juhyeok panics ('THIS MIGHT NOT BE AS EASY AS I THOUGHT?'). Gobang pounds the ground channeling golden energy ('COME OUT! ASSASSINS ARE ALL COWARDS!'). A booming 'MUHAHAHAHA' answers over a dark tree canopy: a lean auburn-haired man in dark sleeveless assassin gear appears, mocks Juhyeok ('YOU'VE SUFFERED WATCHING THAT IGNORANT BASTARD GOBANG'S STRATEGY UNTIL NOW'), vows to 'PURIFY YOUR EYES WITH A CLASSY WALKTHROUGH!', boasts 'THOSE GOBLINS' STEALTH IS NOTHING COMPARED TO MINE', flashes the skill SHADOW STEP, and massacres the goblin assassins in a golden spotlight void as the kill counter races toward 30.",
+  "last_beat": {
+    "y_end": 62500,
+    "continues": false,
+    "description": "Golden-void massacre panel (59800-62500): the dark-gear assassin's blue afterimages shred the goblin assassins into particle showers under spotlight beams; a blue system box tracks '[COMPLETE CONDITION: GOBLIN ASSASSIN .../30]' with the counter racing (6,7,8,9). Panel art ends ~62500; only a purple SFX '챠챠' spill on white continues past y=62700 (to ~62900) — covered as excluded spacing, not a beat continuation."
+  },
+  "characters": [
+    "Bong Juhyeok — commands the fight; shields his eyes at Gobang's rampage; panics at the stealth ambush; chibi-gloom at the assassin's showing off",
+    "Gobang — blast-wipes floor 17, gets stealth-ambushed (invisible goblin latches on; a fish ends up on his head), channels golden energy roaring 'COME OUT!'",
+    "The caped dark-gear figure in the trio (backs to viewer, 38700-41180) — unnamed on-panel here",
+    "The auburn-haired man in dark sleeveless assassin gear — arrives laughing 'MUHAHAHAHA', mocks Gobang's strategy, uses SHADOW STEP, massacres the goblin assassins (identity unresolved — possibly Cossack, possibly the ch.7 red-haired men; same outfit as the caped trio figure)",
+    "Pale-haired screaming witness ('BOM SANSA...?!') — watches from somewhere outside the floor, identity unknown",
+    "Goblin warriors (floor 17, wiped) and goblin assassins in dark cloaks with red face-masks (floor 18, being wiped)"
+  ],
+  "anomalies": [
+    "Site watermarks burned inside art: VORTEXSCANS.COM at ~4355, ~18970, ~29885, ~44880, ~59145; MANGAYY.ORG at ~9040, ~19370, ~46280; MANGAYY.ORG also floats on plain white at ~32800 and ~59620 (excluded as junk)",
+    "Battle sequence 19330-26225 uses diagonal panel edges; horizontal crops necessarily include small wedge bleed from neighboring panels",
+    "The auburn-haired assassin's identity is never stated on-panel in this range; his outfit matches the trio's caped figure — writer should harmonize (Cossack vs. the two identical red-haired men from ch.7)",
+    "'BOM SANSA...?!' — likely a name or exclamation; speaker and target both unclear",
+    "The completion-condition box's kill counter renders as racing digits (6/7/8/9 against 30); the exact count shown is a motion gag, not a stable number",
+    "Inset panel 49250-50170 (shocked Juhyeok) intentionally overlaps the searching-Gobang panel's corner (composite per protocol rule 6)"
+  ]
+}

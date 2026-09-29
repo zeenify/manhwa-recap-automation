@@ -1,0 +1,29 @@
+# ---- heavy regenerable media (never public, never tracked) ----
+*.jpg
+*.jpeg
+*.png
+*.webp
+*.mp3
+*.mp4
+*.m4a
+*.webm
+
+# ---- secrets ----
+tmp/
+
+# ---- per-run artifacts (the sample in examples/ shows the formats) ----
+scripts/*.md
+assets/
+audio/
+videos/
+__pycache__/
+
+# ---- reader/writer run artifacts (drafts, handoffs, view manifests) ----
+toonverse/**/beats_draft_*.json
+toonverse/**/beats_full_*.json
+toonverse/**/handoff_*.json
+toonverse/**/views/
+toonverse/**/window_*.png
+
+# ---- acquisition tooling is intentionally NOT part of this repo ----
+toonverse/download_chapters.py
