@@ -51,7 +51,8 @@ def auto_trim(piece: Image.Image, std_thresh: float = 12.0, pad: int = 12, max_t
 
 
 def chapter_files(chapter_dir: Path) -> list[Path]:
-    files = sorted(chapter_dir.glob("*.jpg")) + sorted(chapter_dir.glob("*.png"))
+    files = (sorted(chapter_dir.glob("*.jpg")) + sorted(chapter_dir.glob("*.png"))
+             + sorted(chapter_dir.glob("*.webp")))
     return sorted(files, key=lambda p: p.name)
 
 
