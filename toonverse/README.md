@@ -18,6 +18,8 @@ toonverse/<your-series-slug>/
 
 - Each image is a TALL vertical slice of the chapter (webtoon-style strips),
   roughly **720 px wide**; height can vary (5k–12k px is normal).
+- `.jpg`, `.png` and `.webp` are all accepted (one format per chapter folder is
+  cleanest — the tools sort by filename).
 - Zero-padded sequential numbering (`001.jpg`, `002.jpg`, …) with **no gaps** —
   the tools concatenate them into one virtual coordinate space per chapter.
 - One folder per chapter, two-digit (`chapter-01`), matching the `chapter=chNNN`
