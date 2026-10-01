@@ -150,6 +150,40 @@ def main():
     print("--- YouTube chapters (paste into description) ---")
     print("\n".join(lines))
 
+    # Machine-readable companion: an AI agent (or the user) uploads the video
+    # to YouTube and applies 'chapters' — either paste chapters_block into the
+    # description or enter each row via YouTube Studio's chapter UI.
+    import json
+    ch_entries = []
+    cursor = 0.0
+    for n in range(args.first, args.last + 1):
+        if n > args.first:
+            cursor += CARD_DUR
+        ch_dur = float(subprocess.run(
+            ["ffprobe", "-v", "error", "-show_entries", "format=duration",
+             "-of", "csv=p=0", f"videos/ch{n:03d}/ch{n:03d}.mp4"],
+            capture_output=True, text=True, check=True).stdout.strip())
+        ch_entries.append({
+            "n": n,
+            "label": f"Chapter {n}",
+            "start": _fmt_ts(cursor),
+            "start_seconds": round(cursor, 2),
+            "source_file": f"videos/ch{n:03d}/ch{n:03d}.mp4",
+        })
+        cursor += ch_dur
+    meta = {
+        "video_file": str(out).replace("\\", "/"),
+        "video_duration_seconds": round(cursor + OUTRO_DUR, 2),
+        "platform": "youtube",
+        "how_to_apply": "Put chapters_block at the top of the video description (first line must be 0:00 and YouTube needs >=3 entries). Alternatively use YouTube Studio > Editor > Chapters with the start values in chapters[].",
+        "format_rules": ["first chapter starts at 0:00", "timestamps are h:mm:ss (or m:ss)", "keep order ascending", "each chapter maps to one manhwa chapter of the same number"],
+        "chapters_block": "\n".join(lines),
+        "chapters": ch_entries,
+    }
+    stamp_path = out.parent / "youtube_timestamps.json"
+    stamp_path.write_text(json.dumps(meta, indent=1), encoding="utf-8")
+    print(f"timestamps: {stamp_path}")
+
 
 if __name__ == "__main__":
     main()
