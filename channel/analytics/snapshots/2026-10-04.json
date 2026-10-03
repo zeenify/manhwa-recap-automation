@@ -1,0 +1,91 @@
+{
+ "captured_at": "2026-10-03T17:57:12.585450+00:00",
+ "platforms": {
+  "youtube": {
+   "error": "no youtube_api_key in credentials.json (one-time setup, see analytics-guide.md)"
+  },
+  "facebook": {
+   "error": "no fb_page_token in credentials.json (one-time setup, see analytics-guide.md)"
+  },
+  "tiktok": {
+   "account_level_only": true,
+   "followers": 0,
+   "total_hearts": 0,
+   "video_count": 20,
+   "note": "per-video stats need the official Display API (analytics-guide.md)"
+  },
+  "rumble": {
+   "error": "no HTTP method (Cloudflare) \u2014 agent opens rumble.com/c/c-7963658 in the browser and reads view counts from the page"
+  },
+  "odysee": {
+   "videos": [
+    {
+     "video_id": "15a65e357e1ebc7212b88a85c75e989a754177b2",
+     "title": "A Wimp's Tower Strategy Guide Chapter 18 - Manhwa Recap",
+     "published_at": "2026-10-03T14:54:39+00:00",
+     "views": 0
+    },
+    {
+     "video_id": "d48113a4c24f02e57fa59764d4656765342078ed",
+     "title": "A Wimp's Tower Strategy Guide Chapter 17 - Manhwa Recap",
+     "published_at": "2026-10-03T14:57:03+00:00",
+     "views": 0
+    },
+    {
+     "video_id": "399eda28cc5550eebe57f3c93164b4399d5a0bf1",
+     "title": "A Wimp's Tower Strategy Guide Chapter 16 - Manhwa Recap",
+     "published_at": "2026-10-03T14:54:34+00:00",
+     "views": 0
+    },
+    {
+     "video_id": "bb31a1b2ec4df7f00c5abd73f21e7b6782633986",
+     "title": "A Wimp's Tower Strategy Guide Chapter 15 - Manhwa Recap",
+     "published_at": "2026-10-03T14:52:28+00:00",
+     "views": 0
+    },
+    {
+     "video_id": "2435d7d339592c2edc795b34408a76fc2c700b86",
+     "title": "A Wimp's Tower Strategy Guide Chapter 14 - Manhwa Recap",
+     "published_at": "2026-10-03T14:52:28+00:00",
+     "views": 0
+    },
+    {
+     "video_id": "16dc7aa42140da6a734ea70b2d206e2e5000a4ce",
+     "title": "A Wimp's Tower Strategy Guide Chapter 13 - Manhwa Recap",
+     "published_at": "2026-10-03T14:47:49+00:00",
+     "views": 0
+    },
+    {
+     "video_id": "517083e3eb0a238ec1ca0b33f1f9e3bce073844d",
+     "title": "A Wimp's Tower Strategy Guide Chapter 12 - Manhwa Recap",
+     "published_at": "2026-10-03T14:46:44+00:00",
+     "views": 0
+    },
+    {
+     "video_id": "34b0da54d6a3d747d8a80249d1d90896539e3826",
+     "title": "A Wimp's Tower Strategy Guide Chapter 11 - Manhwa Recap",
+     "published_at": "2026-10-03T14:31:21+00:00",
+     "views": 0
+    },
+    {
+     "video_id": "71705c6b3dad62b4c8f6263bce1404912c512da0",
+     "title": "A Wimp's Tower Strategy Guide Chapter 10 - Manhwa Recap",
+     "published_at": "2026-10-03T14:30:31+00:00",
+     "views": 0
+    },
+    {
+     "video_id": "1c55e3843f671f7d1ade014aa6182c2a78583d01",
+     "title": "A Wimp's Tower Strategy Guide Chapter 2 - Manhwa Recap",
+     "published_at": "2026-10-03T12:07:20+00:00",
+     "views": 0
+    },
+    {
+     "video_id": "298319f2f7a58f78710f82afdae9c62eb56bd9f4",
+     "title": "A Wimp's Tower Strategy Guide Chapter 1 - Manhwa Recap",
+     "published_at": "2026-10-03T11:56:53+00:00",
+     "views": 0
+    }
+   ]
+  }
+ }
+}

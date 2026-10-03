@@ -26,3 +26,6 @@ toonverse/**/views/
 toonverse/**/window_*.png
 
 # ---- acquisition tooling is intentionally NOT part of this repo ----
+
+channel/analytics/credentials.json
+tmp/
