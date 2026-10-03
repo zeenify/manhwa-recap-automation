@@ -14,13 +14,13 @@ exact endpoints, credentials).
 
 ## Parse the request
 
-- Platforms: `yt`/`youtube`, `fb`/`facebook`, `tiktok`/`tt`, `rumble`, `odysee`, `all`/`all of them`.
+- Platforms: `rumble`, `odysee`, `all`/`both`. YouTube/Facebook/TikTok analytics are **disabled by owner decision** (security) — if asked for those, say they are off and offer the manual fallback (studio.youtube.com / facebook Page insights read manually in the browser).
 - Range: `last day` (24h), `last week` (7d), `last month` (30d), or explicit dates.
-- Default when the user omits a range: last week. Default platforms: all.
+- Default when the user omits a range: last week. Default platforms: all (youtube, facebook, rumble, odysee).
 
 ## How to pull (in priority order)
 
-1. **Scripts first.** Use `tools/analytics_pull.py` (`py tools/analytics_pull.py --platforms yt,fb,tiktok,rumble,odysee`)
+1. **Scripts first.** Use `tools/analytics_pull.py` (`py tools/analytics_pull.py` — defaults to odysee,rumble)
    — it pulls every platform that has working credentials/methods and appends a dated snapshot to
    `channel/analytics/snapshots/`. Run it, then read the JSON it prints/writes. Odysee needs no
    credentials at all; YouTube/Facebook/TikTok-official need `channel/analytics/credentials.json`

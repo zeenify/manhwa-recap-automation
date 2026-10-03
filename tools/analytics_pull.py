@@ -154,7 +154,7 @@ PULLERS = {"youtube": pull_youtube, "facebook": pull_facebook, "tiktok": pull_ti
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--platforms", default="youtube,facebook,tiktok,rumble,odysee")
+    ap.add_argument("--platforms", default="odysee,rumble")
     args = ap.parse_args()
     creds = load_creds()
     snapshot = {"captured_at": datetime.now(timezone.utc).isoformat(), "platforms": {}}

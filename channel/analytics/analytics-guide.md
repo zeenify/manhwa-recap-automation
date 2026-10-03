@@ -5,6 +5,11 @@ Companion protocol: `agents/analyzer-agent.md`. Starter script: `tools/analytics
 
 Status legend: ✅ WORKS TODAY (no login) · 🔑 WORKS (one-time user setup, then scripts) · 🌐 BROWSER FALLBACK (last resort only)
 
+**OWNER DECISION 2026-10-04: YouTube, Facebook and TikTok analytics are DISABLED** — no keys or
+tokens are connected to any of them, and the keys/apps created during setup were removed. The
+original method research for those platforms is kept at the bottom of this file for reference only.
+The analyzer's active platforms are **Odysee + Rumble**.
+
 ## Our account IDs (all platforms)
 
 | Platform | Identity | Notes |
@@ -15,7 +20,7 @@ Status legend: ✅ WORKS TODAY (no login) · 🔑 WORKS (one-time user setup, th
 | Rumble | channel `c-7963658` (https://rumble.com/c/c-7963658) | 20 videos |
 | Odysee | channel `@edrickmartin101` (display "Zeenify"), claim_id `5c1422de080e00da3e0979c1209db3ca252378fb` | 20 videos |
 
-## 1. YouTube — 🔑 YouTube Data API v3 (best data, needs ONE API key)
+## (DISABLED) 1. YouTube — 🔑 YouTube Data API v3 — reference only
 
 One-time setup (user, ~5 min):
 1. https://console.cloud.google.com → new project → "APIs & Services" → Enable **YouTube Data API v3**.
@@ -41,7 +46,7 @@ and for views-delta you compare against a stored snapshot — see "Snapshots" be
 Analytics API + OAuth (skip unless the user asks; the browser fallback for those numbers is
 studio.youtube.com logged in as the user).
 
-## 2. Facebook Page — 🔑 Graph API (needs ONE Page access token)
+## (DISABLED) 2. Facebook Page — 🔑 Graph API — reference only
 
 One-time setup (user, ~10 min):
 1. https://developers.facebook.com → Create App (type: Business) — any name.
@@ -63,7 +68,7 @@ curl -s "https://graph.facebook.com/v21.0/POST_ID?fields=likes.summary(true),com
 ```
 Date filtering: `created_time` client-side + `insights?period=day&since=...&until=...` with unix timestamps.
 
-## 3. TikTok — split approach
+## (DISABLED) 3. TikTok — reference only
 
 **Account level (✅ works today, no login)** — the public profile page embeds a stats JSON:
 ```
@@ -86,19 +91,21 @@ curl -s -X POST "https://open.tiktokapis.com/v2/video/list/?fields=id,title,view
 ⚠️ Display API may only return videos posted AFTER the authorization — test once after setup; if old
 videos are missing, per-video history for the existing 20 stays browser-only (creator analytics page).
 
-## 4. Rumble — 🌐 NO public analytics API; Cloudflare blocks plain curl
+## 4. Rumble — 🌐 NO public analytics API; use the LOGGED-IN DASHBOARD (browser)
 
-Verified: `rumble.com` video/channel/RSS pages all return a Cloudflare "Just a moment..." challenge to
-curl (2026-10-04). Only the oEmbed endpoint is open (no view counts):
+Verified 2026-10-04. Plain curl on any rumble.com page gets a Cloudflare "Just a moment..." challenge,
+and even in a real browser the PUBLIC video pages are a **trap**: their "N views" text belongs to
+recommended/sidebar videos, not the page's own video — a naive body-wide regex reports garbage
+(this burned the first report; the dashboard showed 0 everywhere while the naive sweep "found" 500K).
+
+Correct method — the logged-in creator dashboard (source of truth, needs the user's session):
 ```
-curl -s "https://rumble.com/api/Media/oembed.json?url=VIDEO_URL"   # title/author only
+browser → https://rumble.com/account/dashboard            (overview: all-time views, followers, earnings)
+browser → https://rumble.com/account/dashboard?type=earnings&interval=30   (per-video table:
+           Video | Date | Earnings | Views | Hours Viewed | Comments | Likes)
 ```
-So Rumble = **browser fallback** (the only platform where it's unavoidable):
-- IAB browser → open https://rumble.com/c/c-7963658 → the channel grid shows each video's **view count**;
-  the creator dashboard (rumble.com, logged in) shows fuller analytics.
-- The agent reads the numbers from the page DOM (browser-use, no computer-use needed — it's web content)
-  and reports them like any other platform.
-- Check once per quarter whether Rumble ships a real API; revisit.
+The per-video table is plain text in `document.body.innerText` — parse rows by chapter title.
+The IAB passes Cloudflare fine when logged in (verified). No computer-use needed; it's DOM text.
 
 ## 5. Odysee — ✅ FULLY AUTOMATED (no login at all)
 
