@@ -141,7 +141,10 @@ now only guards against drag:
 ## Retention structure
 
 - **Cold open:** the single most extreme/absurd moment of the chapter, 3–5 lines,
-  before any context. End with "Yeah. Let's back up."
+  before any context. Land the final line as a hook that throws straight into the
+  story — and VARY it chapter to chapter. No fixed sign-off catchphrase (the old
+  "Yeah. Let's back up." got repetitive after a few episodes): end on the worst
+  decision just made, a direct story question, or mid-action instead.
 - **Re-hook** roughly every 8–10 minutes of runtime: a one-line tease of what's
   coming ("This is the last calm thought he has for about an hour, by the way.").
 - **Chapter end:** land the cliffhanger, one short outro line teasing the next

@@ -99,8 +99,9 @@ Read each of the three ONCE, carefully — no re-reads; everything stays in cont
    then the brief front to back. All inputs are now in context — work from them,
    don't re-read source files.
 2. **Pick the cold-open beat** — the chapter's most extreme/absurd panel. Write
-   the cold open first, using a fake-out detonation or a question chain, and end
-   "Yeah. Let's back up." as usual.
+   the cold open first, using a fake-out detonation or a question chain, and land
+   it on a fresh hook line — NO fixed sign-off catchphrase (the old "Yeah. Let's
+   back up." is retired; see tone.md's cold-open rule).
 3. Write the script **in beat order**. **Default: ONE entry per beat.** You may
    MERGE — but only ever TWO consecutive beats, only when they form one
    inseparable action, and only a handful of times per chapter (~4–6, not 16).
@@ -186,8 +187,8 @@ script, and nothing older.
 - [ ] At least 5 entries carry a NAMED FDB pattern; exactly one sincerity drop;
       refrain threaded 2–3×; buddy/cooked/our-boy vocabulary present without
       meme spam
-- [ ] Cold open is the chapter's most extreme moment, uses FDB grammar, ends
-      "Yeah. Let's back up."
+- [ ] Cold open is the chapter's most extreme moment, uses FDB grammar, lands on
+      a fresh hook line (no "Yeah. Let's back up." or any fixed sign-off)
 - [ ] Re-hooks present at the right density
 - [ ] Shot directive on every entry
 - [ ] Names/attribution harmonized with later chapter reveals

@@ -66,8 +66,8 @@ def parse_script(path: Path):
     return entries
 
 
-def tts(text: str, out: Path, key: str) -> bool:
-    body = json.dumps({"text": text, "reference_id": REFERENCE_ID, "format": "mp3"})
+def tts(text: str, out: Path, key: str, voice: str) -> bool:
+    body = json.dumps({"text": text, "reference_id": voice, "format": "mp3"})
     for attempt in range(4):
         r = subprocess.run([
             "curl", "-sS", "-X", "POST", API_URL,
@@ -86,6 +86,31 @@ def tts(text: str, out: Path, key: str) -> bool:
     return False
 
 
+def post_process(path: Path, speed: float, gain: str) -> None:
+    """Manual prosody knobs the fish.audio API lacks (verified 2026-10-04: the
+    s2.1 endpoint silently ignores speed/volume fields — generation randomness
+    masquerades as effect). Runs immediately after synthesis and BEFORE duration
+    measurement, so the timing contract always reflects the final audio.
+    Idempotent: only ever touches freshly synthesized files — the skip-if-exists
+    check runs before this, so processed files are never processed twice."""
+    af = []
+    if speed != 1.0:
+        af.append(f"atempo={speed}")
+    if gain and gain != "0dB":
+        af.append(f"volume={gain}")
+        af.append("alimiter=limit=0.95:level=false")
+    if not af:
+        return
+    tmp = path.with_suffix(".tmp.mp3")
+    r = subprocess.run(["ffmpeg", "-y", "-i", str(path), "-af", ",".join(af),
+                        "-c:a", "libmp3lame", "-q:a", "2", str(tmp)],
+                       capture_output=True, text=True)
+    if r.returncode != 0 or not tmp.exists() or tmp.stat().st_size < 1000:
+        print(r.stderr[-500:], file=sys.stderr)
+        raise SystemExit(f"post-process failed: {path}")
+    tmp.replace(path)
+
+
 def duration(path: Path) -> float:
     r = subprocess.run([
         "ffprobe", "-v", "error", "-show_entries", "format=duration",
@@ -100,6 +125,12 @@ def main():
     ap.add_argument("--out-dir", default="audio/a-wimps-strategy-guide/ch001")
     ap.add_argument("--workers", type=int, default=4,
                     help="parallel TTS requests (1 = sequential, the old behavior)")
+    ap.add_argument("--voice", default=REFERENCE_ID,
+                    help="fish.audio voice reference_id (per-series; default = channel voice)")
+    ap.add_argument("--speed", type=float, default=1.0,
+                    help="post-synthesis tempo factor, e.g. 1.07 (the API has no speed knob)")
+    ap.add_argument("--gain", default="0dB",
+                    help="post-synthesis loudness lift, e.g. 5dB (API has no volume knob)")
     args = ap.parse_args()
 
     key = KEY_FILE.read_text(encoding="utf-8").strip()
@@ -120,7 +151,9 @@ def main():
     if jobs:
         def run(job):
             i, e, f = job
-            ok = tts(e["narration"], f, key)
+            ok = tts(e["narration"], f, key, args.voice)
+            if ok:
+                post_process(f, args.speed, args.gain)
             return i, ok
         with ThreadPoolExecutor(max_workers=max(1, args.workers)) as pool:
             for i, ok in pool.map(run, jobs):
@@ -130,7 +163,8 @@ def main():
                 print(f"[{i+1}/{len(entries)}] synthesized beats {entries[i]['beats']}")
 
     # pass 3: measure durations in order, write the timing contract
-    timing = {"reference_id": REFERENCE_ID, "model": MODEL, "entries": []}
+    timing = {"reference_id": args.voice, "model": MODEL,
+              "speed": args.speed, "gain": args.gain, "entries": []}
     for i, e in enumerate(entries):
         f = files[i]
         dur = duration(f)
