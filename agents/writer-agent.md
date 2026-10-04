@@ -36,16 +36,20 @@ Read each of the three ONCE, carefully — no re-reads; everything stays in cont
    system windows). Merged entries get narration covering both panels in panel
    order with roughly balanced attention. Every beat must be narrated or
    covered by a merged entry.
-4. **Scene-weight triage, then pacing law.** Before writing each entry, classify
-   the beat from its composition + event text: PASS-BY (reaction face, scream,
-   one quick action) → 8–15 words, one flowing sentence, move on; MOMENT
-   (advances the story, lands a joke, carries dialogue that matters) → 15–35
-   words; SETPIECE (lore, backstory, system windows, big reveal) → 35–80 words.
-   The audio is the clock: over-describing a 1-second reaction freezes it on
-   screen for 10 seconds — the most common pacing defect. Average entry: 12–25
-   words. Tall pan-down beats (h/w ≥ ~2.2 in the brief) get the upper half of
-   their range (25–45 words) — the image scrolls at audio speed, and a short
-   entry over a tall strip is an unreadable blur.
+4. **Evaluate each scene, then pace it.** Judge what every panel does for the
+   viewer before writing it: set up the story, pay something off, or just pass
+   by. Prolong what earns it, keep a quick flowing pace on the filler, and cut
+   every word that only re-describes what the viewer already sees. There is NO
+   mechanical class rule — a facial scene can carry a long reflection or the
+   entry's joke, and a system window can be one line when nothing in it
+   matters. Before locking an entry ask: am I overextending? Can this be said
+   faster without losing story context? Calibration anchors: passing moment
+   8–15 words, story moment 15–35, deep setup up to 80 — the scene decides,
+   not the category. The audio is the clock: over-describing a quick beat
+   freezes it on screen past its welcome. Tall pan-down beats (h/w ≥ ~2.2 in
+   the brief) get the upper half of their range (25–45 words) — the image
+   scrolls at audio speed, and a short entry over a tall strip is an
+   unreadable blur.
 5. Per entry format:
    ```
    ### BEAT 014 (covers 014–016) — alley confrontation
@@ -62,7 +66,8 @@ Read each of the three ONCE, carefully — no re-reads; everything stays in cont
    descriptors with names/roles learned later ("a kid" → the MC's name), fix action
    attributions that later context resolves, and neutralize anything still
    ambiguous. Also grep the narration for banned meta-words (panel, sound effect,
-   narrator, montage, caption, "all chapter") — zero hits required.
+   narrator, montage, caption, "all chapter") AND for markdown emphasis
+   characters (* or _) — zero hits required: the TTS reads them aloud.
 
 ## Output
 
@@ -88,9 +93,9 @@ previous chapter's script, and nothing older.
 - [ ] Sounds like tone.md, not a summary bot (check: would a friend laugh at ≥3 lines?)
 - [ ] **Pacing law satisfied**: average entry 12–25 words; entries >40 words are
       lore/explanation only; no beat drags past its screen time
-- [ ] **Scene-weight triage respected**: no PASS-BY beat (reaction face, scream,
-      one quick action) carries more than ~15 words — never 10 seconds of speech
-      over a 1-second reaction
+- [ ] **Scene evaluation done**: every entry's length is justified by what the
+      scene does for the viewer — setups get room, filler passes quickly, and
+      nothing over-describes what is already visible on the panel
 - [ ] **Staccato check**: no entry has two consecutive sentences under ~6 words
       or a "X. Y. Z." chain — punchlines are full sentences joined by connectors
 - [ ] Tall pan-down beats (h/w ≥ ~2.2) carry 25–45 words so the scroll stays readable

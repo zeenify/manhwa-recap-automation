@@ -77,6 +77,11 @@ word and let the audio run a second longer.
   them with and / so / but / because / which / except instead of a full stop.
   Fewer periods per idea equals smoother audio; a period goes at the end of a
   completed thought, not mid-breath.
+- **Narration is plain prose — the TTS reads every character.** No markdown
+  emphasis in narration text (asterisks, underscores): the voice literally says
+  "asterisk yangbap" (a real leak from a quoted "*YANGBAP"). Quote scanlation
+  censor-marks without the asterisk and spell the word the way the voice should
+  say it.
 - Em-dashes: at most one per entry, and only where a human would actually pause.
 - Reactions are spoken as words ("he sighs", "he freezes mid bite"), never inserted
   as sound cues.
@@ -103,15 +108,18 @@ now only guards against drag:
 - Hard ceiling: 80 words. If a joke needs a paragraph, it's two jokes — pick one.
 - Total chapter runtime is the sum of the audio durations. Target zone 15–20
   minutes for a single-chapter recap; a little longer is fine if it flows.
-- **Scene-weight triage — the word count follows the SCENE, not the habit.**
-  Before writing an entry, decide what the panel is worth to a viewer: a
-  PASS-BY (a reaction face, a scream, one quick action) gets 8–15 words in one
-  flowing sentence and moves on — never 10 seconds of description over a
-  1-second reaction; a MOMENT (advances the story, lands a joke, carries
-  dialogue that matters) gets 15–35; a SETPIECE (lore, backstory, system
-  windows, a reveal that deserves awe) gets 35–80. If you cannot say why a
-  viewer should stare at a panel for ten seconds, do not give it ten seconds
-  of words.
+- **Evaluate every scene like a writer — there is no mechanical class rule.**
+  Never think "reaction face means short": a facial scene can deserve a long,
+  funny, reflective entry when it carries a joke or a character thinking, and
+  a system window can deserve one line when nothing in it matters. For every
+  entry, judge what the moment does for the viewer — set up the story, pay
+  something off, or just pass by — then prolong what earns it, keep a quick
+  flowing pace on the filler, and cut every word that only re-describes what
+  the viewer can already see. Before locking an entry ask: am I overextending?
+  Can this be said faster without losing story context? Calibration anchors
+  only: a passing moment survives on 8–15 flowing words, a story moment lives
+  around 15–35, deep setup earns up to 80 — the scene's value decides, never
+  the panel's category.
 - Quick reaction moments should still be short (10–20 words) — brevity through
   natural short sentences, not through deleted connecting words.
 - **Pan-down beats need scroll time.** A tall beat (h/w ≥ ~2.2 in the brief; it

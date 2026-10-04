@@ -28,10 +28,24 @@ def parse_script(path: Path):
         if not b.startswith("### "):
             continue
         header = b.split("\n", 1)[0]
-        m_narr = re.search(r"NARRATION:\n(.*?)(?=\n---|\Z)", b, re.S)
+        # narration ends at a --- rule, any ##/### section header, or the block end —
+        # a bare "## MAIN SCRIPT"/"## OUTRO" header after an entry must never leak
+        # into the TTS text (it was literally spoken as "hash hash main script")
+        m_narr = re.search(r"NARRATION:\n(.*?)(?=\n---|\n## |\n### |\Z)", b, re.S)
         if not m_narr:
             continue
-        narration = m_narr.group(1).strip()
+        raw = m_narr.group(1).strip()
+        stripped = [ln.strip()[:60] for ln in raw.splitlines()
+                    if ln.lstrip().startswith("#") or "SHOT:" in ln or "NARRATION:" in ln]
+        if stripped or "*" in raw:
+            print(f"STRIPPED leak markers from {header}: {stripped or ['asterisk(s)']}",
+                  file=sys.stderr)
+        kept = [ln for ln in raw.splitlines() if not ln.lstrip().startswith("#")]
+        narration = " ".join(" ".join(kept).split()).replace("*", "")
+        if "#" in narration or "SHOT:" in narration or "NARRATION:" in narration:
+            print(f"DIRTY narration after cleanup, refusing to synthesize: {header}",
+                  file=sys.stderr)
+            sys.exit(1)
         beats = []
         m_beat = re.search(r"BEAT (\d+)", header)
         if m_beat:

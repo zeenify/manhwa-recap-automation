@@ -110,15 +110,19 @@ Read each of the three ONCE, carefully — no re-reads; everything stays in cont
    instead. Never merge two panels that each need full-size detail. Merged
    entries narrate both panels in panel order with roughly balanced attention.
    Every beat must be narrated or covered by a merged entry.
-4. **Scene-weight triage, then pacing law.** Classify each beat before writing
-   it: PASS-BY (reaction face, scream, one quick action) → 8–15 words in one
-   flowing sentence, then move on — a 1-second reaction must never eat 10
-   seconds of narration; MOMENT (advances the story, lands a joke, carries
-   dialogue) → 15–35 words; SETPIECE (lore, backstory, system windows, big
-   reveal) → 35–80 words, hard ceiling 80. FDB jokes love long setups — spend
-   them on MOMENTS and SETPIECES, never on a reaction face. Tall pan-down beats
-   (h/w ≥ ~2.2 in the brief) get 25–45 words — the image scrolls at audio
-   speed, and a short entry over a tall strip is an unreadable blur.
+4. **Evaluate each scene, then pace it.** Judge what every panel does for the
+   viewer before writing it: set up the story, pay something off, or just pass
+   by. Prolong what earns it, keep a quick flowing pace on the filler, and cut
+   every word that only re-describes what the viewer already sees. There is NO
+   mechanical class rule — a facial scene can carry a long reflection or the
+   chapter's best joke, and a system window can be one line when nothing in it
+   matters. Before locking an entry ask: am I overextending? Can this be said
+   faster without losing story context? Calibration anchors: passing moment
+   8–15 words, story moment 15–35, setpiece up to 80, hard ceiling 80 — the
+   scene decides, not the category. Spend long FDB setups on moments that earn
+   them. Tall pan-down beats (h/w ≥ ~2.2 in the brief) get 25–45 words — the
+   image scrolls at audio speed, and a short entry over a tall strip is an
+   unreadable blur.
 5. Per entry format:
    ```
    ### BEAT 014 (covers 014–016) — alley confrontation
@@ -136,7 +140,8 @@ Read each of the three ONCE, carefully — no re-reads; everything stays in cont
    revise the full script: replace early-scene descriptors with names/roles
    learned later ("a kid" → the MC's name), fix action attributions that later
    context resolves, and neutralize anything still ambiguous. Also grep the
-   narration for banned meta-words — zero hits required.
+   narration for banned meta-words AND for markdown emphasis characters (* or _)
+   — zero hits required: the TTS reads them aloud.
 
 ## Output
 
@@ -171,9 +176,9 @@ script, and nothing older.
       connector words
 - [ ] Pacing law satisfied: average entry 12–25 words; entries >40 words are
       lore/explanation only; tall pan-down beats (h/w ≥ ~2.2) carry 25–45 words
-- [ ] **Scene-weight triage respected**: no PASS-BY beat (reaction face, scream,
-      one quick action) carries more than ~15 words — long FDB setups are spent
-      on moments and setpieces, never on a reaction face
+- [ ] **Scene evaluation done**: every entry's length is justified by what the
+      scene does for the viewer — setups get room, filler passes quickly; long
+      FDB setups land on moments that earn them
 - [ ] Zero banned meta-words (grep); no direct audience address ("y'all",
       "comment down below", channel/stream business)
 - [ ] Every beat covered (narrated or merged); merges rare (≤ ~6), never more
