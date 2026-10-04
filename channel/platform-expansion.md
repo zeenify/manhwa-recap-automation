@@ -134,3 +134,33 @@ Hashtag core set (rotate 4-6 per post, don't spam all):
 1. TikTok (personal/creator) → 2. Facebook Page → 3. Instagram → 4. Rumble →
 5. Odysee. When any login/signup wall appears during browser work: STOP, ask
 the user, let them type credentials.
+
+## Facebook posting recipe (tested 2026-10-05, ch001 of Return of the Top Class Master)
+
+FB merged page videos into the REEL pipeline — even 11-min horizontal uploads
+go through the reel composer and publish as reels (the wimp chapters are all
+reels in MBS). The "Edit reel" step is NORMAL, not a wrong turn.
+
+1. Page (facebook.com/profile.php?id=61594960413829) → scroll to the timeline
+   composer ("What's on your mind?" field — scrollIntoView + CUA click; the
+   floating "Share a thought..." bubble opens NOTES, not a post — avoid).
+2. In the dialog click the inner "Photo/video" → a file input mounts inside
+   [role=dialog] (accept video/*) → inject the mp4 as a File (chunked base64
+   ≤380KB/evaluate, ~371 chunks for 105MB, assemble via atob→Blob parts) →
+   dispatch change. Upload reaches 100% in ~1-2 min (browser does the transfer).
+3. Type the caption (from fb-captions.json — same format as the wimp bulk) via
+   locator.type() into the dialog textbox → click "Next".
+4. "Edit reel" screen: fill Reel title ("Series — Chapter N | Manhwa Recap"),
+   3 reel tags via the Add tags box (fill + Enter), → "Next".
+5. "Reel settings": caption carried over, audience Public, "Publish now" →
+   click "Post" → dialog closes with a posting confirmation.
+6. The reel then encodes server-side for 10-30 min before it appears on the
+   timeline / MBS published grid / the page Reels tab. VERIFY AFTER A DELAY,
+   not immediately — the published grid will show "Chapter N — ..." with the
+   video duration next to the title.
+
+Gotchas: MBS direct goto ERR_ABORTs — use a NEW IAB tab for
+business.facebook.com. MBS's own composer never mounts its file input via
+injection — the PAGE composer works. The profile feed scrolls inside an inner
+container — use scrollIntoView, not window.scrollBy. Caption typing needs
+locator.click() + locator.type() (real key events); fill() fails on FB fields.
