@@ -1,40 +1,38 @@
 # STORY SO FAR — rolling continuity memo
 
-Updated after: **Chapter 3** ("Return of the Top Class Master")
+Updated after: **Chapter 4** ("Return of the Top Class Master")
 Rule: capped at ~1,500 words. Refreshed after each chapter's script is locked. The next chapter's reader and writer agents receive this file and the previous chapter's script — nothing older.
 
-## Characters (name — role — status at end of ch.3)
+## Characters (name — role — status at end of ch.4)
 
-- **Kang Tae Wook (vessel of the regressed master Ray)** — dark suit, red tie, red eyes when serious. Ch.3: dismantled Ha Tae Yong's crew at the school gate (caught a punch, X-blocked the heir's strike — "LOOKS LIKE YOU NEED A PROPER EDUCATION" — smashed two thugs together, launched the trio skyward, skidded the red-haired one across the pavement), fought four fresh attackers without turning, countered Tae Yong's flame-wreathed fist with a stomp → flying kick → diving punch → KUHUK fist-blast that dropped the heir to his knees. Then the reveal: he pulled out the folded **engagement dissolution paper** — proof he had been engaged to **Ha Yeon Jae** — tore it to shreds before the crowd: "I AM THE ONE WHO IS DECLINING TO HAVE THIS MARRIAGE TAKE PLACE!" (the cancellation was HIS doing, signature and all). Came home to his **mother, alive in this life**; she found his bruised knuckles; he vowed no one would cause them grief again and dropped the hook: **his father "was attacked and killed by someone on the 'route.'"**
-- **Ray (past life)** — the strongest master of Haons; betrayed by vice master **Anuth** (stabbed, core soul stolen at the final gateway); lost the golden-orb clue about his father's death. Backstory: father died, mother hid him at Segang, survived the lightning trial, rose to master.
-- **Ha Tae Yong** — blond heir, cross-scar on left cheek, earrings, self-styled **4-star** Medicinal Arts fighter; humiliated (kneeling, coughing, "HOW CAN A 4-STAR RATED GUY LIKE MYSELF BE SO HELPLESS AGAINST SOME NORMAL PUNK...?!"), slammed into a tree, vowing "I AM NEVER GOING TO LET YOU GET AWAY WITH THIS!" His family spread that Tae Wook twisted an "obsession with the miss" into a betrothal.
-- **Tae Wook's mother** — long dark ponytail, apron; ALIVE in this life; loving but worried ("she cannot care for him alone"); grabbed his bruised hand and begged patience.
-- **Tae Wook's father** — deceased; "attacked and killed by someone on the 'route'" (spoken, not shown).
-- **Ha Yeon Jae** — named only on the dissolution paper; never yet shown on panel.
-- **Cho Hee Sung** — named in dialogue ("NEITHER CHO HEE SUNG NOR THE HA FAMILY LEFT ME ALONE"); broken since ch.1.
-- **The Ha crew** — curly-afro thug, green-haired thug, red-haired skidded thug, mohawked charger; all beaten. **Student crowd** witnessed the paper teardown.
+- **Kang Tae Wook (vessel of the regressed master Ray)** — dark messy hair, red eyes when the master's power surfaces, arm brace early on. Ch.4: pressed his mother about the father's death and got refused; privately resolved to ease her mind by getting stronger; trained through the night (meditation, breathing, a screaming power-up with red eyes snapping open) while noting this "trash body" won't hold; hauled the whole dumbbell load up the mountain himself, face-planted once, and **punched a towering boulder apart in golden energy bursts**; meditated in a ring of golden fire with a translucent spirit body behind him (his friend caught the glow); took the bespectacled kid as a disciple; told his mother to quit housekeeping because he'll work twice as hard; and unearthed an **ornate golden-patterned box** from a cardboard box by the wardrobe — "Found it!"
+- **Tae Wook's mother** — short dark hair, works as a **housekeeper**; only family left. Refused to explain the father's death ("can't afford to lose him too"), begged him to quietly get through school, inspected his bruised knuckles, laughed at his stewed-potatoes whining, and finally conceded ("But still... all right") when he insisted on working harder.
+- **The bespectacled kid (NEW — unnamed disciple)** — small, chubby, sunglasses-on-head in chibi gags, bruised cheek from Ha Tae Yong's crew; star-struck, begged to become Tae Wook's disciple, got palm-blocked ("you don't have that kind of potential"), relented after a tearful outburst; lasted minutes on the mountain, crashed, whined, tried to flee, and witnessed the boulder punch and the glowing meditation ("Is that really Kang Tae Wook?!").
+- **Ray (past life)** — strongest master of Haons; betrayed by **Anuth** (stolen core soul + golden-orb clue). His stats in this body: **physical barely 1-star, skills already 2-star**; the body is "trash" and degrading.
+- **Ha Tae Yong** — humiliated at the school gate (ch.3); Tae Wook expects retaliation and wonders if the Ha family would send elite members to finish a high schooler's fight. Not on panel this chapter.
+- Unseen: **Ha Yeon Jae** (engagement declined), **Cho Hee Sung** (broken), **Suh Jae Dong**, **Choi Ji Yeon**, the homeroom teacher, **Anuth** in Haons.
 
-## Plot state at end of chapter 3
+## Plot state at end of chapter 4
 
-- School-gate war won outright; the Ha family's public narrative (obsession → betrothal) countered by the paper reveal: Tae Wook DECLINED the marriage.
-- Home scene established: mother alive, household modest, the father's death now personal and specific.
-- **Cliffhanger:** resolve closeup, fist tight — "GIVEN THAT I AM MY FATHER'S SON, LIVING A CARE-FREE LIFE WOULD BE A LUXURY TO ME. AND FATHER WAS ATTACKED AND KILLED BY SOMEONE ON THE 'ROUTE,' WASN'T HE?"
+- Mother secure (quit housekeeping pending), disciple acquired, nightly mountain training routine started.
+- Origin pressure keeps building: father killed "on the route"; mother knows more than she says.
+- **Cliffhanger:** alone at the table, sweating, he remembers something stashed near the wardrobe and pulls out an ornate golden-patterned box — "Found it!" (contents not shown).
 
 ## Unresolved threads (payoffs waiting)
 
-- **The "route"** — new term, undefined: where/how the father was killed, and by whom (Ha family involvement suspected but unconfirmed).
-- **The mother's knowledge** — how much she knows about the father's death and the Ha family feud.
-- **Ha Yeon Jae** — still unseen; her real feelings after the canceled engagement ("TAE WOOK-OPPA" reached out in ch.2's flashback).
-- **Anuth in Haons** — the parallel thread; holds the stolen core soul AND the golden-orb clue.
-- **Segang** — what it is; the mother's hiding place back then.
-- **The star ladder** — a 4-star just lost to a "normal punk"; how ratings get measured/raised on Earth is unknown.
-- The **core-soul seal** — Tae Wook still cannot feel his aura.
+- **The golden-patterned box** — what's inside (immediate).
+- **The father's death "on the route"** — who, why, and what the route is; the mother's silence.
+- **The core-soul seal** — aura still unreachable; body 1-star vs skills 2-star gap.
+- **Ha Tae Yong's retaliation** — would the Ha family send elites for a high schooler?
+- **Ha Yeon Jae** — unseen; feelings after the declined marriage.
+- **Anuth in Haons** — the parallel thread (stolen core soul + golden-orb clue).
+- **Segang** — still undefined.
 
-## Voice/continuity notes for chapter 4
+## Voice/continuity notes for chapter 5
 
-- Address conventions: "our boy" / "Kang Tae Wook" for the vessel; Ray is the past-life self; Anuth "the traitor"; Ha Tae Yong by full name (or "the scarred heir" in-panel). Canon names: **Kang Tae Wook / Ray / Anuth / Cho Hee Sung / Suh Jae Dong / Choi Ji Yeon / Ha Tae Yong / Ha Yeon Jae / Haons / Segang / the route**.
-- World canon: core soul (sealed, stolen), aura/internal force/mana, doctor vs martial-artist branches, water/fire/lightning classes, 1-to-12 star ratings (Tae Yong = 4 stars, beaten), the final gateway trial.
-- **Running gags — RECENT window (do not repeat for ~2 chapters):** refrain "This is what he came back for." (3×); the marriage-backstory question chain; the deny-protect-walk-away plan dying into "the replacement plan is murder"; the four-on-one pre-argued objection; the erasure-reversal "until" detonation; the curly→green→red "skidding like a mop" triple; the who-has-been-answering-to-his-name chain. Ch.1–2 gags remain banned. Sincerity drop spent on the mom reveal — a new one needs a fresh moment.
-- Cold open used beat 030 (the heir's kneeling meltdown) with rewind line "The story walks him down to that pavement first, and it starts with a punch caught out of the air." — next chapter needs a fresh rewind phrasing (no stock catchphrase).
+- Address conventions: "our boy" / "Kang Tae Wook" for the vessel; Ray is the past-life self; Anuth "the traitor"; Ha Tae Yong by full name; the disciple kid is unnamed so far (call him "the kid"/"his disciple"). Canon names: **Kang Tae Wook / Ray / Anuth / Cho Hee Sung / Suh Jae Dong / Choi Ji Yeon / Ha Tae Yong / Ha Yeon Jae / Haons / Segang / the route**.
+- World canon: core soul (sealed, stolen), aura/internal force/mana, doctor vs martial-artist branches, water/fire/lightning classes, **1-to-12 star ratings** (body 1-star, skills 2-star), the final gateway trial; training ground = the mountain behind the school; golden-energy punches + meditation spirit-body are Tae Wook's visible powers so far.
+- **Running gags — RECENT window (do not repeat for ~2 chapters):** refrain "One star, and climbing." (3×); the kid's triple-protest question chain; "the basics, somewhat" fake precision; the dinner-dumbbells-mountain escalation triple; "the kid's dumbbells, his own bags, and the general concept of weight" triple; the master-face-plants-instead fake-out; sarcastic "buddy" on the kid; the stewed-potatoes whining deflection. Ch.1–3 gags remain banned. Sincerity drop spent on the mother's "But still, all right." — a new one needs a fresh earned moment.
+- Cold open used beat 042 (the golden-energy boulder punch) with rewind line "Our boy does, and that moment is still a few scenes away, so the story walks it back to where it starts, which is a kitchen." — next chapter needs a fresh rewind phrasing (no stock catchphrase).
 - Narration VOICE: the **"mommy" voice** — `tts_generate --voice mommy` (preset: reference `d8cc2855…`, speed 1.07, gain 5dB, plus the 0.4s inter-entry pad). No background music.
 - Narration writing voice: FDB-voice writer (DerekFDB joke grammar, fully diegetic), flow rule + scene-evaluation pacing per tone.md; hard ceiling 60 words/entry; zero production words; no asterisks/markdown in narration; em-dashes ≤1 per entry. Script format: `### COLD OPEN (from beat NNN) — title` (the cold open REPLACES that beat's own entry); NO outro section — the tease folds into the final beat (≤60 words).
