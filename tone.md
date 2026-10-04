@@ -27,8 +27,12 @@ about the MC like "my guy," "bro," "this dude" — affectionate contempt.
    'IT SPLASHED ON MY FOOT!' — incredible, cinema."
 6. **SFX are performed, not read.** "HAWK. PTOOO." gets a beat of silence and then
    disgust. "WOOF! WOOF!" gets "he's barking at him. Actual barking."
-7. **Vary rhythm.** Long winding sentence, then three words. Then one. Never three
-   same-length sentences in a row.
+7. **Vary rhythm by sentence length, never by fragmenting.** Alternate a long
+   connected sentence with a shorter complete one. The shortest sentence is still
+   a full sentence with a subject and a verb (8–12 words is short; three words is
+   a pause, not a punchline). Never two ultra-short sentences in a row, and never
+   a staccato chain ("X. Y. Z.") — the TTS turns every period into a hard stop
+   and the entry sounds scuffed.
 8. **No slop phrases, ever.** Banned: "In today's video", "without further ado",
    "let's dive in", "what happens next is insane", "smash that like button" (we
    ask for the sub ONCE, at the end, in a funny way or not at all), "little did he
@@ -64,6 +68,15 @@ word and let the audio run a second longer.
 - **Banned choppiness:** sentence fragments ("Studio District, night."), colon-leadins
   ("Home: a metal door…"), one-word punchline paragraphs ("Magic."), and
   parenthetical stage directions ("— sigh —" → write "he lets out a long sigh").
+- **Staccato is choppiness too** (learned from the FDB-voice samples): "Every box
+  checked. Except none of it mattered." is two hard TTS stops for one thought.
+  Join the thought: "The checklist was perfect on paper, and that changed
+  absolutely nothing." A reversal lands through the connector word ("except",
+  "and then", "which is why"), not through a period.
+- **Connectors are the TTS's breathing.** When two ideas share one breath, join
+  them with and / so / but / because / which / except instead of a full stop.
+  Fewer periods per idea equals smoother audio; a period goes at the end of a
+  completed thought, not mid-breath.
 - Em-dashes: at most one per entry, and only where a human would actually pause.
 - Reactions are spoken as words ("he sighs", "he freezes mid bite"), never inserted
   as sound cues.
@@ -90,6 +103,15 @@ now only guards against drag:
 - Hard ceiling: 80 words. If a joke needs a paragraph, it's two jokes — pick one.
 - Total chapter runtime is the sum of the audio durations. Target zone 15–20
   minutes for a single-chapter recap; a little longer is fine if it flows.
+- **Scene-weight triage — the word count follows the SCENE, not the habit.**
+  Before writing an entry, decide what the panel is worth to a viewer: a
+  PASS-BY (a reaction face, a scream, one quick action) gets 8–15 words in one
+  flowing sentence and moves on — never 10 seconds of description over a
+  1-second reaction; a MOMENT (advances the story, lands a joke, carries
+  dialogue that matters) gets 15–35; a SETPIECE (lore, backstory, system
+  windows, a reveal that deserves awe) gets 35–80. If you cannot say why a
+  viewer should stare at a panel for ten seconds, do not give it ten seconds
+  of words.
 - Quick reaction moments should still be short (10–20 words) — brevity through
   natural short sentences, not through deleted connecting words.
 - **Pan-down beats need scroll time.** A tall beat (h/w ≥ ~2.2 in the brief; it

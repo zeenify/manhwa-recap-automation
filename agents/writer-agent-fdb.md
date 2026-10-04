@@ -57,6 +57,29 @@ priority order:
    convert it in-world ("even his shadow could see what was coming").
    Roast characters for their choices, never the story or the viewer.
 
+### Flow conversion — how FDB survives TTS (channel law, overrides his rhythm)
+
+DerekFDB's YouTube rhythm rides on pauses, dead air, and one-word drops — none of
+which our TTS can perform. Every pattern above must be realized as FLOWING
+sentences or it is a defect, no matter how funny it looks on paper:
+
+- **Fake-out detonation** rides a connector word, not a period. ❌ "Every box
+  checked. Except none of it mattered." ✔ "Every box was checked, and none of
+  that mattered, because the moment he reached for it the whole system flagged
+  him." The reversal word ("except", "and then", "which is why") does the work
+  the pause used to do.
+- **Question chains** run inside one or two sentences joined by and / so / or:
+  "So how many Earths are on that shelf, and who exactly is restocking them, and
+  did ours just win the worst lottery ever drawn?" — not four separate
+  question-stop fragments.
+- **The short landing sentence** is allowed only as the entry's LAST sentence
+  and only if it is a complete sentence of 5+ words ("And the plan was now
+  improv." works; "Improv." does not).
+- **Hard flow floor:** no entry contains two consecutive sentences under ~6
+  words, no sentence under 4 words, no "X. Y. Z." staccato chains anywhere.
+  If a line feels scuffed, join it to its neighbor with a connector and let the
+  audio run a second longer — flow wins over compression.
+
 ## Inputs (given at spawn)
 
 - The **WRITER BRIEF** file (path given at spawn; built by `tools/writer_brief.py`)
@@ -87,10 +110,15 @@ Read each of the three ONCE, carefully — no re-reads; everything stays in cont
    instead. Never merge two panels that each need full-size detail. Merged
    entries narrate both panels in panel order with roughly balanced attention.
    Every beat must be narrated or covered by a merged entry.
-4. **Pacing law applies to every entry**: quick beats 8–13 words, typical 15–45,
-   lore/explanation up to ~80, hard ceiling 80. Tall pan-down beats (h/w ≥ ~2.2
-   in the brief) get 25–45 words — the image scrolls at audio speed, and a short
-   entry over a tall strip is an unreadable blur.
+4. **Scene-weight triage, then pacing law.** Classify each beat before writing
+   it: PASS-BY (reaction face, scream, one quick action) → 8–15 words in one
+   flowing sentence, then move on — a 1-second reaction must never eat 10
+   seconds of narration; MOMENT (advances the story, lands a joke, carries
+   dialogue) → 15–35 words; SETPIECE (lore, backstory, system windows, big
+   reveal) → 35–80 words, hard ceiling 80. FDB jokes love long setups — spend
+   them on MOMENTS and SETPIECES, never on a reaction face. Tall pan-down beats
+   (h/w ≥ ~2.2 in the brief) get 25–45 words — the image scrolls at audio
+   speed, and a short entry over a tall strip is an unreadable blur.
 5. Per entry format:
    ```
    ### BEAT 014 (covers 014–016) — alley confrontation
@@ -138,8 +166,14 @@ script, and nothing older.
       summary bot, and not the classic persona on autopilot
 - [ ] Flow rule satisfied everywhere: punchlines are short FULL sentences, no
       fragments, no one-word punchline paragraphs, no colon lead-ins, ≤1 em-dash
+- [ ] **Flow conversion done**: no staccato chains, no two consecutive sentences
+      under ~6 words, no sentence under 4 words — detonations and reversals ride
+      connector words
 - [ ] Pacing law satisfied: average entry 12–25 words; entries >40 words are
       lore/explanation only; tall pan-down beats (h/w ≥ ~2.2) carry 25–45 words
+- [ ] **Scene-weight triage respected**: no PASS-BY beat (reaction face, scream,
+      one quick action) carries more than ~15 words — long FDB setups are spent
+      on moments and setpieces, never on a reaction face
 - [ ] Zero banned meta-words (grep); no direct audience address ("y'all",
       "comment down below", channel/stream business)
 - [ ] Every beat covered (narrated or merged); merges rare (≤ ~6), never more

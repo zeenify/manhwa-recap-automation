@@ -36,12 +36,16 @@ Read each of the three ONCE, carefully — no re-reads; everything stays in cont
    system windows). Merged entries get narration covering both panels in panel
    order with roughly balanced attention. Every beat must be narrated or
    covered by a merged entry.
-4. **Pacing law applies to every entry**: match word count to the beat's screen
-   time (see the table in tone.md). Quick beats get 8–13 words. Lore gets 25–75.
-   Over 40 words requires an explanation beat. Average entry: 12–25 words.
-   Tall pan-down beats (h/w ≥ ~2.2 in the brief) get the upper half of the range
-   (25–45 words) — the image scrolls at audio speed, and a short entry over a
-   tall strip is an unreadable blur.
+4. **Scene-weight triage, then pacing law.** Before writing each entry, classify
+   the beat from its composition + event text: PASS-BY (reaction face, scream,
+   one quick action) → 8–15 words, one flowing sentence, move on; MOMENT
+   (advances the story, lands a joke, carries dialogue that matters) → 15–35
+   words; SETPIECE (lore, backstory, system windows, big reveal) → 35–80 words.
+   The audio is the clock: over-describing a 1-second reaction freezes it on
+   screen for 10 seconds — the most common pacing defect. Average entry: 12–25
+   words. Tall pan-down beats (h/w ≥ ~2.2 in the brief) get the upper half of
+   their range (25–45 words) — the image scrolls at audio speed, and a short
+   entry over a tall strip is an unreadable blur.
 5. Per entry format:
    ```
    ### BEAT 014 (covers 014–016) — alley confrontation
@@ -84,6 +88,11 @@ previous chapter's script, and nothing older.
 - [ ] Sounds like tone.md, not a summary bot (check: would a friend laugh at ≥3 lines?)
 - [ ] **Pacing law satisfied**: average entry 12–25 words; entries >40 words are
       lore/explanation only; no beat drags past its screen time
+- [ ] **Scene-weight triage respected**: no PASS-BY beat (reaction face, scream,
+      one quick action) carries more than ~15 words — never 10 seconds of speech
+      over a 1-second reaction
+- [ ] **Staccato check**: no entry has two consecutive sentences under ~6 words
+      or a "X. Y. Z." chain — punchlines are full sentences joined by connectors
 - [ ] Tall pan-down beats (h/w ≥ ~2.2) carry 25–45 words so the scroll stays readable
 - [ ] Zero banned phrases; grep for meta-words returns zero narration hits
 - [ ] Every beat covered (narrated or merged)
