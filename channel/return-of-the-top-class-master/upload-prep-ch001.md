@@ -1,8 +1,43 @@
 # UPLOAD PREP — ch001 — Return of the Top Class Master (first YouTube chapter upload)
 
-Status: PREP COMPLETE — waiting on ChatGPT thumbnail generation + YouTube upload session.
-Follows the template from `channel/a-wimps-strategy-guide/upload-prep-merged-video.md`.
-Thumbnail pipeline: `agents/thumbnail-agent.md`.
+Status: **LIVE** — published Public on 2026-10-05.
+Video: https://youtu.be/VXOM-9kPmPc — title as recommended (option 1), 1080p HD
+verified available, 11:38, playlist "Return of the Top Class Master" created and
+attached, tags 15/15, thumbnail custom (ChatGPT art + PIL text pass), audience
+not-made-for-kids, English, Standard licence.
+
+## Follow-ups (user, ~2 min)
+1. **Pin the comment** — the rating-question comment IS posted (from
+   @zeenifyrecaps); YouTube blocks PINNING behind a one-time anti-spam
+   verification in Studio (user must complete it; agent rule: user handles
+   verifications). Comment → ⋮ → Pin.
+2. **Possible duplicate playlist** — the Studio picker showed two
+   "Return of the Top Class Master" entries (first Create attempt may have
+   made an empty one before the successful attach). Check
+   studio.youtube.com → Content → Playlists and delete an empty duplicate.
+3. **Copyright check was still running at publish time** ("taking longer than
+   usual") — check Content tab next day for any claim.
+
+## YouTube upload recipe (what worked — for ch002+)
+- Drive the built-in browser via the control-browser skill; login walls = stop,
+  user logs in. Studio was already logged in; ChatGPT too.
+- Upload dialog: Create/Upload videos → inject File objects into the dialog's
+  `input[type=file]` via page-side evaluate — **chunked base64 works at
+  ~380KB/evaluate, ~47ms per chunk** → a 105MB mp4 injects in ~20s of evaluate
+  calls; the browser then does the real upload natively and fast (105MB was
+  "Upload complete" within ~2 min). Assemble in-page: chunks → atob in 8MB
+  segments → Blob parts → File → DataTransfer → input.files → dispatch change.
+- Metadata: title/description via getByRole fill; tags via the visible
+  `#text-input` (fill + Enter per tag; there are TWO #text-input nodes —
+  filter visible); thumbnail via `#file-loader` (accept jpeg/png).
+- The new-playlist modal inside the upload dialog is FLAKY (may not mount);
+  create it later on the video edit page — picker → New playlist menu →
+  "Add title" textbox mounts there.
+- The upload wizard can be advanced while the copyright check runs ("checks
+  aren't final"); Published dialog confirmed.
+- Pinned comments need a one-time Studio verification → user step.
+- www.youtube.com feed pages render EMPTY in the built-in browser; watch pages
+  and studio.youtube.com work.
 
 ## Files
 
