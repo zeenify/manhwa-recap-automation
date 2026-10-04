@@ -1,7 +1,7 @@
 """tts_generate — read the narration script, synthesize each entry via fish.audio,
 measure durations, and write the timing file the assembler syncs to.
 
-Usage: python tools/tts_generate.py --script scripts/ch01_script.md --out-dir audio/ch001
+Usage: python tools/tts_generate.py --script scripts/a-wimps-strategy-guide/ch001_script.md --out-dir audio/a-wimps-strategy-guide/ch001
 Idempotent: skips entries whose mp3 already exists (safe to re-run).
 """
 import argparse
@@ -96,8 +96,8 @@ def duration(path: Path) -> float:
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--script", default="scripts/ch01_script.md")
-    ap.add_argument("--out-dir", default="audio/ch001")
+    ap.add_argument("--script", default="scripts/a-wimps-strategy-guide/ch001_script.md")
+    ap.add_argument("--out-dir", default="audio/a-wimps-strategy-guide/ch001")
     ap.add_argument("--workers", type=int, default=4,
                     help="parallel TTS requests (1 = sequential, the old behavior)")
     args = ap.parse_args()

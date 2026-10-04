@@ -12,7 +12,7 @@
 tmp/
 
 # ---- per-run artifacts (the sample in examples/ shows the formats) ----
-scripts/*.md
+scripts/
 assets/
 audio/
 videos/

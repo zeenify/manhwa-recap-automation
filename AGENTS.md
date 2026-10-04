@@ -24,14 +24,15 @@ Commit after every successful stage.
 - `tools/merge_drafts.py` — fuses reader-part drafts into one chapter draft. Handles both spawn layouts: sequential adjacent parts (fuses `continues`/`continues_from_previous` seams) and parallel overlapping parts (fuses the beat that completes a range-cut panel, drops duplicate overlap beats; prints coverage warnings).
 - `tools/writer_brief.py` — pre-digests beats.json (with aspect ratios) + all handoff synopses + story-so-far into ONE briefing file for the writer agent, so the writer reads 3 files total instead of 7.
 - `tools/tts_generate.py` — synthesizes one mp3 per script entry via the fish.audio API (model `s2.1-pro-free`; voice reference_id and API constants live in the script; API key in `tmp/fish_api_key.txt` — treat as secret, never echo or publish). Idempotent (skips existing mp3s), retries on failure, 4 parallel workers by default (`--workers`).
-- `tools/assemble.py` — the renderer. Reads beats.json + timing.json + shot directives from the script → renders ONE clip per script entry (a merged entry becomes a side-by-side collage shown for the whole entry's audio; `pan-down` scrolls a 70%-width centered column over the blurred bg — full-width scrolling is gone) → concats → muxes narration → optional music. Outputs `videos/<chapter>/<chapter>.mp4` at 1920×1080/30fps. Idempotent per segment (skips existing clips — **delete `videos/<chapter>/clips/*.mp4` AND the cached `collage_entry_*.png` whenever render settings or beats change**, or stale data gets reused).
+- `tools/assemble.py` — the renderer. Reads beats.json + timing.json + shot directives from the script → renders ONE clip per script entry (a merged entry becomes a side-by-side collage shown for the whole entry's audio; `pan-down` scrolls a 70%-width centered column over the blurred bg — full-width scrolling is gone) → concats → muxes narration → optional music. Outputs `videos/<slug>/<chapter>/<chapter>.mp4` at 1920×1080/30fps. Idempotent per segment (skips existing clips — **delete `videos/<slug>/<chapter>/clips/*.mp4` AND the cached `collage_entry_*.png` whenever render settings or beats change**, or stale data gets reused).
 - `agents/reader-agent.md`, `agents/writer-agent.md`, `agents/writer-agent-fdb.md` — permanent agent protocols. **Read the relevant one before doing agent work**; spawn subagents with "follow this file + spawn parameters".
 - `tone.md` — channel persona ("Roasting Best Friend") + the **pacing law** (words per beat by screen time). Law for all narration.
 - `research/narration_style_notes.md` — verbatim style analysis from a real 636K-sub recap channel's transcript. Style bible for the CLASSIC writer.
 - `research/fdb_style_notes.md` — verbatim style analysis of DerekFDB (1.25M-sub movie-commentary channel, "for the giggles"). Style bible for the FDB-VOICE writer.
 - `story-so-far.md` — rolling continuity memo, refreshed after every approved chapter script (cap ~1,500 words). Next chapter's agents get this + previous script, nothing older.
-- `scripts/` — narration scripts. `assets/<slug>/<chapter>/beats/` — exported beat PNGs + `beats.json` (the contract between all stages).
-- `audio/<chapter>/` — per-entry mp3s + `timing.json`: entry → mp3 file, measured `duration_s`, covered beats. **This is the sync contract: an entry's screen time = its narration mp3's duration (audio is the clock).** `videos/`, `tmp/` — outputs and scratch.
+- `scripts/<slug>/` — narration scripts, grouped per series (`scripts/<slug>/<chapter>_script.md`).
+- `assets/<slug>/<chapter>/beats/` — exported beat PNGs + `beats.json` (the contract between all stages).
+- `audio/<slug>/<chapter>/` — per-entry mp3s + `timing.json`: entry → mp3 file, measured `duration_s`, covered beats. **This is the sync contract: an entry's screen time = its narration mp3's duration (audio is the clock).** `videos/<slug>/<chapter>/`, `tmp/` — outputs and scratch. EVERYTHING series-produced lives under the series slug — never create a second series that shares `audio/ch001`-style paths with an old one.
 
 ## Commands
 
@@ -41,8 +42,8 @@ python tools/toonkit.py window  toonverse/<slug>/chapter-NN --y0 A --y1 B  # ful
 python tools/toonkit.py crop    toonverse/<slug>/chapter-NN --beats <draft.json> --out assets/<slug>/<chapter>/beats
 python tools/merge_drafts.py    --out <merged.json> <part1.json> [<part2.json> <part3.json>]
 python tools/writer_brief.py    --slug <slug> --chapter <chapter> --out tmp/writer_brief_<chapter>.md
-python tools/tts_generate.py    --script scripts/<chapter>_script.md --out-dir audio/<chapter>
-python tools/assemble.py        --slug <slug> --chapter <chapter> --script scripts/<chapter>_script.md
+python tools/tts_generate.py    --script scripts/<slug>/<chapter>_script.md --out-dir audio/<slug>/<chapter>
+python tools/assemble.py        --slug <slug> --chapter <chapter> --script scripts/<slug>/<chapter>_script.md
 ```
 
 Deps: Python 3.11 + Pillow + numpy (already installed). No git repo, no linter, no test suite — verification is visual QA of exported beats and grep checks on scripts.
@@ -81,7 +82,7 @@ Deps: Python 3.11 + Pillow + numpy (already installed). No git repo, no linter, 
 - Writer agents' self-reported QA can be wrong (ch10's claimed "all under the cap" shipped 81- and 87-word entries) — the MAIN SESSION always re-verifies coverage, word caps, banned words, and shot directives with the production parsers before spending TTS credits; over-cap entries get edited by hand and their clips re-generated.
 - Stale `ffmpeg.exe` processes lock clip files and break cleanup — `taskkill //F //IM ffmpeg.exe` before deleting/re-rendering.
 - The concat demuxer resolves relative paths against the LIST FILE's directory — always write absolute forward-slash paths into `segments.txt` / `audio_list.txt`.
-- Change a render setting (resolution, filters) without deleting old clips = the idempotent skip silently reuses the stale clips. Purge `videos/<chapter>/clips/` first.
+- Change a render setting (resolution, filters) without deleting old clips = the idempotent skip silently reuses the stale clips. Purge `videos/<slug>/<chapter>/clips/` first.
 
 ## NEW CHAPTER RUNBOOK (do these in order, per chapter — e.g. chapter 2)
 
@@ -131,19 +132,19 @@ crops correct.
 3. `python tools/merge_drafts.py --out toonverse/<slug>/chapter-NN/beats_full_chNN.json <part1.json> [<part2.json> <part3.json>]`
 4. `python tools/toonkit.py crop toonverse/<slug>/chapter-NN --beats <merged.json> --out assets/<slug>/<chapter>/beats`
 5. Build the writer brief (ONE file for the writer instead of six reads):
-   `python tools/writer_brief.py --slug <slug> --chapter <chapter> --out tmp/writer_brief_<chapter>.md`
+   `python tools/writer_brief.py --slug <slug> --chapter <chapter> --out tmp/writer_brief_<slug>_<chapter>.md`
    Spawn WRITER AGENT — pick the persona at spawn (user's choice; default CLASSIC):
    - CLASSIC: "Execute the WRITER AGENT protocol in agents/writer-agent.md.
-     Inputs: tmp/writer_brief_<chapter>.md + tone.md +
+     Inputs: tmp/writer_brief_<slug>_<chapter>.md + tone.md +
      research/narration_style_notes.md (read each once, nothing else). Output:
-     scripts/<chapter>_script.md."
+     scripts/<slug>/<chapter>_script.md."
    - FDB-VOICE: "Execute the WRITER AGENT protocol in agents/writer-agent-fdb.md.
-     Inputs: tmp/writer_brief_<chapter>.md + tone.md +
+     Inputs: tmp/writer_brief_<slug>_<chapter>.md + tone.md +
      research/fdb_style_notes.md (read each once, nothing else). Output:
-     scripts/<chapter>_script.md."
+     scripts/<slug>/<chapter>_script.md."
    Either way it handles flow rule, pacing, harmonization, QA.
-6. `python tools/tts_generate.py --script scripts/<chapter>_script.md --out-dir audio/<chapter>` (idempotent — safe to re-run; ~4 parallel workers by default, expect ~3–5 min)
-7. `python tools/assemble.py --slug <slug> --chapter <chapter> --script scripts/<chapter>_script.md` (run in background; ~25–40 min for ~15 min of video)
+6. `python tools/tts_generate.py --script scripts/<slug>/<chapter>_script.md --out-dir audio/<slug>/<chapter>` (idempotent — safe to re-run; ~4 parallel workers by default, expect ~3–5 min)
+7. `python tools/assemble.py --slug <slug> --chapter <chapter> --script scripts/<slug>/<chapter>_script.md` (run in background; ~25–40 min for ~15 min of video)
 8. Verify with ffprobe (duration ≈ sum of audio durations; 1920×1080; aac audio).
    Then refresh `story-so-far.md` per the writer protocol's continuity duty —
    the main session can do this directly from the handoffs + script; a subagent

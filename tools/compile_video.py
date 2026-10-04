@@ -14,6 +14,7 @@ import subprocess
 from pathlib import Path
 
 W, H, FPS = 1920, 1080, 30
+SERIES_SLUG = "a-wimps-strategy-guide"
 SERIES = "A WIMP'S STRATEGY GUIDE"
 SERIES_SUB = "TO CONQUER THE TOWER"
 CARD_DUR = 2.5
@@ -102,7 +103,7 @@ def main():
             render_card_clip(png, clip, CARD_DUR)
             entries.append((clip, label))
             total += CARD_DUR
-        ch = Path(f"videos/ch{n:03d}/ch{n:03d}.mp4")
+        ch = Path(f"videos/{SERIES_SLUG}/ch{n:03d}/ch{n:03d}.mp4")
         if not ch.exists():
             raise SystemExit(f"missing chapter video: {ch}")
         lines.append(f"{_fmt_ts(total)} {label}")
@@ -161,14 +162,14 @@ def main():
             cursor += CARD_DUR
         ch_dur = float(subprocess.run(
             ["ffprobe", "-v", "error", "-show_entries", "format=duration",
-             "-of", "csv=p=0", f"videos/ch{n:03d}/ch{n:03d}.mp4"],
+             "-of", "csv=p=0", f"videos/{SERIES_SLUG}/ch{n:03d}/ch{n:03d}.mp4"],
             capture_output=True, text=True, check=True).stdout.strip())
         ch_entries.append({
             "n": n,
             "label": f"Chapter {n}",
             "start": _fmt_ts(cursor),
             "start_seconds": round(cursor, 2),
-            "source_file": f"videos/ch{n:03d}/ch{n:03d}.mp4",
+            "source_file": f"videos/{SERIES_SLUG}/ch{n:03d}/ch{n:03d}.mp4",
         })
         cursor += ch_dur
     meta = {

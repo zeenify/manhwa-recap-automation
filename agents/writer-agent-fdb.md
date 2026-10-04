@@ -145,7 +145,7 @@ Read each of the three ONCE, carefully — no re-reads; everything stays in cont
 
 ## Output
 
-Write the script to the exact path given at spawn (`scripts/<chapter>_script.md`),
+Write the script to the exact path given at spawn (`scripts/<slug>/<chapter>_script.md`),
 with a cold-open section at top, then beat-ordered entries, then the outro tease
 folded into the final beat. You may write it in TWO chunks (Write the file with
 the first half, then append the rest with a second write) — long single

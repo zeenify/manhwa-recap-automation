@@ -34,7 +34,7 @@ your scans (toonverse/<slug>/chapter-NN/*.jpg)
   assemble (ffmpeg) ──► 1920×1080/30fps MP4: blurred-pad cards, camera moves,
         │                side-by-side collages for merged beats
         ▼
-  videos/chNNN/chNNN.mp4
+  videos/<slug>/chNNN/chNNN.mp4
 ```
 
 The design principle: **the AI agent is the reader and the writer; the Python
@@ -112,9 +112,9 @@ should be committed to git when it completes, so a bad run is always one
 | merging | `tools/merge_drafts.py` | `beats_full_chNN.json` |
 | cropping | `tools/toonkit.py crop` | `assets/<slug>/chNNN/beats/` PNGs + `beats.json` |
 | writer brief | `tools/writer_brief.py` | `tmp/writer_brief_chNNN.md` |
-| narration | writer agent (AI) | `scripts/chNNN_script.md` |
-| TTS | `tools/tts_generate.py` | `audio/chNNN/*.mp3` + `timing.json` |
-| render | `tools/assemble.py` | `videos/chNNN/chNNN.mp4` (1080p/30fps, AAC) |
+| narration | writer agent (AI) | `scripts/<slug>/chNNN_script.md` |
+| TTS | `tools/tts_generate.py` | `audio/<slug>/chNNN/*.mp3` + `timing.json` |
+| render | `tools/assemble.py` | `videos/<slug>/chNNN/chNNN.mp4` (1080p/30fps, AAC) |
 
 ## Worked example
 

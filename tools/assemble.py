@@ -18,6 +18,9 @@ Camera rules (v2):
 Usage:
   python tools/assemble.py --slug a-wimps-strategy-guide --chapter ch001 \
       [--test N]   # render only the first N entries (smoke test)
+
+All outputs are slug-grouped: scripts/<slug>/, audio/<slug>/<chapter>/,
+videos/<slug>/<chapter>/.
 """
 import argparse
 import json
@@ -45,13 +48,16 @@ def sh(cmd, **kw):
     return r
 
 
-def root_script_default(chapter: str) -> Path:
-    p = Path(f"scripts/{chapter}_script.md")
+def root_script_default(slug: str, chapter: str) -> Path:
+    p = Path(f"scripts/{slug}/{chapter}_script.md")
     if not p.exists():
-        alt = Path(f"scripts/{chapter.replace('ch00', 'ch0')}_script.md")
+        alt = Path(f"scripts/{slug}/{chapter.replace('ch00', 'ch0')}_script.md")
         if alt.exists():
             return alt
-        # fall back: any script mentioning this chapter slug order
+        # legacy flat layout (first-series scripts lived at scripts/ root)
+        flat = Path(f"scripts/{chapter}_script.md")
+        if flat.exists():
+            return flat
         for cand in sorted(Path("scripts").glob("*_script.md")):
             return cand
     return p
@@ -164,15 +170,15 @@ def main():
     ap.add_argument("--test", type=int, default=0, help="render only first N entries")
     ap.add_argument("--script", default=None, help="narration script path (default: scripts/<chapter>_script.md)")
     args = ap.parse_args()
-    script_path = Path(args.script) if args.script else root_script_default(args.chapter)
+    script_path = Path(args.script) if args.script else root_script_default(args.slug, args.chapter)
 
     root = Path(".")
     beats_idx = {b["beat"]: b for b in json.loads(
         (root / f"assets/{args.slug}/{args.chapter}/beats/beats.json").read_text(encoding="utf-8"))}
-    timing = json.loads((root / f"audio/{args.chapter}/timing.json").read_text(encoding="utf-8"))
+    timing = json.loads((root / f"audio/{args.slug}/{args.chapter}/timing.json").read_text(encoding="utf-8"))
     directives = parse_shot_directives(script_path)
 
-    work = root / f"videos/{args.chapter}"
+    work = root / f"videos/{args.slug}/{args.chapter}"
     clips = work / "clips"
     clips.mkdir(parents=True, exist_ok=True)
 
