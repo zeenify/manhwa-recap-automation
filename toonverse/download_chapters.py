@@ -5,9 +5,9 @@ import time
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor
 
-SERIES = "a-wimps-strategy-guide-to-conquer-the-tower"
+SERIES = "return-of-the-top-class-master"
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-FIRST, LAST = 1, 20
+FIRST, LAST = 1, 20  # user decision 2026-10-04: only the first 20 chapters for now
 WORKERS = 6
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
