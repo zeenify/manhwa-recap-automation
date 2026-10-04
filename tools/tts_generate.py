@@ -98,11 +98,13 @@ def tts(text: str, out: Path, key: str, voice: str) -> bool:
     return False
 
 
-def post_process(path: Path, speed: float, gain: str) -> None:
+def post_process(path: Path, speed: float, gain: str, pad_s: float) -> None:
     """Manual prosody knobs the fish.audio API lacks (verified 2026-10-04: the
     s2.1 endpoint silently ignores speed/volume fields — generation randomness
     masquerades as effect). Runs immediately after synthesis and BEFORE duration
-    measurement, so the timing contract always reflects the final audio.
+    measurement, so the timing contract always reflects the final audio — the
+    tail pad makes every beat's screen time include a natural pause between
+    entries (user finding: back-to-back narration with zero gap sounds wrong).
     Idempotent: only ever touches freshly synthesized files — the skip-if-exists
     check runs before this, so processed files are never processed twice."""
     af = []
@@ -111,6 +113,8 @@ def post_process(path: Path, speed: float, gain: str) -> None:
     if gain and gain != "0dB":
         af.append(f"volume={gain}")
         af.append("alimiter=limit=0.95:level=false")
+    if pad_s > 0:
+        af.append(f"apad=pad_dur={pad_s}")
     if not af:
         return
     tmp = path.with_suffix(".tmp.mp3")
@@ -143,6 +147,9 @@ def main():
                     help="override the voice preset's tempo factor, e.g. 1.07")
     ap.add_argument("--gain", default=None,
                     help="override the voice preset's loudness lift, e.g. 5dB")
+    ap.add_argument("--pad", type=float, default=0.4,
+                    help="seconds of tail silence padded onto every entry (breathing room "
+                         "between beats; included in the timing contract)")
     args = ap.parse_args()
 
     voice_id = VOICES.get(args.voice, args.voice)
@@ -169,9 +176,9 @@ def main():
     if jobs:
         def run(job):
             i, e, f = job
-            ok = tts(e["narration"], f, key, args.voice)
+            ok = tts(e["narration"], f, key, voice_id)
             if ok:
-                post_process(f, args.speed, args.gain)
+                post_process(f, args.speed, args.gain, args.pad)
             return i, ok
         with ThreadPoolExecutor(max_workers=max(1, args.workers)) as pool:
             for i, ok in pool.map(run, jobs):
@@ -181,8 +188,9 @@ def main():
                 print(f"[{i+1}/{len(entries)}] synthesized beats {entries[i]['beats']}")
 
     # pass 3: measure durations in order, write the timing contract
-    timing = {"reference_id": args.voice, "model": MODEL,
-              "speed": args.speed, "gain": args.gain, "entries": []}
+    timing = {"reference_id": voice_id, "voice_name": args.voice,
+              "model": MODEL, "speed": args.speed, "gain": args.gain,
+              "pad_s": args.pad, "entries": []}
     for i, e in enumerate(entries):
         f = files[i]
         dur = duration(f)

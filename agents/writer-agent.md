@@ -102,7 +102,8 @@ previous chapter's script, and nothing older.
 - [ ] Zero banned phrases; grep for meta-words returns zero narration hits
 - [ ] Every beat covered (narrated or merged)
 - [ ] Merges are rare (≤ ~6) and never cover more than 2 beats
-- [ ] Cold open is the chapter's most extreme moment
+- [ ] Cold open is the chapter's most extreme moment, and its last line
+      explicitly signals the rewind in fresh words (no stock catchphrase)
 - [ ] Re-hooks present at the right density
 - [ ] Shot directive on every entry
 - [ ] Names/attribution harmonized with later chapter reveals

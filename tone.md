@@ -141,10 +141,13 @@ now only guards against drag:
 ## Retention structure
 
 - **Cold open:** the single most extreme/absurd moment of the chapter, 3–5 lines,
-  before any context. Land the final line as a hook that throws straight into the
-  story — and VARY it chapter to chapter. No fixed sign-off catchphrase (the old
-  "Yeah. Let's back up." got repetitive after a few episodes): end on the worst
-  decision just made, a direct story question, or mid-action instead.
+  before any context. Its last line must BOTH hook AND explicitly signal that the
+  moment comes from later in the story (otherwise the rewind reads as a linear
+  continuation and confuses the viewer). Phrase the signal freshly each chapter —
+  the content differs, so the line should too ("That moment is coming, because
+  this story starts long before it." / "That's where this is going — here's
+  where it starts."). No stock catchphrase: the old verbatim "Yeah. Let's back
+  up." every chapter got repetitive and is retired.
 - **Re-hook** roughly every 8–10 minutes of runtime: a one-line tease of what's
   coming ("This is the last calm thought he has for about an hour, by the way.").
 - **Chapter end:** land the cliffhanger, one short outro line teasing the next
