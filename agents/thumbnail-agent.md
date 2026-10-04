@@ -84,7 +84,15 @@ Pattern script: `tmp/make_thumb_ch001.py` (rerunnable per video).
 
 ## Log
 
-- **ch001 — Return of the Top Class Master** (2026-10-05): samples reused from
-  bank; beats chosen: beat_0010 (betrayal stab, red eyes) primary,
-  beat_0068 (predatory grin) backup. Phrase: "BETRAYED BY HIS BEST FRIEND".
-  Status: [update when the ChatGPT generation lands].
+- **ch001 — Return of the Top Class Master** (2026-10-05): DONE. Samples reused
+  from bank (8) + beats beat_0010 (betrayal) & beat_0068 (grin) attached to a
+  fresh ChatGPT convo (injected as File objects into ChatGPT's hidden
+  `#upload-files` input — file chooser unsupported in IAB; chunked base64 via
+  `window.__up`, ≤280k chars/evaluate). One prompt produced TWO candidates
+  (1672×941); picked "Blue Lightning Betrayal" (protagonist's face cleanest,
+  white coat + gold pendant kept). Generated images are NOT pre-signed —
+  download via in-page `fetch(src, {credentials:'include'})` → base64 chunks →
+  reassemble in Node. Text pass: "BETRAYED BY HIS / BEST FRIEND". Final:
+  `channel/return-of-the-top-class-master/thumbnail_ch001.png`. Fallback PIL
+  build (beat_0010 crop + text) also works — note the scrim mask must NOT be
+  inverted (first attempt darkened the top instead of bottom).
