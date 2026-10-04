@@ -1,399 +1,394 @@
-### COLD OPEN (from beat 030) — death for death
-SHOT: pan-down
+### COLD OPEN (from beat 059) — battle prep, speaker edition
+SHOT: punch-in
 NARRATION:
-You know, when a princess finds out her uncle killed her brother for a throne, there are protocols. Tribunals. Strongly worded letters. Our girl skipped all of it and asked Heaven to deliver one death, hand delivered, no returns. Heaven delivered. It just didn't read the label. Yeah. Let's back up.
+Eighty trolls just walked out of a storm, and the party's newest S-triple-prime weapon strolls toward them the way a person walks to a mailbox. Our boy braces for curses, for plagues, for the full wrath of heaven. Instead she materializes a portable speaker, because the most dangerous shaman of her generation fights to a backing track, and it is not even a metaphor. Yeah. Let's back up.
 
 ### BEAT 000 — the summon detonates
 SHOT: pan-down
 NARRATION:
-It starts with a purple detonation inside a dark hallway, and our boy Bong Juhyeok is on his knees in front of a tower of light while two grown men watch from the floor. Whatever came through that circle, it did not come quietly.
+It starts with a purple explosion inside the apartment, which is apparently just Tuesday here, and our boy Juhyeok kneels facing a towering figure of light while two grown men watch from the doorway, one of them already sweating.
 
-### BEAT 001 — the reveal begins
+### BEAT 001 — out of the flames
 SHOT: hold
 NARRATION:
-Inside the smoke, a framed window opens like the universe is presenting a product, and a braided figure in white robes materializes wreathed in purple fire.
+Out of the smoke, a figure in white robes with a red sash steps through purple-white flames, and the crystal shards falling around her suggest the universe overspent on this arrival.
 
 ### BEAT 002 — boots first
 SHOT: pan-down
 NARRATION:
-The reveal started at the boots, because apparently even the universe knows you build anticipation. White boots, a blue skirt hem, and the smoke just giving up.
+The reveal takes its time, starting with white boots and a blue skirt hem glowing over the void, and that is the walk of someone who intends to run the whole building.
 
-### BEAT 003 — gratitude, with teeth
+### BEAT 003 — first words
 SHOT: punch-in
 NARRATION:
-Then a smiling mouth introduced itself before anything else did. I am grateful that you called upon me. Not a threat assessment, not a name. Gratitude. From something that glows.
+The first thing anybody sees of her face is a smile, and the first thing she says is that she is grateful to be called upon, which is somehow the loudest warning in the room.
 
-### BEAT 004 — the imperial greeting
+### BEAT 004 — the royal greeting
 SHOT: pan-down
 NARRATION:
-The full picture arrives like a state ceremony. Gyeon Dalrae, red braid, white hanbok, kneels on open sky and announces that this humble girl offers her greetings to Young Master Bong. Our boy is in a t-shirt. He is not dressed for an empire.
+Then she kneels in full formal pose and introduces herself the old way, as this humble girl Gyeon Dalrae offering greetings to Young Master Bong, and our boy has been called many things in this tower, though never royalty-grade polite.
 
-### BEAT 005 — the receipt
-SHOT: punch-in
-NARRATION:
-And then the receipt printed. Name, Gyeon Dalrae. Rank, S triple prime. Not S, not SS, S with THREE primes, because apparently the ranking committee ran out of alphabet and kept going.
-
-### BEAT 006 — lightning lettering
+### BEAT 005 — the stat card
 SHOT: hold
 NARRATION:
-There was even lightning lettering involved, which is how you know a summon is legally binding.
+The system pops her stat card, and the rank alone deserves a drumroll, because S-triple-prime puts her at Cossack's post-rank-up tier, except she did it as a free pull.
+
+### BEAT 006 — official announcement
+SHOT: hold
+NARRATION:
+Then the universe stamps its own lettering across the moment, because a summon this dramatic gets an official announcement whether the hallway likes it or not.
 
 ### BEAT 007 — the landing
 SHOT: quick-zoom
 NARRATION:
-And for all that grace, the arrival itself landed like dropped furniture. The whole hallway heard about it.
+She finishes arriving with a landing so heavy the sky writes out the boom.
 
-### BEAT 008 (covers 008–009) — it's a woman
-SHOT: punch-in
-NARRATION:
-Three grown men processed the arrival in real time. An armored man went stiff, a hulking beast-man stopped mid-thought, and our boy scrambled up from behind the table. In the front row, Cossack, a professional assassin, is sweating through an awkward smile while the boy beside him goes pale. Two careers' worth of monster experience, and the room's combined thought was "It's a woman."
-
-### BEAT 010 — accessories deploy
-SHOT: pan-down
-NARRATION:
-Then the accessories deployed. A crystalline blue sword and a ring-handled bell-wand dropped out of the air and stuck there, hovering, while purple cloth whipped around them like the weather reported to her too.
-
-### BEAT 011 — the vow
-SHOT: pan-down
-NARRATION:
-And then she drew, gold beads wrapped around her hand, eyes sharp, and swore that though she is lacking, she will devote all her strength to assisting Young Master Bong. She is an S-rank imperial shaman calling herself lacking. Our boy's resume says unemployed.
-
-### BEAT 012 — shaman???
-SHOT: punch-in
-NARRATION:
-Our boy watched a sword and a set of bells float into his living space and arrived at the only conclusion available to him. "A shaman???" He ordered a warrior. The heavens delivered choir practice.
-
-### BEAT 013 — the gaze
-SHOT: punch-in
-NARRATION:
-Then her eye caught the light sideways, and the temperature of the room dropped about ten degrees for one specific man.
-
-### BEAT 014 — the swing
+### BEAT 008 — hallway crisis
 SHOT: quick-zoom
 NARRATION:
-She turned at combat speed with a curved blade already mid-swing, asking, at volume, what exactly that gaze was supposed to mean. The wall behind him can confirm the question was rhetorical.
+The hallway reacts exactly how a household reacts to an armed royal next to the shoe rack, meaning an armored man goes rigid, a beast-man forgets how lungs work, and our boy scrambles upright.
 
-### BEAT 015 — blade at the throat
+### BEAT 009 — the tactical council
 SHOT: punch-in
 NARRATION:
-The blade finished its commute at Cossack's throat while he babbled that he was only looking because he was curious. Her verdict came with a sentence attached. A severe flogging, administered until his senses returned.
+The red-haired veteran smiles like a man at his own funeral, our boy goes pale, and the hallway's tactical council produces the assessment "it's a woman," twice, at rising volume.
 
-### BEAT 016 — the warning
-SHOT: hold
-NARRATION:
-Our boy wedged himself into the conversation at cartoon panic speed, sweating in a whole new color, while she issued her ruling. Consider it a warning, because harboring dark thoughts upon seeing her beauty is apparently a chargeable offense in this household now.
-
-### BEAT 017 — justice served
-SHOT: quick-zoom
-NARRATION:
-The scream our boy produced was not a word any language has claim to, and her killing glare arrived before the echo did. Justice was stamped and notarized.
-
-### BEAT 018 — the decree
-SHOT: hold
-NARRATION:
-And then, with her eyes closed and her bell-wand floating politely at her side, she forgave the entire incident and decreed that he may look as much as he desires, and please, sit comfortably and admire. There is something wrong with this woman.
-
-### BEAT 019 — absolute win
-SHOT: punch-in
-NARRATION:
-Our boy responded the only way he knows how, which is a thumbs up and a smile at maximum wattage, hugging the catalogue like a new car owner. His official review: this is an absolute win. An ABSOLUTE win.
-
-### BEAT 020 — the pout march
-SHOT: hold
-NARRATION:
-Off she marched, pout fully deployed, while Cossack trailed behind at a respectful sweating distance.
-
-### BEAT 021 — the fine print
-SHOT: hold
-NARRATION:
-The full catalogue went up while she marched. Strict, solemn, and serious head shaman of the Heavenly Empire's Imperial Shrine. Manifestation limit, five hours. Resummon cooldown, three hours. And satisfaction rating, none. Not low. Not pending. None. This woman has been conscious for ten minutes and the form is already finalized.
-
-### BEAT 022 — bowl-of-water theology
-SHOT: punch-in
-NARRATION:
-And our boy had a private suspicion about all this. His summoning offering that day was a bowl of water. Tap adjacent. And the heavens looked at that budget donation and said, sure, here's an imperial shaman. Faith works in mysterious accounting.
-
-### BEAT 023 — the memory dive
+### BEAT 010 — the equipment deploys
 SHOT: pan-down
 NARRATION:
-Then he closed his eyes and dove straight into her memories, body wrapped in blue flame, falling through a starry void until the fall became a beam of light that struck an ancient shrine like a verdict. He landed in a crouch and asked the obvious question. Where is this?
+Then her equipment deploys with zero subtlety, because a crystalline blue sword and a ring-handled bell-wand plunge down amid dark speed stripes and snapping purple cloth, and the polite greeting is suddenly armed.
+
+### BEAT 011 — the oath
+SHOT: pan-down
+NARRATION:
+Blade drawn and prayer beads swinging, she swears that though she is lacking, she will devote all her strength to assisting Young Master Bong, and delivers it with the calm of somebody reading a weather forecast.
+
+### BEAT 012 — the welcome package
+SHOT: punch-in
+NARRATION:
+Our boy is stuck on the welcome package, because his new summon arrived with a sword, a set of bells, and a sworn oath of service, and squeaks the word shaman like a question.
+
+### BEAT 013 — the temperature drops
+SHOT: punch-in
+NARRATION:
+Then one sharp eye catches the light and the whole hallway drops a season.
+
+### BEAT 014 — the courtesy ends
+SHOT: quick-zoom
+NARRATION:
+The courtesy ends immediately, because she whirls with a curved blade that takes up half the room, demanding to know whose eyes have permission to look at her.
+
+### BEAT 015 — the curiosity tariff
+SHOT: quick-zoom
+NARRATION:
+The blade finds Cossack's throat before his defense is ready, and that defense is "I was just looking because I was curious," which gets him a scheduled flogging.
+
+### BEAT 016 — timeout request
+SHOT: quick-zoom
+NARRATION:
+Our boy waves both hands and squeaks for a timeout, because the warning about dark thoughts near her beauty promises a sequel, and nobody wants the sequel.
+
+### BEAT 017 (covers 017–018) — glare, then serenity
+SHOT: punch-in
+NARRATION:
+Her killing glare and the boy's scream share one moment, and justice looks served. Except she just closes her eyes, floats there serenely, and invites the young master to look as much as he desires. The politest person in the room is always the dangerous one.
+
+### BEAT 019 (covers 019–020) — the verdict
+SHOT: hold
+NARRATION:
+Our boy hugs the catalogue like a winning ticket and declares this an absolute win, no follow-up questions asked, while she marches off unimpressed and Cossack shuffles behind her like a man reporting for a shift he never signed up for.
+
+### BEAT 021 — the rental agreement
+SHOT: slow-zoom-out
+NARRATION:
+The full stat card reads like a rental agreement written by a lawyer who hates joy, because she is the strict, solemn, and serious head shaman of the Imperial Shrine, ranked S-triple-prime, with a five-hour manifestation limit and a three-hour cooldown, and a satisfaction rating that is not low, not pending, but none. Who debugs a person like that?
+
+### BEAT 022 — the pre-argued prayer
+SHOT: punch-in
+NARRATION:
+You would think he would ask how a five-hour summon landed in his living room, but don't be silly, because our boy is quietly wondering if his bowl of water did it.
+
+### BEAT 023 — into the memories
+SHOT: pan-down
+NARRATION:
+Our boy dives into his new summon's memories, falling through a starry void wrapped in blue flame before his body compresses into a beam of light that punches down through storm clouds and strikes an ancient shrine gate. He lands in a crouch in a world he does not recognize and asks where this is, and the answer is an entire empire that no longer exists.
 
 ### BEAT 024 — the bell
 SHOT: punch-in
 NARRATION:
-The first thing to greet him in the past is a bell-rattle swinging into frame, golden bells on red, ringing like it has an appointment.
+A golden bell-rattle rings, and our boy nearly jumps out of somebody else's memory.
 
-### BEAT 025 — the shrine stage
+### BEAT 025 — the princess
 SHOT: pan-down
 NARRATION:
-The past opens on a shrine stage under hanging prayer banners, where Gyeon Dalrae dances the rites between two drummers, red ritual drums landing like thunder with manners. Memory introduces her properly. Daughter of Mujong, emperor of the Heavenly Empire.
+Under a shrine's hanging banners, Gyeon Dalrae dances the rites between two drummers while the memory notes she is the daughter of Emperor Mujong himself, ruler of the Heavenly Empire, and our boy went fishing for a summon and accidentally hooked a princess.
 
-### BEAT 026 — throne politics
+### BEAT 026 — palace math
 SHOT: pan-down
 NARRATION:
-Then the family album takes a turn. Her father passed, her young brother took the throne, and their uncle had him murdered shortly after and took the crown for himself. Imperial succession, as practiced by this family, is a contact sport.
+Then the memory turns, because the emperor dies, the young brother takes the throne, and the uncle murders him and crowns himself with the stolen seat, which is the kind of palace math that ends family trees.
 
-### BEAT 027 — the vow in red mist
+### BEAT 027 — death for death
 SHOT: pan-down
 NARRATION:
-So she stood in red mist in her white ritual hood, tears cutting down a face done asking Heaven for permission, and made her vow. Death for death. She performed the death hex ritual, and that is the kind of sentence that ends badly for somebody.
+So the princess stands in her white ritual hood with tears cutting down a furious face and vows death for death, out loud, in front of Heaven, and Heaven does not offer a payment plan, it just watches her sign.
 
-### BEAT 028 — the uncle's homework
+### BEAT 028 — cowardice with a budget
 SHOT: hold
 NARRATION:
-Now, to be fair, the uncle was not stupid. He had magical arrays laid through the entire palace, guards in every shadow, and even a blindfolded scapegoat prepared to eat the hex in his place. Every box checked. Except none of it mattered.
+The uncle is no amateur either, because this dude salted the palace with magical arrays and prepared a blindfolded scapegoat to take the hex in his place, which is cowardice with a budget.
 
-### BEAT 029 — greatest of her generation
-SHOT: hold
-NARRATION:
-Because this was the girl who had served the empire's chief deity since childhood, seated in meditation among spirit carvings while grown officials lay face down at her steps. The greatest shaman of her generation. The paperwork did not apply to her.
-
-### BEAT 031 — the hex lands
-SHOT: pan-down
-NARRATION:
-And it does not even end there, cuz she screamed the spell into the world, and pink glyphs and talisman cards tore through the dark and found the robed scapegoat, who discovered in real time what an imperial-grade death feels like. He screamed. The universe filed it under pending.
-
-### BEAT 032 — the robe
-SHOT: punch-in
-NARRATION:
-A patterned robe crumpled onto the floorboards, empty, with a red impact stamp for punctuation. The uncle's insurance policy had paid out.
-
-### BEAT 033 — the rebound
+### BEAT 029 — the difference
 SHOT: slow-zoom-out
 NARRATION:
-Then the rebound came for the caster. She knelt in a sunlit palace hallway with black blood pooling beneath her, and the greatest shaman of her generation died by her own ritual, in the palace she was trying to avenge. She asked Heaven for one death and Heaven collected two. No joke to make here. She deserved better than a hallway floor.
+And here is what the uncle skipped, because this woman had served the Heavenly Empire's chief deity since childhood and was the greatest shaman of her generation, with supplicants kneeling face-down on her shrine steps, and his scheme is about to learn the difference between a shaman and the shaman.
 
-### BEAT 034 — bitter taste
-SHOT: punch-in
+### BEAT 030 (covers 030–031) — the hex lands
+SHOT: pan-down
 NARRATION:
-Our boy surfaced from the memory dive with a glowing eye and a bitter taste, which is what happens when your new summon's origin story ends at a funeral.
+She screams the hex into the world, hood back, tears flying, violet light tearing up around her, and the glyphs and talisman cards punch through the dark and bring a robed figure down mid-scream, the kind of body an uncle who prepares scapegoats keeps standing by. It still counts as a kill, and Heaven is already reaching for the receipt.
 
-### BEAT 035 — bathroom diplomacy
+### BEAT 032 (covers 032–033) — the price
 SHOT: hold
 NARRATION:
-The scene cuts to the least ceremonial location imaginable, a marble bathroom, where she stands in full imperial regalia and offers to answer whatever he wishes without hesitation.
+The robe settles onto the floor, and a few breaths later the greatest shaman of her generation kneels in a sunlit palace hallway with black blood pooling beneath her, because a hex cast from vengeance was always going to collect from her too. She got her death, and it cost her everything, and there is no joke to make here.
+
+### BEAT 034 — bitter review
+SHOT: punch-in
+NARRATION:
+Back in the present, our boy swallows the story and admits it leaves a bitter taste in his mouth, the only honest review a tale like that allows.
+
+### BEAT 035 — bathroom seminar
+SHOT: hold
+NARRATION:
+The scene takes us to a marble bathroom, where Dalrae folds her hands and invites him to ask anything, and an empire's worth of history is about to get explained next to a sink.
 
 ### BEAT 036 — the name
 SHOT: punch-in
 NARRATION:
-He asked, and she answered with a name like it was normal. The great emperor Gyeon Hwon. Her father. Somewhere in our boy's head, a history textbook fell off a shelf.
+She starts the lesson with a smile and a name, the great Emperor Gyeon Hwon, delivered like the answer to a quiz he did not know he was taking.
 
-### BEAT 037 — history class
+### BEAT 037 — recognition
 SHOT: punch-in
 NARRATION:
-His profile went rigid, because in her world's telling, this man changed a nation's name from Baekje to the Heavenly Empire. And in our boy's world, that same name comes with a losing record attached. Hold that thought.
+That name detonates something, because in the history our boy knows, Gyeon Hwon founded Later Baekje, and in hers he apparently went further and renamed the nation the Heavenly Empire.
 
-### BEAT 038 — later baekje??
-SHOT: hold
-NARRATION:
-Our boy stood up so fast his socks lost traction, demanding to know if this was THE Gyeon Hwon, founder of Later Baekje, while the maid bowed politely and two SSR summoners watched from the floor like it was a weather report.
-
-### BEAT 039 — the shelf of earths
-SHOT: slow-zoom-out
-NARRATION:
-Because here's the thing. Later Baekje lost that war in our boy's history books. In her world, it won. Her Earth is not his Earth. That's a parallel universe, officially. So how many Earths are on that shelf? Who is restocking them? Did every single one get a tower, or did ours just win the worst lottery ever drawn? Nobody in the bathroom was answering.
-
-### BEAT 040 — armed politeness
-SHOT: hold
-NARRATION:
-And while our boy was renegotiating his understanding of geography, Cossack, an actual assassin with actual scars, stood there nodding along to the maid, sweating like the politeness itself was armed.
-
-### BEAT 041 — the supervisor approaches
+### BEAT 038 — the full reel
 SHOT: quick-zoom
 NARRATION:
-She rose, and the red-patterned sleeves swept past like weather moving in. The kitchen was about to have a supervisor.
+He reels back barefoot asking if she means the Gyeon Hwon, while she bows politely and the two summoners on the floor below lose their argument with history in real time.
+
+### BEAT 039 — the shelf of Earths
+SHOT: slow-zoom-out
+NARRATION:
+Then the view pulls back to a whole ocean of Earths hanging in the dark, and our boy puts it together out loud. So how many worlds are floating up there, and who decided his Earth gets the tower, and did his summon just cross a universe to answer a bowl of water? Because that is a parallel universe, and the shipping fees alone should be illegal.
+
+### BEAT 040 — standard orientation
+SHOT: hold
+NARRATION:
+Dalrae bows like this is all standard orientation paperwork, and Cossack stands there sweating through a nod he cannot stop.
+
+### BEAT 041 — the room straightens
+SHOT: quick-zoom
+NARRATION:
+She rises with her sleeves sweeping past, and the room straightens itself out on instinct.
 
 ### BEAT 042 — the ramen summit
 SHOT: pan-down
 NARRATION:
-Then the whole cast turned into talking head stickers over breakfast, which is the correct amount of dignity for this group. Someone offered ramen to the room. Cossack ordered mild. Gobang contributed "me eat ramen too." And her majesty declared that proper etiquette forbids being picky with food, which in this house is how wars start.
+The household holds its emergency summit, which is about ramen, because our boy offers some around, Cossack requests his mild, Gobang bellows that he eats ramen too, and when they ask Miss Dalrae she rules it against proper etiquette to be picky with food.
 
-### BEAT 043 — the kitchen witness
+### BEAT 043 — kitchen watch
 SHOT: hold
 NARRATION:
-In the kitchen, Gobang planted a foot the size of a welcome mat while Cossack cooked, and somebody declared it the best ramen in the business. Also, someone with purple hair was standing at the kitchen's edge, and nobody acknowledged them at all. Remember them.
+In the kitchen our boy mans the stove while Gobang bellows that Summoner Bong cooks the best ramen and is already moving to help, and a purple-haired woman watches from the edge of the room, acknowledged by no one.
 
-### BEAT 044 (covers 044–045) — the ramen trials
-SHOT: punch-in
-NARRATION:
-The ramen peace conference ended the moment she saw the cooking arrangement. Her face went full imperial court, white-eyed and red-cheeked, screaming "YOU INSOLENT FOOLS" at a volume the tower could probably bill them for, and then came the follow-up question. How could they just sit there and let a meal get prepared in her presence? Get up this instant. Three grown men froze mid-air. There is still something wrong with this woman.
-
-### BEAT 046 — the SSR defense
-SHOT: punch-in
-NARRATION:
-Cossack, flush and flustered, raised the only defense available. Isn't it a bit much to talk down to him when they're both SSRs? Buddy, the ranks stop mattering the moment a curse is on the table.
-
-### BEAT 047 — the yangbap ultimatum
-SHOT: pan-down
-NARRATION:
-And then the temperature changed. Her eyes went glowing purple, prayer beads and a hooked staff materialized on cue, and she announced, in total calm, that she would skip the scolding and cast a yangbap curse directly onto his head. For context, a yangbap is a shaman's curse. For further context, the exits were not checked.
-
-### BEAT 048 (covers 048–049) — the dish intervention
+### BEAT 044 (covers 044–045) — imperial fury
 SHOT: quick-zoom
 NARRATION:
-The word curse hit Cossack like a taser. He was cooked the moment the yangbap came out, and he knew it, and within seconds he was at the sink screaming and scrubbing a bowl at panic speed while Gobang charged over bellowing that he helps too. A lunatic assassin and a savage warrior, defeated by dish soap.
+Dalrae's face goes full imperial fury, because how dare two grown summons sit there while the young master prepares the meal himself, and the order to get up this instant freezes an assassin, a warrior, and a summoner mid-breath.
+
+### BEAT 046 — the rank card
+SHOT: punch-in
+NARRATION:
+Cossack tries the rank card, asking if it is a bit much to talk down to him when they are both SSRs, the bravest mistake made in this apartment so far.
+
+### BEAT 047 — the yangbap decree
+SHOT: pan-down
+NARRATION:
+The lights dim because Dalrae's eyes start glowing purple, and she announces that a scolding was the old plan while the new plan is a yangbap curse, a shaman's curse with your name on it. The politest person in the room is always the dangerous one.
+
+### BEAT 048 — negotiating position
+SHOT: punch-in
+NARRATION:
+Cossack's defense collapses into screaming that he hates curses, and no SSR ever meant words harder.
+
+### BEAT 049 — redemption arc
+SHOT: quick-zoom
+NARRATION:
+The kitchen becomes a redemption arc at full speed, because Gobang charges in yelling that he helps too while Cossack scrubs a bowl like it insulted the throne, which is how SSRs apologize.
 
 ### BEAT 050 — the tower calls
 SHOT: pan-down
 NARRATION:
-And mid-dish-soap, the tower called. Blue light took the whole household at once, and somebody's cheerful "okay, sounds good" rode the streaks all the way up.
+Then the tower calls, which means the calm part of this story is officially over, and blue light takes the party upward with somebody's cheerful "okay, sounds good" riding the streaks, because nobody in this house has survival instincts.
 
 ### BEAT 051 — floor thirty
 SHOT: pan-down
 NARRATION:
-The light set them down on the 30th floor of the Horea Black Tower, where the system posted the evening's itinerary. Defeat eighty trolls of any type and one twin-headed troll within thirteen hours. Eighty plus one, thirteen hours. The math was not negotiable.
+The system announces the stop in its customer-service voice, centering the thirtieth floor of the Horea Black Tower, and drops them into a misty pine forest that looks calm the way a trap looks calm.
 
-### BEAT 052 — private math
-SHOT: punch-in
-NARRATION:
-Our boy, meanwhile, was doing private math of his own. Since she keeps Cossack completely in check, maybe he could stand in the back and be decorative.
-
-### BEAT 053 — manners on probation
+### BEAT 052 — management math
 SHOT: hold
 NARRATION:
-She pointed crackling prayer beads at Cossack mid-forest and told him to stay exactly where he was, because his manners were on probation, and he folded on the spot with no appeal filed.
+In the forest our boy is already doing management math, because Dalrae keeps Cossack completely in check, and maybe having her around comes with perks for the guy hiding behind everybody.
 
-### BEAT 054 — aiming high
-SHOT: punch-in
-NARRATION:
-And our boy, glowing with confidence, decided that his personal target for an eighty-troll mission would be about ten of them, and he meant that number. The ambition of a man who bills by the hour.
-
-### BEAT 055 — the loyalty pledges
-SHOT: hold
-NARRATION:
-The loyalty pledges started before anyone even saw a troll. Somebody promised loyalty and safety first and a full wipeout, and Gobang went one further. "Me do it all. Protect summoner even if me die." Cossack drew his blades and said nothing, which from an assassin is basically a love letter.
-
-### BEAT 056 — hearts in the right place
-SHOT: hold
-NARRATION:
-She closed her eyes and forgave the whole courtroom, ruling that their hearts were in the right place, and Cossack blushed so hard he had to scratch his head about it. The bar was on the floor and they still tripped over it.
-
-### BEAT 057 — the forest answers
-SHOT: pan-down
-NARRATION:
-Then the forest answered the enthusiasm. Under a storm-racked sky, a green brute with glowing red eyes and a boil-covered brown troll shouldered out of the treeline with silhouettes behind them, and the ground started keeping time with its own thunder.
-
-### BEAT 058 — read the timeline
-SHOT: punch-in
-NARRATION:
-And our boy, who personally watched a death hex kill its caster about ten minutes ago in memory time, stood there wondering how a shaman even fights and whether she would cast a death hex on the monsters. Bro was not reading the room, and the entire timeline was right there.
-
-### BEAT 059 — ta-da
+### BEAT 053 — deployment orders
 SHOT: quick-zoom
 NARRATION:
-A glowing blue speaker materialized with a full ta-da flourish, and our boy held the thing like it might bite. His brain visibly left the building.
+She plants herself at the treeline, prayer beads crackling, and deployment orders start flying, ordering Summoner Bong to stay put while informing an insolent cur that manners exist, and both grown men just take it. The politest person in the room is always the dangerous one.
 
-### BEAT 060 — audio crimes
+### BEAT 054 — the battle plan
+SHOT: punch-in
+NARRATION:
+Our boy's entire battle plan is a sparkle-eyed question asking whether ten trolls is a polite number, and that is the math of a man planning to spectate.
+
+### BEAT 055 — the loyalty auction
 SHOT: pan-down
 NARRATION:
-There she stood in the middle of a monster forest with a little blue speaker dangling off her and a glowing orb pulsing at her chest, humming to itself, ready to commit audio crimes against the local wildlife.
+The loyalty contest escalates, because Cossack draws his blades pledging loyalty and a full wipeout, while Gobang counter-bids that he will do it all and protect the summoner even if he dies, which is the most earnest bidding war ever held in a troll forest.
 
-### BEAT 061 — desperate measures
+### BEAT 056 — inspection passed
 SHOT: hold
 NARRATION:
-And then she confessed the logistics. She normally requires a master drummer to keep the rhythm, but since she travels alone, the speaker is a desperate measure. Our boy told her to do whatever makes her comfortable, take it easy, and he meant it kindly. There is something wrong with this woman, and honestly, the speaker makes it worse.
+Dalrae accepts the whole display with a serene ruling that their hearts are in the right place, and Cossack blushes like he passed a royal inspection.
+
+### BEAT 057 — the invoice
+SHOT: pan-down
+NARRATION:
+Then the forest answers with drum-sized footsteps, because a green brute with glowing red eyes and a boil-covered brown troll walk out of the treeline with more shadows behind them, and the system posts the invoice, eighty trolls plus one twin-headed troll, in thirteen hours.
+
+### BEAT 058 — the toolkit question
+SHOT: hold
+NARRATION:
+Our boy watches her walk toward the trolls and wonders whether she will cast a death hex on them, which is a bold guess after the story he just sat through.
+
+### BEAT 060 — the war instrument
+SHOT: pan-down
+NARRATION:
+She stands in a troll forest holding a small blue speaker like a ritual instrument while a low hum builds under everything, and the confidence is the scariest part, because she is treating a music box like a war drum.
+
+### BEAT 061 — confession, then war
+SHOT: punch-in
+NARRATION:
+She is almost shy about it, admitting she normally requires a master drummer to hold the rhythm but travels alone, so the speaker was a desperate measure, while our boy tells her to take it easy. Then she says she shall begin, and the forest should be afraid.
 
 ### BEAT 062 — the charge
 SHOT: quick-zoom
 NARRATION:
-The trolls took that moment to charge, a full wall of roar and brown lunges, which in hindsight was the worst tactical decision of their entire lives.
+The trolls charge with a roar that shakes the clearing, and a hand raises a blue-glowing dagger to meet the first lunging beast head on.
 
 ### BEAT 063 — the track drops
 SHOT: pan-down
 NARRATION:
-Because the first thing that stomped down was not a troll. It was the track itself, a giant foot coming down with the play button riding the sole, and the whole forest got conscripted into the audience.
+Then the battle gets a soundtrack, because a giant foot slams down with the play button riding right on the sole, and that is the exact moment the track starts, meaning the trolls are about to fight a concert.
 
-### BEAT 064 — professional-er
+### BEAT 064 — the buff finds Cossack
 SHOT: pan-down
 NARRATION:
-The drop hit the party first. Cossack's whole face lit up teal, heartbeat pounding, pupils doing target acquisition at machine speed, because the music was not decoration. It was a stat increase with a melody, and a professional assassin just got professional-er.
+The music finds Cossack first, because his face lights up teal with a pulse pounding in his ears like his heart just hired a personal trainer, and whatever this song is, it is not playing for the trolls.
 
-### BEAT 065 — the food chain meeting
+### BEAT 065 — the troll's turn
 SHOT: pan-down
 NARRATION:
-And then the moment showed the other side of the food chain, because a troll's grey face went wide-eyed and red-ringed all at once. The prey had just figured out the food chain got reorganized, and the meeting had already started without it.
+And then the same song hits a troll, whose enormous grey face goes wide-eyed with its own pounding heart as the clearing's food chain gets reorganized, and buddy is cooked.
 
-### BEAT 066 — spiritual eviction
+### BEAT 066 — the exorcism step
 SHOT: pan-down
 NARRATION:
-But to top it all off, the headliner took the stage. She rose through the storm with her blade high and her golden wand blazing, dancing the exorcism step through the air, informing the wicked spirits that the blessings of the gods of heaven and earth go to Young Master Bong, and that they should be gone. Spiritual eviction, imperial edition.
+And it does not stop there, because Dalrae goes airborne, dancing the exorcism step through a storm with her blade raised and her golden wand blazing, blessing Young Master Bong with the gods of heaven and earth before ordering the wicked spirits to begone like she is evicting them personally. This is a one-woman raid team with a soundtrack.
 
-### BEAT 067 — the drop
+### BEAT 067 — detonation
 SHOT: quick-zoom
 NARRATION:
-The track hit its drop exactly as her ritual hit its peak, and a blue-white burst went off with radiant shockwaves for miles of absolutely nobody's comfort.
+The track drops and her ritual detonates into a blinding blue-white burst that sends radiant shockwaves rolling across the whole clearing at once.
 
-### BEAT 068 — rent collection
+### BEAT 068 — the small sun
 SHOT: slow-zoom-out
 NARRATION:
-And in the middle of it all she floated, weightless, robes and braid drifting in a colossal star-burst of ritual light, radiating rings like the forest owed her rent.
+At the center of it all she just floats, weightless in a colossal star-burst with robes and braid drifting, like the clearing grew its own small sun with opinions about trolls.
 
-### BEAT 069 — this is...?
+### BEAT 069 — vocabulary reduced
 SHOT: pan-down
 NARRATION:
-Our boy clutched his head in a swirl of blue flame, one eye glowing wide, trying to process what one summon with one speaker just did to an entire floor. His only available thought was "this is...?" and even that was incomplete.
+Our boy is clutching his head with one eye glowing wide, because whatever she is channeling just poured through the clearing and reduced his vocabulary to a whispered question.
 
-### BEAT 070 — the tank episode
+### BEAT 070 — the growth spurt
 SHOT: pan-down
 NARRATION:
-And it does not even end there, cuz Gobang's body started growing bigger, glowing blue from head to topknot, each footfall landing like construction work while a troll screamed in a register usually reserved for haunted houses.
+Then Gobang starts growing, because the music surges him gigantic and glowing blue while his footfalls shake the ground and a troll screeches into the path of a man who now needs a wider forest.
 
 ### BEAT 071 — metal skin
-SHOT: quick-zoom
+SHOT: pan-down
 NARRATION:
-His skin went hard like metal, which the trolls discovered personally, and one unlucky one got swatted out of the air and briefly auditioned as a chew toy.
+After that it stops being a fight, because the giant warrior swats trolls out of the air in a green blur, grapples one with his teeth, and his skin has hardened into metal, which the trolls are discovering through personal experience.
 
-### BEAT 072 — the golden fist
-SHOT: quick-zoom
+### BEAT 072 — surging strength
+SHOT: pan-down
 NARRATION:
-Then the surging strength arrived as a colossal golden fist that slammed down and blasted a whole cluster of trolls away in light and water spray, crater first, apologies never.
+Then a colossal golden fist comes down like weather, blasting trolls away in a burst of light hard enough to redecorate the crater, and the system calls this surging strength, which is the understatement of the raid.
 
 ### BEAT 073 — the whirlwind
 SHOT: pan-down
 NARRATION:
-The middle of the fight turned into a violet-blue whirlwind with figures getting flung through the air in pink lightning arcs, and somewhere in all of that, Cossack was leaping through the carnage like the music personally wrote him a permit.
+The clearing turns into a violet-blue whirlwind with bodies flying through pink lightning arcs, Cossack leaping through the carnage with his daggers out, and our boy's whole contribution is screaming that this is unbelievable, which is honestly a fair review.
 
-### BEAT 074 — someone unnamed
+### BEAT 074 — the unexplained
 SHOT: pan-down
 NARRATION:
-And in the middle of the lightning, the fight briefly showed someone nobody introduced. A pale-haired figure, collapsed, wreathed in crackling pink light, mouth open in a cry while the music coursed through them. No name. No explanation. Just remember that they exist, cuz the tower certainly does.
+And then the raid introduces a mystery it refuses to explain, because a pale-haired figure lies collapsed in crackling pink lightning while somebody screams that it's a killer, and nobody stops to say who that is.
 
-### BEAT 075 — buffs included
-SHOT: punch-in
+### BEAT 075 — the wimp joins the artillery
+SHOT: quick-zoom
 NARRATION:
-And our boy got his share too, fist wreathed in pink-red aura, absolutely delighted that she can cast buffs, because apparently the support package included him.
+Meanwhile the music reaches our boy, whose fist comes up wreathed in a pink-red aura and the stunned realization that she casts buffs too, meaning the wimp is now officially part of the artillery.
 
-### BEAT 076 — two-for-one
+### BEAT 076 — the debuff
 SHOT: hold
 NARRATION:
-On top of that, the trolls were visibly slowing down, marinating in a purple-black miasma, because buffs and debuffs were being applied simultaneously like a two-for-one special.
+The trolls get the other half of the service, because one staggers hunched in purple-black miasma, wading through mud, since the song buffs the party and drags the monsters down at once.
 
-### BEAT 077 — the invoice
+### BEAT 077 — anything is possible
 SHOT: punch-in
 NARRATION:
-And our boy, face lit hard red and grinning with bloodshot focus, reported that right now he felt like he could accomplish anything, and his own body was about to invoice him for that confidence.
+Our boy is lit red and grinning with bloodshot focus, announcing he feels like he could accomplish anything, which is what a battle song does to a man with zero kills.
 
-### BEAT 078 — alpha male makes his move
+### BEAT 078 — the alpha male
+SHOT: punch-in
+NARRATION:
+So his head snaps around mid-shout, because the alpha male is officially making his move, and everyone in that forest hears the mistake coming before buddy finishes the sentence.
+
+### BEAT 079 (covers 079–080) — the hoodie problem
+SHOT: punch-in
+NARRATION:
+The alpha male's move lasts one step before Dalrae yanks his hoodie back with an iron grip, and the mighty hunter's cry becomes a quiet plea to please let go.
+
+### BEAT 081 — the tug-of-war
 SHOT: quick-zoom
 NARRATION:
-Because he rounded the corner of his own confidence at full speed, mouth first, announcing that the alpha male is making his move. He said it out loud, at volume, in front of witnesses.
+It becomes a tug-of-war in the middle of a raid, because he barks that an order is an order while she pleads that he must not fight, and the trolls are technically still there.
 
-### BEAT 079 (covers 079–080) — the plan was now improv
-SHOT: punch-in
+### BEAT 082 — zero kills
+SHOT: hold
 NARRATION:
-The move lasted exactly one breath of dignity. Something yanked his hoodie from behind with a wrenching pull, his whole body jerked to a stop, and the alpha's next line came out as a strangled "please let go of me." The plan was now improv, and the improv was losing.
+The raid ends with our boy kneeling in the dirt, hood over his face, howling that he did not catch a single one this time either, and the word either is carrying years of trauma.
 
-### BEAT 081 — sleeve tug of war
+### BEAT 083 — footsteps
 SHOT: quick-zoom
 NARRATION:
-What followed was a tug of war conducted entirely in etiquette. He barked that it was an order, let go of his hand, quickly. She pleaded back that no, he must not. An imperial shaman and her own summoner, legally fighting over a sleeve.
+Then footsteps come through the trees, a dark-clothed figure walks out of the forest, and our boy manages a quiet huh.
 
-### BEAT 082 — the final score
-SHOT: punch-in
-NARRATION:
-The system, meanwhile, posted the final score like a landlord. Eighty for eighty, one twin-headed troll down, and one level gained. Our boy's personal contribution this run was zero, and he knew it, wailing under his hood that he didn't get to catch a single one this time either. The mission was cleared. His trophy shelf was not.
-
-### BEAT 083 (covers 083–084) — tears at the treeline
+### BEAT 084 — the tears
 SHOT: slow-zoom-out
 NARRATION:
-And then the forest made a sound that was not a troll. Slow footsteps, and a dark-clothed figure walking out of the treeline while our boy looked up mid-sulk. And beside him, amid pink blossoms, the most powerful summon he has ever pulled burst into tears. No warning, no explanation. Whoever that figure is, and whatever broke our girl in the middle of a perfect victory, the tower is not answering today.
+And among the pink blossoms, the strict, solemn, and serious head shaman of the Imperial Shrine bursts into tears while our boy stares completely lost, and nothing in this forest explains it. Whoever that dark figure is, they picked the worst possible moment to walk in, and the next part of this story owes a very good explanation.
