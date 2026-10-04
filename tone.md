@@ -92,6 +92,11 @@ now only guards against drag:
   minutes for a single-chapter recap; a little longer is fine if it flows.
 - Quick reaction moments should still be short (10–20 words) — brevity through
   natural short sentences, not through deleted connecting words.
+- **Pan-down beats need scroll time.** A tall beat (h/w ≥ ~2.2 in the brief; it
+  renders as a pan-down scroll) shows several moments at once — give it the upper
+  half of the range (25–45 words, lore rules may lift it further) so the scroll
+  isn't frantic. Never write a 10-word quick entry over a tall strip: the image
+  scrolls at audio speed and the viewer can't read any of it.
 
 ## Recurring bits (use sparingly, 2–4 per video, don't force)
 
@@ -117,7 +122,7 @@ now only guards against drag:
 The writer tags each beat with a shot directive for the camera engine. Vocabulary:
 `hold`, `punch-in`, `quick-zoom`, `slow-zoom-out`, `fit`, `pan-down`. Rules of thumb:
 - Face closeup + roast → `punch-in`
-- Tall establishing panel → `pan-down` (scrolls the panel as a 60%-width centered
+- Tall establishing panel → `pan-down` (scrolls the panel as a 70%-width centered
   column over a blurred background — whole panel width always in frame, mild zoom.
   NEVER full-width: the old full-width scroll was illegible and dizzying)
 - Big reveal → `slow-zoom-out` or `hold` with silence

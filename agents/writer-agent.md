@@ -39,6 +39,9 @@ Read each of the three ONCE, carefully — no re-reads; everything stays in cont
 4. **Pacing law applies to every entry**: match word count to the beat's screen
    time (see the table in tone.md). Quick beats get 8–13 words. Lore gets 25–75.
    Over 40 words requires an explanation beat. Average entry: 12–25 words.
+   Tall pan-down beats (h/w ≥ ~2.2 in the brief) get the upper half of the range
+   (25–45 words) — the image scrolls at audio speed, and a short entry over a
+   tall strip is an unreadable blur.
 5. Per entry format:
    ```
    ### BEAT 014 (covers 014–016) — alley confrontation
@@ -81,6 +84,7 @@ previous chapter's script, and nothing older.
 - [ ] Sounds like tone.md, not a summary bot (check: would a friend laugh at ≥3 lines?)
 - [ ] **Pacing law satisfied**: average entry 12–25 words; entries >40 words are
       lore/explanation only; no beat drags past its screen time
+- [ ] Tall pan-down beats (h/w ≥ ~2.2) carry 25–45 words so the scroll stays readable
 - [ ] Zero banned phrases; grep for meta-words returns zero narration hits
 - [ ] Every beat covered (narrated or merged)
 - [ ] Merges are rare (≤ ~6) and never cover more than 2 beats

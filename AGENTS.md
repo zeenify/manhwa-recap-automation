@@ -24,10 +24,11 @@ Commit after every successful stage.
 - `tools/merge_drafts.py` — fuses reader-part drafts into one chapter draft. Handles both spawn layouts: sequential adjacent parts (fuses `continues`/`continues_from_previous` seams) and parallel overlapping parts (fuses the beat that completes a range-cut panel, drops duplicate overlap beats; prints coverage warnings).
 - `tools/writer_brief.py` — pre-digests beats.json (with aspect ratios) + all handoff synopses + story-so-far into ONE briefing file for the writer agent, so the writer reads 3 files total instead of 7.
 - `tools/tts_generate.py` — synthesizes one mp3 per script entry via the fish.audio API (model `s2.1-pro-free`; voice reference_id and API constants live in the script; API key in `tmp/fish_api_key.txt` — treat as secret, never echo or publish). Idempotent (skips existing mp3s), retries on failure, 4 parallel workers by default (`--workers`).
-- `tools/assemble.py` — the renderer. Reads beats.json + timing.json + shot directives from the script → renders ONE clip per script entry (a merged entry becomes a side-by-side collage shown for the whole entry's audio; `pan-down` scrolls a 60%-width centered column over the blurred bg — full-width scrolling is gone) → concats → muxes narration → optional music. Outputs `videos/<chapter>/<chapter>.mp4` at 1920×1080/30fps. Idempotent per segment (skips existing clips — **delete `videos/<chapter>/clips/*.mp4` AND the cached `collage_entry_*.png` whenever render settings or beats change**, or stale data gets reused).
-- `agents/reader-agent.md`, `agents/writer-agent.md` — permanent agent protocols. **Read the relevant one before doing agent work**; spawn subagents with "follow this file + spawn parameters".
+- `tools/assemble.py` — the renderer. Reads beats.json + timing.json + shot directives from the script → renders ONE clip per script entry (a merged entry becomes a side-by-side collage shown for the whole entry's audio; `pan-down` scrolls a 70%-width centered column over the blurred bg — full-width scrolling is gone) → concats → muxes narration → optional music. Outputs `videos/<chapter>/<chapter>.mp4` at 1920×1080/30fps. Idempotent per segment (skips existing clips — **delete `videos/<chapter>/clips/*.mp4` AND the cached `collage_entry_*.png` whenever render settings or beats change**, or stale data gets reused).
+- `agents/reader-agent.md`, `agents/writer-agent.md`, `agents/writer-agent-fdb.md` — permanent agent protocols. **Read the relevant one before doing agent work**; spawn subagents with "follow this file + spawn parameters".
 - `tone.md` — channel persona ("Roasting Best Friend") + the **pacing law** (words per beat by screen time). Law for all narration.
-- `research/narration_style_notes.md` — verbatim style analysis from a real 636K-sub recap channel's transcript. Style bible for writers.
+- `research/narration_style_notes.md` — verbatim style analysis from a real 636K-sub recap channel's transcript. Style bible for the CLASSIC writer.
+- `research/fdb_style_notes.md` — verbatim style analysis of DerekFDB (1.25M-sub movie-commentary channel, "for the giggles"). Style bible for the FDB-VOICE writer.
 - `story-so-far.md` — rolling continuity memo, refreshed after every approved chapter script (cap ~1,500 words). Next chapter's agents get this + previous script, nothing older.
 - `scripts/` — narration scripts. `assets/<slug>/<chapter>/beats/` — exported beat PNGs + `beats.json` (the contract between all stages).
 - `audio/<chapter>/` — per-entry mp3s + `timing.json`: entry → mp3 file, measured `duration_s`, covered beats. **This is the sync contract: an entry's screen time = its narration mp3's duration (audio is the clock).** `videos/`, `tmp/` — outputs and scratch.
@@ -50,7 +51,7 @@ Deps: Python 3.11 + Pillow + numpy (already installed). No git repo, no linter, 
 
 1. **Virtual coordinates**: pieces/files concatenate into one continuous y-space per chapter; all beat boundaries are virtual y-values. Views are reading windows only — never crop from them, crop reassembles from source files.
 2. **Every boundary must be window-verified.** Coordinates eyeballed from tall pieces are wrong by 300–400px (downscaled renders). Rough-locate from pieces, decide only from `window` renders.
-3. **Art-only beats.** Dialogue bubbles on black and narration captions are narrated over the nearest art beat (`excluded` ranges), never cropped as beats. Bubbles spilling from art into whitespace are clipped at the art's edge (the beat ends where the art ends; the spillover is excluded and its text spoken over the beat) — bubble-chasing tall crops are a defect. Site junk (THUNDERSCANS banners/promos) is excluded.
+3. **Art-only beats.** Dialogue bubbles on black and narration captions are narrated over the nearest art beat (`excluded` ranges), never cropped as beats. Bubbles spilling from art into whitespace are clipped at the art's edge (the beat ends where the art ends; the spillover is excluded and its text spoken over the beat) — bubble-chasing tall crops are a defect. Site junk (THUNDERSCANS banners/promos) is excluded — and so is the **series/episode title card** (the stylized Korean logo card with the episode number at the top of a chapter): it is packaging, not story art, and it leaked into the ch003 and ch013 videos as beat 0. Also: a multi-moment strip taller than ~4500 virtual px gets SPLIT at its internal gutters into 2–3 beats (reader rule 11) — tall unsplit strips render as frantic, unreadable pan-downs.
 4. **Attribution strictness.** Event text states only what is visually certain; ambiguity gets an "unclear:" flag. The writer's harmonization pass fixes attributions with later-chapter context.
 5. **Flow rule + diegetic narration** (tone.md): every narration entry is flowing, complete sentences a TTS voice reads naturally — no fragments, colon lead-ins, one-word punchline paragraphs, or "— sigh —" stage directions. Banned words in narration: panel, sound effect, narrator, montage, caption, "all chapter". Grep scripts before delivering. Pacing: typical entry 15–45 words (lore up to ~80); total runtime = sum of audio durations, never padded.
 6. **Reader agents split the chapter into 2–3 near-equal ranges (~60–100k virtual
@@ -58,7 +59,7 @@ Deps: Python 3.11 + Pillow + numpy (already installed). No git repo, no linter, 
    platform allows concurrent subagents (`merge_drafts.py` fuses flagged seams and
    dedups overlap beats); fall back to sequential if spawning is rejected. Each
    agent writes a handoff file the writer later uses as story context.
-7. **Camera rules (assembler):** every panel becomes a composed 16:9 card — blurred, darkened copy fills the frame as background, sharp panel centered on top (kills aspect stretching). **No full-width scrolling** (the old full-width pan-down was illegible and dizzying): `pan-down` now scrolls the panel as a **60%-width centered column** over the static blurred background — mild zoom, whole panel width always in frame; panels whose column wouldn't clear the frame height just get `fit`. **A merged entry (writer covered 2 beats) renders as ONE side-by-side collage card for the whole entry's audio** — but only when the panels' heights are comparable (ratio ≤ 1.6, enforced by the assembler; the writer's rule is ~1.5): mismatched sets render as sequential cards instead, because a short panel beside a tall one becomes unreadably tiny. A beat's screen time = its entry's narration mp3 duration.
+7. **Camera rules (assembler):** every panel becomes a composed 16:9 card — blurred, darkened copy fills the frame as background, sharp panel centered on top (kills aspect stretching). **No full-width scrolling** (the old full-width pan-down was illegible and dizzying): `pan-down` now scrolls the panel as a **70%-width centered column** over the static blurred background — mild zoom, whole panel width always in frame (0.6 was raised to 0.7: tall pan-downs read better); panels whose column wouldn't clear the frame height just get `fit`. **A merged entry (writer covered 2 beats) renders as ONE side-by-side collage card for the whole entry's audio** — but only when the panels' heights are comparable (ratio ≤ 1.6, enforced by the assembler; the writer's rule is ~1.5): mismatched sets render as sequential cards instead, because a short panel beside a tall one becomes unreadably tiny. A beat's screen time = its entry's narration mp3 duration.
 8. **No background music** unless the user explicitly asks (in the author's
    tests it sat too quietly under constant narration to be worth it).
 
@@ -130,10 +131,16 @@ crops correct.
 4. `python tools/toonkit.py crop toonverse/<slug>/chapter-NN --beats <merged.json> --out assets/<slug>/<chapter>/beats`
 5. Build the writer brief (ONE file for the writer instead of six reads):
    `python tools/writer_brief.py --slug <slug> --chapter <chapter> --out tmp/writer_brief_<chapter>.md`
-   Spawn WRITER AGENT: prompt = "Execute the WRITER AGENT protocol in
-   agents/writer-agent.md. Inputs: tmp/writer_brief_<chapter>.md + tone.md +
-   research/narration_style_notes.md (read each once, nothing else). Output:
-   scripts/<chapter>_script.md." It handles flow rule, pacing, harmonization, QA.
+   Spawn WRITER AGENT — pick the persona at spawn (user's choice; default CLASSIC):
+   - CLASSIC: "Execute the WRITER AGENT protocol in agents/writer-agent.md.
+     Inputs: tmp/writer_brief_<chapter>.md + tone.md +
+     research/narration_style_notes.md (read each once, nothing else). Output:
+     scripts/<chapter>_script.md."
+   - FDB-VOICE: "Execute the WRITER AGENT protocol in agents/writer-agent-fdb.md.
+     Inputs: tmp/writer_brief_<chapter>.md + tone.md +
+     research/fdb_style_notes.md (read each once, nothing else). Output:
+     scripts/<chapter>_script.md."
+   Either way it handles flow rule, pacing, harmonization, QA.
 6. `python tools/tts_generate.py --script scripts/<chapter>_script.md --out-dir audio/<chapter>` (idempotent — safe to re-run; ~4 parallel workers by default, expect ~3–5 min)
 7. `python tools/assemble.py --slug <slug> --chapter <chapter> --script scripts/<chapter>_script.md` (run in background; ~25–40 min for ~15 min of video)
 8. Verify with ffprobe (duration ≈ sum of audio durations; 1920×1080; aac audio).

@@ -9,7 +9,7 @@ Camera rules (v2):
 - Multi-beat entry (the writer merged beats) → the panels are joined SIDE BY SIDE
   into one collage card shown for the whole entry duration — the narration always
   describes what is on screen (no time-splitting, no wrong-panel moments).
-- There is NO full-width scroll: pan-down renders the panel as a 60%-width
+- There is NO full-width scroll: pan-down renders the panel as a 70%-width
   centered column over the static blurred background and scrolls THAT — mild
   zoom, whole panel width always in frame (full-width scrolling was retired: it
   was dizzying and illegible). Panels whose column wouldn't be taller than the
@@ -32,7 +32,8 @@ FPS = 30
 W, H = 1920, 1080
 SS_W = 3840  # supersample width for zoompan quality
 GUTTER = 24  # px between panels in a collage
-PAN_W = 0.6  # pan-down column width as a fraction of frame width (full-width scroll retired)
+PAN_W = 0.7  # pan-down column width as a fraction of frame width (full-width scroll retired;
+             # 0.6 was raised to 0.7 for readability — tall pan-downs were cramped)
 COLLAGE_MAX_RATIO = 1.6  # taller/shortest height ratio allowed in one collage card
 
 
@@ -95,7 +96,7 @@ def segment_filter(move: str, dur: float, fp) -> str:
     """All moves operate on a COMPOSED 16:9 card: blurred darkened panel as
     background filling the frame, sharp panel centered on top — then the camera
     moves on that card (no aspect distortion). pan-down scrolls the panel as a
-    60%-width centered column over the static blurred bg: the whole panel width
+    70%-width centered column over the static blurred bg: the whole panel width
     stays in view at a mild zoom, so the scroll stays readable and calm."""
     frames = max(2, round(dur * FPS))
     fx, fy = (fp or [0.5, 0.5])[:2]
@@ -217,7 +218,7 @@ def main():
                              "fp": [0.5, 0.5], "entry": ei, "idx": len(segments)})
         else:
             b = bs[0]
-            # pan-down eligibility: the 60%-width column must actually be taller
+            # pan-down eligibility: the 70%-width column must actually be taller
             # than the frame, otherwise the whole panel fits anyway
             if move == "pan-down":
                 col_h = b["h"] * (W * PAN_W) / max(1, b["w"])

@@ -58,8 +58,14 @@ Do NOT edit toonkit.py. Do NOT regenerate views.
 4. **Seam rule.** Art cut at a piece edge is NOT a panel end — carry the beat across
    the boundary (overlap gives you both sides). For RANGE seams (your spawn
    boundary), see the handoff protocol below.
-5. **Site junk.** THUNDERSCANS warning banners, "READ AT …" promos, site logos →
-   `excluded` (type `site-junk`). Chapters often end with a promo block.
+5. **Site junk + title cards.** THUNDERSCANS warning banners, "READ AT …" promos,
+   site logos → `excluded` (type `site-junk`). Chapters often end with a promo block.
+   The **series/episode title card** at the top of a chapter — stylized
+   Korean/Japanese logo lettering, usually with the big episode number on a
+   decorated background — is packaging, NOT story art: exclude it too
+   (type `title-card`). Same for studio/author credit cards. It must NEVER become
+   a beat: in this channel's real run the title card leaked into two published
+   videos (ch003 and ch013, both as beat 0) because it looks like art — it is not.
 6. **Composite panels.** Inset closeups overlapping a main panel, captions burned
    over art edges: keep as ONE beat when separating would cut art. Note it in
    `event`. A banner burned INTO art (unremovable by y-cut): keep the beat, flag it
@@ -73,10 +79,21 @@ Do NOT edit toonkit.py. Do NOT regenerate views.
 9. **Grouping.** Consecutive dialogue bubbles sharing one background = one excluded
    range. A continuous piece of art with internal pacing = one beat.
 10. **Attribution strictness in `event` text.** Describe only what is visually
-   certain. If the actor or target of an action is ambiguous, use a neutral subject
-   ("one of the two men", "a figure") and prefix the uncertainty in the event:
-   "unclear: who the spit is aimed at". NEVER invent who does what to whom — the
-   writer agent harmonizes with story context later.
+    certain. If the actor or target of an action is ambiguous, use a neutral subject
+    ("one of the two men", "a figure") and prefix the uncertainty in the event:
+    "unclear: who the spit is aimed at". NEVER invent who does what to whom — the
+    writer agent harmonizes with story context later.
+11. **Tall strips get split.** A beat taller than ~4500 virtual px that contains
+    multiple stacked moments (an action sequence of 2–4 distinct panels flowing
+    together, or a stack of system windows) is NOT one beat: split it at the
+    internal gutters into 2–3 beats so the renderer pans each part at a readable
+    speed. Window-verify every split edge (rule 3); each part must be
+    self-contained art — never cut through a face, effect, or bubble. Only
+    genuinely continuous single artworks (one splash panel, one unbroken
+    establishing shot) may stay above the cap, flagged in `event`
+    ("tall single artwork"). Why: the renderer scrolls a tall beat at
+    panel-height ÷ narration-duration, so a 7000px strip with a short entry is
+    an unreadable blur, and consecutive tall beats read as cramped.
 
 ## Worked calibration example (why windows matter — memorize this)
 
@@ -174,7 +191,9 @@ Agents may be spawned CONCURRENTLY with ranges that OVERLAP the neighbors by
 - [ ] Every beat boundary decided from a window render, not a piece render
 - [ ] No beat cuts through a face or artwork; bubbles spilling into whitespace
       are excluded at the art edge, never absorbed into the beat
-- [ ] All site junk excluded; nothing else skipped
+- [ ] All site junk AND the series/episode title card excluded; nothing else skipped
+- [ ] No beat over ~4500px unless it is a flagged single continuous artwork
+      (multi-moment tall strips are split at internal gutters)
 - [ ] Beats + excluded cover [START, END) with no gaps
 - [ ] Range-edge beats flagged with continues / continues_from_previous
 - [ ] focal_point present on every beat; events quote the dialogue
