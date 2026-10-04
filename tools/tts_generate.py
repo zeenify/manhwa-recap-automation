@@ -16,8 +16,20 @@ from pathlib import Path
 
 KEY_FILE = Path(os.environ.get("FISH_API_KEY_FILE", "tmp/fish_api_key.txt"))
 API_URL = os.environ.get("FISH_API_URL", "https://api.fish.audio/v1/tts")
-REFERENCE_ID = os.environ.get("FISH_VOICE_ID", "ec47a6d54dbe4e1481f66e1d6a94b849")
 MODEL = os.environ.get("FISH_MODEL", "s2.1-pro-free")
+
+# Named channel voices — swap a series' voice by passing --voice <name>
+# (a raw fish.audio reference_id also works and gets no prosody preset).
+# "default" respects FISH_VOICE_ID from the environment if set.
+VOICES = {
+    "default": os.environ.get("FISH_VOICE_ID", "ec47a6d54dbe4e1481f66e1d6a94b849"),
+    "mommy": "d8cc2855171e415591c06f0c8f0b9bf9",
+}
+# Prosody presets per voice (applied in post-processing — the API has no knobs).
+VOICE_PRESETS = {
+    "default": {"speed": 1.0, "gain": "0dB"},
+    "mommy": {"speed": 1.07, "gain": "5dB"},
+}
 
 
 def parse_script(path: Path):
@@ -125,13 +137,19 @@ def main():
     ap.add_argument("--out-dir", default="audio/a-wimps-strategy-guide/ch001")
     ap.add_argument("--workers", type=int, default=4,
                     help="parallel TTS requests (1 = sequential, the old behavior)")
-    ap.add_argument("--voice", default=REFERENCE_ID,
-                    help="fish.audio voice reference_id (per-series; default = channel voice)")
-    ap.add_argument("--speed", type=float, default=1.0,
-                    help="post-synthesis tempo factor, e.g. 1.07 (the API has no speed knob)")
-    ap.add_argument("--gain", default="0dB",
-                    help="post-synthesis loudness lift, e.g. 5dB (API has no volume knob)")
+    ap.add_argument("--voice", default="default",
+                    help="voice NAME from VOICES ('default', 'mommy', ...) or a raw fish.audio reference_id")
+    ap.add_argument("--speed", type=float, default=None,
+                    help="override the voice preset's tempo factor, e.g. 1.07")
+    ap.add_argument("--gain", default=None,
+                    help="override the voice preset's loudness lift, e.g. 5dB")
     args = ap.parse_args()
+
+    voice_id = VOICES.get(args.voice, args.voice)
+    preset = VOICE_PRESETS.get(args.voice, {"speed": 1.0, "gain": "0dB"})
+    args.speed = args.speed if args.speed is not None else preset["speed"]
+    args.gain = args.gain if args.gain is not None else preset["gain"]
+    print(f"voice={args.voice} ({voice_id}) speed={args.speed} gain={args.gain}")
 
     key = KEY_FILE.read_text(encoding="utf-8").strip()
     entries = parse_script(Path(args.script))

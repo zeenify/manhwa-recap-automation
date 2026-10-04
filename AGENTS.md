@@ -143,7 +143,7 @@ crops correct.
      research/fdb_style_notes.md (read each once, nothing else). Output:
      scripts/<slug>/<chapter>_script.md."
    Either way it handles flow rule, pacing, harmonization, QA.
-6. `python tools/tts_generate.py --script scripts/<slug>/<chapter>_script.md --out-dir audio/<slug>/<chapter> [--voice <id> --speed 1.07 --gain 5dB]` (idempotent — safe to re-run; ~4 parallel workers by default, expect ~3–5 min. **Per-series voice: Return of the Top Class Master uses the "mommy" voice** `d8cc2855171e415591c06f0c8f0b9bf9` with `--speed 1.07 --gain 5dB` on EVERY chapter of that series.)
+6. `python tools/tts_generate.py --script scripts/<slug>/<chapter>_script.md --out-dir audio/<slug>/<chapter> --voice <name>` (idempotent — safe to re-run; ~4 parallel workers by default, expect ~3–5 min. Voices live in the `VOICES` dict in tts_generate.py with per-voice prosody presets — **Return of the Top Class Master uses `--voice mommy`** (its preset carries speed 1.07 + gain 5dB) on EVERY chapter of that series. A raw fish.audio reference_id also works but gets no preset.)
 7. `python tools/assemble.py --slug <slug> --chapter <chapter> --script scripts/<slug>/<chapter>_script.md` (run in background; ~25–40 min for ~15 min of video)
 8. Verify with ffprobe (duration ≈ sum of audio durations; 1920×1080; aac audio).
    Then refresh `story-so-far.md` per the writer protocol's continuity duty —
