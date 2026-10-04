@@ -1,7 +1,7 @@
 ### COLD OPEN (from beat 059) — battle prep, speaker edition
 SHOT: punch-in
 NARRATION:
-Eighty trolls just walked out of a storm, and the party's newest S-triple-prime weapon strolls toward them the way a person walks to a mailbox. Our boy braces for curses, for plagues, for the full wrath of heaven. Instead she materializes a portable speaker, because the most dangerous shaman of her generation fights to a backing track, and it is not even a metaphor. Yeah. Let's back up.
+Eighty trolls just walked out of a storm, and the party's newest weapon strolls toward them the way a person walks to a mailbox. Our boy braces for curses, for plagues, for the full wrath of heaven. Instead she materializes a portable speaker, because the deadliest shaman of her generation fights to a backing track. Yeah. Let's back up.
 
 ### BEAT 000 — the summon detonates
 SHOT: pan-down
@@ -111,7 +111,7 @@ You would think he would ask how a five-hour summon landed in his living room, b
 ### BEAT 023 — into the memories
 SHOT: pan-down
 NARRATION:
-Our boy dives into his new summon's memories, falling through a starry void wrapped in blue flame before his body compresses into a beam of light that punches down through storm clouds and strikes an ancient shrine gate. He lands in a crouch in a world he does not recognize and asks where this is, and the answer is an entire empire that no longer exists.
+Our boy dives into his new summon's memories, falling through a starry void in blue flame before his body becomes a beam of light that punches through storm clouds and strikes an ancient shrine gate. He lands in a world he does not recognize and asks where this is, and the answer is an entire empire that no longer exists.
 
 ### BEAT 024 — the bell
 SHOT: punch-in
@@ -181,7 +181,7 @@ He reels back barefoot asking if she means the Gyeon Hwon, while she bows polite
 ### BEAT 039 — the shelf of Earths
 SHOT: slow-zoom-out
 NARRATION:
-Then the view pulls back to a whole ocean of Earths hanging in the dark, and our boy puts it together out loud. So how many worlds are floating up there, and who decided his Earth gets the tower, and did his summon just cross a universe to answer a bowl of water? Because that is a parallel universe, and the shipping fees alone should be illegal.
+Then the view pulls back to an ocean of Earths hanging in the dark. So how many worlds are floating up there, and who decided his Earth gets the tower, and did his summon just cross a universe to answer a bowl of water? Because that is a parallel universe, and the shipping fees alone should be illegal.
 
 ### BEAT 040 — standard orientation
 SHOT: hold

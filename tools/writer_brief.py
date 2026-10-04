@@ -55,7 +55,7 @@ def main():
     lines.append("viewer (set up story, pay something off, or pass by)? Prolong what earns it, keep")
     lines.append("a quick flowing pace on filler, and cut anything that re-describes what is")
     lines.append("already visible. Anchors, not rules: passing moment 8–15 words, story moment")
-    lines.append("15–35, deep setup up to 80. Keep every entry flowing (connectors, not staccato")
+    lines.append("15–35, deep setup up to 60. Keep every entry flowing (connectors, not staccato")
     lines.append("stops), and use plain prose only — no asterisks or markdown emphasis (TTS reads them).")
     lines.append("Shorter-than-frame panels: moves on the composed card (hold / punch-in /")
     lines.append("quick-zoom / slow-zoom-out / fit).")

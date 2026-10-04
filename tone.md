@@ -104,8 +104,8 @@ Rough guide, ~2.4 words per second of TTS audio. The IMAGE doesn't force a word
 count anymore: the TTS audio's duration IS the beat's screen time. The pacing law
 now only guards against drag:
 
-- Typical entry: 15–45 words. Lore/explanation beats may run up to ~80.
-- Hard ceiling: 80 words. If a joke needs a paragraph, it's two jokes — pick one.
+- Typical entry: 15–45 words. Lore/explanation beats may run up to ~60.
+- Hard ceiling: 60 words. If a joke needs a paragraph, it's two jokes — pick one.
 - Total chapter runtime is the sum of the audio durations. Target zone 15–20
   minutes for a single-chapter recap; a little longer is fine if it flows.
 - **Evaluate every scene like a writer — there is no mechanical class rule.**
@@ -118,7 +118,7 @@ now only guards against drag:
   the viewer can already see. Before locking an entry ask: am I overextending?
   Can this be said faster without losing story context? Calibration anchors
   only: a passing moment survives on 8–15 flowing words, a story moment lives
-  around 15–35, deep setup earns up to 80 — the scene's value decides, never
+  around 15–35, deep setup earns up to 60 — the scene's value decides, never
   the panel's category.
 - Quick reaction moments should still be short (10–20 words) — brevity through
   natural short sentences, not through deleted connecting words.

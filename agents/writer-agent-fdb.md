@@ -118,7 +118,7 @@ Read each of the three ONCE, carefully — no re-reads; everything stays in cont
    chapter's best joke, and a system window can be one line when nothing in it
    matters. Before locking an entry ask: am I overextending? Can this be said
    faster without losing story context? Calibration anchors: passing moment
-   8–15 words, story moment 15–35, setpiece up to 80, hard ceiling 80 — the
+   8–15 words, story moment 15–35, setpiece up to 60, hard ceiling 60 — the
    scene decides, not the category. Spend long FDB setups on moments that earn
    them. Tall pan-down beats (h/w ≥ ~2.2 in the brief) get 25–45 words — the
    image scrolls at audio speed, and a short entry over a tall strip is an
