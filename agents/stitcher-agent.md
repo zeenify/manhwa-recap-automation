@@ -5,8 +5,9 @@ Trigger: the user says "stitch chapters X-Y of <series>" (e.g. "stitch chapter
 
 What it produces: ONE YouTube-ready compilation mp4 — chapter videos joined in
 order with styled transition cards between them, an outro card, a printed
-YouTube-chapters timestamp block, and a `youtube_timestamps.json` companion
-for the upload step.
+YouTube-chapters timestamp block, a `youtube_timestamps.json` companion, and
+an upload-prep doc with the timestamps embedded in a ready-to-paste
+description.
 
 ## Rules you cannot change
 
@@ -70,8 +71,31 @@ as the compilation's own runtime ÷ encode speed (a 1-2 hour compilation is a
 3. Optional spot-check: extract a frame at a card boundary
    (`ffmpeg -ss <t> -i out.mp4 -frames:v 1 tmp/check.png`) and eyeball one
    transition card.
-4. Report the chapters block to the user — it goes into the upload
-   description (per `youtube_timestamps.json.how_to_apply`).
+
+## Timestamps + upload prep (mandatory final step — the tool alone is not enough)
+
+The tool writes `youtube_timestamps.json` and prints the chapters block, but
+the AGENT must turn that into an upload-ready document. Write
+`channel/<slug>/upload-prep-compilation-chXXX-chYYY.md` (template:
+`channel/a-wimps-strategy-guide/upload-prep-merged-video.md`) containing:
+
+1. **Files** — compilation path + duration, thumbnail status (build one via
+   `agents/thumbnail-agent.md` if none exists for this compilation).
+2. **Title options** (2–3) — power-word hook pattern, user rule: NEVER the
+   chapter range or runtime in the title.
+3. **Description** — the chapters block MUST be the very first lines (first
+   line `0:00 Chapter N`, ascending, ≥3 entries — that is what makes YouTube
+   auto-chapters work), THEN the standard description template: "Manhwa
+   Summary:" hook, fully-edited/commentary line, 📖 Series block (+ official
+   link if one exists), rating question, subscribe line with cadence, fair-use
+   line. Copy the chapters block verbatim from the tool output or
+   `youtube_timestamps.json.chapters_block` — never re-type timestamps by
+   hand.
+4. **Tags** line.
+5. **Upload-day checklist** — Studio upload, metadata from this doc,
+   thumbnail, playlist, audience not-made-for-kids, HD check, pinned comment.
+
+Report both the chapters block and the prep-doc path to the user.
 
 ## Notes
 
