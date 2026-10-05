@@ -1,37 +1,40 @@
 # STORY SO FAR — rolling continuity memo
 
-Updated after: **Chapter 5** ("Return of the Top Class Master")
+Updated after: **Chapter 6** ("Return of the Top Class Master")
 Rule: capped at ~1,500 words. Refreshed after each chapter's script is locked. The next chapter's reader and writer agents receive this file and the previous chapter's script — nothing older.
 
-## Characters (name — role — status at end of ch.5)
+## Characters (name — role — status at end of ch.6)
 
-- **Kang Tae Wook (vessel of the regressed master Ray)** — grey hoodie this chapter, red eyes. Ch.5: opened the golden-patterned box — a plain black bottle + folded papers, and a **printed secret-arts manual** with technique diagrams that he hugged ("WITH THIS MANUAL OF SECRETS ARTS... GOOD. THIS WILL BE ENOUGH."); over black he vowed **"I can lure the real culprit who murdered my father"** (the manual is bait for a trap). Tracked down a building converted into **Kyung Poong Gym**, where a bearded instructor he knew as a kid ("you used to buy me snacks") now teaches — evasive about Tae Wook's father. When **Young Hwa Gym** debt-collectors raided and beat the master, Tae Wook intervened: hurled and choked out the lead thug (warning the lackeys about the "fallout"), **caught a masked thug's metal bat barehanded and smashed it into his face**, one-swept a black belt, and stood unbeaten over the floor of thugs.
-- **The bearded gym master** — white dobok, black belt, runs the debt-crippled dojang; evasive about the father ("I DON'T KNOW A WHOLE LOT"); slipped and called the kid "TAE WOOK... NO, I MEAN WHO ARE YOU..." (protective denial); begged the collectors for exactly one more week.
-- **The disciple kid** — present at the gym raid, intervened alongside Tae Wook.
-- **Young Hwa Gym crew (NEW faction)** — spiky-haired lead (thrown, pinned, choked, left terrified: "OUR CHIEF IS GOING TO HUNT YOU DOWN!!"), masked blue-teal-haired bat-thug (bat caught, face smashed), black-belt kicker, mohawked student (also led a school pack earlier), buzz-cut and freckled hangers-on. A **"chief"** above them is now teased.
-- **Tae Wook's mother** — kitchen scenes, proud ("OUR TAE WOOK HAS REALLY MATURED... growing up just like you wanted him to").
-- Unseen: **Anuth** (in Haons), **Ha Tae Yong / the Ha family** (retaliation pending), **Ha Yeon Jae**, **Cho Hee Sung** (broken), **Choi Ji Yeon**, **Segang**, the **"route"**.
+- **Kang Tae Wook (vessel of the regressed master Ray)** — grey hoodie, red eyes. Ch.6: deflected the gym beating onto **Cho Hee Sung** by name (thumbs-up smug Gwang Hwee High student, everyone knows him) and taunted that he'll be waiting; confronted the bearded gym instructor — the man **changed his surname** and became a martial-arts instructor; is that connected to the father's murder? — and got stonewalled ("I have no idea what you're talking about... get going"). Walking the streets he concluded the conspiracy around his father's death is bigger than thought and that he is too weak for revenge yet. Then a long sepia flashback (below), after which he searched a mountain valley and found **Master Kwak alive**.
+- **Ray (past self)** — in the flashback he was the bullied schoolboy: three suited delinquents dunked him in a stream ("HOW IS IT? WATER TASTES GREAT, RIGHT?") until an old man intervened, hung the bullies upside-down from a giant tree, and promised to teach him self-defense — "He started me down the path of martial arts."
+- **Master Kwak (NEW — major)** — white-haired, mustached, blue traditional outfit; a **medicinal-arts master** facing his **12-star realm breakthrough challenge**. Captions say he later failed a breakthrough and "lost his life" — yet he is alive in the present (contradiction left as-teased). He agreed to help Tae Wook as a favor for **"a friend from a long time ago"** (unseen vouching figure). Tested Tae Wook, scoffed, coughed (KUHUK!), and had his **acupuncture-needle case** fished out of his jacket pocket — chapter ends on the opened needle case ("WH-WHAT ARE YOU PLANNING ON DOING?").
+- **The gym instructor** — bearded, black belt, changed his surname; keeps **his own golden box** in an old cabinet ("Even though I had wanted to live a quiet life, it looks like those around me won't leave me be"); the inner voice (Ray) notes Tae Wook's father wouldn't want the boy caught in this fight. Bang-vs-Gu name question still open.
+- **Cho Hee Sung** — now attending **Gwang Hwee High**; just got scapegoated by Tae Wook for the gym beating. New trouble incoming for him.
+- **The regressed master's inner voice** — glowing-blue-bubble commentary; derides "plebs who haven't established their own realm"; chides that Tae Wook's father wouldn't want the boy in this fight.
+- Unseen/unchanged: **Anuth** (in Haons, holds the stolen core soul), **Ha Tae Yong/the Ha family** (retaliation pending), **Ha Yeon Jae**, **the "route"**, **Segang**, the **secret-arts manual** (the lure plan), the **black bottle + papers**.
 
-## Plot state at end of chapter 5
+## Plot state at end of chapter 6
 
-- The box resolved: secret-arts manual in hand, black bottle + papers unexplained; the plan stated — lure the father's murderer.
-- Kyung Poong Gym re-entered Tae Wook's life (old connection to his father, debt-ridden); the raid beaten back with zero damage taken.
-- **Cliffhanger:** the spiky-haired thug's terror — "WH-WHO THE HELL ARE YOU?! ... OUR CHIEF IS GOING TO HUNT YOU DOWN!!"
+- Gym debt crisis redirected onto Cho Hee Sung; instructor's mystery deepened (surname change, own golden box).
+- The father's-death conspiracy acknowledged as bigger than one gym.
+- Flashback revealed Tae Wook's origin with the old man (Kwak) — his martial-arts start.
+- Master Kwak found alive; his favor secured via the mystery friend; **cliffhanger: Tae Wook opens Kwak's needle case** (he came to assist Kwak's 12-star breakthrough challenge).
 
 ## Unresolved threads (payoffs waiting)
 
-- **The secret-arts manual** — what techniques it teaches; how the "lure" trap will work.
-- **The black bottle and folded papers** — unexplained.
-- **"Our chief"** — Young Hwa Gym's boss, teased as the next threat.
-- **Bang vs Gu** — students demanded "INSTRUCTOR BANG"; Tae Wook recalls the man's "LAST NAME ... GU"; the bearded master may be either or neither.
-- **The master's past with Tae Wook's father** — evasive; he "has had it bad, all this while."
-- **The father's death "on the route"** — who, why.
-- **Anuth in Haons**; **Ha Tae Yong's retaliation**; **Ha Yeon Jae**; **Segang**; **the star ladder** (body 1-star, skills 2-star); **the core-soul seal**.
+- **The needle plan** — what Tae Wook intends with acupuncture needles on a 12-star breakthrough.
+- **Kwak's "death" vs. being alive** — figure out the contradiction.
+- **"A friend from a long time ago"** — who vouches for Tae Wook?
+- **The instructor's surname change + his own golden box** — his tie to the father/murder.
+- **The secret-arts manual lure plan** (father's murderer); **the black bottle + papers**.
+- **Cho Hee Sung's incoming payback** (scapegoated for the gym beating).
+- **Anuth in Haons**; **Ha Tae Yong's retaliation**; **Ha Yeon Jae**; **Segang**; **the route**.
 
-## Voice/continuity notes for chapter 6
+## Voice/continuity notes for chapter 7
 
-- Address conventions: "our boy" / "Kang Tae Wook" for the vessel; Ray is the past-life self; the bearded man is "the gym master" (name unresolved); Young Hwa Gym for the thugs. Canon names: **Kang Tae Wook / Ray / Anuth / Cho Hee Sung / Suh Jae Dong / Choi Ji Yeon / Ha Tae Yong / Ha Yeon Jae / Kyung Poong Gym / Young Hwa Gym / Haons / Segang / the route**.
-- World canon: core soul (sealed, stolen), aura/internal force/mana, water/fire/lightning classes, 1-to-12 star ratings (body 1-star, skills 2-star), the golden-energy punches + meditation spirit-body, the secret-arts manual (new).
-- **Running gags — RECENT window (do not repeat for ~2 chapters):** refrain "Business has been slow." (3×, inverted on the floor of unconscious guests); the hug→smile-dies fake-out; "the legendary technique, allegedly" fake credentials; the Bang-vs-Gu open question; the chairs-racks-twenty-years triple; "exactly one more week" fake precision; "buddy" on a doomed thug; "cooked"; the master-snaps-at-the-boy sincerity drop. Ch.1–4 gags remain banned. Cold open used beat 059 (the barehanded bat catch) with rewind line "That moment is coming later, because this story starts with a dusty box and a very patient young man." — next chapter needs a fresh rewind phrasing.
+- Address conventions: "our boy" / "Kang Tae Wook" for the vessel; Ray is the past-life self (also "the inner voice"); Kwak is "Master Kwak" / "the old man"; the bearded man is "the gym instructor" (name unresolved). Canon names: **Kang Tae Wook / Ray / Anuth / Cho Hee Sung / Suh Jae Dong / Choi Ji Yeon / Ha Tae Yong / Ha Yeon Jae / Master Kwak / Kyung Poong Gym / Young Hwa Gym / Gwang Hwee High / Haons / Segang / the route**.
+- World canon: core soul (sealed, stolen), aura/internal force/mana, water/fire/lightning classes, **1-to-12 star/realm ratings** (Kwak attempts the 12-star realm breakthrough; Tae Wook's body 1-star, skills 2-star), medicinal arts + acupuncture needles, golden-energy punches, the secret-arts manual, TWO golden boxes (Tae Wook's and the instructor's).
+- **Running gags — RECENT window (do not repeat for ~2 chapters):** refrain "Everyone in this story is hiding something." (3×); the rope-tree-branch-gravity detonation; the scapegoat/promise-of-violence/field-trip triple; the resident-master interrogation chain; the almost-confession dying at "hey"; the plan→"the spot is empty" collapse; the oath answers structure. Ch.1–5 gags remain banned. Sincerity drop spent on the Master Kwak reunion — a new one needs a fresh earned moment.
+- Cold open used beat 033 (the three bullies hanging from the tree) with rewind line "Hold that thought, because the road to that tree starts with a petty redirect." — next chapter needs a fresh rewind phrasing.
 - Narration VOICE: the **"mommy" voice** — `tts_generate --voice mommy` (preset: reference `d8cc2855…`, speed 1.07, gain 5dB, plus the 0.4s inter-entry pad). No background music.
 - Narration writing voice: FDB-voice writer (DerekFDB joke grammar, fully diegetic), flow rule + scene-evaluation pacing per tone.md; hard ceiling 60 words/entry; zero production words; no asterisks/markdown in narration; em-dashes ≤1 per entry. Script format: `### COLD OPEN (from beat NNN) — title` (the cold open REPLACES that beat's own entry); NO outro section — the tease folds into the final beat (≤60 words).
