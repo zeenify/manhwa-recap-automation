@@ -135,32 +135,41 @@ Hashtag core set (rotate 4-6 per post, don't spam all):
 5. Odysee. When any login/signup wall appears during browser work: STOP, ask
 the user, let them type credentials.
 
-## Facebook posting recipe (tested 2026-10-05, ch001 of Return of the Top Class Master)
+## Facebook posting recipe (tested 2026-10-05/06, ch001-010 of Return of the Top Class Master)
 
 FB merged page videos into the REEL pipeline — even 11-min horizontal uploads
-go through the reel composer and publish as reels (the wimp chapters are all
-reels in MBS). The "Edit reel" step is NORMAL, not a wrong turn.
+go through the reel composer and publish as reels (all 10 chapters of the new
+series + the wimp chapters are reels in MBS). The "Edit reel" step is NORMAL,
+not a wrong turn.
 
-1. Page (facebook.com/profile.php?id=61594960413829) → scroll to the timeline
-   composer ("What's on your mind?" field — scrollIntoView + CUA click; the
-   floating "Share a thought..." bubble opens NOTES, not a post — avoid).
-2. In the dialog click the inner "Photo/video" → a file input mounts inside
-   [role=dialog] (accept video/*) → inject the mp4 as a File (chunked base64
-   ≤380KB/evaluate, ~371 chunks for 105MB, assemble via atob→Blob parts) →
-   dispatch change. Upload reaches 100% in ~1-2 min (browser does the transfer).
-3. Type the caption (from fb-captions.json — same format as the wimp bulk) via
-   locator.type() into the dialog textbox → click "Next".
-4. "Edit reel" screen: fill Reel title ("Series — Chapter N | Manhwa Recap"),
-   3 reel tags via the Add tags box (fill + Enter), → "Next".
-5. "Reel settings": caption carried over, audience Public, "Publish now" →
-   click "Post" → dialog closes with a posting confirmation.
-6. The reel then encodes server-side for 10-30 min before it appears on the
-   timeline / MBS published grid / the page Reels tab. VERIFY AFTER A DELAY,
-   not immediately — the published grid will show "Chapter N — ..." with the
-   video duration next to the title.
+**BULK ROUTE (preferred — used for ch002-010):** MBS Content
+(business.facebook.com/latest/posts/published_posts) → the toolbar has TWO
+"Create post" buttons: click the LAST one (split-button, aria-haspopup=menu) →
+menu: **Bulk upload reels** → the bulk page mounts `input[type=file]
+accept="video/*" multiple` → inject ONE file per session → the row gets its
+own Description box + "Publish now" → type caption → Publish now → confirm
+"Publish" → "Your bulk upload is processing" = done. REOPEN the bulk page per
+file (Create post → Bulk upload reels again): the page does NOT survive
+reloads, and "Add videos" re-click opens a native chooser (dead end). FB then
+encodes 1-18 h before reels appear in the grid / page Reels tab — do not
+panic-verify (ch001 took ~18 h to surface).
 
-Gotchas: MBS direct goto ERR_ABORTs — use a NEW IAB tab for
-business.facebook.com. MBS's own composer never mounts its file input via
-injection — the PAGE composer works. The profile feed scrolls inside an inner
-container — use scrollIntoView, not window.scrollBy. Caption typing needs
-locator.click() + locator.type() (real key events); fill() fails on FB fields.
+Injection details: ~380KB base64 per evaluate (371-405 chunks for a ~110MB
+chapter, ~47ms/chunk). A transient "Internal error" hits the bridge about
+once per cell — page state (window.__up) persists, so resume from
+window.__up.length. Assemble in ≤100-chunk slices with
+window.__parts/window.__assembledTo bookkeeping — one big atob assembly
+overloads the bridge. Caption typing: locator.click() + locator.type(); if
+the role=textbox locator times out, click the div[contenteditable] via
+evaluate + tab.cua.type.
+
+**SINGLE-POST ROUTE (fallback — ch001):** page composer ("What's on your
+mind?" field → scrollIntoView + CUA click; the floating "Share a thought..."
+bubble opens NOTES — avoid) → inner "Photo/video" → same injection → caption
+→ Next → "Edit reel" (Reel title + 3 tags, fill + Enter) → Next → Reel
+settings (caption carried over, Public, Publish now) → Post. Long horizontal
+chapters publish as reels at full length.
+
+Common gotchas: MBS direct goto ERR_ABORTs — open business.facebook.com in a
+NEW IAB tab. The profile feed scrolls in an inner container — scrollIntoView,
+not window.scrollBy. fill() fails on FB fields — use real typing.
