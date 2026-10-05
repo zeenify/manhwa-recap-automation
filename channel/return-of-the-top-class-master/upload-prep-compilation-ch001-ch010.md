@@ -1,6 +1,7 @@
 # UPLOAD PREP — compilation ch001-010 — Return of the Top Class Master
 
-Status: READY — stitched and verified 2026-10-06 via `agents/stitcher-agent.md`.
+Status: **LIVE** — published Public on 2026-10-06.
+Video: https://youtu.be/GuIk0Yuim2k — title option 1 (no range in title ✓), chapters block in description ✓, thumbnail = the removed solo-ch001 thumbnail ✓, tags ✓, playlist attached ✓, 1080p ✓. Replaced the deleted solo ch001 upload (VXOM-9kPmPc, underperforming). Note: 2-3 duplicate empty "Return of the Top Class Master" playlists exist from failed picker attempts — delete the extras in Content → Playlists.
 - **Video:** `videos/return-of-the-top-class-master/compilation/ch001-ch010_full.mp4`
   — 1:43:02 (6182.6s), 1920×1080 h264, 1.32GB. Duration verified = chapters
   (6150.1s) + 9 cards (22.5s) + outro (10s). No card before Chapter 1 (range
