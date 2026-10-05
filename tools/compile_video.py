@@ -7,7 +7,12 @@ renders them as short clips that match the chapter files' codec parameters
 YouTube-chapters timestamp block for the upload description.
 
 Usage:
-  python tools/compile_video.py --from 1 --to 20 --out videos/compilation/ch001-020_full.mp4
+  python tools/compile_video.py --from 1 --to 20 --out videos/compilation/ch001-020_full.mp4 \
+      --slug a-wimps-strategy-guide --series "A WIMP'S STRATEGY GUIDE" --sub "TO CONQUER THE TOWER"
+
+The first chapter of the range starts immediately (no card before it); every
+following chapter gets a 2.5s chapter-number card. Chapter files must exist at
+videos/<slug>/chNNN/chNNN.mp4.
 """
 import argparse
 import subprocess
@@ -82,12 +87,23 @@ def main():
     ap.add_argument("--from", dest="first", type=int, default=1)
     ap.add_argument("--to", dest="last", type=int, default=20)
     ap.add_argument("--out", required=True)
-    ap.add_argument("--workdir", default="tmp/compile")
+    ap.add_argument("--workdir", default=None,
+                    help="default: tmp/compile/<slug>")
+    ap.add_argument("--slug", default=SERIES_SLUG,
+                    help="series slug under videos/ (default: wimp series)")
+    ap.add_argument("--series", default=SERIES,
+                    help="big card line for the outro (default: wimp series)")
+    ap.add_argument("--sub", default=SERIES_SUB,
+                    help="small card sub-line; pass empty string to omit "
+                         "(default: wimp tagline)")
+    ap.add_argument("--outro-sub", default="NEW FLOORS EVERY WEEK - SUBSCRIBE",
+                    help="outro sub-line")
     args = ap.parse_args()
 
+    slug = args.slug
     out = Path(args.out)
     out.parent.mkdir(parents=True, exist_ok=True)
-    work = Path(args.workdir)
+    work = Path(args.workdir) if args.workdir else Path(f"tmp/compile/{slug}")
     work.mkdir(parents=True, exist_ok=True)
 
     entries = []  # (path, youtube_label or None)
@@ -98,12 +114,12 @@ def main():
         label = f"Chapter {n}"
         if n > args.first:
             png = work / f"card_ch{n:03d}.png"
-            make_card(png, f"CHAPTER {n}", SERIES, SERIES_SUB)
+            make_card(png, f"CHAPTER {n}", args.series, args.sub)
             clip = work / f"clip_ch{n:03d}.mp4"
             render_card_clip(png, clip, CARD_DUR)
             entries.append((clip, label))
             total += CARD_DUR
-        ch = Path(f"videos/{SERIES_SLUG}/ch{n:03d}/ch{n:03d}.mp4")
+        ch = Path(f"videos/{slug}/ch{n:03d}/ch{n:03d}.mp4")
         if not ch.exists():
             raise SystemExit(f"missing chapter video: {ch}")
         lines.append(f"{_fmt_ts(total)} {label}")
@@ -115,7 +131,7 @@ def main():
         total += d
 
     outro_png = work / "card_outro.png"
-    make_card(outro_png, "THAT'S CHAPTERS 1-20", SERIES, "NEW FLOORS EVERY WEEK - SUBSCRIBE")
+    make_card(outro_png, f"THAT'S CHAPTERS {args.first}-{args.last}", args.series, args.outro_sub)
     outro_clip = work / "clip_outro.mp4"
     render_card_clip(outro_png, outro_clip, OUTRO_DUR)
     entries.append((outro_clip, None))
@@ -162,14 +178,14 @@ def main():
             cursor += CARD_DUR
         ch_dur = float(subprocess.run(
             ["ffprobe", "-v", "error", "-show_entries", "format=duration",
-             "-of", "csv=p=0", f"videos/{SERIES_SLUG}/ch{n:03d}/ch{n:03d}.mp4"],
+             "-of", "csv=p=0", f"videos/{slug}/ch{n:03d}/ch{n:03d}.mp4"],
             capture_output=True, text=True, check=True).stdout.strip())
         ch_entries.append({
             "n": n,
             "label": f"Chapter {n}",
             "start": _fmt_ts(cursor),
             "start_seconds": round(cursor, 2),
-            "source_file": f"videos/{SERIES_SLUG}/ch{n:03d}/ch{n:03d}.mp4",
+            "source_file": f"videos/{slug}/ch{n:03d}/ch{n:03d}.mp4",
         })
         cursor += ch_dur
     meta = {
