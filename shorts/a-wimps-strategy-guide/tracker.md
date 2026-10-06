@@ -3,15 +3,15 @@
 One row per scripted short (97 total). Pipeline: TTS -> render (both idempotent).
 Status: **scripted** = script passes the validator; **produced** = TTS + rendered mp4 exists.
 Upload cadence per the research: 3-5/week (or daily). Fill `day` + tick YT / TT (TikTok) / FB when posted.
-Batch 1 produced 2026-10-07: 001 (sample) + the 10 marked produced below.
+Batch 1 produced 2026-10-07: 001 (sample) + 10 produced. UPLOADED to YT Shorts 2026-10-07: 9 (daily upload limit hit; 080_mortgage-with-handle publish incomplete + 110_red-ribbon-robbery not attempted -> upload both when the limit resets).
 
 | # | short | type | source | status | dur_s | upload day | YT | TT | FB |
 |---|---|---|---|---|---|---|---|---|---|
-| 001_door_kick | cliffhanger | ch010 beats 070-079 | **produced** | 43.9 |  |  |  |  |
+| 001_door_kick | cliffhanger | ch010 beats 070-079 | **produced** | 43.9 | 2026-10-07 | ✓ |  |  |
 | 010_safety_seminar | roast | ch001 beats 006-017 | scripted |  |  |  |  |  |
 | 011_one_bite_thief | roast | ch001 beats 037-044 | scripted |  |  |  |  |  |
 | 012_bark_for_me | roast | ch001 beats 072-080 | scripted |  |  |  |  |  |
-| 013_interest_day | face-slap | ch001 beats 081-097, ch002 beats 000-004 | **produced** | 44.5 |  |  |  |  |
+| 013_interest_day | face-slap | ch001 beats 081-097, ch002 beats 000-004 | **produced** | 44.5 | 2026-10-07 | ✓ |  |  |
 | 014_ring_me_up | roast | ch002 beats 005-011 | scripted |  |  |  |  |  |
 | 015_three_stars | roast | ch002 beats 015-028 | scripted |  |  |  |  |  |
 | 016_article_three | roast | ch002 beats 030-048 | scripted |  |  |  |  |  |
@@ -27,19 +27,19 @@ Batch 1 produced 2026-10-07: 001 (sample) + the 10 marked produced below.
 | 026_wild_horse | roast | ch004 beats 041-046 | scripted |  |  |  |  |  |
 | 027_pom_poms | roast | ch004 beats 047-057 | scripted |  |  |  |  |  |
 | 028_shadow_step | roast | ch004 beats 060-067 | scripted |  |  |  |  |  |
-| 029_biggest_mystery | cliffhanger | ch004 beats 068-081 | **produced** | 38.2 |  |  |  |  |
+| 029_biggest_mystery | cliffhanger | ch004 beats 068-081 | **produced** | 38.2 | 2026-10-07 | ✓ |  |  |
 | 030_robot_mode | roast | ch005 beats 001-007 | scripted |  |  |  |  |  |
 | 031_mascot_video | roast | ch005 beats 009-021 | scripted |  |  |  |  |  |
 | 032_coward_epitaph | roast | ch005 beats 028-042 | scripted |  |  |  |  |  |
-| 033_floor_eleven_bet | face-slap | ch005 beats 043-082 | **produced** | 42.8 |  |  |  |  |
+| 033_floor_eleven_bet | face-slap | ch005 beats 043-082 | **produced** | 42.8 | 2026-10-07 | ✓ |  |  |
 | 060_who-told-you | roast | ch006 beats 000-006 | scripted |  |  |  |  |  |
-| 061_haggling-downward | face-slap | ch006 beats 013-023 | **produced** | 45.2 |  |  |  |  |
+| 061_haggling-downward | face-slap | ch006 beats 013-023 | **produced** | 45.2 | 2026-10-07 | ✓ |  |  |
 | 062_refusal-was-acting | cliffhanger | ch006 beats 027-035 | scripted |  |  |  |  |  |
 | 063_absolutely-slow | roast | ch006 beats 038-046 | scripted |  |  |  |  |  |
-| 064_please-stab-me | roast | ch007 beats 019-023 | **produced** | 26.7 |  |  |  |  |
+| 064_please-stab-me | roast | ch007 beats 019-023 | **produced** | 26.7 | 2026-10-07 | ✓ |  |  |
 | 065_studying-their-wimp | roast | ch007 beats 061-063 | scripted |  |  |  |  |  |
-| 066_every-god-at-once | cliffhanger | ch007 beats 070-077 | **produced** | 35.6 |  |  |  |  |
-| 067_goblin-plays-dead | face-slap | ch007 beats 034-040 | **produced** | 39.2 |  |  |  |  |
+| 066_every-god-at-once | cliffhanger | ch007 beats 070-077 | **produced** | 35.6 | 2026-10-07 | ✓ |  |  |
+| 067_goblin-plays-dead | face-slap | ch007 beats 034-040 | **produced** | 39.2 | 2026-10-07 | ✓ |  |  |
 | 068_it-tickles | roast | ch008 beats 006-009 | scripted |  |  |  |  |  |
 | 069_naming-ceremony | roast | ch008 beats 030-032 | scripted |  |  |  |  |  |
 | 070_interviewer-bong | roast | ch008 beats 011-016 | scripted |  |  |  |  |  |
@@ -48,7 +48,7 @@ Batch 1 produced 2026-10-07: 001 (sample) + the 10 marked produced below.
 | 073_rental-bike-thesis | roast | ch009 beats 009-012 | scripted |  |  |  |  |  |
 | 074_classy-walkthrough | roast | ch009 beats 023-027 | scripted |  |  |  |  |  |
 | 075_wild-horse | roast | ch009 beats 032-035 | scripted |  |  |  |  |  |
-| 076_world-slows-down | face-slap | ch009 beats 048-057 | **produced** | 41.8 |  |  |  |  |
+| 076_world-slows-down | face-slap | ch009 beats 048-057 | **produced** | 41.8 | 2026-10-07 | ✓ |  |  |
 | 077_excessive-talent | cliffhanger | ch009 beats 063-071 | scripted |  |  |  |  |  |
 | 078_fridge-war | roast | ch010 beats 001-005 | scripted |  |  |  |  |  |
 | 079_trust-arrow | roast | ch010 beats 017-022 | scripted |  |  |  |  |  |
