@@ -1,0 +1,28 @@
+{
+  "role": "continuation reader agent (B1 tail)",
+  "series": "return-of-the-top-class-master",
+  "chapter": 12,
+  "total_virtual_height": 108442,
+  "my_band": [75100, 82000],
+  "do_not_touch_band": [80000, 108442],
+  "incoming_state": {
+    "draft_file": "toonverse/return-of-the-top-class-master/chapter-12/beats_draft_B1.json",
+    "verified_beats": 13,
+    "covered_range": [52221, 75100],
+    "last_piece_breadcrumb": "v073100_small.png"
+  },
+  "deliverables": [
+    "toonverse/return-of-the-top-class-master/chapter-12/beats_draft_B1.json (append tail beats, status complete)",
+    "toonverse/return-of-the-top-class-master/chapter-12/handoff_B1_52221_82000.json"
+  ],
+  "steps": [
+    "1. checkpoint written (this file)",
+    "2. read agents/reader-agent.md + beats_draft_B1.json",
+    "3. window-verify junction 74800-76400",
+    "4. judge [75100, 82000) from views/small pieces, pin boundaries with window renders",
+    "5. append to beats_draft_B1.json in place, save every ~5 boundaries, update last_piece breadcrumb",
+    "6. set status complete",
+    "7. write handoff_B1_52221_82000.json"
+  ],
+  "current_step": 2
+}
