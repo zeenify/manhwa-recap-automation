@@ -46,10 +46,35 @@ PAN_W = 0.75         # pan-down column width fraction (tall art fills 9:16 nativ
 PAN_MAX_SPEED = 320  # px/s cap at output scale (research: 100-200 dialogue, 300-500 sparse)
 ENDCARD_S = 1.8      # funnel endcard length (last frame = series + CTA)
 CAP_FONT = "Arial Black"
-CAP_SIZE = 58
-CAP_MARGIN_V = 460   # bottom-center, above the Shorts UI bar (bottom 440px unsafe)
+CAP_SIZE = 72
+CAP_TOP = 1230       # captions anchor TOP-center here — fixed first line, no jumping
+CAP_MAX_WORDS = 3    # Hormozi-style short cards; longer cards wrap downward
 DARK = (14, 14, 16)
 FONTS = "C:/Windows/Fonts"
+
+_WHISPER = None
+
+
+def speech_spans(mp3: Path):
+    """Real word start/end times via faster-whisper (local, CPU). Returns
+    [(start, end), ...] or None if unavailable — the caller then falls back to
+    proportional estimation. Model loads once per run."""
+    global _WHISPER
+    try:
+        from faster_whisper import WhisperModel
+    except ImportError:
+        print("captions: faster-whisper not installed — proportional timing "
+              "(install with: py -m pip install faster-whisper)", file=sys.stderr)
+        return None
+    if _WHISPER is None:
+        _WHISPER = WhisperModel("base.en", device="cpu", compute_type="int8")
+    segments, _info = _WHISPER.transcribe(str(mp3), language="en", word_timestamps=True)
+    spans = []
+    for s in segments:
+        for w in (s.words or []):
+            if w.word.strip():
+                spans.append((w.start, w.end))
+    return spans or None
 
 
 def sh(cmd, cwd=None, **kw):
@@ -170,9 +195,12 @@ def ass_time(t: float) -> str:
 
 
 def build_ass(entries, timing, out: Path):
-    """Karaoke captions: words dim until spoken (secondary -> primary), one
-    keyword per card yellow, positioned inside the universal safe box. Word
-    timing is an estimate (length + punctuation weight) — no forced alignment."""
+    """Karaoke captions synced to real speech: word times come from
+    faster-whisper on each entry's mp3 (exact per-word spans when the tokenizer
+    agrees with the script, else proportional interpolation inside the real
+    speech window; falls back to duration estimates only if whisper fails).
+    Cards anchor TOP-center at a fixed line so multi-line cards never make the
+    text jump around — that was the 'shaky caption' defect."""
     pad = timing.get("pad_s", 0.0)
     header = (
         "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\n"
@@ -182,36 +210,69 @@ def build_ass(entries, timing, out: Path):
         "ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, "
         "MarginL, MarginR, MarginV, Encoding\n"
         f"Style: Cap,{CAP_FONT},{CAP_SIZE},&H00FFFFFF,&H00303030,&H00000000,"
-        f"&H00000000,0,0,0,0,100,100,0,0,1,4,0,2,60,60,{CAP_MARGIN_V},1\n\n"
+        f"&H00000000,0,0,0,0,100,100,0,0,1,5,0,8,50,50,{CAP_TOP},1\n\n"
         "[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, "
         "MarginV, Effect, Text\n")
-    lines, t = [], 0.0
+    lines, offset = [], 0.0
     for e, tm in zip(entries, timing["entries"]):
-        window = max(0.5, tm["duration_s"] - pad)
         words = e["narration"].split()
         weights = [word_weight(w) for w in words]
-        scale = window / sum(weights)
-        cards, cur, cur_w = [], [], 0.0
-        for wd, wt in zip(words, weights):
-            cur.append((wd, wt))
-            cur_w += wt
-            if len(cur) >= 4 or (len(cur) >= 2 and re.search(r"[.!?]$", wd)):
-                cards.append((cur, cur_w))
-                cur, cur_w = [], 0.0
+        window = max(0.5, tm["duration_s"] - pad)
+        spans = speech_spans(Path(e["file"]))
+        if spans is not None:
+            # whisper timestamps are relative to the entry's own mp3 — shift
+            # them into the short's timeline (concat position of this entry)
+            spans = [(s + offset, t + offset) for s, t in spans]
+        if spans is not None and len(spans) != len(words):
+            if len(spans) >= 2:
+                # tokenizer mismatch: interpolate inside the REAL speech window
+                lo, hi = spans[0][0], spans[-1][1]
+                total_w = sum(weights)
+                spans, acc = [], lo
+                for wt in weights:
+                    spans.append((acc, acc + (hi - lo) * wt / total_w))
+                    acc += (hi - lo) * wt / total_w
+                mode = "anchor"
+            else:
+                spans = None
+        if spans is None:
+            total_w = sum(weights)
+            spans, acc = [], offset
+            for wt in weights:
+                spans.append((acc, acc + window * wt / total_w))
+                acc += window * wt / total_w
+            mode = "estimate"
+        else:
+            mode = "whisper"
+        # regroup into short cards anchored at real word times
+        cards, cur = [], []
+        for i, wd in enumerate(words):
+            cur.append(i)
+            nxt = words[i + 1] if i + 1 < len(words) else ""
+            if len(cur) >= CAP_MAX_WORDS or (len(cur) >= 2 and re.search(r"[.!?]$", wd)) \
+                    or (nxt and len(nxt) > 9):
+                cards.append(cur)
+                cur = []
         if cur:
-            cards.append((cur, cur_w))
-        for card, card_w in cards:
-            start, dur_c = t, card_w * scale
+            cards.append(cur)
+        for card in cards:
+            start = spans[card[0]][0]
+            end = max(spans[card[-1]][1], start + 0.25) + 0.12  # small linger
             parts = []
-            kw = keyword_of([w for w, _ in card])
-            for wd, wt in card:
-                kcs = max(5, int(round(wt * scale * 100)))
-                mark = f"{{\\c&H00FFFF&}}" if wd == kw else ""
-                reset = "{\\c&HFFFFFF&}" if wd == kw else ""
-                parts.append(f"{{\\k{kcs}}}{mark}{wd}{reset}")
-            lines.append(f"Dialogue: 0,{ass_time(start)},{ass_time(start + dur_c + 0.05)},"
+            kw = keyword_of([words[i] for i in card])
+            for pos, i in enumerate(card):
+                # \k runs back-to-back from the card start, so each word's k
+                # must span UP TO the next word's real start (gaps included)
+                # or pauses inside a card would fire the highlight early
+                nxt = spans[card[pos + 1]][0] if pos + 1 < len(card) else spans[i][1]
+                kcs = max(4, int(round((nxt - spans[i][0]) * 100)))
+                mark = f"{{\\c&H00FFFF&}}" if words[i] == kw else ""
+                reset = "{\\c&HFFFFFF&}" if words[i] == kw else ""
+                parts.append(f"{{\\k{kcs}}}{mark}{words[i]}{reset}")
+            lines.append(f"Dialogue: 0,{ass_time(start)},{ass_time(end)},"
                          f"Cap,,0,0,0,,{' '.join(parts)}")
-            t += dur_c
+        offset += tm["duration_s"]
+        print(f"captions entry '{e['title']}': {mode} timing")
     out.write_text(header + "\n".join(lines) + "\n", encoding="utf-8")
 
 
