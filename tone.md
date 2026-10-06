@@ -68,7 +68,7 @@ word and let the audio run a second longer.
 - **Banned choppiness:** sentence fragments ("Studio District, night."), colon-leadins
   ("Home: a metal door…"), one-word punchline paragraphs ("Magic."), and
   parenthetical stage directions ("— sigh —" → write "he lets out a long sigh").
-- **Staccato is choppiness too** (learned from the FDB-voice samples): "Every box
+- **Staccato is choppiness too** (learned from staccato-heavy narration samples): "Every box
   checked. Except none of it mattered." is two hard TTS stops for one thought.
   Join the thought: "The checklist was perfect on paper, and that changed
   absolutely nothing." A reversal lands through the connector word ("except",

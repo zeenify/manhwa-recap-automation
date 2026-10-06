@@ -29,3 +29,8 @@ toonverse/**/window_*.png
 
 channel/analytics/credentials.json
 tmp/
+
+# ---- author-private material (kept local, never pushed) ----
+agents/writer-agent-fdb.md
+research/fdb_style_notes.md
+channel/thumbnail-research/

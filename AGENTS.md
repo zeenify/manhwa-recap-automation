@@ -25,14 +25,17 @@ Commit after every successful stage.
 - `tools/writer_brief.py` — pre-digests beats.json (with aspect ratios) + all handoff synopses + story-so-far into ONE briefing file for the writer agent, so the writer reads 3 files total instead of 7.
 - `tools/tts_generate.py` — synthesizes one mp3 per script entry via the fish.audio API (model `s2.1-pro-free`; API key in `tmp/fish_api_key.txt` — treat as secret, never echo or publish). Idempotent (skips existing mp3s), retries on failure, 4 parallel workers by default (`--workers`). Per-series voice + prosody via `--voice <name> --speed <factor> --gain <dB> --pad <seconds>` — the API has NO speed/volume knobs (verified 2026-10-04), so these are applied in ffmpeg post-processing right after synthesis and BEFORE timing is measured; `--pad` (default 0.4s) pads tail silence onto every entry so beats don't butt together (user finding from ch001). Defaults preserve the old behavior except the pad.
 - `tools/assemble.py` — the renderer. Reads beats.json + timing.json + shot directives from the script → renders ONE clip per script entry (a merged entry becomes a side-by-side collage shown for the whole entry's audio; `pan-down` scrolls a 70%-width centered column over the blurred bg — full-width scrolling is gone) → concats → muxes narration → optional music. Outputs `videos/<slug>/<chapter>/<chapter>.mp4` at 1920×1080/30fps. Idempotent per segment (skips existing clips — **delete `videos/<slug>/<chapter>/clips/*.mp4` AND the cached `collage_entry_*.png` whenever render settings or beats change**, or stale data gets reused).
-- `agents/reader-agent.md`, `agents/writer-agent.md`, `agents/writer-agent-fdb.md` — permanent agent protocols. **Read the relevant one before doing agent work**; spawn subagents with "follow this file + spawn parameters".
+- `agents/reader-agent.md`, `agents/writer-agent.md` — long-form agent protocols. `agents/shorts-miner-agent.md`, `agents/shorts-writer-agent.md` — the SHORTS specialist pair (mine scenes from finished chapters → script 30–60s vertical shorts). **Read the relevant one before doing agent work**; spawn subagents with "follow this file + spawn parameters".
 - `tone.md` — channel persona ("Roasting Best Friend") + the **pacing law** (words per beat by screen time). Law for all narration.
-- `research/narration_style_notes.md` — verbatim style analysis from a real 636K-sub recap channel's transcript. Style bible for the CLASSIC writer.
-- `research/fdb_style_notes.md` — verbatim style analysis of DerekFDB (1.25M-sub movie-commentary channel, "for the giggles"). Style bible for the FDB-VOICE writer.
+- `research/narration_style_notes.md` — verbatim style analysis from a real 636K-sub recap channel's transcript. Style bible for the long-form writer.
+- `research/shorts_style_notes.md` — the SHORTS bible: platform mechanics (the 3-second swipe window, completion + rewatch ranking), the manhwa-niche format menu, production specs (captions, pan speeds, safe zones), cross-posting rules, and the copyright armor. Law for the shorts writer.
 - `story-so-far.md` — rolling continuity memo, refreshed after every approved chapter script (cap ~1,500 words). Next chapter's agents get this + previous script, nothing older.
 - `scripts/<slug>/` — narration scripts, grouped per series (`scripts/<slug>/<chapter>_script.md`).
 - `assets/<slug>/<chapter>/beats/` — exported beat PNGs + `beats.json` (the contract between all stages).
 - `audio/<slug>/<chapter>/` — per-entry mp3s + `timing.json`: entry → mp3 file, measured `duration_s`, covered beats. **This is the sync contract: an entry's screen time = its narration mp3's duration (audio is the clock).** `videos/<slug>/<chapter>/`, `tmp/` — outputs and scratch. EVERYTHING series-produced lives under the series slug — never create a second series that shares `audio/ch001`-style paths with an old one.
+- `tools/assemble_shorts.py` — the vertical renderer: ONE 30–60s short per script at 1080×1920/30fps — composed cards, smoothstepped speed-capped pan-downs, burned-in karaoke captions (faster-whisper word alignment; estimated fallback), −14 LUFS voice, funnel endcard. Idempotent per clip — **purge `videos/<slug>/shorts/<short>/clips/` after changing shots/beats/captions** or stale clips get reused.
+- `tools/validate_shorts.py` — the shorts QA gate (header format, beat refs vs beats.json, word budgets, banned words, hook boundary in the first ~10 words). Run after EVERY shorts writing pass; writer self-QA is never trusted.
+- `shorts/<slug>/` — scene catalogs (`catalog.md` master index + per-range catalogs) and `tracker.md` (production & upload log: status, duration, upload day, YT/TT/FB ticks).
 
 ## Commands
 
@@ -44,9 +47,13 @@ python tools/merge_drafts.py    --out <merged.json> <part1.json> [<part2.json> <
 python tools/writer_brief.py    --slug <slug> --chapter <chapter> --out tmp/writer_brief_<chapter>.md
 python tools/tts_generate.py    --script scripts/<slug>/<chapter>_script.md --out-dir audio/<slug>/<chapter>
 python tools/assemble.py        --slug <slug> --chapter <chapter> --script scripts/<slug>/<chapter>_script.md
+# ---- shorts specialist (30–60s vertical from EXISTING chapters) ----
+python tools/validate_shorts.py --slug <slug>
+python tools/tts_generate.py    --script scripts/<slug>/shorts/<id>.md --out-dir audio/<slug>/shorts/<id> --voice <name> --speed 1.07 --pad 0.2
+python tools/assemble_shorts.py --slug <slug> --short <id> --series-title "SERIES NAME"
 ```
 
-Deps: Python 3.11 + Pillow + numpy (already installed). No git repo, no linter, no test suite — verification is visual QA of exported beats and grep checks on scripts.
+Deps: Python 3.11 + Pillow + numpy + faster-whisper (word-level caption alignment for shorts; the renderer falls back to estimated timing without it). No linter, no test suite — verification is visual QA of exported beats and `tools/validate_shorts.py` on scripts.
 
 ## Non-negotiable conventions
 
@@ -83,6 +90,7 @@ Deps: Python 3.11 + Pillow + numpy (already installed). No git repo, no linter, 
 - Stale `ffmpeg.exe` processes lock clip files and break cleanup — `taskkill //F //IM ffmpeg.exe` before deleting/re-rendering.
 - The concat demuxer resolves relative paths against the LIST FILE's directory — always write absolute forward-slash paths into `segments.txt` / `audio_list.txt`.
 - Change a render setting (resolution, filters) without deleting old clips = the idempotent skip silently reuses the stale clips. Purge `videos/<slug>/<chapter>/clips/` first.
+- Shorts captions: word timing comes from faster-whisper on each entry mp3 — those timestamps are PER-FILE, so always add the entry's concat offset before building the ASS (assemble_shorts.py does this; don't bypass it). Caption cards anchor TOP-center at one fixed line — bottom-anchored cards jump line to line and read as shaky (user finding, sample short v1). Missing faster-whisper = silent fallback to estimated timing with visible drift; the renderer prints a warning per entry.
 
 ## NEW CHAPTER RUNBOOK (do these in order, per chapter — e.g. chapter 2)
 
@@ -133,20 +141,54 @@ crops correct.
 4. `python tools/toonkit.py crop toonverse/<slug>/chapter-NN --beats <merged.json> --out assets/<slug>/<chapter>/beats`
 5. Build the writer brief (ONE file for the writer instead of six reads):
    `python tools/writer_brief.py --slug <slug> --chapter <chapter> --out tmp/writer_brief_<slug>_<chapter>.md`
-   Spawn WRITER AGENT — pick the persona at spawn (user's choice; default CLASSIC):
-   - CLASSIC: "Execute the WRITER AGENT protocol in agents/writer-agent.md.
-     Inputs: tmp/writer_brief_<slug>_<chapter>.md + tone.md +
-     research/narration_style_notes.md (read each once, nothing else). Output:
-     scripts/<slug>/<chapter>_script.md."
-   - FDB-VOICE: "Execute the WRITER AGENT protocol in agents/writer-agent-fdb.md.
-     Inputs: tmp/writer_brief_<slug>_<chapter>.md + tone.md +
-     research/fdb_style_notes.md (read each once, nothing else). Output:
-     scripts/<slug>/<chapter>_script.md."
-   Either way it handles flow rule, pacing, harmonization, QA.
-6. `python tools/tts_generate.py --script scripts/<slug>/<chapter>_script.md --out-dir audio/<slug>/<chapter> --voice <name>` (idempotent — safe to re-run; ~4 parallel workers by default, expect ~3–5 min. Voices live in the `VOICES` dict in tts_generate.py with per-voice prosody presets — **Return of the Top Class Master uses `--voice mommy`** (its preset carries speed 1.07 + gain 5dB) on EVERY chapter of that series. A raw fish.audio reference_id also works but gets no preset.)
+   Spawn WRITER AGENT: "Execute the WRITER AGENT protocol in agents/writer-agent.md.
+   Inputs: tmp/writer_brief_<slug>_<chapter>.md + tone.md +
+   research/narration_style_notes.md (read each once, nothing else). Output:
+   scripts/<slug>/<chapter>_script.md." It handles flow rule, pacing,
+   harmonization, QA.
+6. `python tools/tts_generate.py --script scripts/<slug>/<chapter>_script.md --out-dir audio/<slug>/<chapter> --voice <name>` (idempotent — safe to re-run; ~4 parallel workers by default, expect ~3–5 min. Voices live in the `VOICES` dict in tts_generate.py with per-voice prosody presets — **each series pins ONE voice and keeps it for every chapter**, so the channel sounds consistent; a raw fish.audio reference_id also works but gets no preset.)
 7. `python tools/assemble.py --slug <slug> --chapter <chapter> --script scripts/<slug>/<chapter>_script.md` (run in background; ~25–40 min for ~15 min of video)
 8. Verify with ffprobe (duration ≈ sum of audio durations; 1920×1080; aac audio).
    Then refresh `story-so-far.md` per the writer protocol's continuity duty —
    the main session can do this directly from the handoffs + script; a subagent
    is unnecessary.
 9. If anything fails mid-chain: every stage is idempotent and re-runnable — fix the specific stage, never restart the whole pipeline.
+
+## SHORTS RUNBOOK (the shorts specialist — 30–60s vertical cut from EXISTING chapters)
+
+The shorts pipeline reuses finished chapter scripts + beat PNGs; nobody reads
+images. Research + rationale: `research/shorts_style_notes.md` (LAW). Protocols:
+`agents/shorts-miner-agent.md` (find scenes) → `agents/shorts-writer-agent.md`
+(script them). A short = one self-contained scene or small arc; it MAY pull beats
+across chapters; unrestricted count — every short-able scene is a short.
+
+0. Pick the target series (needs finished chapter scripts + beats.json) and give
+   each agent range a FREE NUMBERING BLOCK (e.g. ch01–05 → 010–059, ch06–10 →
+   060–109) to avoid filename collisions. List already-taken scenes in the prompt.
+1. SPAWN miner+writer agents in PARALLEL — 2 at a time (more gets rejected) —
+   one pair per chapter range: "Execute BOTH protocols: agents/shorts-miner-agent.md
+   then agents/shorts-writer-agent.md. Range: chX–chY. Numbering block: NNN–NNN.
+   Output: one script per unit at scripts/<slug>/shorts/<NNN>_<id>.md + catalog at
+   shorts/<slug>/catalog_<range>.md." Hard rules live in the protocols (no image
+   reads, no TTS/renderer runs, beat numbers copied from chapter script headers only).
+2. `python tools/validate_shorts.py --slug <slug>` — fix every FAIL by hand
+   (the usual defect: hooks whose payoff word lands past ~word 10 — tighten the
+   first clause so the hook lands inside the 2.5-second swipe window).
+3. Merge the range catalogs into `shorts/<slug>/catalog.md` (id | type | source | hook)
+   and create `shorts/<slug>/tracker.md` — one row per short (status, duration,
+   upload day, YT/TT/FB ticks). The tracker is the day-by-day production/upload log.
+4. PRODUCE a batch (user picks which shorts): per short — TTS with the series
+   voice at shorts settings (`--speed 1.07 --pad 0.2`), then
+   `assemble_shorts --slug <slug> --short <id> --series-title "..."`. Expect
+   ~2 min TTS + ~3 min render per short, both idempotent. Verify 1080×1920/30fps
+   with ffprobe, spot-check frames, update the tracker.
+5. UPLOAD via a browser-automation session into YouTube Studio: each script's
+   PUBLISHING PACK section carries the YT title/description, TikTok/Reels caption,
+   and pinned-comment funnel text. Public, not made for kids. Tick the tracker's
+   day + YT column per upload. **YouTube enforces a daily upload limit (~10/day
+   observed)** — when it fires, stop and resume when it resets; 080+110-style
+   stragglers go up FIRST next session.
+6. Cross-post the SAME master file natively to TikTok/FB (per-platform captions
+   from the pack; never a watermarked re-upload). After a few days of data, pull
+   viewed-vs-swiped + average % viewed from Studio and steer the next mined batch
+   toward the winning formats.

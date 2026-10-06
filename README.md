@@ -1,10 +1,12 @@
 # manhwa-recap pipeline
 
 An **AI-agent-driven production line** that turns manhwa/webtoon chapters into
-narrated YouTube-style recap videos: AI reader agents judge the panel layout of
-scanned chapters, a writer agent narrates the story in a fixed comedy persona, a
-TTS engine speaks it, and an ffmpeg assembler renders a 1080p MP4 with synced
-camera moves — end to end, about one chapter per working session.
+narrated YouTube-style recap videos — plus a **shorts specialist** that re-cuts
+finished chapters into 30–60s vertical Shorts/TikToks. For the long-form: AI
+reader agents judge the panel layout of scanned chapters, a writer agent narrates
+the story in a fixed comedy persona, a TTS engine speaks it, and an ffmpeg
+assembler renders a 1080p MP4 with synced camera moves — end to end, about one
+chapter per working session.
 
 ```
 your scans (toonverse/<slug>/chapter-NN/*.jpg)
@@ -45,7 +47,10 @@ this repo, while cropping, merging, TTS, and rendering stay deterministic.
 
 ## Requirements
 
-- **Python 3.11+** with `Pillow` and `numpy` (`pip install -r requirements.txt`)
+- **Python 3.11+** with `Pillow`, `numpy`, and `faster-whisper`
+  (`pip install -r requirements.txt` — faster-whisper aligns shorts captions to
+  the narration word-by-word; without it the renderer falls back to estimated
+  timing with visible drift)
 - **ffmpeg 8.x** on PATH (`ffprobe` too)
 - **A fish.audio account + API key** (TTS; the free tier handled full chapters)
 - **An agentic coding assistant that can read images** (ZCode, Claude Code, …).
@@ -103,6 +108,47 @@ Each stage is **idempotent** — re-running skips finished work — and every st
 should be committed to git when it completes, so a bad run is always one
 `git checkout -- .` away from recovery.
 
+## Shorts pipeline (30–60s vertical from finished chapters)
+
+Once a series has narrated chapters, the shorts specialist mines it for
+short-able scenes — face-slap arcs, roast beats, cliffhangers — and scripts them
+as vertical shorts. No image reading; the existing chapter scripts and beat crops
+are the material. Research + format bible: `research/shorts_style_notes.md`.
+
+```
+scripts/<slug>/ch*_script.md  (finished chapters — the material)
+        │
+        ▼
+  SHORTS MINER AGENTS (parallel, per chapter range) ──► scene catalogs
+        │        agents/shorts-miner-agent.md
+        ▼
+  SHORTS WRITER AGENTS ──► one script per short: hook ≤2.5s, 75–135 words,
+        │                   loop-or-cliffhanger ending, PUBLISHING PACK metadata
+        ▼
+  validate_shorts ──► the QA gate (format, beat refs, budgets, banned words)
+        │
+        ▼
+  tts_generate --speed 1.07 --pad 0.2 ──► one mp3 per entry (audio is the clock)
+        │
+        ▼
+  assemble_shorts ──► 1080×1920/30fps MP4: composed cards, smoothstepped
+        │             pan-downs, karaoke captions (whisper-aligned), endcard
+        ▼
+  shorts/<slug>/tracker.md ──► produce + upload day by day (tick YT/TT/FB)
+```
+
+Give your assistant one instruction:
+
+> Follow AGENTS.md's SHORTS RUNBOOK: mine every short-able scene in the finished
+> series, script them all, validate, then produce the first 10 and update the
+> tracker. Do not upload yet.
+
+Uploading is an interactive browser-automation session into YouTube Studio (each
+script carries its own title/description/pinned-comment pack). Expect a ~10
+uploads/day platform limit. Cadence guidance and the copyright posture for recap
+content are in `research/shorts_style_notes.md` §7 — read it before the first
+upload.
+
 ## What the stages produce
 
 | Stage | Tool/agent | Output |
@@ -115,6 +161,9 @@ should be committed to git when it completes, so a bad run is always one
 | narration | writer agent (AI) | `scripts/<slug>/chNNN_script.md` |
 | TTS | `tools/tts_generate.py` | `audio/<slug>/chNNN/*.mp3` + `timing.json` |
 | render | `tools/assemble.py` | `videos/<slug>/chNNN/chNNN.mp4` (1080p/30fps, AAC) |
+| shorts mining/writing | shorts agents (AI) | `scripts/<slug>/shorts/<id>.md` + `shorts/<slug>/` catalogs |
+| shorts QA | `tools/validate_shorts.py` | pass/fail per short script |
+| shorts TTS+render | `tools/assemble_shorts.py` | `videos/<slug>/shorts/<id>.mp4` (1080×1920/30fps, burned captions) |
 
 ## Worked example
 
@@ -136,12 +185,15 @@ older.
 ## Repository layout
 
 ```
-AGENTS.md      the AI agent's brain — runbook, conventions, gotchas
+AGENTS.md      the AI agent's brain — runbooks (long-form + shorts), conventions, gotchas
 agents/        per-role protocols the main agent spawns sub-agents from
+               (reader, writer, shorts miner, shorts writer, stitcher, thumbnail, analyzer)
 tone.md        narration persona + pacing law (make it yours)
-research/      style bible distilled from a real recap channel's transcript
-tools/         deterministic pipeline (crop/merge/brief/TTS/assemble)
+research/      style bibles: long-form narration + the shorts format bible
+tools/         deterministic pipeline (crop/merge/brief/TTS/assemble/validate)
 story-so-far.md  rolling continuity memo (sample from the author's run)
+shorts/        shorts catalogs + production/upload tracker per series
+channel/       channel-ops guides (setup, platform expansion, analytics)
 examples/      real artifacts showing every file format
 toonverse/     YOUR scans go here (gitignored; see its README)
 scripts/ audio/ videos/ assets/ tmp/   outputs & scratch (gitignored)

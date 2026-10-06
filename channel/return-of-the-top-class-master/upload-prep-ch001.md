@@ -42,10 +42,10 @@ not-made-for-kids, English, Standard licence.
 ## Files
 
 - **Video:** `videos/return-of-the-top-class-master/ch001/ch001.mp4` — 11m37s
-  (697.4s), 1920×1080, h264+aac. Voice "mommy" (speed 1.07), verified against
+  (697.4s), 1920×1080, h264+aac. Series voice (speed preset 1.07), verified against
   `audio/return-of-the-top-class-master/ch001/timing.json` (total 697.4s).
-  **Do not use** `videos/return-of-the-top-class-master-mommy/` — that lane
-  holds a stale pre-preset render (745.2s, raw voice, no speed preset).
+  **Do not use** the legacy `…-mommy/` render lane — it holds a stale
+  pre-preset render (745.2s, raw voice, no speed preset).
 - **Thumbnail:** `channel/return-of-the-top-class-master/thumbnail_ch001.png`
   (1280×720). Fallback (PIL from beat_0010 + text pass) already saved; ChatGPT
   art version generated via the thumbnail-agent pipeline replaces it if QA passes.
