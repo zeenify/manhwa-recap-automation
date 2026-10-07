@@ -71,6 +71,17 @@ def main():
     lines.append("")
     lines.append("---")
     lines.append("")
+
+    # Series bible (character + world knowledge)
+    bible = Path(f"toonverse/{args.slug}/series-bible.md")
+    if bible.exists():
+        lines.append("## SERIES BIBLE (character + world reference)")
+        lines.append("")
+        lines.append(bible.read_text(encoding="utf-8").strip())
+        lines.append("")
+        lines.append("---")
+        lines.append("")
+
     lines.append("## READER HANDOFF SYNOPSES")
     lines.append("")
     for h in handoffs:

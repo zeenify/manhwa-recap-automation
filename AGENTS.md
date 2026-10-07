@@ -30,6 +30,7 @@ Commit after every successful stage.
 - `research/narration_style_notes.md` — verbatim style analysis from a real 636K-sub recap channel's transcript. Style bible for the long-form writer.
 - `research/shorts_style_notes.md` — the SHORTS bible: platform mechanics (the 3-second swipe window, completion + rewatch ranking), the manhwa-niche format menu, production specs (captions, pan speeds, safe zones), cross-posting rules, and the copyright armor. Law for the shorts writer.
 - `story-so-far.md` — rolling continuity memo, refreshed after every approved chapter script (cap ~1,500 words). Next chapter's agents get this + previous script, nothing older.
+- `toonverse/<slug>/series-bible.md` — per-series CHARACTER + WORLD knowledge base for reader agents: visual markers → canon names, terminology → correct terms. Reader agents read this BEFORE scanning — it makes them context-aware (they call characters by name, not "a dark-haired young man"). Updated after each chapter (new characters, new terms). The writer also gets it via the writer brief.
 - `scripts/<slug>/` — narration scripts, grouped per series (`scripts/<slug>/<chapter>_script.md`).
 - `assets/<slug>/<chapter>/beats/` — exported beat PNGs + `beats.json` (the contract between all stages).
 - `audio/<slug>/<chapter>/` — per-entry mp3s + `timing.json`: entry → mp3 file, measured `duration_s`, covered beats. **This is the sync contract: an entry's screen time = its narration mp3's duration (audio is the clock).** `videos/<slug>/<chapter>/`, `tmp/` — outputs and scratch. EVERYTHING series-produced lives under the series slug — never create a second series that shares `audio/ch001`-style paths with an old one.
@@ -130,7 +131,9 @@ crops correct.
      2 agents → A `[0, MID+2000)`, B `[MID−2000, END)`.
    - Prompt per agent: "Execute the READER AGENT protocol in
      agents/reader-agent.md exactly. Mode: PARALLEL (ranges overlap your
-     neighbors; judge from what you see). Range: [START, END). Output:
+     neighbors; judge from what you see). Series bible:
+     toonverse/<slug>/series-bible.md (read it BEFORE scanning — it has
+     character visual IDs and world terminology). Range: [START, END). Output:
      beats_draft_X.json + handoff_X.json (exact paths in the chapter folder)."
    - If concurrent spawning is rejected, run the same agents SEQUENTIALLY (first
      agent's handoff feeds the next).
@@ -152,6 +155,12 @@ crops correct.
    Then refresh `story-so-far.md` per the writer protocol's continuity duty —
    the main session can do this directly from the handoffs + script; a subagent
    is unnecessary.
+   Also refresh `toonverse/<slug>/series-bible.md`: scan the handoffs for any NEW
+   characters (ones described visually, not by canon name) and any new world
+   terminology. Add new character rows with their visual markers and canon name
+   (from dialogue or context). Add new terminology rows. Update existing entries
+   if new visual details emerged (a character changed clothes, gained a scar, etc.).
+   **The bible must always be current for the NEXT chapter's readers.**
 9. If anything fails mid-chain: every stage is idempotent and re-runnable — fix the specific stage, never restart the whole pipeline.
 
 ## SHORTS RUNBOOK (the shorts specialist — 30–60s vertical cut from EXISTING chapters)

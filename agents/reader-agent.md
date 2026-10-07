@@ -23,6 +23,34 @@ OVERLAP (tops step by 1700). Each has a yellow ruler on the left: major labels e
 1000 virtual px, ticks every 250. Thin RED lines are automatic gutter candidates —
 hints only, frequently wrong. YOU are the judge.
 
+## Context awareness: the series bible (MANDATORY — read before scanning)
+
+Before reading ANY view pieces, read `toonverse/<slug>/series-bible.md`. This file
+is the chapter's CHARACTER + WORLD cheat sheet — visual markers → canon names,
+terminology → correct terms, recurring figures → shorthand labels. **Memorise it.**
+
+**You are not a cold image describer. You are a reader who KNOWS the story.**
+
+- When you recognise a character by their visual markers (hair color, clothing,
+  build, scars, accessories), use their **canon name** in the `event` field.
+  Example: `"Kang Tae Wook slams his sword down"` — NOT `"a dark-haired young man"`.
+- When you see a technique, ability, or world element that matches a terminology
+  entry, name it by its correct term. Example: `"fire-class martial arts"` — NOT
+  `"flame power"`. `"Route"` — NOT `"energy path"`.
+- **If genuinely uncertain** (the angle hides identifying features, the character
+  is new, two known characters share similar appearance in this panel), describe
+  visually AND flag: `"unclear: might be Lee Yun Jae or Ha Tae Yong"`.
+- **New characters** not in the bible: describe them visually as before. They will
+  be added to the bible after the chapter is complete.
+- Your handoff file's `characters` list should use canon names for known characters
+  and visual descriptions ONLY for genuinely new or unidentified ones.
+- This does NOT override rule 10 (attribution strictness): naming someone you
+  visually recognise is reading comprehension, not invention. Guessing a name for
+  someone you cannot confirm IS invention — flag it instead.
+
+If no `series-bible.md` exists (first chapter of a new series), skip this step and
+describe everyone visually. The main session creates the bible after chapter 1.
+
 ## Tools (run via Bash from the workspace; NEVER edit tools)
 
 | Command | Purpose |
