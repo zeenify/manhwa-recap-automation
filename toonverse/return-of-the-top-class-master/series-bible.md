@@ -27,8 +27,8 @@ Updated after: **Chapter 21**
 
 | Canon name | Visual markers | Notes |
 |---|---|---|
-| **Lee family head** | Bearded man, dark suit. Often seen on a sofa with snacks. | Father figure of Lee Yun Jae's family. Dispatched the envelope to Tae Wook. |
-| **Mr. Lee (secretary)** | Gray-haired man in a brown suit. | The family head's secretary. Carries the envelope. |
+| **Lee family head** | Bearded man, dark suit. Often seen on a sofa with snacks. | The Lee family's father figure. Dispatched the envelope to Tae Wook (ch.21: fumed over pre-competition rumors). |
+| **Mr. Lee (secretary)** — a.k.a. **Lee Chul Bong** | Gray-haired man in a brown suit. | The family head's secretary. Carried the envelope; led the squad that delivered the competition invitation to Tae Wook (ch.21; self-introduced as "Lee Chul Bong"). Use "Secretary Lee" in events. |
 
 ### Ha family
 
