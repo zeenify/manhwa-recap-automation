@@ -7,7 +7,7 @@ from concurrent.futures import ThreadPoolExecutor
 
 SERIES = "return-of-the-top-class-master"
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-FIRST, LAST = 1, 20  # user decision 2026-10-04: only the first 20 chapters for now
+FIRST, LAST = 21, 40  # user decision 2026-10-07: extend the run to chapter 40
 WORKERS = 6
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
