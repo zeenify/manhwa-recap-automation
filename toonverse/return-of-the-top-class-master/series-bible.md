@@ -6,7 +6,7 @@ use their NAME in the `event` field — never describe a known character with
 only generic terms ("the dark-haired young man"). If a character's identity is
 genuinely ambiguous in a specific panel, flag it: `"unclear: might be X or Y"`.
 
-Updated after: **Chapter 22**
+Updated after: **Chapter 30**
 
 ---
 
@@ -46,6 +46,9 @@ Updated after: **Chapter 22**
 | **Jang Dong Yun** | Announced in ch.25 as Tae Wook's round-two group-1 pairing: the fighter who salutes back (dark navy short hair, eyes exposed, **near-black double-breasted coat with a thick rolled collar and pale-gray cuffs**). **Identity visually unconfirmed** — the ch.25 fight panels never show his face mid-match. | NEW (ch.25). From the pairing card "GROUP 1. KANG TAE WOOK VERSUS JANG DONG YUN!". Do NOT confuse him with the **periwinkle-haired lollipop withdrawer** (ch.26, a different character — see below). |
 | **The lollipop withdrawer** (unnamed in the art) | **Periwinkle / light-indigo hair** (longer, center-parted, face-framing strands), medium-blue double-breasted **stand-collar** coat (light collar button, pale round buttons), lollipop in mouth, dark slim pants and black boots. | NEW (ch.26). Withdraws before his match with Tae Wook ("WITHDRAW? BUT WE DIDN'T EVEN START?"); "THIS IS MY SECOND TIME" — he refused to play the punching bag for the Lee family, and **they sliced his tendons** (flashback); asks Tae Wook to give revenge to the fighters without backing; thumbs-up, "I'LL CHEER YOU ON FROM AFAR!". He also walks across the arena in the ch.25 announcement panel (background figure). Narrate him as "the fighter"/"the man with the lollipop" — the art never names him. |
 | **Jin Sae Kyul** | Dark swept-back hair with a strand over the forehead; pale blue-gray robe with white piping and a knotted button (readers also flagged a gray "frogged coat" / brown hair in some panels — same fighter). Name card: **4-stars, middle stage**. | NEW (ch.25). The Han family's fighter; purple energy; fights Tae Wook in round two, eats the Spiral Cut ("MY POWER DISAPPEARED IN AN INSTANT!") and concedes ("WHEW… I LOST."). Standardize on "Jin Sae Kyul" (the announcer bubble misspells "Jin Gae Kyul"). |
+| **Joo Si-young** | Spiky PLUM/purple-pink hair, GREEN eyes, a **zigzag-patterned headband** (read as "triangle" in ch.29 and "gold diamond" in ch.30 — same band), gray high-collar uniform with an ORANGE sash. Name card: **4-STARS REALM**. | NEW (ch.29). Tae Wook's round-three teammate ("I'LL HELP YOU, KANG TAE-WOOK!"). Ch.30: accidentally wounds Tae Wook ("SORRY, I WAS JUST TRYING TO HELP…"), takes to the air in the golden blast, and the stands blame him ("useless teammate"/"spy"). |
+| **Seo Jun-ho** | Muscular, BROWN hair, tank top. Name card: **SEO JUN-HO / 5-STAR REALM**. | NEW (ch.29). Lee Yun Jae's round-three partner. Ch.30: beaten by Yun Jae himself under "THERE'S NO RULE AGAINST ATTACKING YOUR TEAMMATE." |
+| **The black-suited adviser** | Black suit, in the VIP room. | NEW (ch.29). Delivers the realm warning before Yun Jae takes the pill. Name unasserted. |
 
 ### Other named characters
 
@@ -111,6 +114,9 @@ concepts. If you see the visual effect, name the concept; if uncertain, flag it.
 | Round-two format: random drawing, groups of 10, win-streak system, last fighter standing advances (ch.25) | "the second round" / "groups of ten" | "the qualifier round" |
 | The Han family (dialogue-only; Jin Sae Kyul's family) | "the Han family" | "the Han clan", "his family" |
 | Tae Wook's technique from the secret-arts manual his father left (useful against opponents who push him back by force) | "Spiral Cut" | "the spinning slash", "the spiral move" |
+| The giant golden palm technique Tae Wook uses in ch.30 (technique card) | "Wayne Hand" | "the giant hand", "the golden palm" (as description only) |
+| The dark-red pill Yun Jae swallows in ch.29 (realm boost; unlocks Haons skills; implied price) | "the pill" / "Haons skills" | "the potion", "the drug" |
+| Ranked competition round three: four-fighter teams (draw cards: e.g. Joo Si-young's "3") | "the third round" / "teams" | "the team round" |
 | A competitor's offer/team-up rule in the royale | "the team-up rule" | "the alliance rule" |
 | The envelope (with Yun Jae) | "the envelope" | "the letter" |
 | Flip phone (drugging gadget) | "the flip phone" | "the phone" (when it's the drugging device) |
