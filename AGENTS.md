@@ -191,12 +191,31 @@ across chapters; unrestricted count — every short-able scene is a short.
    `assemble_shorts --slug <slug> --short <id> --series-title "..."`. Expect
    ~2 min TTS + ~3 min render per short, both idempotent. Verify 1080×1920/30fps
    with ffprobe, spot-check frames, update the tracker.
-5. UPLOAD via a browser-automation session into YouTube Studio: each script's
-   PUBLISHING PACK section carries the YT title/description, TikTok/Reels caption,
-   and pinned-comment funnel text. Public, not made for kids. Tick the tracker's
-   day + YT column per upload. **YouTube enforces a daily upload limit (~10/day
-   observed)** — when it fires, stop and resume when it resets; 080+110-style
-   stragglers go up FIRST next session.
+5. UPLOAD via a browser-automation session. **Proven toolchain (2026-10-09, all
+   11 Wimp shorts posted this way):** pages like TikTok/Facebook block every way
+   to move file bytes into the page (CSP kills localhost fetch/XHR; large
+   evaluate payloads break the browser bridge), and the in-app browser cannot
+   open a file chooser — so drive the page's own "Select video" with a REAL
+   click (`tab.cua.click` on the button rect; JS clicks lack the user activation
+   the picker needs), then drive the native Windows "Open" dialog with
+   PowerShell (`tmp/drive_dialog.ps1 -Path <file>` for one file,
+   `tmp/drive_dialog_multi.ps1 -PathsRaw "p1|p2|..."` for batches — they find
+   the dialog via `FindWindow("#32770","Open")`, Alt+N the File name field,
+   paste, Enter). Captions: real click into the description field +
+   `tab.cua.type` (NEVER `document.execCommand("selectAll")` — it selects the
+   whole page and crashes the composer). TikTok: after Post, a "Post now"
+   confirm sometimes appears — click it. YouTube Studio accepts the localhost
+   fetch + `input.files` injection route instead (its CSP allows it; serve the
+   renders with `tmp/upload_server.py`). Facebook bulk reels route (see
+   `channel/platform-expansion.md`): business.facebook.com → last "Create post"
+   split-button → Bulk upload reels → "Add videos" real click → feed ~3 quoted
+   paths per dialog batch → fill each row's Description with real input →
+   global Publish → "Your bulk upload is processing" = done; reels surface
+   after 1–18 h of encoding, do not panic-verify. Tick the tracker's day +
+   YT/TT/FB columns per upload. **YouTube enforces a daily upload limit
+   (~10/day observed)** — when it fires, stop and resume when it resets;
+   080+110-style stragglers go up FIRST next session. Paste each script's
+   pinned-comment funnel after posting (needs a one-time Studio verification).
 6. Cross-post the SAME master file natively to TikTok/FB (per-platform captions
    from the pack; never a watermarked re-upload). After a few days of data, pull
    viewed-vs-swiped + average % viewed from Studio and steer the next mined batch
