@@ -3,7 +3,7 @@
 One row per scripted short (97 total). Pipeline: TTS -> render (both idempotent).
 Status: **scripted** = script passes the validator; **produced** = TTS + rendered mp4 exists.
 Upload cadence per the research: 3-5/week (or daily). Fill `day` + tick YT / TT (TikTok) / FB when posted.
-Batch 1 produced 2026-10-07: 001 (sample) + 10 produced. UPLOADED to YT Shorts 2026-10-07: 9 (daily upload limit hit; 080_mortgage-with-handle publish incomplete + 110_red-ribbon-robbery not attempted -> upload both when the limit resets).
+Batch 1 produced 2026-10-07: 001 (sample) + 10 produced. UPLOADED to YT Shorts: all 11 live & Public (9 on 2026-10-07, 080 + 110 on 2026-10-09). TikTok/FB pending.
 
 | # | short | type | source | status | dur_s | upload day | YT | TT | FB |
 |---|---|---|---|---|---|---|---|---|---|
@@ -52,10 +52,10 @@ Batch 1 produced 2026-10-07: 001 (sample) + 10 produced. UPLOADED to YT Shorts 2
 | 077_excessive-talent | cliffhanger | ch009 beats 063-071 | scripted |  |  |  |  |  |
 | 078_fridge-war | roast | ch010 beats 001-005 | scripted |  |  |  |  |  |
 | 079_trust-arrow | roast | ch010 beats 017-022 | scripted |  |  |  |  |  |
-| 080_mortgage-with-handle | roast | ch010 beats 040-047 | **produced** | 24.8 |  |  |  |  |
+| 080_mortgage-with-handle | roast | ch010 beats 040-047 | **produced** | 24.8 | 2026-10-09 | ✓ |  |  |
 | 081_remember-this-handshake | cliffhanger | ch010 beats 049-053 | scripted |  |  |  |  |  |
 | 082_grudge-question | cliffhanger | ch010 beats 058-069 | scripted |  |  |  |  |  |
-| 110_red-ribbon-robbery | face-slap | ch011 beats 000-013 | **produced** | 41.3 |  |  |  |  |
+| 110_red-ribbon-robbery | face-slap | ch011 beats 000-013 | **produced** | 41.3 | 2026-10-09 | ✓ |  |  |
 | 111_shop-regular-arrest | face-slap | ch011 beats 024-036 | scripted |  |  |  |  |  |
 | 112_victory-screen-tourist | roast | ch011 beats 046-057 | scripted |  |  |  |  |  |
 | 113_spine-acquired | cliffhanger | ch011 beats 070-077 | scripted |  |  |  |  |  |
