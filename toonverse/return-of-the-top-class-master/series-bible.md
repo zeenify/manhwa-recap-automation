@@ -16,11 +16,11 @@ Updated after: **Chapter 22**
 
 | Canon name | Visual markers | Notes |
 |---|---|---|
-| **Kang Tae Wook** (vessel of the regressed master **Ray**) | Dark hair, young face. Often in a light hoodie or school uniform. Red/fiery eyes when powering up. Wields a sword (sometimes flame-wreathed). | Protagonist. Fire-class martial artist AND medicinal arts practitioner. His core soul is sealed (by father + Gu Bon Seung). Vessel = Tae Wook's body, Ray = past-life self. |
+| **Kang Tae Wook** (vessel of the regressed master **Ray**) | Dark hair, young face. Often in a light hoodie or school uniform; ch.23: blazer/suit with a red tie. Red/fiery eyes when powering up. Wields a sword (sometimes flame-wreathed). | Protagonist. Fire-class martial artist AND medicinal arts practitioner. His core soul is sealed (by father + Gu Bon Seung). Vessel = Tae Wook's body, Ray = past-life self. |
 | **Ha Yeon Jae** | White/silver hair, young woman. | Tae Wook's ward/love interest. Has a cold-energy disease (unusual energy centers). Lives with Tae Wook after leaving the Ha family. Call her "Yeon Jae" in events. |
-| **Lee Yun Jae** | Blond hair, student. School uniform or casual clothes. | Classmate/rival. The Lee family's young master at school. Grudge against Tae Wook. Call him "Yun Jae" or "Lee Yun Jae" — never "the blond student" when identifiable. |
+| **Lee Yun Jae** | Blond/ash-blond hair (renders platinum-silver in arena lighting), green eyes, student. School uniform or casual clothes; ch.23–24: a formal suit at the family council and at the competition. | Classmate/rival. The Lee family's young master at school. Grudge against Tae Wook. Call him "Yun Jae" or "Lee Yun Jae" — never "the blond student" when identifiable. **Ch.23 script harmonization:** the blond young man in a suit at the family council / venue / dusk street confrontation (7 beats, flagged unclear by readers) is narrated as Lee Yun Jae — evidence: ch.21's "Father" line, ch.23's "your father will guarantee you take first place", and Ji Yeon's "I heard from Lee Yun Jae… bragging he'll beat you down". **Ch.24:** present at the competition; rigged the first-round battle royale so every fighter targets Tae Wook. |
 | **Gu Bon Seung (Mr. Gu)** | Older man. | Route unsealer. Vanished — quest to find him is ON HOLD. Always "Mr. Gu" or "Gu Bon Seung", never "the old man". |
-| **Choi Ji Yeon** | Purple hair, young woman. | Use "Choi Ji Yeon" or "Ji Yeon". |
+| **Choi Ji Yeon** | Purple hair, young woman; ch.23: school uniform with red ribbon bow. | Use "Choi Ji Yeon" or "Ji Yeon". Ch.23: Tae Wook's classmate; visits his home to warn him off entering the competition (she heard from Lee Yun Jae); later seen crying in a dusk street confrontation with the blond man in the dark suit. |
 | **Master Kwak** | Old man, martial arts master. | "Master Kwak" or "the old man" (only for him). Two-day boundary breakthrough. |
 
 ### Lee family
@@ -36,8 +36,9 @@ Updated after: **Chapter 22**
 | Canon name | Visual markers | Notes |
 |---|---|---|
 | **Ha Taek Geun ("the president")** | — | Ha Yeon Jae's father/family head. Ordered the kidnapping. |
-| **Ha Tae Yong** | Scarred blond, earrings. | The kidnapping leader (ch.20). Whether he's the same person as "Im Su Hoon" is an open art contradiction — the script narrated the scarred kidnapper as Ha Tae Yong. |
-| **Im Su Hoon ("the cap-man")** | Cap/hat, golden lightning element. | Dialogue-only name. Sent as the distraction fighter. |
+| **Ha Tae Yong** | Blond hair, gold eyes, X-shaped scar across the face, earrings, dark suit. | The kidnapping leader (ch.20). Whether he's the same person as "Im Su Hoon" is an open art contradiction — the script narrated the scarred kidnapper as Ha Tae Yong. **Ch.24:** phones his father about the failed abduction and the competition order; then schemes with Im Su Hoon. |
+| **Ha Tae Yong's father** | Dark hair, white shirt and tie (phone voice in ch.24; unnamed on-page). | NEW (ch.24). Carries the president's order: crush/kill Kang Tae Wook at the martial arts competition, "without any suspicion". Not yet named in dialogue — keep as "Ha Tae Yong's father" (or "the man on the phone" while unseen). |
+| **Im Su Hoon ("the cap-man")** | Cap/hat, dark jacket over white tee, golden lightning element. | Dialogue-only name. Sent as the distraction fighter. Ch.24: listens to the father's call, volunteers for the competition, punches a glass wall. |
 | **Pink-haired driver** | Pink hair. | Flanker in the Ha family car. |
 
 ### Other named characters
@@ -59,6 +60,7 @@ Updated after: **Chapter 22**
 |---|---|---|
 | Blue-haired young man in a gray uniform, seated center at the association hall, flanked by masked attendants | "the blue-haired youth (association)" | NEW (ch.22). Clasps his hands and vows "Lee Cheon Kyung, this time around you won't be able to get away with what you want." Name not yet asserted — describe visually. |
 | Purple-haired + brown-haired young men at the association meeting | "the association duo" | NEW (ch.22). "Now I'm curious what type of person he is." / "I also would like to meet him." Names not asserted. |
+| Blond young man in a dark suit (venue arrival; dusk street confrontation with Choi Ji Yeon, 7 beats in ch.23) | **RESOLVED: Lee Yun Jae** | Was flagged `unclear` by ch.23's readers (unscarred, formally dressed); ch.23's script harmonized him to **Lee Yun Jae** on family-son evidence — narrate him as "Lee Yun Jae" from ch.23 on. |
 | Orange-haired + dark-haired pair on rooftop | "the rooftop duo" | Unnamed. Responsible for "Plan B", the stone charm, purple bolt. |
 | The mystery helper | "the mystery helper" | Identity unknown. Notified Tae Wook about Yeon Jae's danger. Suspected to side with whoever attacked Mr. Gu. |
 | The glasses-wearing classmate | "the glasses-wearing friend" | Tae Wook's schoolmate. |
@@ -97,6 +99,10 @@ concepts. If you see the visual effect, name the concept; if uncertain, flag it.
 | Martial Arts Association hall/meeting | "the Martial Arts Association" | "the association", "the council" |
 | 4-Great Families (backing bloc) | "the 4-Great Families" | "the four families", "the alliance" |
 | Wolfpack (legendary group, disappeared long ago; Tae Wook's rise attributed to it) | "the Wolfpack" | "the pack", "a legendary squad" — never a generic "gang" |
+| MARTIAL ARTS COMPETITION SPECTATOR TICKET (held up in ch.23) | "the spectator ticket" | "the ticket stub", "the pass" |
+| The competition venue / entrance hall (ch.23) | "the competition venue" | "the stadium", "the arena" |
+| First round of the competition = a 50-man battle royale (ch.24) | "the battle royale" | "the melee round", "the group fight" |
+| A competitor's offer/team-up rule in the royale | "the team-up rule" | "the alliance rule" |
 | The envelope (with Yun Jae) | "the envelope" | "the letter" |
 | Flip phone (drugging gadget) | "the flip phone" | "the phone" (when it's the drugging device) |
 | Shockwave-ring fist catch | "shockwave-ring fist catch" | "power block" |
