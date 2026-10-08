@@ -6,7 +6,7 @@ use their NAME in the `event` field — never describe a known character with
 only generic terms ("the dark-haired young man"). If a character's identity is
 genuinely ambiguous in a specific panel, flag it: `"unclear: might be X or Y"`.
 
-Updated after: **Chapter 21**
+Updated after: **Chapter 22**
 
 ---
 
@@ -27,7 +27,8 @@ Updated after: **Chapter 21**
 
 | Canon name | Visual markers | Notes |
 |---|---|---|
-| **Lee family head** | Bearded man, dark suit. Often seen on a sofa with snacks. | The Lee family's father figure. Dispatched the envelope to Tae Wook (ch.21: fumed over pre-competition rumors). |
+| **Lee family head** — a.k.a. **Lee Cheon Kyung** | Bearded man, dark suit. Often seen on a sofa with snacks. | The Lee family's father figure; **canon name revealed in ch.22 dialogue** ("Lee Cheon Kyung's son was savagely beaten…") — prefer "Lee Cheon Kyung". Dispatched the envelope to Tae Wook (ch.21: fumed over pre-competition rumors). |
+| **The red-eyed man in the dark** | Dark hair, red eyes, dark clothes; at the Lee home. | Ch.22: delivers the coldest line — Tae Wook "only needs to disappear for Yun Jae's future to be solidified." Identity not asserted (not confirmed as a Lee family member). |
 | **Mr. Lee (secretary)** — a.k.a. **Lee Chul Bong** | Gray-haired man in a brown suit. | The family head's secretary. Carried the envelope; led the squad that delivered the competition invitation to Tae Wook (ch.21; self-introduced as "Lee Chul Bong"). Use "Secretary Lee" in events. |
 
 ### Ha family
@@ -56,6 +57,8 @@ Updated after: **Chapter 21**
 
 | Description | Shorthand to use | Notes |
 |---|---|---|
+| Blue-haired young man in a gray uniform, seated center at the association hall, flanked by masked attendants | "the blue-haired youth (association)" | NEW (ch.22). Clasps his hands and vows "Lee Cheon Kyung, this time around you won't be able to get away with what you want." Name not yet asserted — describe visually. |
+| Purple-haired + brown-haired young men at the association meeting | "the association duo" | NEW (ch.22). "Now I'm curious what type of person he is." / "I also would like to meet him." Names not asserted. |
 | Orange-haired + dark-haired pair on rooftop | "the rooftop duo" | Unnamed. Responsible for "Plan B", the stone charm, purple bolt. |
 | The mystery helper | "the mystery helper" | Identity unknown. Notified Tae Wook about Yeon Jae's danger. Suspected to side with whoever attacked Mr. Gu. |
 | The glasses-wearing classmate | "the glasses-wearing friend" | Tae Wook's schoolmate. |
@@ -91,6 +94,9 @@ concepts. If you see the visual effect, name the concept; if uncertain, flag it.
 | Practitioner (visible aura = practitioner) | "practitioner" | "fighter", "powered person" |
 | Medicinal arts | "medicinal arts" | "healing power" |
 | Martial arts competition | "the martial arts competition" | "the tournament" |
+| Martial Arts Association hall/meeting | "the Martial Arts Association" | "the association", "the council" |
+| 4-Great Families (backing bloc) | "the 4-Great Families" | "the four families", "the alliance" |
+| Wolfpack (legendary group, disappeared long ago; Tae Wook's rise attributed to it) | "the Wolfpack" | "the pack", "a legendary squad" — never a generic "gang" |
 | The envelope (with Yun Jae) | "the envelope" | "the letter" |
 | Flip phone (drugging gadget) | "the flip phone" | "the phone" (when it's the drugging device) |
 | Shockwave-ring fist catch | "shockwave-ring fist catch" | "power block" |
