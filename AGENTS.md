@@ -198,8 +198,8 @@ across chapters; unrestricted count — every short-able scene is a short.
    open a file chooser — so drive the page's own "Select video" with a REAL
    click (`tab.cua.click` on the button rect; JS clicks lack the user activation
    the picker needs), then drive the native Windows "Open" dialog with
-   PowerShell (`tmp/drive_dialog.ps1 -Path <file>` for one file,
-   `tmp/drive_dialog_multi.ps1 -PathsRaw "p1|p2|..."` for batches — they find
+   PowerShell (`tools/drive_dialog.ps1 -Path <file>` for one file,
+   `tools/drive_dialog_multi.ps1 -PathsRaw "p1|p2|..."` for batches — they find
    the dialog via `FindWindow("#32770","Open")`, Alt+N the File name field,
    paste, Enter). Captions: real click into the description field +
    `tab.cua.type` (NEVER `document.execCommand("selectAll")` — it selects the
