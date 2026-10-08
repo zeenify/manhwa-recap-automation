@@ -41,6 +41,11 @@ Updated after: **Chapter 22**
 | **Im Su Hoon ("the cap-man")** | Cap/hat, dark jacket over white tee, golden lightning element. | Dialogue-only name. Sent as the distraction fighter. Ch.24: listens to the father's call, volunteers for the competition, punches a glass wall. |
 | **Pink-haired driver** | Pink hair. | Flanker in the Ha family car. |
 
+| Canon name | Visual markers | Notes |
+|---|---|---|
+| **Jang Dong Yun** | Navy-haired fighter in a dark double-breasted coat. | NEW (ch.25). Tae Wook's first round-two opponent ("GROUP 1. KANG TAE WOOK VERSUS JANG DONG YUN!"). Name from the announcer's call. |
+| **Jin Sae Kyul** | Dark swept-back hair with a strand over the forehead; pale blue-gray robe with white piping and a knotted button (readers also flagged a gray "frogged coat" / brown hair in some panels — same fighter). Name card: **4-stars, middle stage**. | NEW (ch.25). The Han family's fighter; purple energy; fights Tae Wook in round two, eats the Spiral Cut ("MY POWER DISAPPEARED IN AN INSTANT!") and concedes ("WHEW… I LOST."). Standardize on "Jin Sae Kyul" (the announcer bubble misspells "Jin Gae Kyul"). |
+
 ### Other named characters
 
 | Canon name | Visual markers | Notes |
@@ -102,6 +107,9 @@ concepts. If you see the visual effect, name the concept; if uncertain, flag it.
 | MARTIAL ARTS COMPETITION SPECTATOR TICKET (held up in ch.23) | "the spectator ticket" | "the ticket stub", "the pass" |
 | The competition venue / entrance hall (ch.23) | "the competition venue" | "the stadium", "the arena" |
 | First round of the competition = a 50-man battle royale (ch.24) | "the battle royale" | "the melee round", "the group fight" |
+| Round-two format: random drawing, groups of 10, win-streak system, last fighter standing advances (ch.25) | "the second round" / "groups of ten" | "the qualifier round" |
+| The Han family (dialogue-only; Jin Sae Kyul's family) | "the Han family" | "the Han clan", "his family" |
+| Tae Wook's technique from the secret-arts manual his father left (useful against opponents who push him back by force) | "Spiral Cut" | "the spinning slash", "the spiral move" |
 | A competitor's offer/team-up rule in the royale | "the team-up rule" | "the alliance rule" |
 | The envelope (with Yun Jae) | "the envelope" | "the letter" |
 | Flip phone (drugging gadget) | "the flip phone" | "the phone" (when it's the drugging device) |
