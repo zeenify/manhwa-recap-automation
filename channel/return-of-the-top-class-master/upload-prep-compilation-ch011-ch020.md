@@ -11,9 +11,9 @@ attach, pinned comment (needs one-time Studio verification).)
   frame-checked at the ch12 transition.
 - **Timestamps:** `youtube_timestamps.json` next to the video (chapters_block +
   per-chapter start seconds).
-- **Thumbnail:** none yet — build via `agents/thumbnail-agent.md` after upload
-  (YouTube auto-picks a frame meanwhile; comp-1 used the solo-ch001 art, do NOT
-  reuse it here — identical art on two compilations reads as spam).
+- **Thumbnail:** DONE — `thumbnail_compilation_ch011-ch020.png` (AI render
+  "Neon Blade Clash" composed in the sample-bank style + local yellow text
+  "WHO KILLED HIS FATHER?"; attached + saved on the video 2026-10-09).
 
 ## Title (pick one — NO chapter counts, NO runtime)
 

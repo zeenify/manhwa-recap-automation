@@ -96,3 +96,16 @@ Pattern script: `tmp/make_thumb_ch001.py` (rerunnable per video).
   `channel/return-of-the-top-class-master/thumbnail_ch001.png`. Fallback PIL
   build (beat_0010 crop + text) also works — note the scrim mask must NOT be
   inverted (first attempt darkened the top instead of bottom).
+
+- **compilation ch011-020 — Return of the Top Class Master** (2026-10-09): DONE.
+  Two single-portrait renders were rejected by the user ("feels AI made"). The
+  fix came from studying the sample bank closely: every sample is a COMPOSED
+  multi-element layout built from the series' own art — not a single painted
+  portrait. Third prompt demanded that composed style explicitly (MC grin left
+  + sword eruption center + cap-man right, blue-violet night, crimson blade
+  energy) → "Neon Blade Clash" (1672×941). Local text pass ×2 iterations.
+  Final: `channel/return-of-the-top-class-master/thumbnail_compilation_ch011-ch020.png`
+  ("WHO KILLED HIS FATHER?"), attached to youtu.be/bvLJScLrnuE and saved.
+  Download note: in-page credentialed fetch → base64 → retrieve via evaluate in
+  ≤64KB slices (200KB return slices get truncated by the bridge; verify each
+  slice length and the final byte count).
