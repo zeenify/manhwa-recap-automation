@@ -6,7 +6,7 @@ use their NAME in the `event` field — never describe a known character with
 only generic terms ("the dark-haired young man"). If a character's identity is
 genuinely ambiguous in a specific panel, flag it: `"unclear: might be X or Y"`.
 
-Updated after: **Chapter 30**
+Updated after: **Chapter 35**
 
 ---
 
@@ -35,7 +35,9 @@ Updated after: **Chapter 30**
 
 | Canon name | Visual markers | Notes |
 |---|---|---|
-| **Ha Taek Geun ("the president")** | — | Ha Yeon Jae's father/family head. Ordered the kidnapping. |
+| **Ha Taek Geun ("the president")** | — | Ha Yeon Jae's father/family head. Ordered the kidnapping. **Naming note:** ch.35's exposition montage carries a name card "HA FAMILY HEAD, HA JEONG-WOOK" — a variant that conflicts with the earlier "Ha Taek Geun / the president"; treat as an unresolved naming variant until a later chapter confirms (do not silently merge them). |
+| **Ha Won-gyu** | Early **8-STAR** realm; brown suit, goatee, stern features (name card "HA WON-GYU, EARLY 8-STAR REALM"). | NEW (ch.35). **Yeon Jae's uncle**; arrives by SUV to shield Tae Wook and Yeon Jae from the Shim family's squad, invokes "OUR HA FAMILY", and destroys the envoy's dantian with a two-finger flick ("IS THIS THE POWER OF THE 8-STAR REALM?"). Tells Tae Wook: "DON'T THANK ME, THANK YEON-JAE'S FATHER." |
+| **"Butler Lee"** (the gray-haired envoy in the brown suit) | Gray-haired older man, brown suit, sunglasses bodyguards, purple SUV. | NEW (ch.35). The Shim family's envoy — taunts Tae Wook, demands he be handed over, refuses Ha Won-gyu's order to leave ("FOR THE SAKE OF THE SHIM FAMILY…"), and has his **dantian destroyed in one go** by the 8-star. Whether he is the earlier "Secretary Lee / Lee Chul Bong" or the hunters' "boss" is **unresolved** — do not assert. |
 | **Ha Tae Yong** | Blond hair, gold eyes, X-shaped scar across the face, earrings, dark suit. | The kidnapping leader (ch.20). Whether he's the same person as "Im Su Hoon" is an open art contradiction — the script narrated the scarred kidnapper as Ha Tae Yong. **Ch.24:** phones his father about the failed abduction and the competition order; then schemes with Im Su Hoon. |
 | **Ha Tae Yong's father** | Dark hair, white shirt and tie (phone voice in ch.24; unnamed on-page). | NEW (ch.24). Carries the president's order: crush/kill Kang Tae Wook at the martial arts competition, "without any suspicion". Not yet named in dialogue — keep as "Ha Tae Yong's father" (or "the man on the phone" while unseen). |
 | **Im Su Hoon ("the cap-man")** | Cap/hat, dark jacket over white tee, golden lightning element. | Dialogue-only name. Sent as the distraction fighter. Ch.24: listens to the father's call, volunteers for the competition, punches a glass wall. |
@@ -117,6 +119,9 @@ concepts. If you see the visual effect, name the concept; if uncertain, flag it.
 | The giant golden palm technique Tae Wook uses in ch.30 (technique card) | "Wayne Hand" | "the giant hand", "the golden palm" (as description only) |
 | The dark-red pill Yun Jae swallows in ch.29 (realm boost; unlocks Haons skills; implied price) | "the pill" / "Haons skills" | "the potion", "the drug" |
 | Ranked competition round three: four-fighter teams (draw cards: e.g. Joo Si-young's "3") | "the third round" / "teams" | "the team round" |
+| The Shim family (a top-10 capital family; ch.35's envoy's house) | "the Shim family" | "the Shim clan", "those people" |
+| The capital's ten great families (exposition montage, ch.35) | "the top 10 families of the capital" | "the ten clans", "the big families" |
+| The Seongeongye (ch.34: the clean-up mandate invoked over the factions) | "the Seongeongye" | "the alliance", "the bureau" |
 | A competitor's offer/team-up rule in the royale | "the team-up rule" | "the alliance rule" |
 | The envelope (with Yun Jae) | "the envelope" | "the letter" |
 | Flip phone (drugging gadget) | "the flip phone" | "the phone" (when it's the drugging device) |
