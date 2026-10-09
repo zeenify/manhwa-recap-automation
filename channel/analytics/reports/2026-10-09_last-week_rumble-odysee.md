@@ -11,7 +11,7 @@ Rumble is alive but tiny: 20 recaps, 243 total views (11–14 per video, flat). 
 - Engagement notes: views are near-uniform (11–14) across every chapter; no standout suggests a platform-side trickle rather than discovery. Rumble pays from the first view, so 243 views is a real (if tiny) revenue seed.
 
 ## Odysee (official API, captured 2026-10-09)
-- Videos visible: 11 (ch01, ch02, ch10–ch18) — ch03–09, ch19, ch20 are NOT visible via the API; likely missing uploads or pagination. Worth a one-time check.
+- Videos live: 11 (ch01, ch02, ch10–ch18) — **browser-audited**: the channel page itself shows only these 11. The puller isn't truncating (page_size=50); chapters 3–9, 19, 20 were never uploaded to Odysee. Backfill them if Odysee is kept at all.
 - Total views: 0 (delta vs Oct 4 snapshot: **+0** — 5 days, no movement)
 - Top / underperformer: none — every video at 0
 
@@ -22,5 +22,5 @@ Rumble is alive but tiny: 20 recaps, 243 total views (11–14 per video, flat). 
 
 ## Data quality
 - Rumble: browser DOM read (Cloudflare blocks HTTP); counters as of 2026-10-09, whole-view rounding. Baseline starts today; deltas available from the next run.
-- Odysee: API via `tools/analytics_pull.py`; both snapshots agree at 0 views. 11/20 chapters visible — flag for a one-time upload audit.
+- Odysee: API via `tools/analytics_pull.py` + browser audit of the channel page; both snapshots agree at 0 views; 11/20 chapters live (9 never uploaded — backfill candidate).
 - YouTube / Facebook / TikTok analytics: disabled by owner decision (security); manual browser reads remain the fallback.
