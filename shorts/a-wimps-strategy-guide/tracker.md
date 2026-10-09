@@ -12,7 +12,7 @@ Batch 1 produced 2026-10-07: 001 (sample) + 10 produced. ALL PLATFORMS DONE 2026
 | 011_one_bite_thief | roast | ch001 beats 037-044 | scripted |  |  |  |  |  |
 | 012_bark_for_me | roast | ch001 beats 072-080 | scripted |  |  |  |  |  |
 | 013_interest_day | face-slap | ch001 beats 081-097, ch002 beats 000-004 | **produced** | 44.5 | 2026-10-07 | ✓ | ✓ | ✓ |
-| 014_ring_me_up | roast | ch002 beats 005-011 | scripted |  |  |  |  |  |
+| 014_ring_me_up | roast | ch002 beats 005-011 | **produced** | 25.2 |  |  |  |  |
 | 015_three_stars | roast | ch002 beats 015-028 | scripted |  |  |  |  |  |
 | 016_article_three | roast | ch002 beats 030-048 | scripted |  |  |  |  |  |
 | 017_safety_first | roast | ch002 beats 054-065 | scripted |  |  |  |  |  |
@@ -21,7 +21,7 @@ Batch 1 produced 2026-10-07: 001 (sample) + 10 produced. ALL PLATFORMS DONE 2026
 | 020_blade_rain | roast | ch003 beats 025-034 | scripted |  |  |  |  |  |
 | 021_his_grace | roast | ch003 beats 047-050 | scripted |  |  |  |  |  |
 | 022_chicken_first | roast | ch003 beats 062-070 | scripted |  |  |  |  |  |
-| 023_second_slot | cliffhanger | ch003 beats 072-077 | scripted |  |  |  |  |  |
+| 023_second_slot | cliffhanger | ch003 beats 072-077 | **produced** | 27.0 |  |  |  |  |
 | 024_mind_reader_office | roast | ch004 beats 007-019 | scripted |  |  |  |  |  |
 | 025_chicken_hood | roast | ch004 beats 030-033 | scripted |  |  |  |  |  |
 | 026_wild_horse | roast | ch004 beats 041-046 | scripted |  |  |  |  |  |
@@ -29,7 +29,7 @@ Batch 1 produced 2026-10-07: 001 (sample) + 10 produced. ALL PLATFORMS DONE 2026
 | 028_shadow_step | roast | ch004 beats 060-067 | scripted |  |  |  |  |  |
 | 029_biggest_mystery | cliffhanger | ch004 beats 068-081 | **produced** | 38.2 | 2026-10-07 | ✓ | ✓ | ✓ |
 | 030_robot_mode | roast | ch005 beats 001-007 | scripted |  |  |  |  |  |
-| 031_mascot_video | roast | ch005 beats 009-021 | scripted |  |  |  |  |  |
+| 031_mascot_video | roast | ch005 beats 009-021 | **produced** | 29.8 |  |  |  |  |
 | 032_coward_epitaph | roast | ch005 beats 028-042 | scripted |  |  |  |  |  |
 | 033_floor_eleven_bet | face-slap | ch005 beats 043-082 | **produced** | 42.8 | 2026-10-07 | ✓ | ✓ | ✓ |
 | 060_who-told-you | roast | ch006 beats 000-006 | scripted |  |  |  |  |  |
@@ -43,7 +43,7 @@ Batch 1 produced 2026-10-07: 001 (sample) + 10 produced. ALL PLATFORMS DONE 2026
 | 068_it-tickles | roast | ch008 beats 006-009 | scripted |  |  |  |  |  |
 | 069_naming-ceremony | roast | ch008 beats 030-032 | scripted |  |  |  |  |  |
 | 070_interviewer-bong | roast | ch008 beats 011-016 | scripted |  |  |  |  |  |
-| 071_death-by-mockery | face-slap | ch008 beats 025-029 | scripted |  |  |  |  |  |
+| 071_death-by-mockery | face-slap | ch008 beats 025-029 | **produced** | 38.8 |  |  |  |  |
 | 072_chicken-not-kitchen | roast | ch008 beats 058-062 | scripted |  |  |  |  |  |
 | 073_rental-bike-thesis | roast | ch009 beats 009-012 | scripted |  |  |  |  |  |
 | 074_classy-walkthrough | roast | ch009 beats 023-027 | scripted |  |  |  |  |  |
@@ -54,11 +54,11 @@ Batch 1 produced 2026-10-07: 001 (sample) + 10 produced. ALL PLATFORMS DONE 2026
 | 079_trust-arrow | roast | ch010 beats 017-022 | scripted |  |  |  |  |  |
 | 080_mortgage-with-handle | roast | ch010 beats 040-047 | **produced** | 24.8 | 2026-10-09 | ✓ | ✓ | ✓ |
 | 081_remember-this-handshake | cliffhanger | ch010 beats 049-053 | scripted |  |  |  |  |  |
-| 082_grudge-question | cliffhanger | ch010 beats 058-069 | scripted |  |  |  |  |  |
+| 082_grudge-question | cliffhanger | ch010 beats 058-069 | **produced** | 40.0 |  |  |  |  |
 | 110_red-ribbon-robbery | face-slap | ch011 beats 000-013 | **produced** | 41.3 | 2026-10-09 | ✓ | ✓ | ✓ |
 | 111_shop-regular-arrest | face-slap | ch011 beats 024-036 | scripted |  |  |  |  |  |
 | 112_victory-screen-tourist | roast | ch011 beats 046-057 | scripted |  |  |  |  |  |
-| 113_spine-acquired | cliffhanger | ch011 beats 070-077 | scripted |  |  |  |  |  |
+| 113_spine-acquired | cliffhanger | ch011 beats 070-077 | **produced** | 43.5 |  |  |  |  |
 | 114_documented-losing-streak | spotlight | ch012 beats 000-008 | scripted |  |  |  |  |  |
 | 115_nobody-authorized-this | roast | ch012 beats 010-019 | scripted |  |  |  |  |  |
 | 116_meat-shield-rating | spotlight | ch011 beat 050, ch012 beats 043-072, ch013 beat 035, ch015 beat 051 | scripted |  |  |  |  |  |
@@ -70,10 +70,10 @@ Batch 1 produced 2026-10-07: 001 (sample) + 10 produced. ALL PLATFORMS DONE 2026
 | 122_summons-unionized | roast | ch013 beats 049-062 | scripted |  |  |  |  |  |
 | 123_first-real-swing | cliffhanger | ch013 beats 077-086 | scripted |  |  |  |  |  |
 | 124_rune-is-edible | roast | ch014 beats 016-022 | scripted |  |  |  |  |  |
-| 125_protest-invoice | face-slap | ch014 beats 031-047 | scripted |  |  |  |  |  |
+| 125_protest-invoice | face-slap | ch014 beats 031-047 | **produced** | 40.8 |  |  |  |  |
 | 126_free-things-pattern | roast | ch014 beats 058-069 | scripted |  |  |  |  |  |
 | 127_ultra-elite-bill | cliffhanger | ch014 beats 072-079 | scripted |  |  |  |  |  |
-| 128_ask-the-assassin | roast | ch015 beats 013-039 | scripted |  |  |  |  |  |
+| 128_ask-the-assassin | roast | ch015 beats 013-039 | **produced** | 34.3 |  |  |  |  |
 | 129_loyalty-brightness | roast | ch015 beats 019-022 | scripted |  |  |  |  |  |
 | 130_right-now-yes | cliffhanger | ch015 beats 029-033 | scripted |  |  |  |  |  |
 | 131_rank-system-bullying | roast | ch015 beats 041-043 | scripted |  |  |  |  |  |
@@ -88,12 +88,12 @@ Batch 1 produced 2026-10-07: 001 (sample) + 10 produced. ALL PLATFORMS DONE 2026
 | 167_already-too-late | cliffhanger | ch017 beats 034-041 | scripted |  |  |  |  |  |
 | 168_chicken-diplomacy | roast | ch017 beats 043-053 | scripted |  |  |  |  |  |
 | 169_warrior-feel-no-cold | roast | ch017 beats 064-071 | scripted |  |  |  |  |  |
-| 170_the-sword-hums | cliffhanger | ch017 beats 077-081 | scripted |  |  |  |  |  |
+| 170_the-sword-hums | cliffhanger | ch017 beats 077-081 | **produced** | 31.5 |  |  |  |  |
 | 171_two-swing-disaster | roast | ch018 beats 000-009 | scripted |  |  |  |  |  |
 | 172_sign-of-the-apocalypse | cliffhanger | ch018 beats 010-013 | scripted |  |  |  |  |  |
 | 173_traitor-letter | roast | ch018 beats 033-036 | scripted |  |  |  |  |  |
 | 174_gold-power | spotlight | ch018 beats 038-045 | scripted |  |  |  |  |  |
-| 175_ill-do-anything | cliffhanger | ch018 beats 054-075 | scripted |  |  |  |  |  |
+| 175_ill-do-anything | cliffhanger | ch018 beats 054-075 | **produced** | 43.4 |  |  |  |  |
 | 176_kissy-face-with-audio | roast | ch019 beats 005-008 | scripted |  |  |  |  |  |
 | 177_targeted-advertisement | face-slap | ch019 beats 013-032 | scripted |  |  |  |  |  |
 | 178_brain-stops-rendering | roast | ch019 beats 033-048 | scripted |  |  |  |  |  |
