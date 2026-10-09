@@ -1,6 +1,9 @@
 # UPLOAD PREP — compilation ch011-020 — Return of the Top Class Master
 
-Status: **READY TO UPLOAD** (compiled + verified 2026-10-09).
+Status: **LIVE** — published Public on 2026-10-09. Video: https://youtu.be/bvLJScLrnuE
+(title option 1, chapters block in description ✓, tags ✓, audience not-made-for-kids ✓,
+visibility verified Public in Content. Follow-ups: thumbnail (thumbnail-agent), playlist
+attach, pinned comment (needs one-time Studio verification).)
 - **Video:** `videos/return-of-the-top-class-master/compilation/ch011-ch020_full.mp4`
   — 1:50:05 (6605.4s), 1920×1080 h264+aac 30fps, 1.22GB. Duration verified =
   chapters (6572.8s) + 9 cards (22.5s) + outro (10s). No card before Chapter 11
