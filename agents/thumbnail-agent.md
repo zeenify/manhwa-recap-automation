@@ -39,8 +39,10 @@ the yellow phrase text is always added by us locally, never by the AI.
 
 ## Generation (user's ChatGPT, via browser)
 
-1. Open chatgpt.com. If a login wall appears: STOP, let the user log in —
-   never touch account credentials.
+1. Open chatgpt.com **in the ZCode default browser (browser-use skill)** — the
+   logged-in profiles live there; other browser tooling is a fallback. If a
+   login wall appears: STOP, let the user log in — never touch account
+   credentials.
 2. Fresh conversation per video is fine (the prompt below is self-contained);
    continuing the original brand conversation also works.
 3. Attach: 5–8 competitor sample JPGs + our 1–3 chosen beat PNGs.

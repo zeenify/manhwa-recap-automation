@@ -74,6 +74,12 @@ Deps: Python 3.11 + Pillow + numpy + faster-whisper (word-level caption alignmen
 
 ## Gotchas
 
+- **Browser rule: ALWAYS use the ZCode default/built-in browser (the `browser-use`
+  skill — it holds the logged-in channel profiles) whenever it is available.**
+  Other browser tooling (chrome-devtools MCP, debug-port Chrome copies) is a
+  fallback only, and expect login walls there — the default browser is the one
+  the user is signed into. If a login wall appears in ANY browser: STOP, let the
+  user type credentials.
 - Windows + Git Bash; workspace path contains spaces — always quote.
 - Session PATH can silently lose `python` and `ffmpeg` (happened once): use `py`
   for Python (the Windows launcher, always present) and prepend
@@ -191,7 +197,8 @@ across chapters; unrestricted count — every short-able scene is a short.
    `assemble_shorts --slug <slug> --short <id> --series-title "..."`. Expect
    ~2 min TTS + ~3 min render per short, both idempotent. Verify 1080×1920/30fps
    with ffprobe, spot-check frames, update the tracker.
-5. UPLOAD via a browser-automation session. **Proven toolchain (2026-10-09, all
+5. UPLOAD via the ZCode DEFAULT browser (built-in IAB — logged in; browser rule
+   in Gotchas). **Proven toolchain (2026-10-09, all
    11 Wimp shorts posted this way):** pages like TikTok/Facebook block every way
    to move file bytes into the page (CSP kills localhost fetch/XHR; large
    evaluate payloads break the browser bridge), and the in-app browser cannot

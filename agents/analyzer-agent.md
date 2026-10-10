@@ -27,9 +27,10 @@ exact endpoints, credentials).
    (template: `credentials.example.json`).
 2. **If a platform errors** (missing key, expired token, Cloudflare challenge): say so in the report
    under "data quality" and report what you have. Never invent numbers.
-3. **Rumble is browser-only** (Cloudflare blocks plain HTTP). Open the channel page
+3. **Rumble is browser-only** (Cloudflare blocks plain HTTP). Use the ZCode
+   DEFAULT browser (browser-use skill) when available. Open the channel page
    https://rumble.com/c/c-7963658 in the in-app browser, read per-video view counts from the page DOM
-   (browser-use skill — it's web content, no computer-use), and fold them into the report.
+   (it's web content, no computer-use), and fold them into the report.
 4. **View DELTAS**: counters are cumulative. If a snapshot from the requested window exists, report
    deltas; if not, report cumulative-so-far and say the baseline starts today. Snapshots accumulate in
    `channel/analytics/snapshots/` — every run makes future reports better. Recommend a daily cron.
