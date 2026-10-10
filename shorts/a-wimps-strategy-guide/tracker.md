@@ -12,7 +12,7 @@ Batch 1 produced 2026-10-07: 001 (sample) + 10 produced. ALL PLATFORMS DONE 2026
 | 011_one_bite_thief | roast | ch001 beats 037-044 | scripted |  |  |  |  |  |
 | 012_bark_for_me | roast | ch001 beats 072-080 | scripted |  |  |  |  |  |
 | 013_interest_day | face-slap | ch001 beats 081-097, ch002 beats 000-004 | **produced** | 44.5 | 2026-10-07 | ✓ | ✓ | ✓ |
-| 014_ring_me_up | roast | ch002 beats 005-011 | **produced** | 25.2 |  |  |  |  |
+| 014_ring_me_up | roast | ch002 beats 005-011 | **produced** | 25.2 | 2026-10-10 | ✓ |  | ✓ |
 | 015_three_stars | roast | ch002 beats 015-028 | scripted |  |  |  |  |  |
 | 016_article_three | roast | ch002 beats 030-048 | scripted |  |  |  |  |  |
 | 017_safety_first | roast | ch002 beats 054-065 | scripted |  |  |  |  |  |
@@ -21,7 +21,7 @@ Batch 1 produced 2026-10-07: 001 (sample) + 10 produced. ALL PLATFORMS DONE 2026
 | 020_blade_rain | roast | ch003 beats 025-034 | scripted |  |  |  |  |  |
 | 021_his_grace | roast | ch003 beats 047-050 | scripted |  |  |  |  |  |
 | 022_chicken_first | roast | ch003 beats 062-070 | scripted |  |  |  |  |  |
-| 023_second_slot | cliffhanger | ch003 beats 072-077 | **produced** | 27.0 |  |  |  |  |
+| 023_second_slot | cliffhanger | ch003 beats 072-077 | **produced** | 27.0 | 2026-10-10 | ✓ |  | ✓ |
 | 024_mind_reader_office | roast | ch004 beats 007-019 | scripted |  |  |  |  |  |
 | 025_chicken_hood | roast | ch004 beats 030-033 | scripted |  |  |  |  |  |
 | 026_wild_horse | roast | ch004 beats 041-046 | scripted |  |  |  |  |  |
@@ -29,7 +29,7 @@ Batch 1 produced 2026-10-07: 001 (sample) + 10 produced. ALL PLATFORMS DONE 2026
 | 028_shadow_step | roast | ch004 beats 060-067 | scripted |  |  |  |  |  |
 | 029_biggest_mystery | cliffhanger | ch004 beats 068-081 | **produced** | 38.2 | 2026-10-07 | ✓ | ✓ | ✓ |
 | 030_robot_mode | roast | ch005 beats 001-007 | scripted |  |  |  |  |  |
-| 031_mascot_video | roast | ch005 beats 009-021 | **produced** | 29.8 |  |  |  |  |
+| 031_mascot_video | roast | ch005 beats 009-021 | **produced** | 29.8 | 2026-10-10 | ✓ |  | ✓ |
 | 032_coward_epitaph | roast | ch005 beats 028-042 | scripted |  |  |  |  |  |
 | 033_floor_eleven_bet | face-slap | ch005 beats 043-082 | **produced** | 42.8 | 2026-10-07 | ✓ | ✓ | ✓ |
 | 060_who-told-you | roast | ch006 beats 000-006 | scripted |  |  |  |  |  |
