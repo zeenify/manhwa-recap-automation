@@ -43,7 +43,7 @@ Batch 1 produced 2026-10-07: 001 (sample) + 10 produced. ALL PLATFORMS DONE 2026
 | 068_it-tickles | roast | ch008 beats 006-009 | scripted |  |  |  |  |  |
 | 069_naming-ceremony | roast | ch008 beats 030-032 | scripted |  |  |  |  |  |
 | 070_interviewer-bong | roast | ch008 beats 011-016 | scripted |  |  |  |  |  |
-| 071_death-by-mockery | face-slap | ch008 beats 025-029 | **produced** | 38.8 |  |  |  |  |
+| 071_death-by-mockery | face-slap | ch008 beats 025-029 | **produced** | 38.8 | 2026-10-12 | ✓ |  | ✓ |
 | 072_chicken-not-kitchen | roast | ch008 beats 058-062 | scripted |  |  |  |  |  |
 | 073_rental-bike-thesis | roast | ch009 beats 009-012 | scripted |  |  |  |  |  |
 | 074_classy-walkthrough | roast | ch009 beats 023-027 | scripted |  |  |  |  |  |
@@ -54,7 +54,7 @@ Batch 1 produced 2026-10-07: 001 (sample) + 10 produced. ALL PLATFORMS DONE 2026
 | 079_trust-arrow | roast | ch010 beats 017-022 | scripted |  |  |  |  |  |
 | 080_mortgage-with-handle | roast | ch010 beats 040-047 | **produced** | 24.8 | 2026-10-09 | ✓ | ✓ | ✓ |
 | 081_remember-this-handshake | cliffhanger | ch010 beats 049-053 | scripted |  |  |  |  |  |
-| 082_grudge-question | cliffhanger | ch010 beats 058-069 | **produced** | 40.0 |  |  |  |  |
+| 082_grudge-question | cliffhanger | ch010 beats 058-069 | **produced** | 40.0 | 2026-10-12 | ✓ |  | ✓ |
 | 110_red-ribbon-robbery | face-slap | ch011 beats 000-013 | **produced** | 41.3 | 2026-10-09 | ✓ | ✓ | ✓ |
 | 111_shop-regular-arrest | face-slap | ch011 beats 024-036 | scripted |  |  |  |  |  |
 | 112_victory-screen-tourist | roast | ch011 beats 046-057 | scripted |  |  |  |  |  |
