@@ -58,7 +58,7 @@ Batch 1 produced 2026-10-07: 001 (sample) + 10 produced. ALL PLATFORMS DONE 2026
 | 110_red-ribbon-robbery | face-slap | ch011 beats 000-013 | **produced** | 41.3 | 2026-10-09 | ✓ | ✓ | ✓ |
 | 111_shop-regular-arrest | face-slap | ch011 beats 024-036 | scripted |  |  |  |  |  |
 | 112_victory-screen-tourist | roast | ch011 beats 046-057 | scripted |  |  |  |  |  |
-| 113_spine-acquired | cliffhanger | ch011 beats 070-077 | **produced** | 43.5 |  |  |  |  |
+| 113_spine-acquired | cliffhanger | ch011 beats 070-077 | **produced** | 43.5 | 2026-10-13 | ✓ |  | ✓ |
 | 114_documented-losing-streak | spotlight | ch012 beats 000-008 | scripted |  |  |  |  |  |
 | 115_nobody-authorized-this | roast | ch012 beats 010-019 | scripted |  |  |  |  |  |
 | 116_meat-shield-rating | spotlight | ch011 beat 050, ch012 beats 043-072, ch013 beat 035, ch015 beat 051 | scripted |  |  |  |  |  |
@@ -70,7 +70,7 @@ Batch 1 produced 2026-10-07: 001 (sample) + 10 produced. ALL PLATFORMS DONE 2026
 | 122_summons-unionized | roast | ch013 beats 049-062 | scripted |  |  |  |  |  |
 | 123_first-real-swing | cliffhanger | ch013 beats 077-086 | scripted |  |  |  |  |  |
 | 124_rune-is-edible | roast | ch014 beats 016-022 | scripted |  |  |  |  |  |
-| 125_protest-invoice | face-slap | ch014 beats 031-047 | **produced** | 40.8 |  |  |  |  |
+| 125_protest-invoice | face-slap | ch014 beats 031-047 | **produced** | 40.8 | 2026-10-13 | ✓ |  | ✓ |
 | 126_free-things-pattern | roast | ch014 beats 058-069 | scripted |  |  |  |  |  |
 | 127_ultra-elite-bill | cliffhanger | ch014 beats 072-079 | scripted |  |  |  |  |  |
 | 128_ask-the-assassin | roast | ch015 beats 013-039 | **produced** | 34.3 |  |  |  |  |
