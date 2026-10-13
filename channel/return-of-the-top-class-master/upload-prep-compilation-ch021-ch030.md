@@ -1,10 +1,10 @@
 # UPLOAD PREP — compilation ch021-ch030 — Return of the Top Class Master
 
-Status: **STITCHING** — compile running in background; timestamps block pending.
-When done: ffprobe-verify duration/resolution, paste the chapters block from
-`videos/return-of-the-top-class-master/compilation/youtube_timestamps.json`
-(printed by the tool too) into the description below, then this doc is
-upload-ready.
+Status: **STITCHED + VERIFIED** — `ch021-ch030_full.mp4` is 1:55:49 (6949.0s),
+1920×1080 h264, aac, 1.22GB. Duration = chapters + 9 cards (2.5s) + outro (10s).
+No card before Chapter 21 (range start). Chapters block pasted below from
+`youtube_timestamps.json`. Remaining before upload: thumbnail (build via
+`agents/thumbnail-agent.md`).
 
 - **Video:** `videos/return-of-the-top-class-master/compilation/ch021-ch030_full.mp4`
 - **Thumbnail:** NOT BUILT YET — standing rule: build via
@@ -25,8 +25,16 @@ upload-ready.
 ## Description (chapters block FIRST — required for auto-chapters)
 
 ```
-[CHAPTERS BLOCK — paste verbatim from youtube_timestamps.json when the stitch
-finishes; first line must be "0:00 Chapter 21"]
+0:00 Chapter 21
+12:47 Chapter 22
+22:50 Chapter 23
+34:20 Chapter 24
+47:52 Chapter 25
+59:09 Chapter 26
+1:11:44 Chapter 27
+1:22:47 Chapter 28
+1:33:58 Chapter 29
+1:44:49 Chapter 30
 
 Manhwa Summary:
 
