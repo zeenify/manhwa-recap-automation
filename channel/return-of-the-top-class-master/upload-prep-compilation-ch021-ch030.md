@@ -1,11 +1,12 @@
 # UPLOAD PREP — compilation ch021-ch030 — Return of the Top Class Master
 
-Status: **READY TO UPLOAD** — `ch021-ch030_full.mp4` is 1:55:49 (6949.0s),
-1920×1080 h264, aac, 1.22GB. Duration = chapters + 9 cards (2.5s) + outro (10s).
-No card before Chapter 21 (range start). Chapters block pasted below from
-`youtube_timestamps.json`. Thumbnail: **DONE** —
-`thumbnail_compilation_ch021-ch030.png` (ChatGPT "golden hand + hero + rival"
-art, QA-approved; local yellow phrase "WHO PAID TO / BURY HIM?").
+Status: **LIVE** — published Public on 2026-10-13 (local; YouTube shows 14 Oct).
+Video: https://youtu.be/4-aAQx2W1b0 — title option 1 ✓, chapters block in
+description ✓, thumbnail attached ✓, playlist "Return of the Top Class Master"
+attached ✓, Public verified in Content ✓. Part 2's end screen now points here
+(editor saved + verified through reload). Remaining (user-side): pin the
+rating-question comment (needs Studio verification); verify auto-chapters on
+the watch page once HD processing completes.
 
 - **Video:** `videos/return-of-the-top-class-master/compilation/ch021-ch030_full.mp4`
 - **Thumbnail:** DONE — `thumbnail_compilation_ch021-ch030.png` (built via
