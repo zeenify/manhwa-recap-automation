@@ -1,17 +1,15 @@
 # UPLOAD PREP — compilation ch021-ch030 — Return of the Top Class Master
 
-Status: **STITCHED + VERIFIED** — `ch021-ch030_full.mp4` is 1:55:49 (6949.0s),
+Status: **READY TO UPLOAD** — `ch021-ch030_full.mp4` is 1:55:49 (6949.0s),
 1920×1080 h264, aac, 1.22GB. Duration = chapters + 9 cards (2.5s) + outro (10s).
 No card before Chapter 21 (range start). Chapters block pasted below from
-`youtube_timestamps.json`. Remaining before upload: thumbnail (build via
-`agents/thumbnail-agent.md`).
+`youtube_timestamps.json`. Thumbnail: **DONE** —
+`thumbnail_compilation_ch021-ch030.png` (ChatGPT "golden hand + hero + rival"
+art, QA-approved; local yellow phrase "WHO PAID TO / BURY HIM?").
 
 - **Video:** `videos/return-of-the-top-class-master/compilation/ch021-ch030_full.mp4`
-- **Thumbnail:** NOT BUILT YET — standing rule: build via
-  `agents/thumbnail-agent.md` before any YouTube upload (ChatGPT art from our
-  beats + local yellow-phrase text pass). Arc art candidates: Wayne Hand
-  golden-palm moment (ch029/030), fire-sword stance, Yun Jae's pill
-  transformation.
+- **Thumbnail:** DONE — `thumbnail_compilation_ch021-ch030.png` (built via
+  `agents/thumbnail-agent.md`; raw kept at `tmp/thumb_p3_raw.jpg`).
 - **Playlist:** "Return of the Top Class Master" (exists — parts 1 & 2 attached).
 - **End screen:** after both parts are live, wire Part 2's end screen → Part 3
   (Editor → End screen → Add element → Video → "Choose specific video").

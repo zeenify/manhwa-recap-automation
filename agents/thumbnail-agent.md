@@ -111,3 +111,18 @@ Pattern script: `tmp/make_thumb_ch001.py` (rerunnable per video).
   Download note: in-page credentialed fetch → base64 → retrieve via evaluate in
   ≤64KB slices (200KB return slices get truncated by the bridge; verify each
   slice length and the final byte count).
+
+- **compilation ch021-030 — Return of the Top Class Master** (2026-10-13):
+  DONE. Beats chosen from beats.json event text only (ch030 beat 44 = giant
+  golden handprint / Wayne Hand finisher; hero closeup beat 8; rival smirk
+  ch029 beat 14), contact-sheet QA on one ≤200KB jpg. Attachments via the
+  chunked `window.__up` route worked, but ChatGPT's file input ids rotated
+  (`_r_b_` etc., no `#upload-files`) — attach via
+  `document.querySelector('input[type="file"]')` + change event; the composer
+  picks them up even though `attach()` reports 0. Two-stage download: in-page
+  canvas re-encode to JPEG q0.94 at 1600px (2.8MB blob → 600KB) THEN ≤64KB
+  slice retrieval — raw PNGs are too big to slice directly (~58 calls). Art:
+  hero front + rival looming + golden handprint behind (composed, per the
+  sample grammar). Phrase: "WHO PAID TO / BURY HIM?" (question format, matched
+  to the comp2 winner). QA via vision pass on a 640×360 preview.
+  Final: `channel/return-of-the-top-class-master/thumbnail_compilation_ch021-ch030.png`.
