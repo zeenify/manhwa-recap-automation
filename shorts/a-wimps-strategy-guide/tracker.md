@@ -73,7 +73,7 @@ Batch 1 produced 2026-10-07: 001 (sample) + 10 produced. ALL PLATFORMS DONE 2026
 | 125_protest-invoice | face-slap | ch014 beats 031-047 | **produced** | 40.8 | 2026-10-13 | ✓ |  | ✓ |
 | 126_free-things-pattern | roast | ch014 beats 058-069 | scripted |  |  |  |  |  |
 | 127_ultra-elite-bill | cliffhanger | ch014 beats 072-079 | scripted |  |  |  |  |  |
-| 128_ask-the-assassin | roast | ch015 beats 013-039 | **produced** | 34.3 |  |  |  |  |
+| 128_ask-the-assassin | roast | ch015 beats 013-039 | **produced** | 34.3 | 2026-10-15 | ✓ |  | ✓ |
 | 129_loyalty-brightness | roast | ch015 beats 019-022 | scripted |  |  |  |  |  |
 | 130_right-now-yes | cliffhanger | ch015 beats 029-033 | scripted |  |  |  |  |  |
 | 131_rank-system-bullying | roast | ch015 beats 041-043 | scripted |  |  |  |  |  |
@@ -88,12 +88,12 @@ Batch 1 produced 2026-10-07: 001 (sample) + 10 produced. ALL PLATFORMS DONE 2026
 | 167_already-too-late | cliffhanger | ch017 beats 034-041 | scripted |  |  |  |  |  |
 | 168_chicken-diplomacy | roast | ch017 beats 043-053 | scripted |  |  |  |  |  |
 | 169_warrior-feel-no-cold | roast | ch017 beats 064-071 | scripted |  |  |  |  |  |
-| 170_the-sword-hums | cliffhanger | ch017 beats 077-081 | **produced** | 31.5 |  |  |  |  |
+| 170_the-sword-hums | cliffhanger | ch017 beats 077-081 | **produced** | 31.5 | 2026-10-15 | ✓ |  | ✓ |
 | 171_two-swing-disaster | roast | ch018 beats 000-009 | scripted |  |  |  |  |  |
 | 172_sign-of-the-apocalypse | cliffhanger | ch018 beats 010-013 | scripted |  |  |  |  |  |
 | 173_traitor-letter | roast | ch018 beats 033-036 | scripted |  |  |  |  |  |
 | 174_gold-power | spotlight | ch018 beats 038-045 | scripted |  |  |  |  |  |
-| 175_ill-do-anything | cliffhanger | ch018 beats 054-075 | **produced** | 43.4 |  |  |  |  |
+| 175_ill-do-anything | cliffhanger | ch018 beats 054-075 | **produced** | 43.4 | 2026-10-15 | ✓ |  | ✓ |
 | 176_kissy-face-with-audio | roast | ch019 beats 005-008 | scripted |  |  |  |  |  |
 | 177_targeted-advertisement | face-slap | ch019 beats 013-032 | scripted |  |  |  |  |  |
 | 178_brain-stops-rendering | roast | ch019 beats 033-048 | scripted |  |  |  |  |  |
