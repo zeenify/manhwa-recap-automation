@@ -1,0 +1,1512 @@
+{
+ "chapter": "chapter-01",
+ "virtual_height": 129725,
+ "assets": [
+  {
+   "asset": 0,
+   "film_class": "tile",
+   "y_start": 1010,
+   "y_end": 1840,
+   "x_start": 0,
+   "x_end": 800,
+   "scene_group": 0,
+   "composition": "establish",
+   "focal_point": [
+    0.55,
+    0.55
+   ],
+   "event": "The brown planet of Haons hangs in deep space with its two moons; the promise: here one can ascend as a god."
+  },
+  {
+   "asset": 1,
+   "film_class": "tile",
+   "y_start": 2380,
+   "y_end": 3260,
+   "x_start": 0,
+   "x_end": 800,
+   "scene_group": 1,
+   "composition": "establish",
+   "focal_point": [
+    0.5,
+    0.45
+   ],
+   "event": "The final gateway: colossal pillars of blue lightning tear through a storm-lit mountain pass, a trial of several hundred billions of volts."
+  },
+  {
+   "asset": 2,
+   "film_class": "tile",
+   "y_start": 3280,
+   "y_end": 3940,
+   "x_start": 0,
+   "x_end": 800,
+   "scene_group": 1,
+   "composition": "mood",
+   "focal_point": [
+    0.5,
+    0.5
+   ],
+   "event": "Lightning floods the gateway — only divine-level beings could withstand this power."
+  },
+  {
+   "asset": 3,
+   "film_class": "tile",
+   "y_start": 4680,
+   "y_end": 5620,
+   "x_start": 0,
+   "x_end": 800,
+   "scene_group": 1,
+   "composition": "action",
+   "focal_point": [
+    0.5,
+    0.55
+   ],
+   "event": "A dark-haired man in a white commander's coat descends through the gateway storm, arms spread wide, shards orbiting him."
+  },
+  {
+   "asset": 4,
+   "film_class": "tile",
+   "y_start": 6270,
+   "y_end": 7130,
+   "x_start": 0,
+   "x_end": 800,
+   "scene_group": 1,
+   "composition": "closeup",
+   "focal_point": [
+    0.5,
+    0.5
+   ],
+   "event": "Ray's face in extreme closeup, eyes glowing white, teeth gritted as he declares he only needs to pass this gateway to stand on top of the world."
+  },
+  {
+   "asset": 5,
+   "film_class": "pan",
+   "y_start": 7680,
+   "y_end": 9485,
+   "x_start": 0,
+   "x_end": 800,
+   "scene_group": 1,
+   "composition": "pan-down",
+   "focal_point": [
+    0.5,
+    0.5
+   ],
+   "event": "Ray bellows his challenge into the Valley of Volts as blue lightning splits the dark rocks around him."
+  },
+  {
+   "asset": 6,
+   "film_class": "tile",
+   "y_start": 9985,
+   "y_end": 10830,
+   "x_start": 0,
+   "x_end": 800,
+   "scene_group": 2,
+   "composition": "closeup",
+   "focal_point": [
+    0.4,
+    0.5
+   ],
+   "event": "Anuth, the vice master, watches unseen from behind the valley boulders, a blade ready."
+  },
+  {
+   "asset": 7,
+   "film_class": "tile",
+   "y_start": 11640,
+   "y_end": 12580,
+   "x_start": 0,
+   "x_end": 800,
+   "scene_group": 2,
+   "composition": "wide",
+   "focal_point": [
+    0.5,
+    0.45
+   ],
+   "event": "A giant bolt of lightning slams down before Ray on his rock spire while the watcher's pale hand creeps into the frame."
+  },
+  {
+   "asset": 8,
+   "film_class": "tile",
+   "y_start": 13930,
+   "y_end": 14620,
+   "x_start": 0,
+   "x_end": 800,
+   "scene_group": 2,
+   "composition": "action",
+   "focal_point": [
+    0.55,
+    0.5
+   ],
+   "event": "Anuth charges through the storm with his knife drawn, closing on the distracted master."
+  },
+  {
+   "asset": 9,
+   "film_class": "tile",
+   "y_start": 16120,
+   "y_end": 16950,
+   "x_start": 0,
+   "x_end": 800,
+   "scene_group": 2,
+   "composition": "action",
+   "focal_point": [
+    0.5,
+    0.5
+   ],
+   "event": "The blade bursts through Ray's body in a spray of blood, the death-blow streaking the frame."
+  },
+  {
+   "asset": 10,
+   "film_class": "tile",
+   "y_start": 17820,
+   "y_end": 18730,
+   "x_start": 0,
+   "x_end": 800,
+   "scene_group": 2,
+   "composition": "closeup",
+   "focal_point": [
+    0.45,
+    0.45
+   ],
+   "event": "Ray's eyes flash red with rage as the blade sits inside him, the vice master's head looming at his shoulder — unclear: whose shocked line 'WHAT IS...!'."
+  },
+  {
+   "asset": 11,
+   "film_class": "tile",
+   "y_start": 19790,
+   "y_end": 20560,
+   "x_start": 140,
+   "x_end": 800,
+   "scene_group": 2,
+   "composition": "impact",
+   "focal_point": [
+    0.5,
+    0.5
+   ],
+   "event": "The master's body drops hard onto the cracked wet rock, blue light still spitting across the ground."
+  },
+  {
+   "asset": 12,
+   "film_class": "tile",
+   "y_start": 20575,
+   "y_end": 21480,
+   "x_start": 0,
+   "x_end": 800,
+   "scene_group": 2,
+   "composition": "impact",
+   "focal_point": [
+    0.5,
+    0.55
+   ],
+   "event": "A colossal pillar of lightning erupts through the valley, blasting the sfx-lit air white."
+  },
+  {
+   "asset": 13,
+   "film_class": "tile",
+   "y_start": 21480,
+   "y_end": 22345,
+   "x_start": 0,
+   "x_end": 800,
+   "scene_group": 2,
+   "composition": "two-shot",
+   "focal_point": [
+    0.5,
+    0.6
+   ],
+   "event": "Beneath the light storm, Anuth looms tall over Ray's bleeding, kneeling back."
+  },
+  {
+   "asset": 14,
+   "film_class": "tile",
+   "y_start": 23190,
+   "y_end": 24130,
+   "x_start": 0,
+   "x_end": 800,
+   "scene_group": 3,
+   "composition": "closeup",
+   "focal_point": [
+    0.45,
+    0.45
+   ],
+   "event": "Ray, blood at his lips, recognizes his betrayer — 'Urk!' — wide-eyed disbelief as he clutches his chest."
+  },
+  {
+   "asset": 15,
+   "film_class": "tile",
+   "y_start": 24900,
+   "y_end": 25800,
+   "x_start": 0,
+   "x_end": 800,
+   "scene_group": 3,
+   "composition": "closeup",
+   "focal_point": [
+    0.55,
+    0.5
+   ],
+   "event": "Anuth, calm behind his dark visor among the storm clouds, gloats that he can tell Ray didn't expect this."
+  },
+  {
+   "asset": 16,
+   "film_class": "tile",
+   "y_start": 26300,
+   "y_end": 27005,
+   "x_start": 0,
+   "x_end": 800,
+   "scene_group": 3,
+   "composition": "closeup",
+   "focal_point": [
+    0.45,
+    0.45
+   ],
+   "event": "Ray glares bloodshot and snarling through bloodied teeth — 'I trusted you...' — the betrayal raw on his face."
+  },
+  {
+   "asset": 17,
+   "film_class": "tile",
+   "y_start": 27560,
+   "y_end": 28245,
+   "x_start": 0,
+   "x_end": 800,
+   "scene_group": 3,
+   "composition": "closeup",
+   "focal_point": [
+    0.5,
+    0.45
+   ],
+   "event": "Ray screams in agony inside a bordered frame, red eyes blazing, blood flying."
+  },
+  {
+   "asset": 18,
+   "film_class": "tile",
+   "y_start": 28480,
+   "y_end": 29400,
+   "x_start": 0,
+   "x_end": 800,
+   "scene_group": 3,
+   "composition": "two-shot",
+   "focal_point": [
+    0.5,
+    0.45
+   ],
+   "event": "Anuth seizes Ray by the collar amid the lightning, sneering that trash shouldn't pretend to be the master."
+  },
+  {
+   "asset": 19,
+   "film_class": "tile",
+   "y_start": 30290,
+   "y_end": 30720,
+   "x_start": 330,
+   "x_end": 800,
+   "scene_group": 3,
+   "composition": "impact",
+   "focal_point": [
+    0.55,
+    0.5
+   ],
+   "event": "A hand snatches at Ray in a burst of blue energy — the core soul being torn toward the traitor."
+  },
+  {
+   "asset": 20,
+   "film_class": "tile",
+   "y_start": 31540,
+   "y_end": 32330,
+   "x_start": 0,
+   "x_end": 800,
+   "scene_group": 3,
+   "composition": "action",
+   "focal_point": [
+    0.5,
+    0.45
+   ],
+   "event": "Anuth runs Ray through from behind on grey speed lines — don't worry, Haons will take good care of this body."
+  },
+  {
+   "asset": 21,
+   "film_class": "tile",
+   "y_start": 33290,
+   "y_end": 33790,
+   "x_start": 150,
+   "x_end": 645,
+   "scene_group": 3,
+   "composition": "closeup",
+   "focal_point": [
+    0.5,
+    0.5
+   ],
+   "event": "Ray's face in framed closeup, mouth bloodied wide in a death-agony scream."
+  },
+  {
+   "asset": 22,
+   "film_class": "tile",
+   "y_start": 34400,
+   "y_end": 34850,
+   "x_start": 350,
+   "x_end": 800,
+   "scene_group": 3,
+   "composition": "impact",
+   "focal_point": [
+    0.6,
+    0.45
+   ],
+   "event": "unclear: dark stone behind a burst of flying blood — the dying strike's punctuation."
+  },
+  {
+   "asset": 23,
+   "film_class": "tile",
+   "y_start": 35560,
+   "y_end": 36360,
+   "x_start": 0,
+   "x_end": 800,
+   "scene_group": 3,
+   "composition": "closeup",
+   "focal_point": [
+    0.5,
+    0.45
+   ],
+   "event": "Anuth grins with glowing eyes, golden lightning crackling — the core soul is in his hands, and now he is the master of Haons."
+  },
+  {
+   "asset": 24,
+   "film_class": "tile",
+   "y_start": 37550,
+   "y_end": 38460,
+   "x_start": 0,
+   "x_end": 800,
+   "scene_group": 3,
+   "composition": "aftermath",
+   "focal_point": [
+    0.55,
+    0.45
+   ],
+   "event": "Ray's broken body lies on the wet stone while the traitor turns away holding the stolen core soul."
+  },
+  {
+   "asset": 25,
+   "film_class": "tile",
+   "y_start": 39330,
+   "y_end": 39730,
+   "x_start": 200,
+   "x_end": 545,
+   "scene_group": 4,
+   "composition": "closeup",
+   "focal_point": [
+    0.5,
+    0.5
+   ],
+   "event": "The dying Ray's eye rolls back, blood at the corner of his mouth — you're going to regret this, I'll make sure of it."
+  },
+  {
+   "asset": 26,
+   "film_class": "pan",
+   "y_start": 41500,
+   "y_end": 43640,
+   "x_start": 0,
+   "x_end": 800,
+   "scene_group": 4,
+   "composition": "pan-down",
+   "focal_point": [
+    0.5,
+    0.5
+   ],
+   "event": "The valley's lightning erupts sky-wide as a dark figure is hurled down the slope by the blast — unclear: whether the storm is reclaiming the gateway or striking the thief."
+  },
+  {
+   "asset": 27,
+   "film_class": "tile",
+   "y_start": 43870,
+   "y_end": 44520,
+   "x_start": 0,
+   "x_end": 800,
+   "scene_group": 4,
+   "composition": "closeup",
+   "focal_point": [
+    0.6,
+    0.5
+   ],
+   "event": "unclear: a light-haired young man winces, gloved hand shielding his eyes from the light — an unseen witness to the master's fall."
+  },
+  {
+   "asset": 28,
+   "film_class": "pan",
+   "y_start": 48850,
+   "y_end": 50760,
+   "x_start": 0,
+   "x_end": 800,
+   "scene_group": 5,
+   "composition": "pan-down",
+   "focal_point": [
+    0.5,
+    0.5
+   ],
+   "event": "A sunlit blue sky over a multi-story school building and fence — a bright, ordinary world far from Haons."
+  },
+  {
+   "asset": 29,
+   "film_class": "tile",
+   "y_start": 51040,
+   "y_end": 51450,
+   "x_start": 415,
+   "x_end": 800,
+   "scene_group": 5,
+   "composition": "closeup",
+   "focal_point": [
+    0.6,
+    0.45
+   ],
+   "event": "A bruised red-eyed young man lifts his head off the floor — huh?"
+  },
+  {
+   "asset": 30,
+   "film_class": "pan",
+   "y_start": 51620,
+   "y_end": 53760,
+   "x_start": 0,
+   "x_end": 800,
+   "scene_group": 5,
+   "composition": "pan-down",
+   "focal_point": [
+    0.5,
+    0.55
+   ],
+   "event": "The dark-haired boy in a school uniform sits slumped against a green wall, lost — where am I?"
+  },
+  {
+   "asset": 31,
+   "film_class": "tile",
+   "y_start": 55250,
+   "y_end": 55990,
+   "x_start": 170,
+   "x_end": 800,
+   "scene_group": 5,
+   "composition": "closeup",
+   "focal_point": [
+    0.5,
+    0.5
+   ],
+   "event": "He touches his own bruised face in disbelief — I'm still alive?"
+  },
+  {
+   "asset": 32,
+   "film_class": "tile",
+   "y_start": 57270,
+   "y_end": 58170,
+   "x_start": 0,
+   "x_end": 800,
+   "scene_group": 6,
+   "composition": "establish",
+   "focal_point": [
+    0.45,
+    0.4
+   ],
+   "event": "Cho Hee Sung, the brown-haired school bully, laughs over the unconscious boy with two flunkies — knocked out after one hit."
+  },
+  {
+   "asset": 33,
+   "film_class": "tile",
+   "y_start": 58795,
+   "y_end": 59215,
+   "x_start": 220,
+   "x_end": 800,
+   "scene_group": 6,
+   "composition": "action",
+   "focal_point": [
+    0.6,
+    0.5
+   ],
+   "event": "A fist seizes the boy's collar and hauls him close — hey, Kang Tae Wook."
+  },
+  {
+   "asset": 34,
+   "film_class": "tile",
+   "y_start": 59430,
+   "y_end": 60240,
+   "x_start": 0,
+   "x_end": 800,
+   "scene_group": 6,
+   "composition": "two-shot",
+   "focal_point": [
+    0.5,
+    0.5
+   ],
+   "event": "The bully yanks Tae Wook up by his collar, glaring down at him."
+  },
+  {
+   "asset": 35,
+   "film_class": "tile",
+   "y_start": 61000,
+   "y_end": 61640,
+   "x_start": 0,
+   "x_end": 800,
+   "scene_group": 6,
+   "composition": "closeup",
+   "focal_point": [
+    0.5,
+    0.5
+   ],
+   "event": "Cho Hee Sung's smirking sneer up close — tell me if you wanna die, I'll do you that favor any time."
+  },
+  {
+   "asset": 36,
+   "film_class": "tile",
+   "y_start": 62590,
+   "y_end": 63400,
+   "x_start": 0,
+   "x_end": 800,
+   "scene_group": 6,
+   "composition": "crowd",
+   "focal_point": [
+    0.5,
+    0.5
+   ],
+   "event": "Classmates watch from their desks — he's bullying Kang Tae Wook again; guess he provoked Cho Hee Sung and got it coming."
+  },
+  {
+   "asset": 37,
+   "film_class": "tile",
+   "y_start": 64100,
+   "y_end": 65040,
+   "x_start": 0,
+   "x_end": 800,
+   "scene_group": 7,
+   "composition": "action",
+   "focal_point": [
+    0.5,
+    0.5
+   ],
+   "event": "A fist rockets toward the viewer in a burst of red — the bully swings at the helpless boy."
+  },
+  {
+   "asset": 38,
+   "film_class": "tile",
+   "y_start": 65955,
+   "y_end": 66480,
+   "x_start": 225,
+   "x_end": 750,
+   "scene_group": 7,
+   "composition": "impact",
+   "focal_point": [
+    0.5,
+    0.5
+   ],
+   "event": "A hand catches the fist mid-strike, fingers clamping around it — the punch simply stops."
+  },
+  {
+   "asset": 39,
+   "film_class": "tile",
+   "y_start": 67510,
+   "y_end": 67985,
+   "x_start": 95,
+   "x_end": 755,
+   "scene_group": 7,
+   "composition": "two-shot",
+   "focal_point": [
+    0.5,
+    0.45
+   ],
+   "event": "Tae Wook holds the captured fist without a flicker, eyes cold under his hair — who the f*ck are you to get all up in my face?"
+  },
+  {
+   "asset": 40,
+   "film_class": "tile",
+   "y_start": 68860,
+   "y_end": 69550,
+   "x_start": 0,
+   "x_end": 800,
+   "scene_group": 7,
+   "composition": "closeup",
+   "focal_point": [
+    0.5,
+    0.5
+   ],
+   "event": "Face to face: Tae Wook's red eyes glint icy and amused while the bully's rage shakes him."
+  },
+  {
+   "asset": 41,
+   "film_class": "tile",
+   "y_start": 70005,
+   "y_end": 70840,
+   "x_start": 0,
+   "x_end": 800,
+   "scene_group": 7,
+   "composition": "impact",
+   "focal_point": [
+    0.5,
+    0.5
+   ],
+   "event": "The captured arm bends the wrong way with a crack, light bursting around the joint."
+  },
+  {
+   "asset": 42,
+   "film_class": "tile",
+   "y_start": 71295,
+   "y_end": 72075,
+   "x_start": 0,
+   "x_end": 800,
+   "scene_group": 7,
+   "composition": "closeup",
+   "focal_point": [
+    0.5,
+    0.45
+   ],
+   "event": "Cho Hee Sung's face contorts in a scream as his arm gives."
+  },
+  {
+   "asset": 43,
+   "film_class": "tile",
+   "y_start": 72890,
+   "y_end": 73740,
+   "x_start": 0,
+   "x_end": 800,
+   "scene_group": 7,
+   "composition": "wide",
+   "focal_point": [
+    0.35,
+    0.5
+   ],
+   "event": "With a concussive burst Tae Wook hurls Cho Hee Sung away across the classroom, arm still outstretched."
+  },
+  {
+   "asset": 44,
+   "film_class": "tile",
+   "y_start": 73740,
+   "y_end": 74340,
+   "x_start": 0,
+   "x_end": 800,
+   "scene_group": 7,
+   "composition": "action",
+   "focal_point": [
+    0.55,
+    0.5
+   ],
+   "event": "Cho Hee Sung tumbles through the air, all four limbs wheeling."
+  },
+  {
+   "asset": 45,
+   "film_class": "tile",
+   "y_start": 75090,
+   "y_end": 75840,
+   "x_start": 0,
+   "x_end": 800,
+   "scene_group": 7,
+   "composition": "impact",
+   "focal_point": [
+    0.5,
+    0.45
+   ],
+   "event": "Cho Hee Sung slams back-first into the green chalkboard wall and crumples."
+  },
+  {
+   "asset": 46,
+   "film_class": "tile",
+   "y_start": 77420,
+   "y_end": 78050,
+   "x_start": 0,
+   "x_end": 800,
+   "scene_group": 7,
+   "composition": "aftermath",
+   "focal_point": [
+    0.25,
+    0.5
+   ],
+   "event": "Cho lies crumpled over a desk among the front rows as the whispers spread — he took him down in one blow?"
+  },
+  {
+   "asset": 47,
+   "film_class": "tile",
+   "y_start": 78575,
+   "y_end": 79345,
+   "x_start": 0,
+   "x_end": 800,
+   "scene_group": 8,
+   "composition": "portrait",
+   "focal_point": [
+    0.45,
+    0.5
+   ],
+   "event": "Tae Wook allows himself a small, satisfied smile in profile."
+  },
+  {
+   "asset": 48,
+   "film_class": "tile",
+   "y_start": 79680,
+   "y_end": 80580,
+   "x_start": 0,
+   "x_end": 800,
+   "scene_group": 8,
+   "composition": "low-angle",
+   "focal_point": [
+    0.4,
+    0.55
+   ],
+   "event": "Cho Hee Sung's gang looms over a beaten, glasses-wearing boy painters-green with dread on the floor."
+  },
+  {
+   "asset": 49,
+   "film_class": "tile",
+   "y_start": 81660,
+   "y_end": 82165,
+   "x_start": 125,
+   "x_end": 590,
+   "scene_group": 8,
+   "composition": "closeup",
+   "focal_point": [
+    0.45,
+    0.5
+   ],
+   "event": "The bruised glasses-wearing boy pleads — just apologize to Cho Hee Sung, else you're in big trouble."
+  },
+  {
+   "asset": 50,
+   "film_class": "tile",
+   "y_start": 82745,
+   "y_end": 83450,
+   "x_start": 0,
+   "x_end": 800,
+   "scene_group": 8,
+   "composition": "reveal",
+   "focal_point": [
+    0.5,
+    0.5
+   ],
+   "event": "Tae Wook stands before a boiling blue-black nebula, wind in his hair, recognition dawning."
+  },
+  {
+   "asset": 51,
+   "film_class": "tile",
+   "y_start": 87740,
+   "y_end": 88550,
+   "x_start": 0,
+   "x_end": 800,
+   "scene_group": 9,
+   "composition": "memory",
+   "focal_point": [
+    0.5,
+    0.6
+   ],
+   "event": "In a washed-out memory, three suit-clad bullies kick a boy on the floor of his home."
+  },
+  {
+   "asset": 52,
+   "film_class": "tile",
+   "y_start": 92230,
+   "y_end": 93060,
+   "x_start": 0,
+   "x_end": 800,
+   "scene_group": 9,
+   "composition": "lore",
+   "focal_point": [
+    0.5,
+    0.5
+   ],
+   "event": "A masked boxer throws a punch beside a young martial-arts doctor — the two branches of human training."
+  },
+  {
+   "asset": 53,
+   "film_class": "tile",
+   "y_start": 93060,
+   "y_end": 93640,
+   "x_start": 0,
+   "x_end": 800,
+   "scene_group": 9,
+   "composition": "lore",
+   "focal_point": [
+    0.35,
+    0.6
+   ],
+   "event": "A kneeling healer channels pale light into her palm, the great hall glowing gold around her."
+  },
+  {
+   "asset": 54,
+   "film_class": "tile",
+   "y_start": 93790,
+   "y_end": 94690,
+   "x_start": 0,
+   "x_end": 800,
+   "scene_group": 9,
+   "composition": "cosmos",
+   "focal_point": [
+    0.5,
+    0.5
+   ],
+   "event": "A burning orange nebula carries the system's law — water, fire and lightning classes, rated one to twelve stars."
+  },
+  {
+   "asset": 55,
+   "film_class": "tile",
+   "y_start": 96880,
+   "y_end": 97790,
+   "x_start": 0,
+   "x_end": 800,
+   "scene_group": 9,
+   "composition": "portrait",
+   "focal_point": [
+    0.5,
+    0.65
+   ],
+   "event": "The past master stands arms loose in a shaft of light, golden rings of aura coiling around him — master of both medicinal arts and martial arts."
+  },
+  {
+   "asset": 56,
+   "film_class": "tile",
+   "y_start": 98580,
+   "y_end": 99160,
+   "x_start": 155,
+   "x_end": 800,
+   "scene_group": 9,
+   "composition": "detail",
+   "focal_point": [
+    0.55,
+    0.5
+   ],
+   "event": "Close on his torso as the golden rings tighten — the body of a man both healer and fighter."
+  },
+  {
+   "asset": 57,
+   "film_class": "tile",
+   "y_start": 100250,
+   "y_end": 101100,
+   "x_start": 0,
+   "x_end": 800,
+   "scene_group": 10,
+   "composition": "reveal",
+   "focal_point": [
+    0.5,
+    0.4
+   ],
+   "event": "Back in the present: the bruised student surveys the room beneath a freezing blue nebula of thought — his aura gone, his core soul sealed."
+  },
+  {
+   "asset": 58,
+   "film_class": "tile",
+   "y_start": 103960,
+   "y_end": 104880,
+   "x_start": 0,
+   "x_end": 800,
+   "scene_group": 10,
+   "composition": "resolve",
+   "focal_point": [
+    0.5,
+    0.5
+   ],
+   "event": "In the classroom, Tae Wook grips his own blood-red tie, resolve hardening — he'll dig up the secrets of his father's death."
+  },
+  {
+   "asset": 59,
+   "film_class": "tile",
+   "y_start": 105810,
+   "y_end": 106330,
+   "x_start": 130,
+   "x_end": 700,
+   "scene_group": 10,
+   "composition": "portrait",
+   "focal_point": [
+    0.5,
+    0.45
+   ],
+   "event": "The transfer student stands against icy blue smoke, bruise on his cheek, stare like a drawn blade — just you wait, Anuth."
+  },
+  {
+   "asset": 60,
+   "film_class": "tile",
+   "y_start": 108185,
+   "y_end": 108985,
+   "x_start": 60,
+   "x_end": 800,
+   "scene_group": 11,
+   "composition": "two-shot",
+   "focal_point": [
+    0.75,
+    0.5
+   ],
+   "event": "Cho Hee Sung kneels trembling against the wall while Tae Wook looks down at him — that bastard made his past life miserable."
+  },
+  {
+   "asset": 61,
+   "film_class": "tile",
+   "y_start": 110260,
+   "y_end": 110760,
+   "x_start": 230,
+   "x_end": 730,
+   "scene_group": 11,
+   "composition": "gesture",
+   "focal_point": [
+    0.45,
+    0.6
+   ],
+   "event": "Tae Wook extends his hand down to the beaten boy — get up, I don't need to take sh*t from them."
+  },
+  {
+   "asset": 62,
+   "film_class": "tile",
+   "y_start": 111630,
+   "y_end": 112455,
+   "x_start": 0,
+   "x_end": 800,
+   "scene_group": 11,
+   "composition": "portrait",
+   "focal_point": [
+    0.5,
+    0.5
+   ],
+   "event": "Tae Wook looks almost gentle in a blue-halftone portrait — a warm-up is just right."
+  },
+  {
+   "asset": 63,
+   "film_class": "tile",
+   "y_start": 114950,
+   "y_end": 115850,
+   "x_start": 0,
+   "x_end": 800,
+   "scene_group": 11,
+   "composition": "low-angle",
+   "focal_point": [
+    0.5,
+    0.5
+   ],
+   "event": "Over Cho Hee Sung's shoulder: Tae Wook cracks his knuckles and smiles — how long are you gonna stay down?"
+  },
+  {
+   "asset": 64,
+   "film_class": "tile",
+   "y_start": 116760,
+   "y_end": 117455,
+   "x_start": 0,
+   "x_end": 800,
+   "scene_group": 11,
+   "composition": "closeup",
+   "focal_point": [
+    0.5,
+    0.5
+   ],
+   "event": "Cho stares hollow-eyed and bloodied, unable to process the boy in front of him."
+  },
+  {
+   "asset": 65,
+   "film_class": "tile",
+   "y_start": 118620,
+   "y_end": 119360,
+   "x_start": 60,
+   "x_end": 800,
+   "scene_group": 11,
+   "composition": "closeup",
+   "focal_point": [
+    0.5,
+    0.5
+   ],
+   "event": "Tae Wook's face splits into a predatory grin, red eyes gleaming — why, you scared?"
+  },
+  {
+   "asset": 66,
+   "film_class": "tile",
+   "y_start": 120520,
+   "y_end": 121420,
+   "x_start": 0,
+   "x_end": 800,
+   "scene_group": 12,
+   "composition": "wide",
+   "focal_point": [
+    0.5,
+    0.5
+   ],
+   "event": "Cho shrieks at his frozen lackeys — what the hell are you standing there for, get him!"
+  },
+  {
+   "asset": 67,
+   "film_class": "tile",
+   "y_start": 122130,
+   "y_end": 123035,
+   "x_start": 0,
+   "x_end": 800,
+   "scene_group": 12,
+   "composition": "closeup",
+   "focal_point": [
+    0.5,
+    0.6
+   ],
+   "event": "Tae Wook's red-eyed glare from below — ah, you're going to come all at once?"
+  },
+  {
+   "asset": 68,
+   "film_class": "tile",
+   "y_start": 124030,
+   "y_end": 124755,
+   "x_start": 0,
+   "x_end": 800,
+   "scene_group": 12,
+   "composition": "crowd",
+   "focal_point": [
+    0.35,
+    0.45
+   ],
+   "event": "The lackeys panic and wave each other off — you go first! / why should I go first?!"
+  },
+  {
+   "asset": 69,
+   "film_class": "tile",
+   "y_start": 125550,
+   "y_end": 126325,
+   "x_start": 0,
+   "x_end": 800,
+   "scene_group": 12,
+   "composition": "closeup",
+   "focal_point": [
+    0.5,
+    0.55
+   ],
+   "event": "Cho Hee Sung's face twists with rage against a blue halftone — I told you to take him down!"
+  },
+  {
+   "asset": 70,
+   "film_class": "pan",
+   "y_start": 127140,
+   "y_end": 129130,
+   "x_start": 0,
+   "x_end": 800,
+   "scene_group": 12,
+   "composition": "pan-down",
+   "focal_point": [
+    0.5,
+    0.5
+   ],
+   "event": "The gang charges over blue speed lines with chairs raised as Tae Wook turns to meet them head-on — and the swing comes whistling down."
+  }
+ ],
+ "excluded": [
+  {
+   "type": "dialogue-on-black",
+   "y_start": 0,
+   "y_end": 1010,
+   "note": "black cosmic intro text 'The place all powerful beings across the universe desire the most / Haons' — text folded into asset 0."
+  },
+  {
+   "type": "dialogue-only",
+   "y_start": 1840,
+   "y_end": 2380,
+   "note": "residual caption 'through the final gateway' on dark space — folded into asset 0."
+  },
+  {
+   "type": "scene-remaining",
+   "y_start": 3260,
+   "y_end": 3280,
+   "note": "gutter seam between the two gateway-pillar crops — continuity margin."
+  },
+  {
+   "type": "watermark",
+   "y_start": 3940,
+   "y_end": 4075,
+   "note": "READ AT MANHWA-FREAK.COM banner over the gateway splash bottom."
+  },
+  {
+   "type": "scene-remaining",
+   "y_start": 4075,
+   "y_end": 4680,
+   "note": "framed gateway panel's upper storm columns — duplicate of asset 1's pillars; figure starts below; folded into asset 3."
+  },
+  {
+   "type": "dialogue-only",
+   "y_start": 5620,
+   "y_end": 6270,
+   "note": "shout bubbles 'I HAVE FINALLY ARRIVED!!' / 'I ONLY NEED TO PASS THROUGH THIS GATEWAY...' on white — folded into asset 4."
+  },
+  {
+   "type": "title-card",
+   "y_start": 7130,
+   "y_end": 7680,
+   "note": "black name-reveal caption card 'The strongest master who rules Haons — Ray' + speckle transition — name folded into asset 4."
+  },
+  {
+   "type": "dialogue-only",
+   "y_start": 9485,
+   "y_end": 9985,
+   "note": "FREAKSCANS/MANHWA-FREAK watermark band on the valley art bottom + watcher bubbles 'RAY?! LOOKS LIKE YOU ARE CHALLENGING...' — folded into asset 6."
+  },
+  {
+   "type": "dialogue-only",
+   "y_start": 10830,
+   "y_end": 11640,
+   "note": "white gap + floating sfx strike glyphs above the bolt panel — folded into asset 7."
+  },
+  {
+   "type": "dialogue-only",
+   "y_start": 12580,
+   "y_end": 13930,
+   "note": "watcher's plot bubbles 'HE IS CURRENTLY LOST IN A TRANCE...' / 'IF I AMBUSH HIM...' + watermark (13290-13390) + 'NOW'S MY CHANCE!' — folded into assets 8-9."
+  },
+  {
+   "type": "dialogue-only",
+   "y_start": 14620,
+   "y_end": 16120,
+   "note": "'DIE! YOU PIECE OF SH*T!' burst bubble on white — folded into asset 9."
+  },
+  {
+   "type": "dialogue-only",
+   "y_start": 16950,
+   "y_end": 17820,
+   "note": "'KUK...!' jagged bubble + 'IF YOU DIE THEN THE STRONGEST IN HAONS WILL BE ME!' on white — folded into assets 9-10."
+  },
+  {
+   "type": "transition",
+   "y_start": 18730,
+   "y_end": 19790,
+   "note": "'WHAT IS ...!' bubble remnant + full-width vertical speed-line stagger transition — folded into asset 11."
+  },
+  {
+   "type": "scene-remaining",
+   "y_start": 20560,
+   "y_end": 20575,
+   "note": "seam between boots inset bottom and the towering panel — folded into assets 11-12."
+  },
+  {
+   "type": "dialogue-only",
+   "y_start": 22345,
+   "y_end": 23190,
+   "note": "'ANUTH..!?' realization bubble on white — folded into asset 14."
+  },
+  {
+   "type": "dialogue-only",
+   "y_start": 24130,
+   "y_end": 24900,
+   "note": "shock-panel bottom sliver + white + top of the 'HA! I CAN TELL...' bubble — folded into assets 14-15."
+  },
+  {
+   "type": "dialogue-only",
+   "y_start": 25800,
+   "y_end": 26300,
+   "note": "betrayal bubbles 'WHY DID YOU THINK I DIDN'T HAVE IT IN ME TO BETRAY YOU?' / 'I TRUSTED YOU..' — folded into asset 16."
+  },
+  {
+   "type": "dialogue-only",
+   "y_start": 27005,
+   "y_end": 27560,
+   "note": "'WERE YOU NOT SATISFIED WITH THE VICE MASTER POSITION!?' bubble on white — folded into asset 16."
+  },
+  {
+   "type": "scene-remaining",
+   "y_start": 28245,
+   "y_end": 28480,
+   "note": "gap between scream inset and collar-grab panel — folded into asset 18."
+  },
+  {
+   "type": "dialogue-only",
+   "y_start": 29400,
+   "y_end": 30290,
+   "note": "'WHAT'S WITH A PIECE OF TRASH...' bubble on white + float sfx 훅 — folded into asset 19."
+  },
+  {
+   "type": "dialogue-only",
+   "y_start": 30720,
+   "y_end": 31540,
+   "note": "READ AT watermark band + white + bubble top 'DON'T WORRY AND JUST DIE ALREADY...' — folded into asset 20."
+  },
+  {
+   "type": "dialogue-only",
+   "y_start": 32330,
+   "y_end": 33290,
+   "note": "red sfx 퍼억! overflow + white + 'KUHUCK!!!' bubble — folded into asset 21."
+  },
+  {
+   "type": "scene-remaining",
+   "y_start": 33790,
+   "y_end": 34400,
+   "note": "scream-inset collar/brooch bottom + gap + blood-inset top edge — folded into asset 22."
+  },
+  {
+   "type": "dialogue-only",
+   "y_start": 34850,
+   "y_end": 35560,
+   "note": "blood-inset lower tails + white + black gloat bubble 'HUHU... SINCE I EVEN MANAGED TO GET MY HANDS ON THE CORE SOUL...' — folded into asset 23."
+  },
+  {
+   "type": "dialogue-only",
+   "y_start": 36360,
+   "y_end": 37550,
+   "note": "orb/fist below-face zone bearing the FREAK/MANHWA-FREAK watermark (36480-36560) + 'FROM NOW ON, I AM THE MASTER OF HAONS!' black bubble on white — folded into asset 23."
+  },
+  {
+   "type": "dialogue-only",
+   "y_start": 38460,
+   "y_end": 39330,
+   "note": "white gap + 'YOU…' bubble + dying-inset hair top — folded into asset 25."
+  },
+  {
+   "type": "scene-remaining",
+   "y_start": 39730,
+   "y_end": 39740,
+   "note": "frame margin between the dying-face inset and the regret-bubble zone — folded into asset 25."
+  },
+  {
+   "type": "dialogue-only",
+   "y_start": 39740,
+   "y_end": 41500,
+   "note": "inset bottom + regret bubble 'YOU'RE GOING TO REGRET THIS...' + watermark on dark + night-sky sfx splash — folded into asset 26."
+  },
+  {
+   "type": "scene-remaining",
+   "y_start": 43640,
+   "y_end": 43870,
+   "note": "tilted seam between blast panel and witness panel — folded into asset 27."
+  },
+  {
+   "type": "dialogue-only",
+   "y_start": 44520,
+   "y_end": 48850,
+   "note": "Ray's dying mind-voice run on white/black ('I WAS ON THE VERGE...' / 'OF BECOMING A GOD...' / 'I'M FURIOUS!' / 'I'll never forgive him!') + red speed lines + red vow text 'Anuth, I am absolutely going to tear you apart!' — folded into asset 28."
+  },
+  {
+   "type": "dialogue-only",
+   "y_start": 50760,
+   "y_end": 51040,
+   "note": "school art dissolving into mist + 'ABSOL…' bubble top — folded into asset 29."
+  },
+  {
+   "type": "dialogue-only",
+   "y_start": 51450,
+   "y_end": 51620,
+   "note": "beat-face bottom sliver + HUH? bubble remainder on white — folded into asset 29."
+  },
+  {
+   "type": "scene-remaining",
+   "y_start": 53760,
+   "y_end": 54330,
+   "note": "white gap after the slumped-figure panel, before the title card — folded into asset 30."
+  },
+  {
+   "type": "title-card",
+   "y_start": 54330,
+   "y_end": 55100,
+   "note": "SERIES/EPISODE TITLE CARD: logo + 제1화 — packaging, not story art; title noted for the writer."
+  },
+  {
+   "type": "dialogue-only",
+   "y_start": 55100,
+   "y_end": 55250,
+   "note": "white + 'I'M STILL ALIVE?' bubble top — folded into asset 31."
+  },
+  {
+   "type": "scene-remaining",
+   "y_start": 55990,
+   "y_end": 57270,
+   "note": "alive-inset lower half (suit/tie) + white + 'PUHAHA! KANG TAE WOOK, YOU P*SSY...' bubble — folded into asset 32."
+  },
+  {
+   "type": "dialogue-only",
+   "y_start": 58170,
+   "y_end": 58795,
+   "note": "bully panel leg zone (tilted floor) + white + bubble tail — folded into asset 33."
+  },
+  {
+   "type": "dialogue-only",
+   "y_start": 59215,
+   "y_end": 59430,
+   "note": "grab-inset bottom edge + 'HEY, KANG TAE WOOK…' bubble tail — folded into asset 34."
+  },
+  {
+   "type": "scene-remaining",
+   "y_start": 60240,
+   "y_end": 61000,
+   "note": "white gap between haul panel and sneer closeup — folded into asset 35."
+  },
+  {
+   "type": "dialogue-only",
+   "y_start": 61640,
+   "y_end": 62590,
+   "note": "'TELL ME IF YOU WANNA DIE...' bubble tail + white — folded into asset 35."
+  },
+  {
+   "type": "dialogue-only",
+   "y_start": 63400,
+   "y_end": 64100,
+   "note": "crowd bubble tail + white + red sfx prelude — folded into asset 36."
+  },
+  {
+   "type": "dialogue-only",
+   "y_start": 65040,
+   "y_end": 65955,
+   "note": "fist-panel sfx overflow + white — folded into asset 38."
+  },
+  {
+   "type": "dialogue-only",
+   "y_start": 66480,
+   "y_end": 67510,
+   "note": "catch-inset lower arm + white + grab-sfx glyph — folded into asset 39."
+  },
+  {
+   "type": "dialogue-only",
+   "y_start": 67985,
+   "y_end": 68860,
+   "note": "shadow-panel bottom sliver + rage text bubbles 'WHAT THE HELL ARE YOU SAYING…' / 'WHO THE F*CK ARE YOU...' — folded into asset 40."
+  },
+  {
+   "type": "scene-remaining",
+   "y_start": 69550,
+   "y_end": 70005,
+   "note": "white gap between glare and the arm-break panel — folded into asset 41."
+  },
+  {
+   "type": "dialogue-only",
+   "y_start": 70840,
+   "y_end": 71295,
+   "note": "jagged '!!' burst bubble on white — folded into asset 42."
+  },
+  {
+   "type": "dialogue-only",
+   "y_start": 72075,
+   "y_end": 72890,
+   "note": "'GY..GYAHHHH!!' bubble + READ AT watermark (72590-72830) + white — folded into asset 43."
+  },
+  {
+   "type": "dialogue-only",
+   "y_start": 74340,
+   "y_end": 75090,
+   "note": "throw-panel lower tumble + black sfx 쾅! on white — folded into asset 45."
+  },
+  {
+   "type": "dialogue-only",
+   "y_start": 75840,
+   "y_end": 77420,
+   "note": "slam-panel floor strip bearing FREAK/MANHWA-FREAK watermarks (75850-75950) + white + 'WH, WHAT!? DID KANG TAE WOOK JUST BLAST CHO HEE SUNG AWAY?' bubble — folded into asset 46."
+  },
+  {
+   "type": "dialogue-only",
+   "y_start": 78050,
+   "y_end": 78575,
+   "note": "'THAT BASTARD.. IS HE REALLY THAT WEAKLING KANG TAE WOOK?' bubble straddling the panel edge + white — folded into asset 47."
+  },
+  {
+   "type": "scene-remaining",
+   "y_start": 79345,
+   "y_end": 79680,
+   "note": "white gap between profile inset and gang-loom panel — folded into asset 48."
+  },
+  {
+   "type": "dialogue-only",
+   "y_start": 80580,
+   "y_end": 81660,
+   "note": "gang-loom bottom sliver + white + 'HEY, TAE WOOK…' bubble — folded into asset 49."
+  },
+  {
+   "type": "dialogue-only",
+   "y_start": 82165,
+   "y_end": 82745,
+   "note": "'JUST APOLOGIZE...' bubble tail + mind-voice top + white — folded into asset 50."
+  },
+  {
+   "type": "dialogue-only",
+   "y_start": 83450,
+   "y_end": 87740,
+   "note": "logo strip on panel bottom (83460-83555) + Ray's recognition bubbles ('ISN'T HE THE GUY WHO SAT NEXT TO ME… SUH JAE DONG?!' / 'THIS LOOKS LIKE THE HIGH SCHOOL I ATTENDED ON EARTH…' / 'DON'T TELL ME I'VE RETURNED BACK IN TIME…') + page-white + speed-line reality-shudder transition (85260-86450) + on-black recap captions — key lines folded into assets 50-51."
+  },
+  {
+   "type": "narration-on-black",
+   "y_start": 88550,
+   "y_end": 92230,
+   "note": "pure on-black/on-noise exposition captions ('Were bleak when my father suddenly died…' / 'Luckily, I started on the path of training…' / 'All humans are born with some type of inherent strength…' / 'The inherent strengths… are called: mana, aura, and internal force.' / 'After a long period of development… divided into two branches.' / 'One branch is based on medicinal techniques…') — narration-only stretch, folded into asset 52."
+  },
+  {
+   "type": "scene-remaining",
+   "y_start": 93640,
+   "y_end": 93790,
+   "note": "sepia fade-out + gap before the nebula panel — folded into asset 54."
+  },
+  {
+   "type": "dialogue-only",
+   "y_start": 94690,
+   "y_end": 96880,
+   "note": "mind-voice bubbles 'SINCE THE PATH OF TRAINING IS SO DIFFICULT…' / 'I'M NOT SURE IF IT WAS DUE TO THE CORE SOUL…' / 'AND IN THE END, I WAS ABLE TO BECOME THE MASTER…' — folded into asset 55."
+  },
+  {
+   "type": "dialogue-only",
+   "y_start": 97790,
+   "y_end": 98580,
+   "note": "ray-panel leg zone + dark fade + 'ALTHOUGH AT THE LAST GATEWAY I CREATED AN OPENING FOR ANUTH TO EXPLOIT,' bubble — folded into asset 56."
+  },
+  {
+   "type": "dialogue-only",
+   "y_start": 99160,
+   "y_end": 100250,
+   "note": "rings-inset bottom + 'IN THE END, I WILL GET TO CHALLENGE THAT PATH TO BECOME A GOD…' mind bubble + white — folded into asset 57."
+  },
+  {
+   "type": "dialogue-only",
+   "y_start": 101100,
+   "y_end": 103960,
+   "note": "mind bubbles 'AS EXPECTED, I CAN'T FEEL MY AURA.' / 'AND MY CORE SOUL IS ALSO SEALED.' / 'I NEED TO HURRY AND RECOVER MY ENERGY…' / 'AND SINCE I'VE GONE BACK IN TIME,' / 'THIS TIME AROUND I AM GOING TO DIG UP THE SECRETS…' + framed closeup of the smirk (classic beat 102225-103045, held fully by asset 58's crop) — folded into assets 57-58."
+  },
+  {
+   "type": "dialogue-only",
+   "y_start": 104880,
+   "y_end": 105810,
+   "note": "'HAVE MY REVENGE AGAINST THE F*CKER WHO STABBED ME THROUGH THE HEART!' + 'JUST YOU WAIT, ANUTH.' black mind bubbles on white — folded into asset 59."
+  },
+  {
+   "type": "dialogue-only",
+   "y_start": 106330,
+   "y_end": 108185,
+   "note": "hero-shot lower torso bearing watermarks (106630-106710) + jagged 'I WILL TRULY BECOME A GOD…' bubble + 'AH… SH*T…' bubble + white — folded into asset 60."
+  },
+  {
+   "type": "dialogue-only",
+   "y_start": 108985,
+   "y_end": 110260,
+   "note": "kneel-panel upper zone (Tae Wook closeup + 'THAT BASTARD…' bubble) + mind bubble 'CHO HEE SUNG… HE MADE MY PAST LIFE REALLY MISERABLE.' + white + hand-panel top — folded into assets 60-61."
+  },
+  {
+   "type": "dialogue-only",
+   "y_start": 110760,
+   "y_end": 111630,
+   "note": "'B-BUT STILL…' bubble + white + hand-panel bottom frame — folded into asset 61."
+  },
+  {
+   "type": "dialogue-only",
+   "y_start": 112455,
+   "y_end": 114950,
+   "note": "warm-up inset lower body + white + 'HEY! HOW LONG ARE YOU GONNA STAY DOWN?' bubble top — folded into asset 63."
+  },
+  {
+   "type": "dialogue-only",
+   "y_start": 115850,
+   "y_end": 116760,
+   "note": "stance-panel leg zone + '?!' burst bubble + 'GET OUT OF MY FACE!' bubble + white — folded into assets 64."
+  },
+  {
+   "type": "dialogue-only",
+   "y_start": 117455,
+   "y_end": 118620,
+   "note": "hollow-closeup shoulders + 'GET OUT OF MY FACE!' bubble + white + 'WHY, YOU SCARED?' bubble top — folded into asset 65."
+  },
+  {
+   "type": "dialogue-only",
+   "y_start": 119360,
+   "y_end": 120520,
+   "note": "grin panel collar zone + 'COME ON AND SHOW ME WHAT KIND OF SKILLS A BULLY'S GOT!' bubble + white — folded into asset 66."
+  },
+  {
+   "type": "dialogue-only",
+   "y_start": 121420,
+   "y_end": 122130,
+   "note": "rally shoes/floor + white + SOUNDS GOOD bubble — folded into asset 66."
+  },
+  {
+   "type": "scene-remaining",
+   "y_start": 123035,
+   "y_end": 124030,
+   "note": "white gap between glare closeup and the panicking lackeys — folded into asset 68."
+  },
+  {
+   "type": "scene-remaining",
+   "y_start": 124755,
+   "y_end": 125550,
+   "note": "white gap between lackeys and rage inset — folded into asset 69."
+  },
+  {
+   "type": "dialogue-only",
+   "y_start": 126325,
+   "y_end": 127140,
+   "note": "white + AH F*CK IT! YAAHHH!!! burst bubble on the swarm panel top (126990-127380) — folded into asset 70."
+  },
+  {
+   "type": "scene-remaining",
+   "y_start": 129130,
+   "y_end": 129725,
+   "note": "sfx glyph white tail + chapter-end white — chapter closes on the cliffhanger charge."
+  }
+ ],
+ "pipeline_note": "FILM-FORMAT reader draft for chapter-01 (test run). Identity notes: the white-coat master is RAY (past-life self of Kang Tae Wook, named by the in-page caption card at 7190-7570). The dark-gear traitor is ANUTH ('Vice master', named by the in-page caption card at 10590-10835; bible lists 'Anuth - In Haons' and the ch01 stabber matches). The brown-haired school bully is CHO HEE SUNG (named by a classmate's bubble at ~63300). The glasses-wearing friend is SUH JAE DONG (named by Ray's recognition bubble at ~83750). The light-haired witness after the blast (asset 27) is NEW and unidentified. Twist for harmonization: Ray returns to 'the high school I attended on Earth' and suspects he came back in time - his memories show Earth schoolboy years, bullied, father died. Watermarks sit INSIDE art at 9490-9580, 30740-30840, 36480-36560, 40190-40270, 75850-75950, 83460-83555, 106630-106710; every crop boundary abuts or dodges them. ~12 tiles carry slivers of speech bubbles sliced by frame edges (their text is washed white downstream and folded into the adjacent asset's event) - deliberate trade to keep subjects whole; worst cases: asset 4 (shout bubble tail), asset 29 (HUH bubble), asset 49 (flanked by two bubbles). Title card at 54330-55100 (logo + 제1화) excluded per packaging rule. Ambiguous lines folded with 'unclear:' flags: 'WHAT IS...!' (asset 10), the blood splash (asset 22), the post-blast valley convulsion (asset 26), the 'AH... SH*T...' beat (106730-107580, folded into asset 60's exclusion). Alternative to note: asset 25 (dying face) is a narrow 345-wide inset kept as a 0.86 window crop; a slow creep-pan over the full 39010-39740 inset would also read well if the assembler supports narrow pans. Chapter ends mid-brawl (swarm charge) with no resolution beat - cliffhanger by design."
+}

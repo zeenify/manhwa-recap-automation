@@ -279,9 +279,14 @@ def cmd_crop(args):
             continue
         fi0, fy0 = locate(y0)
         fi1, fy1 = locate(y1 - 1)
+        w_ref = min(sizes[j][0] for j in range(fi0, fi1 + 1))
+        # optional x-window (film crops): the draft may narrow the horizontal
+        # composition; defaults to the full strip width
+        x0 = max(0, min(w_ref, int(b.get("x_start", 0))))
+        x1 = max(x0 + 1, min(w_ref, int(b.get("x_end", w_ref))))
         if fi0 == fi1:
             with Image.open(files[fi0]) as im:
-                piece = im.crop((0, fy0, sizes[fi0][0], fy1 + 1))
+                piece = im.crop((x0, fy0, x1, fy1 + 1))
         else:
             parts = []
             for j in range(fi0, fi1 + 1):
@@ -289,8 +294,8 @@ def cmd_crop(args):
                 sy0 = fy0 if j == fi0 else 0
                 sy1 = fy1 + 1 if j == fi1 else h
                 with Image.open(files[j]) as im:
-                    parts.append(im.crop((0, max(0, sy0), w, min(h, sy1))))
-            piece = Image.new("RGB", (sizes[fi0][0], sum(p.size[1] for p in parts)))
+                    parts.append(im.crop((x0, max(0, sy0), x1, min(h, sy1))))
+            piece = Image.new("RGB", (x1 - x0, sum(p.size[1] for p in parts)))
             yy = 0
             for p in parts:
                 piece.paste(p, (0, yy))
@@ -302,8 +307,11 @@ def cmd_crop(args):
         piece.save(out_dir / name)
         index.append({
             "beat": i, "file": name, "y_start": y0, "y_end": y1,
+            "x_start": x0, "x_end": x1,
             "w": piece.size[0], "h": piece.size[1], "trim_box": trim_box,
             "composition": b.get("composition", "unknown"),
+            "film_class": b.get("film_class", "tile"),
+            "scene_group": b.get("scene_group", 0),
             "focal_point": b.get("focal_point"),
             "event": b.get("event", ""),
         })
