@@ -73,3 +73,57 @@ Numbers for implementation (measured): slide-in 0.8–1.2s; tile width 0.30–0.
 frame; creep +8–12%/4–5s; set swap wipe 0.3–0.5s; full-pan rate such that a
 long strip crosses most of its height in ~6–11s (≈100–150px/s at 1080p);
 clause-to-tile latency ≈ 0–0.5s after the clause starts.
+
+---
+
+# CROP VERIFICATION — what the sample actually crops (verified against the source manhua)
+
+Method: identified the source series ("It Turns Out That They Are the
+Protagonists", original 刺猬猫/Ciweimao), found a paginated mirror (toonz.to,
+chapter 1 = 98 separate page files at `uploads/chapters/1069605/13065064/NNN.webp`),
+downloaded the first pages, and compared them frame-by-frame against the YouTube
+tiles. Proof pairs: `tmp/crop_review/yt_vs_source_pairs.jpg` (disposable; pages
+of chapter 1 in `tmp/crop_review/src_pages/`).
+
+## Findings
+
+1. **The source's native unit is a near-square PAGE.** Chapter 1's 98 pages are
+   individual files at 1080×1080 (16 of 98 slightly shorter — 1080×600–940 —
+   at scene transitions). No long strips anywhere in the distribution.
+
+2. **The YouTube "tiles" are whole source pages, verbatim.** Five tiles matched
+   pixel-for-pixel: YT@3s = page 005 (woman on bed), YT@7s = page 007 (death
+   scene), YT@13s = page 008 (face close-up), YT@19s = page 011 (woman holding
+   him), YT@44s = page 020 (explosion burst). Same art, same composition, same
+   white margins/caption bars — no creative cropping.
+
+3. **All page text is WASHED WHITE.** Page 011's bubble ("OHH? THIS OTHERWORLD
+   REALLY IS CONVENIENT.") is present on the source and shows as an EMPTY white
+   bubble on YouTube — same shape, no text. Dialogue bubbles and the bottom
+   caption blocks all go blank. (Also kills the site watermark bands wholesale.)
+   The pair sometimes sits slightly tighter than the page (margins trimmed).
+
+4. **Full-screen pan sections = runs of consecutive pages** (the chibi
+   explainer block at 33–44s is several 1080×1080 pages stacked seamlessly on
+   their shared white background, panning through them).
+
+5. Chapter math: 98 pages/chapter; observed YouTube pacing ≈ one page per
+   6–15s of narration, so a 6-hour video covers roughly the first 30–40
+   chapters — the "whole story" is a page-count game.
+
+## What "crop smartly" means for us
+
+- **The reader dictates crops today** (it judges beat y-ranges; the cropper
+  only executes them) — and it crops ART-RUNS: "all of the art it can see" in
+  a y-range, hence tall multi-panel rectangles. That is the core mismatch.
+- The sample does NO creative cropping: it shows the source's PAGE units and
+  blanks the text. Smart cropping = don't invent crops at all.
+- Therefore the film lane should consume a PAGINATED source (per-page image
+  files, which the reader did not have to cut at all), and the reader's film
+  job becomes: per page — classify (tile / explainer-run page / skip), group
+  into scenes (set-swap boundaries), flag polluted pages (ads, watermark-only
+  bands), pass the page file path as the asset. Text-blanking is a page-image
+  operation (bubble/caption detection → fill white), not a crop.
+- Our current scrape source (toonverse.net long strips) cannot yield these
+  page units; the film lane needs a paginated source or a page-boundary
+  detector on the strips (implementation decision, open).
