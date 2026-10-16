@@ -8,18 +8,18 @@ Batch 1 produced 2026-10-07: 001 (sample) + 10 produced. ALL PLATFORMS DONE 2026
 | # | short | type | source | status | dur_s | upload day | YT | TT | FB |
 |---|---|---|---|---|---|---|---|---|---|
 | 001_door_kick | cliffhanger | ch010 beats 070-079 | **produced** | 43.9 | 2026-10-07 | ✓ | ✓ | ✓ |
-| 010_safety_seminar | roast | ch001 beats 006-017 | scripted |  |  |  |  |  |
-| 011_one_bite_thief | roast | ch001 beats 037-044 | scripted |  |  |  |  |  |
-| 012_bark_for_me | roast | ch001 beats 072-080 | scripted |  |  |  |  |  |
+| 010_safety_seminar | roast | ch001 beats 006-017 | **produced** | 26.1 | 2026-10-15 | ✓ |  | ✓ |
+| 011_one_bite_thief | roast | ch001 beats 037-044 | **produced** | 26.7 | 2026-10-15 | ✓ |  | ✓ |
+| 012_bark_for_me | roast | ch001 beats 072-080 | **produced** | 28.0 | 2026-10-15 | ✓ |  | ✓ |
 | 013_interest_day | face-slap | ch001 beats 081-097, ch002 beats 000-004 | **produced** | 44.5 | 2026-10-07 | ✓ | ✓ | ✓ |
 | 014_ring_me_up | roast | ch002 beats 005-011 | **produced** | 25.2 | 2026-10-10 | ✓ |  | ✓ |
-| 015_three_stars | roast | ch002 beats 015-028 | scripted |  |  |  |  |  |
-| 016_article_three | roast | ch002 beats 030-048 | scripted |  |  |  |  |  |
-| 017_safety_first | roast | ch002 beats 054-065 | scripted |  |  |  |  |  |
-| 018_pothole_patrol | roast | ch002 beats 075-088 | scripted |  |  |  |  |  |
-| 019_hold_me | roast | ch003 beats 012-024 | scripted |  |  |  |  |  |
-| 020_blade_rain | roast | ch003 beats 025-034 | scripted |  |  |  |  |  |
-| 021_his_grace | roast | ch003 beats 047-050 | scripted |  |  |  |  |  |
+| 015_three_stars | roast | ch002 beats 015-028 | **produced** | 26.0 |  |  |  |  |
+| 016_article_three | roast | ch002 beats 030-048 | **produced** | 30.3 |  |  |  |  |
+| 017_safety_first | roast | ch002 beats 054-065 | **produced** | 27.9 |  |  |  |  |
+| 018_pothole_patrol | roast | ch002 beats 075-088 | **produced** | 25.7 |  |  |  |  |
+| 019_hold_me | roast | ch003 beats 012-024 | **produced** | 26.7 |  |  |  |  |
+| 020_blade_rain | roast | ch003 beats 025-034 | **produced** | 29.4 |  |  |  |  |
+| 021_his_grace | roast | ch003 beats 047-050 | **produced** | 24.3 |  |  |  |  |
 | 022_chicken_first | roast | ch003 beats 062-070 | scripted |  |  |  |  |  |
 | 023_second_slot | cliffhanger | ch003 beats 072-077 | **produced** | 27.0 | 2026-10-10 | ✓ |  | ✓ |
 | 024_mind_reader_office | roast | ch004 beats 007-019 | scripted |  |  |  |  |  |
