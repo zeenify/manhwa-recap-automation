@@ -38,8 +38,11 @@ NARRATION:
 ```
 
 Rules:
-- **One clause = one image event.** Most clauses carry ONE asset; occasionally
-  a fast beat pairs `[a][b]`. Never more than two.
+- **One clause = one BATCH.** The assembler replaces the whole batch when the
+  clause ends — no images carry over between clauses. Most clauses carry ONE
+  image; strong simultaneity justifies TWO (they display as a balanced
+  left/right pair); three is the hard max and should be rare. Tall strips get
+  their own clause tagged [NN pan] (solo full-screen top-down pan).
 - Clause length: **25–40 words** (~8–13s of narration at the channel's
   ~210 wpm). Keep them flowing and complete — the TTS voice reads them whole.
 - First clause of the script is the COLD OPEN: strongest hook available in the
