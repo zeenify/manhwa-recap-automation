@@ -186,7 +186,7 @@ def build_batch(clause, dur, wipes: bool, out: Path):
         dx, dy = SLIDE_DIRS[n][k]
         tiles.append({"img": disp, "w": disp.width, "h": disp.height,
                       "x": x, "y": y, "dir": (dx * W * 0.6, dy * H * 0.6),
-                      "t0": k * min(1.2, dur * 0.3)})
+                      "t0": k * (dur / n)})
     proc = start_encoder(out)
     for f in range(frames):
         t = f / FPS
