@@ -13,8 +13,8 @@ Batch 1 produced 2026-10-07: 001 (sample) + 10 produced. ALL PLATFORMS DONE 2026
 | 012_bark_for_me | roast | ch001 beats 072-080 | **produced** | 28.0 | 2026-10-15 | ✓ |  | ✓ |
 | 013_interest_day | face-slap | ch001 beats 081-097, ch002 beats 000-004 | **produced** | 44.5 | 2026-10-07 | ✓ | ✓ | ✓ |
 | 014_ring_me_up | roast | ch002 beats 005-011 | **produced** | 25.2 | 2026-10-10 | ✓ |  | ✓ |
-| 015_three_stars | roast | ch002 beats 015-028 | **produced** | 26.0 |  |  |  |  |
-| 016_article_three | roast | ch002 beats 030-048 | **produced** | 30.3 |  |  |  |  |
+| 015_three_stars | roast | ch002 beats 015-028 | **produced** | 26.0 | 2026-10-18 | ✓ |  | ✓ |
+| 016_article_three | roast | ch002 beats 030-048 | **produced** | 30.3 | 2026-10-18 | ✓ |  | ✓ |
 | 017_safety_first | roast | ch002 beats 054-065 | **produced** | 27.9 |  |  |  |  |
 | 018_pothole_patrol | roast | ch002 beats 075-088 | **produced** | 25.7 |  |  |  |  |
 | 019_hold_me | roast | ch003 beats 012-024 | **produced** | 26.7 |  |  |  |  |
