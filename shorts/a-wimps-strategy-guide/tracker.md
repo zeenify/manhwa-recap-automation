@@ -18,8 +18,8 @@ Batch 1 produced 2026-10-07: 001 (sample) + 10 produced. ALL PLATFORMS DONE 2026
 | 017_safety_first | roast | ch002 beats 054-065 | **produced** | 27.9 | 2026-10-19 | ✓ |  | ✓ |
 | 018_pothole_patrol | roast | ch002 beats 075-088 | **produced** | 25.7 | 2026-10-19 | ✓ |  | ✓ |
 | 019_hold_me | roast | ch003 beats 012-024 | **produced** | 26.7 | 2026-10-19 | ✓ |  | ✓ |
-| 020_blade_rain | roast | ch003 beats 025-034 | **produced** | 29.4 |  |  |  |  |
-| 021_his_grace | roast | ch003 beats 047-050 | **produced** | 24.3 |  |  |  |  |
+| 020_blade_rain | roast | ch003 beats 025-034 | **produced** | 29.4 | 2026-10-19 | ✓ |  | ✓ |
+| 021_his_grace | roast | ch003 beats 047-050 | **produced** | 24.3 | 2026-10-19 | ✓ |  | ✓ |
 | 022_chicken_first | roast | ch003 beats 062-070 | scripted |  |  |  |  |  |
 | 023_second_slot | cliffhanger | ch003 beats 072-077 | **produced** | 27.0 | 2026-10-10 | ✓ |  | ✓ |
 | 024_mind_reader_office | roast | ch004 beats 007-019 | scripted |  |  |  |  |  |
