@@ -20,21 +20,21 @@ Batch 1 produced 2026-10-07: 001 (sample) + 10 produced. ALL PLATFORMS DONE 2026
 | 019_hold_me | roast | ch003 beats 012-024 | **produced** | 26.7 | 2026-10-19 | ✓ |  | ✓ |
 | 020_blade_rain | roast | ch003 beats 025-034 | **produced** | 29.4 | 2026-10-19 | ✓ |  | ✓ |
 | 021_his_grace | roast | ch003 beats 047-050 | **produced** | 24.3 | 2026-10-19 | ✓ |  | ✓ |
-| 022_chicken_first | roast | ch003 beats 062-070 | scripted |  |  |  |  |  |
+| 022_chicken_first | roast | ch003 beats 062-070 | **produced** | 26.1 | 2026-10-19 | ✓ |  | ✓ |
 | 023_second_slot | cliffhanger | ch003 beats 072-077 | **produced** | 27.0 | 2026-10-10 | ✓ |  | ✓ |
-| 024_mind_reader_office | roast | ch004 beats 007-019 | scripted |  |  |  |  |  |
-| 025_chicken_hood | roast | ch004 beats 030-033 | scripted |  |  |  |  |  |
-| 026_wild_horse | roast | ch004 beats 041-046 | scripted |  |  |  |  |  |
-| 027_pom_poms | roast | ch004 beats 047-057 | scripted |  |  |  |  |  |
-| 028_shadow_step | roast | ch004 beats 060-067 | scripted |  |  |  |  |  |
+| 024_mind_reader_office | roast | ch004 beats 007-019 | **produced** | 27.3 | 2026-10-19 | ✓ |  | ✓ |
+| 025_chicken_hood | roast | ch004 beats 030-033 | **produced** | 23.1 |  |  |  |  |
+| 026_wild_horse | roast | ch004 beats 041-046 | **produced** | 26.5 |  |  |  |  |
+| 027_pom_poms | roast | ch004 beats 047-057 | **produced** | 23.9 |  |  |  |  |
+| 028_shadow_step | roast | ch004 beats 060-067 | **produced** | 29.1 |  |  |  |  |
 | 029_biggest_mystery | cliffhanger | ch004 beats 068-081 | **produced** | 38.2 | 2026-10-07 | ✓ | ✓ | ✓ |
-| 030_robot_mode | roast | ch005 beats 001-007 | scripted |  |  |  |  |  |
+| 030_robot_mode | roast | ch005 beats 001-007 | **produced** | 26.4 |  |  |  |  |
 | 031_mascot_video | roast | ch005 beats 009-021 | **produced** | 29.8 | 2026-10-10 | ✓ |  | ✓ |
-| 032_coward_epitaph | roast | ch005 beats 028-042 | scripted |  |  |  |  |  |
+| 032_coward_epitaph | roast | ch005 beats 028-042 | **produced** | 28.3 |  |  |  |  |
 | 033_floor_eleven_bet | face-slap | ch005 beats 043-082 | **produced** | 42.8 | 2026-10-07 | ✓ | ✓ | ✓ |
-| 060_who-told-you | roast | ch006 beats 000-006 | scripted |  |  |  |  |  |
+| 060_who-told-you | roast | ch006 beats 000-006 | **produced** | 24.5 |  |  |  |  |
 | 061_haggling-downward | face-slap | ch006 beats 013-023 | **produced** | 45.2 | 2026-10-07 | ✓ | ✓ | ✓ |
-| 062_refusal-was-acting | cliffhanger | ch006 beats 027-035 | scripted |  |  |  |  |  |
+| 062_refusal-was-acting | cliffhanger | ch006 beats 027-035 | **produced** | 32.6 |  |  |  |  |
 | 063_absolutely-slow | roast | ch006 beats 038-046 | scripted |  |  |  |  |  |
 | 064_please-stab-me | roast | ch007 beats 019-023 | **produced** | 26.7 | 2026-10-07 | ✓ | ✓ | ✓ |
 | 065_studying-their-wimp | roast | ch007 beats 061-063 | scripted |  |  |  |  |  |
