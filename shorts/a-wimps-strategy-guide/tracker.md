@@ -25,8 +25,8 @@ Batch 1 produced 2026-10-07: 001 (sample) + 10 produced. ALL PLATFORMS DONE 2026
 | 024_mind_reader_office | roast | ch004 beats 007-019 | **produced** | 27.3 | 2026-10-21 | ✓ |  | ✓ |
 | 025_chicken_hood | roast | ch004 beats 030-033 | **produced** | 23.1 | 2026-10-21 | ✓ |  | ✓ |
 | 026_wild_horse | roast | ch004 beats 041-046 | **produced** | 26.5 | 2026-10-21 | ✓ |  | ✓ |
-| 027_pom_poms | roast | ch004 beats 047-057 | **produced** | 23.9 |  |  |  |  |
-| 028_shadow_step | roast | ch004 beats 060-067 | **produced** | 29.1 |  |  |  |  |
+| 027_pom_poms | roast | ch004 beats 047-057 | **produced** | 23.9 | 2026-10-23 | ✓ |  | ✓ |
+| 028_shadow_step | roast | ch004 beats 060-067 | **produced** | 29.1 | 2026-10-23 | ✓ |  | ✓ |
 | 029_biggest_mystery | cliffhanger | ch004 beats 068-081 | **produced** | 38.2 | 2026-10-07 | ✓ | ✓ | ✓ |
 | 030_robot_mode | roast | ch005 beats 001-007 | **produced** | 26.4 |  |  |  |  |
 | 031_mascot_video | roast | ch005 beats 009-021 | **produced** | 29.8 | 2026-10-10 | ✓ |  | ✓ |
