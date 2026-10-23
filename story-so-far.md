@@ -1,5 +1,12 @@
 # STORY SO FAR — rolling continuity memo
 
+> **SERIES DISCONTINUED 2026-10-23.** "Return of the Top Class Master" was cut
+> after chapter 30. Chapters 31–37 were rendered but never compiled or uploaded
+> and will not be used. All video/audio/asset/scan media for this series and for
+> "A Wimp's Strategy Guide" was moved to the Bentoy flash drive —
+> see `F:\make-mon-archive\MANIFEST.md`. Do not start chapter 38 or any new work
+> on this series; the workspace is being reused for a different series.
+
 Updated after: **Chapter 37** ("Return of the Top Class Master")
 Rule: capped at ~1,500 words. Refreshed after each chapter's script is locked. The next chapter's reader and writer agents receive this file and the previous chapter's script — nothing older.
 
