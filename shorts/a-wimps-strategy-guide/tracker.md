@@ -28,9 +28,9 @@ Batch 1 produced 2026-10-07: 001 (sample) + 10 produced. ALL PLATFORMS DONE 2026
 | 027_pom_poms | roast | ch004 beats 047-057 | **produced** | 23.9 | 2026-10-23 | ✓ |  | ✓ |
 | 028_shadow_step | roast | ch004 beats 060-067 | **produced** | 29.1 | 2026-10-23 | ✓ |  | ✓ |
 | 029_biggest_mystery | cliffhanger | ch004 beats 068-081 | **produced** | 38.2 | 2026-10-07 | ✓ | ✓ | ✓ |
-| 030_robot_mode | roast | ch005 beats 001-007 | **produced** | 26.4 |  |  |  |  |
+| 030_robot_mode | roast | ch005 beats 001-007 | **produced** | 26.4 | 2026-10-25 | ✓ |  | ✓ |
 | 031_mascot_video | roast | ch005 beats 009-021 | **produced** | 29.8 | 2026-10-10 | ✓ |  | ✓ |
-| 032_coward_epitaph | roast | ch005 beats 028-042 | **produced** | 28.3 |  |  |  |  |
+| 032_coward_epitaph | roast | ch005 beats 028-042 | **produced** | 28.3 | 2026-10-25 | ✓ |  | ✓ |
 | 033_floor_eleven_bet | face-slap | ch005 beats 043-082 | **produced** | 42.8 | 2026-10-07 | ✓ | ✓ | ✓ |
 | 060_who-told-you | roast | ch006 beats 000-006 | **produced** | 24.5 |  |  |  |  |
 | 061_haggling-downward | face-slap | ch006 beats 013-023 | **produced** | 45.2 | 2026-10-07 | ✓ | ✓ | ✓ |
