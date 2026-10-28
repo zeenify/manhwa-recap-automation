@@ -19,9 +19,12 @@ Shorts script format (scripts/<slug>/shorts/<short>.md):
 - One TTS mp3 per entry; the entry's screen time = its mp3 duration.
 - A short MAY cross chapters (refs name the chapter per beat).
 
-Pipeline: one silent segment per entry (camera move) → concat (+ funnel
-endcard) → burn block captions (ASS, one big single line dead-center,
-proportional block timing — no word-level karaoke) → mux narration
+Pipeline: frame-EXACT silent segments per entry (segment frame counts allocated
+so each entry's video length equals its mp3 duration — no cumulative A/V skew)
+→ concat (+ funnel endcard) → burn block captions as per-frame ASS events
+(Akiel-Runes style: ONE big Rubik-Bold ALL-CAPS line dead-center; block births
+anchored to real faster-whisper word onsets, clumped → letter-gaps ease open
+with overshoot; subtle continuous vibration; no word karaoke) → mux narration
 (loudnorm -14 LUFS, tail pad for the endcard).
 
 Usage:
@@ -29,10 +32,12 @@ Usage:
   py tools/assemble_shorts.py --slug ... --short ... --test N   # first N entries, no endcard
 
 Idempotent per segment clip — delete videos/<slug>/shorts/<short>/clips/ after
-changing shots/beats/captions, or stale clips get reused (long-form gotcha).
+changing shots, beats, or timing; captions burn fresh on every run.
 """
 import argparse
 import json
+import math
+import random
 import re
 import subprocess
 import sys
@@ -49,14 +54,40 @@ ENDCARD_S = 1.8      # funnel endcard length (last frame = series + CTA)
 CAP_FONT = "Rubik"   # rounded bold sans — the Akiel-Runes/CapCut-style caption look
 CAP_SIZE = 96        # one big line, dead-center — measured chunks guarantee fit
 CAP_MARGIN = 40      # side margin for the measured line budget (W - 2*margin)
-CAP_FSP_TWEEN = (0.90, 1.10)  # line width ratio at birth -> settled: the pop
-CAP_POP_MS = 130     # letter-gap expansion duration at block birth (60fps ref ~8 frames)
-CAP_FADE = "25,40"   # \\fad ms — birth frame lands near-solid (reference pops, no dim ramp)
+CAP_FSP_TWEEN = (0.90, 1.10)  # letter-gap ratio: clumped birth -> settled width
+CAP_POP_MS = 290     # birth pop: rise ~60% then decelerating settle (ease-out feel)
+CAP_POP_OVERSHOOT = 1.12  # peak of the rise, fraction of the gap delta — springy
+CAP_JITTER = 1.2     # px amplitude of the continuous caption vibration
 DARK = (14, 14, 16)
 FONTS = "C:/Windows/Fonts"
 CAP_FONT_TTF = f"{FONTS}/Rubik-Bold.ttf"
 if not Path(CAP_FONT_TTF).exists():  # machines without Rubik keep a clean bold look
     CAP_FONT, CAP_FONT_TTF = "Arial Black", f"{FONTS}/ariblk.ttf"
+
+_WHISPER = None
+
+
+def speech_spans(mp3: Path):
+    """Real word start/end times via faster-whisper (local, CPU). Used ONLY to
+    anchor block boundaries to actual speech onsets — never for per-word
+    karaoke. Returns [(start, end), ...] or None (caller falls back to
+    proportional timing). Model loads once per run."""
+    global _WHISPER
+    try:
+        from faster_whisper import WhisperModel
+    except ImportError:
+        print("captions: faster-whisper not installed — proportional block "
+              "timing (install with: py -m pip install faster-whisper)", file=sys.stderr)
+        return None
+    if _WHISPER is None:
+        _WHISPER = WhisperModel("base.en", device="cpu", compute_type="int8")
+    segments, _info = _WHISPER.transcribe(str(mp3), language="en", word_timestamps=True)
+    spans = []
+    for s in segments:
+        for w in (s.words or []):
+            if w.word.strip():
+                spans.append((w.start, w.end))
+    return spans or None
 
 
 def sh(cmd, cwd=None, **kw):
@@ -113,7 +144,7 @@ def segment_filter(move: str, dur: float, fp) -> str:
     fx, fy = (fp or [0.5, 0.5])[:2]
     if move == "pan-down":
         cw = int(W * PAN_W)
-        q = f"clip(t/{dur:.3f},0,1)"
+        q = f"clip(t/{dur:.4f},0,1)"
         ease = f"({q})*({q})*(3-2*({q}))"  # smoothstep in/out — no whip starts
         return (
             f"[0:v]split[bgs][fgs];"
@@ -144,18 +175,31 @@ def segment_filter(move: str, dur: float, fp) -> str:
         f"d=1:s={W}x{H}:fps={FPS},setsar=1,format=yuv420p")
 
 
-def render_segment(img: Path, dur: float, move: str, fp, out: Path):
+def render_segment(img: Path, frames: int, move: str, fp, out: Path):
+    """frames-EXACT: -frames:v pins the segment length so an entry's segments
+    sum to exactly round(entry_dur * FPS) — the anti-drift contract."""
+    dur = frames / FPS
     vf = segment_filter(move, dur, fp)
-    sh(["ffmpeg", "-y", "-loop", "1", "-framerate", str(FPS), "-t", f"{dur:.3f}",
-        "-i", str(img), "-vf", vf, "-c:v", "libx264", "-preset", "veryfast",
-        "-crf", "20", "-an", str(out)])
+    sh(["ffmpeg", "-y", "-loop", "1", "-framerate", str(FPS), "-i", str(img),
+        "-vf", vf, "-frames:v", str(frames), "-c:v", "libx264", "-preset",
+        "veryfast", "-crf", "20", "-an", str(out)])
+
+
+# ---------------------------------------------------------------- frames
+
+def split_frames(total: int, n: int):
+    """Balanced (Bresenham) split of an entry's exact frame count across its
+    beats — sums back to `total`, so rounding can never accumulate."""
+    if n <= 1:
+        return [total]
+    return [(i + 1) * total // n - i * total // n for i in range(n)]
 
 
 # ---------------------------------------------------------------- captions
 
 def word_weight(word: str) -> float:
     """Pronunciation-duration weight (syllable-ish chars + punctuation pause)
-    — reused as the block timing weight."""
+    — block timing weight for the proportional fallback."""
     w = len(re.sub(r"[^A-Za-z0-9']", "", word)) + 1.0
     if re.search(r"[.!?]$", word):
         w += 2.0
@@ -170,65 +214,67 @@ _meas_font = None
 def meas_font():
     global _meas_font
     if _meas_font is None:
-        _meas_font = ImageFont.truetype(f"{FONTS}/ariblk.ttf", CAP_SIZE)
+        _meas_font = ImageFont.truetype(CAP_FONT_TTF, CAP_SIZE)
     return _meas_font
 
 
 def line_wid(text) -> float:
     """Settled-state line width (PIL measure + 10% end tracking + libass fuzz)
     — a wrapped caption would break the one-line contract."""
-    natural = meas_font().getlength(text)
-    return natural * CAP_FSP_TWEEN[1] * 1.03
+    return meas_font().getlength(text) * CAP_FSP_TWEEN[1] * 1.03
 
 
 def fsp_pair(text):
-    """Birth/settled \\fsp values: block starts clumped (90% width) and the
-    letter gaps expand to 110% over CAP_POP_MS — the reference channel's
-    signature entrance, position untouched."""
+    """Clumped/settled \\fsp values for the birth pop."""
     natural = meas_font().getlength(text)
     gaps = max(1, len(text) - 1)
     lo, hi = CAP_FSP_TWEEN
-    return (round((lo - 1.0) * natural / gaps, 1),
-            round((hi - 1.0) * natural / gaps, 1))
+    return (round((lo - 1.0) * natural / gaps, 2),
+            round((hi - 1.0) * natural / gaps, 2))
 
 
 def blockify(words):
     """Split narration into single-line caption blocks: greedily fill by
     measured width (uppercase, at settled tracking), prefer ending a block at
     sentence ends, and when a split must happen mid-sentence prefer the last
-    comma/colon inside the line."""
+    comma/colon inside the line. Returns word-index ranges."""
     budget = W - 2 * CAP_MARGIN
     blocks, cur = [], []
-    for w in words:
+    start = 0
+    for i, w in enumerate(words):
         if cur and line_wid(" ".join(cur + [w])) > budget:
             cut = next((j for j in range(len(cur) - 2, 0, -1)
                         if re.search(r"[,;:]$", cur[j])), None)
-            head, tail = (cur[:cut + 1], cur[cut + 1:]) if cut is not None else (cur, [])
-            blocks.append(head)
-            cur = tail + [w]
+            if cut is not None:
+                blocks.append((start, start + cut))
+                start += cut + 1
+                cur = cur[cut + 1:] + [w]
+            else:
+                blocks.append((start, start + len(cur) - 1))
+                start += len(cur)
+                cur = [w]
         else:
             cur.append(w)
         if re.search(r"[.!?]$", w):
-            blocks.append(cur)
+            blocks.append((start, start + len(cur) - 1))
+            start += len(cur)
             cur = []
     if cur:
-        blocks.append(cur)
+        blocks.append((start, start + len(cur) - 1))
     # safety: a comma-preferred leave-behind or a lone huge word can still sit
     # over budget — greedy-split those so no block ever needs a second line
     final = []
-    for b in blocks:
-        if len(b) == 1 or line_wid(" ".join(b)) <= budget:
-            final.append(b)
+    for a, b in blocks:
+        text = " ".join(words[a:b + 1])
+        if b == a or line_wid(text) <= budget:
+            final.append((a, b))
             continue
-        c2 = []
-        for w in b:
-            if c2 and line_wid(" ".join(c2 + [w])) > budget:
-                final.append(c2)
-                c2 = [w]
-            else:
-                c2.append(w)
-        if c2:
-            final.append(c2)
+        c0 = a
+        for j in range(a + 1, b + 1):
+            if line_wid(" ".join(words[c0:j + 1])) > budget:
+                final.append((c0, j - 1))
+                c0 = j
+        final.append((c0, b))
     return final
 
 
@@ -237,14 +283,76 @@ def ass_time(t: float) -> str:
     return f"{cs // 360000:01d}:{cs // 6000 % 60:02d}:{cs // 100 % 60:02d}.{cs % 100:02d}"
 
 
+def pop_gap_frac(p: float) -> float:
+    """Progress of the birth pop as fraction of the gap delta: fast ease-out
+    rise that overshoots ~12% and settles back — never a hard stop."""
+    if p <= 0:
+        return 0.0
+    if p >= 1:
+        return 1.0
+    rise, settle = 0.55, 0.45
+    if p < rise:
+        q = p / rise
+        return CAP_POP_OVERSHOOT * (1.0 - (1.0 - q) ** 3)
+    q = (p - rise) / settle
+    e = 0.5 * (1.0 - math.cos(math.pi * q))
+    return CAP_POP_OVERSHOOT + (1.0 - CAP_POP_OVERSHOOT) * e
+
+
+def jitter_xy(t: float, seed: int):
+    """Very subtle continuous vibration: two incommensurate sines per axis
+    (~8-13 Hz), deterministic per block so re-renders are stable."""
+    r = random.Random(seed * 7919 + 13)
+    ph = [r.uniform(0, 2 * math.pi) for _ in range(4)]
+    dx = CAP_JITTER * (0.6 * math.sin(2 * math.pi * 8.3 * t + ph[0])
+                       + 0.4 * math.sin(2 * math.pi * 13.1 * t + ph[1]))
+    dy = CAP_JITTER * (0.6 * math.sin(2 * math.pi * 9.7 * t + ph[2])
+                       + 0.4 * math.sin(2 * math.pi * 12.3 * t + ph[3]))
+    return dx, dy
+
+
+def block_times(words, blocks, spans, dur, pad):
+    """Video-relative (start, end) seconds per block, inside [0, dur]. Exact
+    when whisper's word spans match the script word count (block birth = the
+    block's real spoken onset); otherwise proportional across the real speech
+    window. Blocks display contiguously; an entry's last block holds through
+    its TTS tail pad so captions never blink between entries."""
+    n = len(words)
+    if spans is not None and len(spans) == n:
+        times = []
+        for bi, (a, b) in enumerate(blocks):
+            start = spans[a][0]
+            end = (spans[blocks[bi + 1][0]][0] if bi + 1 < len(blocks)
+                   else spans[b][1] + 0.30)  # hold the tail pad (pad ~0.2)
+            times.append((start, min(end, dur)))
+        return times, "whisper"
+    if spans is not None and len(spans) >= 2:
+        lo, hi = spans[0][0], spans[-1][1]
+        window = max(0.5, hi - lo)
+    else:
+        lo, hi = 0.0, max(0.5, dur - pad)
+        window = hi - lo
+    weights = [sum(word_weight(w) for w in words[a:b + 1]) for a, b in blocks]
+    total = sum(weights)
+    times, t = [], lo
+    for bi, wt in enumerate(weights):
+        start = t
+        t += window * wt / total
+        end = dur if bi == len(blocks) - 1 else t
+        times.append((start, end))
+    if spans is not None and len(spans) >= 2:
+        return times, "speech-window"
+    return times, "estimate"
+
+
 def build_ass(entries, timing, out: Path):
-    """Block captions, dead-center and stable, Akiel-Runes-style: each block
-    is ONE measured line shown at the exact same spot. Block timing is
-    proportional to natural speech duration over the entry's real audio
-    window — block granularity, no per-word karaoke. Entrance: the line is
-    born clumped (\\fsp low) and its letter gaps tween open over CAP_POP_MS
-    (\\t ease-out), position untouched; the entry's last block extends through
-    its TTS tail pad so captions never blink off between entries."""
+    """Per-frame block captions, Akiel-Runes style. Each block emits one ASS
+    event per video frame at a fixed dead-center anchor: fsp animates the
+    letter-gap pop in Python (ease-out overshoot settle), a 1.2px sine
+    vibration keeps the line barely alive, frame-0 alpha lands the birth
+    near-solid. Block births come from real word onsets when whisper agrees
+    with the script, else proportional timing across the measured speech
+    window. One line per block, guaranteed by measured chunking."""
     pad = timing.get("pad_s", 0.0)
     header = (
         "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\n"
@@ -257,31 +365,38 @@ def build_ass(entries, timing, out: Path):
         f"&H00000000,-1,0,0,0,100,100,0,0,1,3,4,5,40,40,0,1\n\n"
         "[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, "
         "MarginV, Effect, Text\n")
-    lines, offset = [], 0.0
-    for e, tm in zip(entries, timing["entries"]):
+    pop_s = CAP_POP_MS / 1000.0
+    lines, block_id = [], 0
+    for ei, (e, tm) in enumerate(zip(entries, timing["entries"])):
         words = [w.upper() for w in e["narration"].split()]
         blocks = blockify(words)
-        window = max(0.5, tm["duration_s"] - pad)  # speech window = mp3 minus tail pad
-        weights = [sum(word_weight(w) for w in b) for b in blocks]
-        total_w = sum(weights)
-        t = offset
-        for bi, (b, wt) in enumerate(zip(blocks, weights)):
-            start = t
-            t += window * wt / total_w
-            end = (offset + tm["duration_s"]) if bi == len(blocks) - 1 else t
-            text = " ".join(b)
-            fsp0, fsp1 = fsp_pair(text)
+        spans = speech_spans(Path(e["file"]))
+        times, mode = block_times(words, blocks, spans, e["dur"], pad)
+        v0 = e["vstart"] / FPS  # this entry's first frame on the video timeline
+        for bi, ((a, b), (ts, te)) in enumerate(zip(blocks, times)):
+            text = " ".join(words[a:b + 1])
             if line_wid(text) > (W - 2 * CAP_MARGIN):
                 print(f"captions WARNING: block over one-line budget, "
                       f"libass may wrap: {text!r}", file=sys.stderr)
-            lines.append(
-                f"Dialogue: 0,{ass_time(start)},{ass_time(end)},Cap,"
-                f",0,0,0,,{{\\fsp{fsp0}\\blur1.5\\fad({CAP_FADE})"
-                f"\\t(0,{CAP_POP_MS},0.45,\\fsp{fsp1})}}{text}")
-        offset += tm["duration_s"]
-        print(f"captions entry '{e['title']}': {len(blocks)} blocks, "
-              f"proportional timing")
+            fsp_lo, fsp_hi = fsp_pair(text)
+            birth, dead = v0 + ts, v0 + te
+            f0 = max(0, math.ceil(birth * FPS - 1e-6))
+            f1 = math.ceil(dead * FPS - 1e-6)
+            for f in range(f0, f1):
+                ft = f / FPS
+                p = (ft - birth) / pop_s
+                fsp = fsp_lo + (fsp_hi - fsp_lo) * pop_gap_frac(p)
+                jx, jy = jitter_xy(ft, block_id)
+                alpha = "&H60&" if f == f0 else "&H00&"
+                lines.append(
+                    f"Dialogue: 0,{ass_time(ft)},{ass_time(min((f + 1) / FPS, dead))},Cap,"
+                    f",0,0,0,,{{\\pos({540 + jx:.1f},{960 + jy:.1f})\\fsp{fsp:.2f}"
+                    f"\\blur1.5\\alpha{alpha}}}{text}")
+            block_id += 1
+        print(f"captions entry '{e['title']}': {len(blocks)} blocks, {mode} timing, "
+              f"video start {v0:.2f}s")
     out.write_text(header + "\n".join(lines) + "\n", encoding="utf-8")
+    print(f"captions: {block_id} blocks as {len(lines)} per-frame events")
 
 
 def build_endcard(out: Path, series_title: str):
@@ -344,6 +459,15 @@ def main():
         e["file"] = tm["file"]
         e["dur"] = tm["duration_s"]
 
+    # video frame allocation: each entry renders round(dur*FPS) frames split
+    # across its segments — captions and audio can never drift apart
+    vstart = 0
+    for e in entries:
+        e["seg_frames"] = split_frames(round(e["dur"] * FPS), len(e["imgs"]))
+        e["n_frames"] = sum(e["seg_frames"])
+        e["vstart"] = vstart
+        vstart += e["n_frames"]
+
     work = Path(f"videos/{args.slug}/shorts/{args.short}")
     clips = work / "clips"
     clips.mkdir(parents=True, exist_ok=True)
@@ -360,11 +484,11 @@ def main():
         if move == "pan-down" and (col_h <= H * 1.15
                                    or (col_h - H) / max(0.1, e["dur"]) > PAN_MAX_SPEED):
             move = "fit"
-        per = e["dur"] / len(e["imgs"])
         for bi, img in enumerate(e["imgs"]):
             out = clips / f"seg_{n_seg:04d}.mp4"
             if not out.exists():
-                render_segment(img, per, move if len(e["imgs"]) == 1 else
+                render_segment(img, e["seg_frames"][bi],
+                               move if len(e["imgs"]) == 1 else
                                (move if move != "pan-down" else "fit"),
                                e["meta"][bi].get("focal_point"), out)
             n_seg += 1

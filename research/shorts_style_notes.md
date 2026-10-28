@@ -183,20 +183,25 @@ title bar is the biggest intruder at ~440px) [D from 2025–26 zone guides].
 
 **Captions — mandatory, burned in.** 60–85% of the audience may be on mute;
 the short must fully work sound-off (FB's 85%-muted stat; captions +12% view
-time) [T]. House style v3 (2026-10-28, studied frame-by-frame at 60fps from
-Akiel Runes @AkielRunes — 98k-sub manhwa shorts channel): **ONE line per
-caption block, ALL CAPS, Rubik Bold ~96px @1080×1920, white with a THIN
-(3px) black stroke + soft shadow, placed DEAD-CENTER** — identical anchor for
-every block, never multi-line, never moving (measured-width chunking in
-assemble_shorts.py guarantees the fit; no yellow karaoke highlight, that died
-with word timing). **Entrance = letter-spacing pop**: each block is born
-clumped (~90% of settled line width) and its letter gaps tween open to ~110%
-over ~130ms ease-out, position untouched — Akiel's signature "text expanding
-apart" beat, the block's vigor comes from ALL CAPS + the rounded bold face +
-this pop, not from outline thickness. **Timing is block-by-block**: each
-block takes its proportional slice of the entry's measured audio — no
-per-word pop (Akiel also has no per-word effect; his blocks just pop open and
-hold dead still). Blocks prefer phrase breaks (sentence ends, then commas).
+time) [T]. House style v4 (2026-10-28, second Akiel Runes pass after a 60fps frame study of
+his transitions — 98k-sub manhwa shorts channel): **ONE line per caption block,
+ALL CAPS, Rubik Bold ~96px @1080×1920, white with a THIN (3px) black stroke +
+soft shadow, placed DEAD-CENTER** — identical anchor for every block, never
+multi-line, never drifting. **Entrance = letter-spacing pop with a spring
+settle**: born clumped (~90% of settled width), letter gaps ease out fast,
+overshoot ~12% past settled, decelerate back over ~290ms total — never a hard
+stop; the line also carries a very subtle continuous VIBRATION (~1px sine
+wobble at 8-13Hz; the mean position never moves) — Akiel's "alive caption"
+feel; the vigor comes from ALL CAPS + the rounded bold face + the pop.
+**Timing is block-by-block and speech-anchored**: faster-whisper word onsets
+anchor each block's birth to the real spoken word (block granularity only,
+never per-word karaoke); when whisper's token count disagrees with the script,
+blocks spread proportionally across the REAL speech window instead. Segment
+frame counts are allocated so each entry's video length equals its mp3
+duration (kills cumulative A/V skew). Blocks prefer phrase breaks (sentence
+ends, then commas — width-chunked in assemble_shorts.py so a block never
+wraps; no yellow karaoke highlight, that died with word timing).
+
 Also export an SRT for YouTube accessibility/SEO; disable
 platform auto-captions where possible. [S]
 
