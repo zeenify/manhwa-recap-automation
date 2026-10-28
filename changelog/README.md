@@ -1,41 +1,36 @@
 # Changelog
 
-Every user-visible change gets a numbered update folder. The number is just
-the chronological order of updates (like the shorts numbering) — NOT a
-software version; small changes get small entries, big rebuilds get big ones,
-and related same-day iterations stay inside ONE entry listed as commits.
-Newest first.
+Versioned bundles — one folder per version, pokeemerald-expansion release
+style. A version folder (`changelog/vN/`) groups every change shipped in that
+version: one doc per change, evidence bundled in its `media/`, and each doc
+formatted like their release notes (emoji domain sections, `### Added /
+Changed / Fixed / Removed`, one imperative line per change, commit hash).
+Newest version first.
 
-Format modeled on the
-[pokeemerald-expansion](https://github.com/rh-hideout/pokeemerald-expansion)
-release notes: emoji domain sections, each holding `### Added / Changed /
-Fixed / Removed`, one imperative line per change, code identifiers in
-backticks, and the originating commit per section.
+| Version | Dates | Bundled changes |
+| --- | --- | --- |
+| **v1** | 2026-10-17 → 2026-10-28 | [Film lane](v1/film-lane.md) ("arc film" format) · [Shorts captions rebuild](v1/shorts-captions.md) (one-line center blocks, Akiel-Runes style) |
 
-| Update | Date | Pipeline | Title |
-| --- | --- | --- | --- |
-| [002](002-shorts-captions/update.md) | 2026-10-28 | Shorts captions | Shorts captions rebuild — one-line center blocks, Akiel-Runes style |
-| [001](001-film-lane/update.md) | 2026-10-17 | Film lane | Film lane ("arc film" format, inspired by Leo's Manhwa) |
+## Adding a change / cutting a version
 
-## Adding an entry
-
-1. Create the folder: `changelog/NNN-short-kebab-name/` — the next free
-   number in merge order (014, 015, …), short kebab name.
-2. Write `update.md` inside it:
-   - `# UPDATE NNN — <title>`, then `**Date:**`, `**Scope:**` (exact
-     files/pipelines touched), `**Commits:**` (hashes, oldest first; several
-     same-day passes all belong to the same entry — either on this line or
-     inline at each domain bullet).
-   - One `## <emoji> Domain <emoji>` section per touched area (e.g.
-     `## 🎬 Shorts renderer 🎬`, `## 🔍 Research 🔍`, `## 📜 House docs 📜`).
-   - Under each domain: `### Added` / `### Changed` / `### Fixed` /
-     `### Removed` — one imperative bullet per change (`Add …`, `Fix …`,
-     `Replace …`), functions/files in backticks, *why* on the line for
-     non-obvious changes.
-   - Optional `## 🧪 Verification 🧪` — how the change was proven (renders,
-     probes, frame strips), with relative links into `media/`.
-3. Bundle evidence: screenshots/notes that deserve to survive go into
-   `changelog/NNN-.../media/` with descriptive names (never `tmp/` — it is
-   scratch and gitignored).
-4. Add the row to the table above (newest first).
-5. Commit the folder and the index row in one commit.
+- **New change** (even a small one): drop a doc into the *current* (highest)
+  version folder — `changelog/vN/<change-name>.md`, short kebab name. Its
+  doc carries only that change.
+- **Doc recipe**: title + `**Bundle:** vN` + `**Date:**` + `**Scope:**` (exact
+  files/pipelines touched) + `**Commits:**` (hashes, oldest first; several
+  same-day passes belong to the same doc, listed inline). Then `## <emoji>
+  Domain <emoji>` sections per touched area, each with `### Added / Changed /
+  Fixed / Removed` — one imperative bullet per change (`Add …`, `Fix …`,
+  `Replace …`), functions/files in backticks, *why* on the line for
+  non-obvious changes. Optional `## 🧪 Verification 🧪` with relative links
+  into `media/`.
+- **Evidence** that should survive goes into `changelog/vN/media/` with
+  descriptive names — image files are gitignored repo-wide EXCEPT under
+  `changelog/` (see `.gitignore` exception). Never reference `tmp/` in a
+  changelog doc; tmp is scratch.
+- **Cut a version**: when the batch of changes since the last bundle is
+  worth naming as a unit (a rework, a feature sweep, a release to the
+  channel), create the next `changelog/vN+1/` folder and start filing new
+  changes there. The user decides when to cut.
+- Update the index table above (newest version first, newest change first
+  within a bundle) in the same commit as the change.

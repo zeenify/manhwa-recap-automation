@@ -1,6 +1,7 @@
-# UPDATE 002 — Shorts captions rebuild (one-line center blocks, Akiel-Runes style)
+# Shorts captions rebuild (one-line center blocks, Akiel-Runes style)
 
 **Date:** 2026-10-28
+**Bundle:** v1
 **Scope:** `tools/assemble_shorts.py` caption engine, shorts caption house
 style. Scripts, TTS, beat assets, and the long-form pipeline untouched.
 **Commits:** [c9547cc](https://github.com/zeenify/manhwa-recap-automation/commit/c9547cc)

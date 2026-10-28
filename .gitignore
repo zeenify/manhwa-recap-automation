@@ -34,3 +34,8 @@ tmp/
 agents/writer-agent-fdb.md
 research/fdb_style_notes.md
 channel/thumbnail-research/
+
+# ---- except bundled changelog evidence (small, versioned on purpose) ----
+!changelog/**/*.jpg
+!changelog/**/*.jpeg
+!changelog/**/*.png

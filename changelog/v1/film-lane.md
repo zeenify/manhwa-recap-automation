@@ -1,6 +1,7 @@
-# UPDATE 001 — Film lane ("arc film" format, inspired by Leo's Manhwa)
+# Film lane ("arc film" format, inspired by Leo's Manhwa)
 
 **Date:** 2026-10-17
+**Bundle:** v1
 **Scope:** new parallel long-form lane alongside the classic per-chapter card
 pipeline (classic pipeline untouched — `tools/assemble.py` and friends
 unchanged).
