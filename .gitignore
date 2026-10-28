@@ -39,3 +39,9 @@ channel/thumbnail-research/
 !changelog/**/*.jpg
 !changelog/**/*.jpeg
 !changelog/**/*.png
+
+# ---- run artifacts that predate these ignore rules (keep local) ----
+toonverse/**/*.bak
+toonverse/**/continuation_checkpoint_*.json
+toonverse/**/verification_*.json
+toonverse/download_chapters.py
