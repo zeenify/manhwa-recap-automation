@@ -20,8 +20,9 @@ Shorts script format (scripts/<slug>/shorts/<short>.md):
 - A short MAY cross chapters (refs name the chapter per beat).
 
 Pipeline: one silent segment per entry (camera move) → concat (+ funnel
-endcard) → burn karaoke captions (ASS, estimated word timing — no forced
-alignment) → mux narration (loudnorm -14 LUFS, tail pad for the endcard).
+endcard) → burn block captions (ASS, one big single line dead-center,
+proportional block timing — no word-level karaoke) → mux narration
+(loudnorm -14 LUFS, tail pad for the endcard).
 
 Usage:
   py tools/assemble_shorts.py --slug a-wimps-strategy-guide --short 001_door_kick
@@ -46,35 +47,11 @@ PAN_W = 0.75         # pan-down column width fraction (tall art fills 9:16 nativ
 PAN_MAX_SPEED = 320  # px/s cap at output scale (research: 100-200 dialogue, 300-500 sparse)
 ENDCARD_S = 1.8      # funnel endcard length (last frame = series + CTA)
 CAP_FONT = "Arial Black"
-CAP_SIZE = 72
-CAP_TOP = 1230       # captions anchor TOP-center here — fixed first line, no jumping
-CAP_MAX_WORDS = 3    # Hormozi-style short cards; longer cards wrap downward
+CAP_SIZE = 96        # one big line, dead-center — measured chunks guarantee fit
+CAP_MARGIN = 40      # side margin for the measured line budget (W - 2*margin)
+CAP_FADE = "70,50"   # \\fad ms — soft pop between blocks, no hard snap
 DARK = (14, 14, 16)
 FONTS = "C:/Windows/Fonts"
-
-_WHISPER = None
-
-
-def speech_spans(mp3: Path):
-    """Real word start/end times via faster-whisper (local, CPU). Returns
-    [(start, end), ...] or None if unavailable — the caller then falls back to
-    proportional estimation. Model loads once per run."""
-    global _WHISPER
-    try:
-        from faster_whisper import WhisperModel
-    except ImportError:
-        print("captions: faster-whisper not installed — proportional timing "
-              "(install with: py -m pip install faster-whisper)", file=sys.stderr)
-        return None
-    if _WHISPER is None:
-        _WHISPER = WhisperModel("base.en", device="cpu", compute_type="int8")
-    segments, _info = _WHISPER.transcribe(str(mp3), language="en", word_timestamps=True)
-    spans = []
-    for s in segments:
-        for w in (s.words or []):
-            if w.word.strip():
-                spans.append((w.start, w.end))
-    return spans or None
 
 
 def sh(cmd, cwd=None, **kw):
@@ -172,6 +149,8 @@ def render_segment(img: Path, dur: float, move: str, fp, out: Path):
 # ---------------------------------------------------------------- captions
 
 def word_weight(word: str) -> float:
+    """Pronunciation-duration weight (syllable-ish chars + punctuation pause)
+    — reused as the block timing weight."""
     w = len(re.sub(r"[^A-Za-z0-9']", "", word)) + 1.0
     if re.search(r"[.!?]$", word):
         w += 2.0
@@ -180,13 +159,59 @@ def word_weight(word: str) -> float:
     return w
 
 
-def keyword_of(card):
-    best, blen = None, 4
-    for wd in card:
-        core = re.sub(r"[^A-Za-z0-9']", "", wd)
-        if len(core) > blen:
-            best, blen = wd, len(core)
-    return best
+_meas_font = None
+
+
+def meas_font():
+    global _meas_font
+    if _meas_font is None:
+        _meas_font = ImageFont.truetype(f"{FONTS}/ariblk.ttf", CAP_SIZE)
+    return _meas_font
+
+
+def line_wid(words) -> float:
+    """Measured line width with a safety factor — libass kerns/hints a bit
+    wider than PIL, and a wrapped caption would break the one-line contract."""
+    return meas_font().getlength(" ".join(words)) * 1.08
+
+
+def blockify(words):
+    """Split narration into single-line caption blocks: greedily fill by
+    measured width, prefer ending a block at sentence ends, and when a split
+    must happen mid-sentence prefer the last comma/colon inside the line."""
+    budget = W - 2 * CAP_MARGIN
+    blocks, cur = [], []
+    for w in words:
+        if cur and line_wid(cur + [w]) > budget:
+            cut = next((j for j in range(len(cur) - 2, 0, -1)
+                        if re.search(r"[,;:]$", cur[j])), None)
+            head, tail = (cur[:cut + 1], cur[cut + 1:]) if cut is not None else (cur, [])
+            blocks.append(head)
+            cur = tail + [w]
+        else:
+            cur.append(w)
+        if re.search(r"[.!?]$", w):
+            blocks.append(cur)
+            cur = []
+    if cur:
+        blocks.append(cur)
+    # safety: a comma-preferred leave-behind or a lone huge word can still sit
+    # over budget — greedy-split those so no block ever needs a second line
+    final = []
+    for b in blocks:
+        if len(b) == 1 or line_wid(b) <= budget:
+            final.append(b)
+            continue
+        c2 = []
+        for w in b:
+            if c2 and line_wid(c2 + [w]) > budget:
+                final.append(c2)
+                c2 = [w]
+            else:
+                c2.append(w)
+        if c2:
+            final.append(c2)
+    return final
 
 
 def ass_time(t: float) -> str:
@@ -195,12 +220,12 @@ def ass_time(t: float) -> str:
 
 
 def build_ass(entries, timing, out: Path):
-    """Karaoke captions synced to real speech: word times come from
-    faster-whisper on each entry's mp3 (exact per-word spans when the tokenizer
-    agrees with the script, else proportional interpolation inside the real
-    speech window; falls back to duration estimates only if whisper fails).
-    Cards anchor TOP-center at a fixed line so multi-line cards never make the
-    text jump around — that was the 'shaky caption' defect."""
+    """Block captions, dead-center and stable: each entry's narration is split
+    into single-line blocks (measured width, sentence/comma-preferring breaks)
+    shown one at a time at the exact same spot. Blocks are timed by natural
+    duration weights spread over the entry's measured speech window — block
+    granularity, no per-word karaoke. The entry's last block extends through
+    its TTS tail pad so captions never blink off between entries."""
     pad = timing.get("pad_s", 0.0)
     header = (
         "[Script Info]\nScriptType: v4.00+\nPlayResX: 1080\nPlayResY: 1920\n"
@@ -209,70 +234,31 @@ def build_ass(entries, timing, out: Path):
         "OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, "
         "ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, "
         "MarginL, MarginR, MarginV, Encoding\n"
-        f"Style: Cap,{CAP_FONT},{CAP_SIZE},&H00FFFFFF,&H00303030,&H00000000,"
-        f"&H00000000,0,0,0,0,100,100,0,0,1,5,0,8,50,50,{CAP_TOP},1\n\n"
+        f"Style: Cap,{CAP_FONT},{CAP_SIZE},&H00FFFFFF,&H00FFFFFF,&H00000000,"
+        f"&H00000000,0,0,0,0,100,100,1,0,1,7,3,5,40,40,0,1\n\n"
         "[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, "
         "MarginV, Effect, Text\n")
     lines, offset = [], 0.0
     for e, tm in zip(entries, timing["entries"]):
         words = e["narration"].split()
-        weights = [word_weight(w) for w in words]
-        window = max(0.5, tm["duration_s"] - pad)
-        spans = speech_spans(Path(e["file"]))
-        if spans is not None:
-            # whisper timestamps are relative to the entry's own mp3 — shift
-            # them into the short's timeline (concat position of this entry)
-            spans = [(s + offset, t + offset) for s, t in spans]
-        if spans is not None and len(spans) != len(words):
-            if len(spans) >= 2:
-                # tokenizer mismatch: interpolate inside the REAL speech window
-                lo, hi = spans[0][0], spans[-1][1]
-                total_w = sum(weights)
-                spans, acc = [], lo
-                for wt in weights:
-                    spans.append((acc, acc + (hi - lo) * wt / total_w))
-                    acc += (hi - lo) * wt / total_w
-                mode = "anchor"
-            else:
-                spans = None
-        if spans is None:
-            total_w = sum(weights)
-            spans, acc = [], offset
-            for wt in weights:
-                spans.append((acc, acc + window * wt / total_w))
-                acc += window * wt / total_w
-            mode = "estimate"
-        else:
-            mode = "whisper"
-        # regroup into short cards anchored at real word times
-        cards, cur = [], []
-        for i, wd in enumerate(words):
-            cur.append(i)
-            nxt = words[i + 1] if i + 1 < len(words) else ""
-            if len(cur) >= CAP_MAX_WORDS or (len(cur) >= 2 and re.search(r"[.!?]$", wd)) \
-                    or (nxt and len(nxt) > 9):
-                cards.append(cur)
-                cur = []
-        if cur:
-            cards.append(cur)
-        for card in cards:
-            start = spans[card[0]][0]
-            end = max(spans[card[-1]][1], start + 0.25) + 0.12  # small linger
-            parts = []
-            kw = keyword_of([words[i] for i in card])
-            for pos, i in enumerate(card):
-                # \k runs back-to-back from the card start, so each word's k
-                # must span UP TO the next word's real start (gaps included)
-                # or pauses inside a card would fire the highlight early
-                nxt = spans[card[pos + 1]][0] if pos + 1 < len(card) else spans[i][1]
-                kcs = max(4, int(round((nxt - spans[i][0]) * 100)))
-                mark = f"{{\\c&H00FFFF&}}" if words[i] == kw else ""
-                reset = "{\\c&HFFFFFF&}" if words[i] == kw else ""
-                parts.append(f"{{\\k{kcs}}}{mark}{words[i]}{reset}")
-            lines.append(f"Dialogue: 0,{ass_time(start)},{ass_time(end)},"
-                         f"Cap,,0,0,0,,{' '.join(parts)}")
+        blocks = blockify(words)
+        window = max(0.5, tm["duration_s"] - pad)  # speech window = mp3 minus tail pad
+        weights = [sum(word_weight(w) for w in b) for b in blocks]
+        total_w = sum(weights)
+        t = offset
+        for bi, (b, wt) in enumerate(zip(blocks, weights)):
+            start = t
+            t += window * wt / total_w
+            end = (offset + tm["duration_s"]) if bi == len(blocks) - 1 else t
+            over = line_wid(b) > (W - 2 * CAP_MARGIN)
+            if over:
+                print(f"captions WARNING: block over one-line budget, "
+                      f"libass may wrap: {' '.join(b)!r}", file=sys.stderr)
+            lines.append(f"Dialogue: 0,{ass_time(start)},{ass_time(end)},Cap,"
+                         f",0,0,0,,{{\\fad({CAP_FADE})}}{' '.join(b)}")
         offset += tm["duration_s"]
-        print(f"captions entry '{e['title']}': {mode} timing")
+        print(f"captions entry '{e['title']}': {len(blocks)} blocks, "
+              f"proportional timing")
     out.write_text(header + "\n".join(lines) + "\n", encoding="utf-8")
 
 

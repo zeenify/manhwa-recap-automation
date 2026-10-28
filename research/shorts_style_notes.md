@@ -183,11 +183,15 @@ title bar is the biggest intruder at ~440px) [D from 2025–26 zone guides].
 
 **Captions — mandatory, burned in.** 60–85% of the audience may be on mute;
 the short must fully work sound-off (FB's 85%-muted stat; captions +12% view
-time) [T]. House style: bold sans (Anton/Montserrat Black), white with thick
-black stroke, **one keyword per card in yellow**, **2–4 words per card**
-(sweet spot 3), ~60px, center-lower inside the safe box, card appears on or
-just before its spoken word (word-level "karaoke" pop is the default that
-wins) [S/G]. Also export an SRT for YouTube accessibility/SEO; disable
+time) [T]. House style v2 (2026-10-28): **ONE line per caption block, BIG
+(Arial Black ~96px @1080×1920), white with thick black stroke, placed
+DEAD-CENTER** — identical anchor for every block, never multi-line, never
+moving (measured-width chunking in assemble_shorts.py guarantees the fit; no
+yellow karaoke highlight, that died with word timing). **Timing is
+block-by-block**: each block takes its proportional slice of the entry's
+measured audio — no per-word pop; fewer, calmer changes that read while the
+art gets watched. Blocks prefer phrase breaks (sentence ends, then commas).
+Also export an SRT for YouTube accessibility/SEO; disable
 platform auto-captions where possible. [S]
 
 **Voice.** ~150–160 WPM (~2.5 words/sec) — run the persona ~10–15% hotter
