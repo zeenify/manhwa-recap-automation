@@ -38,7 +38,7 @@ Commit after every successful stage.
 sp` tween pop on every block birth; proportional block timing — no word karaoke, no whisper dependency), −14 LUFS voice, funnel endcard. Idempotent per clip — **purge `videos/<slug>/shorts/<short>/clips/` after changing shots or beats** or stale clips get reused (captions burn on the final concat, so caption-only changes need NO clip purge).
 - `tools/validate_shorts.py` — the shorts QA gate (header format, beat refs vs beats.json, word budgets, banned words, hook boundary in the first ~10 words). Run after EVERY shorts writing pass; writer self-QA is never trusted.
 - `shorts/<slug>/` — scene catalogs (`catalog.md` master index + per-range catalogs) and `tracker.md` (production & upload log: status, duration, upload day, YT/TT/FB ticks).
-- `changelog/` — versioned bundles, pokeemerald-expansion release style: `changelog/vN/` groups every change of that version — one doc per change (`v1/film-lane.md`, `v1/shorts-captions.md`, …) plus its `media/` (jpg evidence is gitignore-EXCEPTED under changelog/ only); each doc: emoji domain sections with Added/Changed/Fixed/Removed, one line per change, commit hash. `changelog/README.md` is the index + the add-a-change recipe.
+- `changelog/` — release docs in the pokeemerald-expansion docs/changelogs style: one folder per minor line (`1.0.x/`), one md per release named by version (`1.0.1.md`), `template.md` is the skeleton (fenced How-to-update, emoji domain sections with Added/Changed/Fixed, `* N/A` convention, Full-Changelog compare link); each doc converts to the next `<line>/<ver>.md` on a user-visible change; `changelog/README.md` is the index + recipe.
 
 ## Commands
 

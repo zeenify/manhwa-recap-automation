@@ -1,36 +1,32 @@
 # Changelog
 
-Versioned bundles — one folder per version, pokeemerald-expansion release
-style. A version folder (`changelog/vN/`) groups every change shipped in that
-version: one doc per change, evidence bundled in its `media/`, and each doc
-formatted like their release notes (emoji domain sections, `### Added /
-Changed / Fixed / Removed`, one imperative line per change, commit hash).
-Newest version first.
+Release docs in the pokeemerald-expansion `docs/changelogs` style: one folder
+per minor version line (`1.0.x/`), one `.md` per release named by its version
+(`1.0.1.md`), plus `template.md` — the skeleton every release copies. Each
+release doc opens with a fenced "How to update" block, then emoji domain
+sections (`Added / Changed / Fixed`), one imperative line per change, code
+identifiers in backticks; empty domains are deleted, kept-but-unused sections
+hold a `* N/A`.
 
-| Version | Dates | Bundled changes |
-| --- | --- | --- |
-| **v1** | 2026-10-17 → 2026-10-28 | [Film lane](v1/film-lane.md) ("arc film" format) · [Shorts captions rebuild](v1/shorts-captions.md) (one-line center blocks, Akiel-Runes style) |
+| Line | Releases (newest first) |
+| --- | --- |
+| 1.0.x | [1.0.1 — Shorts captions rebuild](1.0.x/1.0.1.md) · [1.0.0 — Film lane](1.0.x/1.0.0.md) |
 
-## Adding a change / cutting a version
+## Releasing a change
 
-- **New change** (even a small one): drop a doc into the *current* (highest)
-  version folder — `changelog/vN/<change-name>.md`, short kebab name. Its
-  doc carries only that change.
-- **Doc recipe**: title + `**Bundle:** vN` + `**Date:**` + `**Scope:**` (exact
-  files/pipelines touched) + `**Commits:**` (hashes, oldest first; several
-  same-day passes belong to the same doc, listed inline). Then `## <emoji>
-  Domain <emoji>` sections per touched area, each with `### Added / Changed /
-  Fixed / Removed` — one imperative bullet per change (`Add …`, `Fix …`,
-  `Replace …`), functions/files in backticks, *why* on the line for
-  non-obvious changes. Optional `## 🧪 Verification 🧪` with relative links
-  into `media/`.
-- **Evidence** that should survive goes into `changelog/vN/media/` with
-  descriptive names — image files are gitignored repo-wide EXCEPT under
-  `changelog/` (see `.gitignore` exception). Never reference `tmp/` in a
-  changelog doc; tmp is scratch.
-- **Cut a version**: when the batch of changes since the last bundle is
-  worth naming as a unit (a rework, a feature sweep, a release to the
-  channel), create the next `changelog/vN+1/` folder and start filing new
-  changes there. The user decides when to cut.
-- Update the index table above (newest version first, newest change first
-  within a bundle) in the same commit as the change.
+1. New doc: copy `template.md` to the current line folder as the next version
+   (`1.0.x/1.0.2.md` — bump the patch per release; start a new line folder
+   (`1.1.x/`) for a feature-era batch; the user decides when to cut).
+2. Convert to a doc: the patch note lives at `changelog/<line>/<ver>.md`;
+   several same-day passes are one release (list their commits in the Full
+   Changelog footer range).
+3. Fill the domains the release touched, one imperative bullet per change
+   (`Add …`, `Fix …`, `Replace …`), *why* on the line for non-obvious
+   changes, commit/compare hash at the bottom ("Full Changelog" compare of
+   `prev...this`).
+4. Evidence worth keeping: `changelog/<line>/media/` with descriptive names —
+   image files are gitignored repo-wide EXCEPT under `changelog/` (see
+   `.gitignore`); link them from a `## 🧶 Bundled media 🧶` section. Never
+   reference `tmp/` — it is scratch.
+5. Delete the untouched domain sections (or leave their `* N/A`), add the
+   release row to the table above, and commit the doc + index together.
