@@ -46,12 +46,17 @@ SS_W = 2160          # supersample width for zoompan quality
 PAN_W = 0.75         # pan-down column width fraction (tall art fills 9:16 natively)
 PAN_MAX_SPEED = 320  # px/s cap at output scale (research: 100-200 dialogue, 300-500 sparse)
 ENDCARD_S = 1.8      # funnel endcard length (last frame = series + CTA)
-CAP_FONT = "Arial Black"
+CAP_FONT = "Rubik"   # rounded bold sans — the Akiel-Runes/CapCut-style caption look
 CAP_SIZE = 96        # one big line, dead-center — measured chunks guarantee fit
 CAP_MARGIN = 40      # side margin for the measured line budget (W - 2*margin)
-CAP_FADE = "70,50"   # \\fad ms — soft pop between blocks, no hard snap
+CAP_FSP_TWEEN = (0.90, 1.10)  # line width ratio at birth -> settled: the pop
+CAP_POP_MS = 130     # letter-gap expansion duration at block birth (60fps ref ~8 frames)
+CAP_FADE = "25,40"   # \\fad ms — birth frame lands near-solid (reference pops, no dim ramp)
 DARK = (14, 14, 16)
 FONTS = "C:/Windows/Fonts"
+CAP_FONT_TTF = f"{FONTS}/Rubik-Bold.ttf"
+if not Path(CAP_FONT_TTF).exists():  # machines without Rubik keep a clean bold look
+    CAP_FONT, CAP_FONT_TTF = "Arial Black", f"{FONTS}/ariblk.ttf"
 
 
 def sh(cmd, cwd=None, **kw):
@@ -169,20 +174,33 @@ def meas_font():
     return _meas_font
 
 
-def line_wid(words) -> float:
-    """Measured line width with a safety factor — libass kerns/hints a bit
-    wider than PIL, and a wrapped caption would break the one-line contract."""
-    return meas_font().getlength(" ".join(words)) * 1.08
+def line_wid(text) -> float:
+    """Settled-state line width (PIL measure + 10% end tracking + libass fuzz)
+    — a wrapped caption would break the one-line contract."""
+    natural = meas_font().getlength(text)
+    return natural * CAP_FSP_TWEEN[1] * 1.03
+
+
+def fsp_pair(text):
+    """Birth/settled \\fsp values: block starts clumped (90% width) and the
+    letter gaps expand to 110% over CAP_POP_MS — the reference channel's
+    signature entrance, position untouched."""
+    natural = meas_font().getlength(text)
+    gaps = max(1, len(text) - 1)
+    lo, hi = CAP_FSP_TWEEN
+    return (round((lo - 1.0) * natural / gaps, 1),
+            round((hi - 1.0) * natural / gaps, 1))
 
 
 def blockify(words):
     """Split narration into single-line caption blocks: greedily fill by
-    measured width, prefer ending a block at sentence ends, and when a split
-    must happen mid-sentence prefer the last comma/colon inside the line."""
+    measured width (uppercase, at settled tracking), prefer ending a block at
+    sentence ends, and when a split must happen mid-sentence prefer the last
+    comma/colon inside the line."""
     budget = W - 2 * CAP_MARGIN
     blocks, cur = [], []
     for w in words:
-        if cur and line_wid(cur + [w]) > budget:
+        if cur and line_wid(" ".join(cur + [w])) > budget:
             cut = next((j for j in range(len(cur) - 2, 0, -1)
                         if re.search(r"[,;:]$", cur[j])), None)
             head, tail = (cur[:cut + 1], cur[cut + 1:]) if cut is not None else (cur, [])
@@ -199,12 +217,12 @@ def blockify(words):
     # over budget — greedy-split those so no block ever needs a second line
     final = []
     for b in blocks:
-        if len(b) == 1 or line_wid(b) <= budget:
+        if len(b) == 1 or line_wid(" ".join(b)) <= budget:
             final.append(b)
             continue
         c2 = []
         for w in b:
-            if c2 and line_wid(c2 + [w]) > budget:
+            if c2 and line_wid(" ".join(c2 + [w])) > budget:
                 final.append(c2)
                 c2 = [w]
             else:
@@ -220,11 +238,12 @@ def ass_time(t: float) -> str:
 
 
 def build_ass(entries, timing, out: Path):
-    """Block captions, dead-center and stable: each entry's narration is split
-    into single-line blocks (measured width, sentence/comma-preferring breaks)
-    shown one at a time at the exact same spot. Blocks are timed by natural
-    duration weights spread over the entry's measured speech window — block
-    granularity, no per-word karaoke. The entry's last block extends through
+    """Block captions, dead-center and stable, Akiel-Runes-style: each block
+    is ONE measured line shown at the exact same spot. Block timing is
+    proportional to natural speech duration over the entry's real audio
+    window — block granularity, no per-word karaoke. Entrance: the line is
+    born clumped (\\fsp low) and its letter gaps tween open over CAP_POP_MS
+    (\\t ease-out), position untouched; the entry's last block extends through
     its TTS tail pad so captions never blink off between entries."""
     pad = timing.get("pad_s", 0.0)
     header = (
@@ -235,12 +254,12 @@ def build_ass(entries, timing, out: Path):
         "ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, "
         "MarginL, MarginR, MarginV, Encoding\n"
         f"Style: Cap,{CAP_FONT},{CAP_SIZE},&H00FFFFFF,&H00FFFFFF,&H00000000,"
-        f"&H00000000,0,0,0,0,100,100,1,0,1,7,3,5,40,40,0,1\n\n"
+        f"&H00000000,-1,0,0,0,100,100,0,0,1,3,4,5,40,40,0,1\n\n"
         "[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, "
         "MarginV, Effect, Text\n")
     lines, offset = [], 0.0
     for e, tm in zip(entries, timing["entries"]):
-        words = e["narration"].split()
+        words = [w.upper() for w in e["narration"].split()]
         blocks = blockify(words)
         window = max(0.5, tm["duration_s"] - pad)  # speech window = mp3 minus tail pad
         weights = [sum(word_weight(w) for w in b) for b in blocks]
@@ -250,12 +269,15 @@ def build_ass(entries, timing, out: Path):
             start = t
             t += window * wt / total_w
             end = (offset + tm["duration_s"]) if bi == len(blocks) - 1 else t
-            over = line_wid(b) > (W - 2 * CAP_MARGIN)
-            if over:
+            text = " ".join(b)
+            fsp0, fsp1 = fsp_pair(text)
+            if line_wid(text) > (W - 2 * CAP_MARGIN):
                 print(f"captions WARNING: block over one-line budget, "
-                      f"libass may wrap: {' '.join(b)!r}", file=sys.stderr)
-            lines.append(f"Dialogue: 0,{ass_time(start)},{ass_time(end)},Cap,"
-                         f",0,0,0,,{{\\fad({CAP_FADE})}}{' '.join(b)}")
+                      f"libass may wrap: {text!r}", file=sys.stderr)
+            lines.append(
+                f"Dialogue: 0,{ass_time(start)},{ass_time(end)},Cap,"
+                f",0,0,0,,{{\\fsp{fsp0}\\blur1.5\\fad({CAP_FADE})"
+                f"\\t(0,{CAP_POP_MS},0.45,\\fsp{fsp1})}}{text}")
         offset += tm["duration_s"]
         print(f"captions entry '{e['title']}': {len(blocks)} blocks, "
               f"proportional timing")
@@ -373,9 +395,9 @@ def main():
     # path (drive-letter colons are a filtergraph-escaping trap)
     fonts = work / "fonts"
     fonts.mkdir(exist_ok=True)
-    cap_font = fonts / "ariblk.ttf"
+    cap_font = fonts / Path(CAP_FONT_TTF).name
     if not cap_font.exists():
-        cap_font.write_bytes(Path(f"{FONTS}/ariblk.ttf").read_bytes())
+        cap_font.write_bytes(Path(CAP_FONT_TTF).read_bytes())
     build_ass(entries, timing, work / "captions.ass")
     sh(["ffmpeg", "-y", "-i", "silent_full.mp4" if not args.test else "silent.mp4",
         "-vf", "ass=captions.ass:fontsdir=fonts",
