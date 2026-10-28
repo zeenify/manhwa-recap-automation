@@ -25,8 +25,7 @@ toonverse/**/handoff_*.json
 toonverse/**/views/
 toonverse/**/window_*.png
 
-# ---- acquisition tooling is intentionally NOT part of this repo ----
-
+# ---- secrets & scratch (never public) ----
 channel/analytics/credentials.json
 tmp/
 
@@ -44,4 +43,3 @@ channel/thumbnail-research/
 toonverse/**/*.bak
 toonverse/**/continuation_checkpoint_*.json
 toonverse/**/verification_*.json
-toonverse/download_chapters.py
