@@ -32,9 +32,9 @@ Batch 1 produced 2026-10-07: 001 (sample) + 10 produced. ALL PLATFORMS DONE 2026
 | 031_mascot_video | roast | ch005 beats 009-021 | **produced** | 29.8 | 2026-10-10 | ✓ |  | ✓ |
 | 032_coward_epitaph | roast | ch005 beats 028-042 | **produced** | 28.3 | 2026-10-25 | ✓ |  | ✓ |
 | 033_floor_eleven_bet | face-slap | ch005 beats 043-082 | **produced** | 42.8 | 2026-10-07 | ✓ | ✓ | ✓ |
-| 060_who-told-you | roast | ch006 beats 000-006 | **produced** | 24.5 |  |  |  |  |
+| 060_who-told-you | roast | ch006 beats 000-006 | **produced** | 24.5 | 2026-10-27 | ✓ |  | ✓ |
 | 061_haggling-downward | face-slap | ch006 beats 013-023 | **produced** | 45.2 | 2026-10-07 | ✓ | ✓ | ✓ |
-| 062_refusal-was-acting | cliffhanger | ch006 beats 027-035 | **produced** | 32.6 |  |  |  |  |
+| 062_refusal-was-acting | cliffhanger | ch006 beats 027-035 | **produced** | 32.6 | 2026-10-27 | ✓ |  | ✓ |
 | 063_absolutely-slow | roast | ch006 beats 038-046 | scripted |  |  |  |  |  |
 | 064_please-stab-me | roast | ch007 beats 019-023 | **produced** | 26.7 | 2026-10-07 | ✓ | ✓ | ✓ |
 | 065_studying-their-wimp | roast | ch007 beats 061-063 | scripted |  |  |  |  |  |
