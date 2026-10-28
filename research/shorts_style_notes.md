@@ -183,7 +183,8 @@ title bar is the biggest intruder at ~440px) [D from 2025–26 zone guides].
 
 **Captions — mandatory, burned in.** 60–85% of the audience may be on mute;
 the short must fully work sound-off (FB's 85%-muted stat; captions +12% view
-time) [T]. House style v4 (2026-10-28, second Akiel Runes pass after a 60fps frame study of
+time) [T]. House caption style (revised 2026-10-28, second Akiel Runes pass after a 60fps
+frame study of
 his transitions — 98k-sub manhwa shorts channel): **ONE line per caption block,
 ALL CAPS, Rubik Bold ~96px @1080×1920, white with a THIN (3px) black stroke +
 soft shadow, placed DEAD-CENTER** — identical anchor for every block, never

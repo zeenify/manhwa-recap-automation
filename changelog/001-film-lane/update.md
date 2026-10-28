@@ -1,4 +1,4 @@
-# UPDATE v1 — Film lane ("arc film" format, inspired by Leo's Manhwa)
+# UPDATE 001 — Film lane ("arc film" format, inspired by Leo's Manhwa)
 
 **Date:** 2026-10-17
 **Scope:** new parallel long-form lane alongside the classic per-chapter card
